@@ -1213,7 +1213,7 @@ button:focus {
   position: absolute;
   display: block;
   top: 100%;
-  left: 0;
+  /* left: 0; */
   right: 0;
   min-width: 100%;
   margin: 10px 0;
@@ -1226,6 +1226,7 @@ button:focus {
   pointer-events: none;
   transform: translateY(-15px);
   z-index: 1;
+  width: max-content;
 }
 
 .custom-select.opened .custom-options {
@@ -1241,6 +1242,7 @@ button:focus {
   content: '';
   bottom: 100%;
   left: 10px;
+  /* right: 10px; */
   width: 10px;
   height: 10px;
   margin-bottom: -5px;
@@ -2044,6 +2046,50 @@ footer {
   .day-location .day,
   .day-location .location {
     font-size: 16px;
+  }
+}
+
+@media (min-width:2px) and (max-width: 420px) {
+  .custom-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    right: 0 !important;
+    min-width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    background: #fff;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-15px);
+    z-index: 1;
+    width: max-content;
+  }
+
+  .custom-select.opened .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  .custom-options:before {
+    position: absolute;
+    display: block;
+    content: '';
+    bottom: 100%;
+    left: 70%;
+    width: 10px;
+    height: 10px;
+    margin-bottom: -5px;
+    border-top: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    background: #fff;
+    transform: rotate(45deg);
+    transition: all .2s ease-in-out;
   }
 }
 

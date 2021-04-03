@@ -49,8 +49,7 @@
                       class="text-dark form-control"
                       type="text"
                       placeholder="Find your KBTG job today!"
-                      :state="GET_SEARCH"
-                      @click="clickedSearch(search)"
+                      :state="getSearch"
                     ></b-form-input>
                     <datalist id="my-list-id">
                       <option v-for="list in GET_TITLE" :key="list">
@@ -129,23 +128,23 @@
                         </div>
                       </div>
                     </li>
-                    <li v-for="p in displayedPosts" :key="p">
+                    <li v-for="item in displayedPosts" :key="item">
                       <div class="title">
-                        <nuxt-link :to="`/jobs-exe/${p.id}`">
-                          {{ p.title }}
-                          <span v-if="p.fresh_grad"
+                        <nuxt-link :to="`/jobs-exe/${item.id}`">
+                          {{ item.title }}
+                          <span v-if="item.fresh_grad"
                             ><img src="~/assets/images/icon_fresh_grad.png"
                           /></span>
                         </nuxt-link>
                       </div>
-                      <div class="level">{{ p.levels }}</div>
+                      <div class="level">{{ item.levels }}</div>
                     </li>
-                    <li>
+                    <!--<li>
                       <div class="title"></div>
                       <div class="level">
                         <button
                           type=" button"
-                          class="btn btn-outline-light b-b mr-2"
+                          class="btn b-number mr-2"
                           v-if="page != 1"
                           @click="page--"
                         >
@@ -153,7 +152,7 @@
                         </button>
 
                         <button
-                          class="btn btn-outline-light b-b mr-2"
+                          class="btn b-number mr-2 rounded-0"
                           type=" button"
                           v-for="pageNumber in pages.slice(page - 1, page + 10)"
                           :key="pageNumber"
@@ -165,7 +164,7 @@
                         </button>
 
                         <button
-                          class="btn btn-outline-light b-b mr-2"
+                          class="btn b-number mr-2"
                           type=" button"
                           @click="page++"
                           v-if="page < pages.length"
@@ -173,6 +172,21 @@
                           <small style="font-size: 12px">&#62;</small>
                         </button>
                       </div>
+                    </li> -->
+                  </ul>
+                </div>
+                <div class="next">
+                  <ul>
+                    <li class="" :class="{'active': pageNumber == 1}"
+                      v-for="pageNumber in pages"
+                      :key="pageNumber"
+                      @click="selectNumber(pageNumber)"
+                    >
+                      <button
+                        class="btn rounded-0 b-number"
+                      >
+                        {{ pageNumber }}
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -186,7 +200,6 @@
 </template>
 <script>
 export default {
- 
   data() {
     return {
       JOBS: null,
@@ -203,10 +216,11 @@ export default {
       perPage: 10,
       pages: [],
       result: [],
+
+      status_numer: false,
     };
   },
   async mounted() {
-
     await this.$axios.$get(`/jobs.json`).then((res) => {
       this.JOBS = res.jobs;
       this.posts = res.jobs;
@@ -220,9 +234,11 @@ export default {
     this.GET_REPAIRLEVEL = [...new Set(this.GET_LEVELS)];
   },
   computed: {
-    
     displayedPosts() {
       return this.paginate(this.posts);
+    },
+    getSearch() {
+      console.log("search>>", this.search);
     },
   },
   watch: {
@@ -235,7 +251,6 @@ export default {
       this.status = !this.status;
       console.log(this.status);
     },
-
     setPages() {
       let numberOfPages = Math.ceil(this.posts.length / this.perPage);
       for (let index = 1; index <= numberOfPages; index++) {
@@ -321,16 +336,22 @@ export default {
         }
       }
     },
+    selectNumber(number) {
+      console.log("test select number", number);
+      if (number === 1) {
+        this.status_numer = true;
+      }
+    },
   },
 };
 </script>
 <style>
-.button.page-link {
-  display: inline-block;
-}
-.b-b {
+.b-number {
+  color: #ffffff;
   font-size: 14px !important;
-  border: none !important;
+}
+.b-active {
+  border-bottom: 1px solid #62cbc9;
 }
 .offset {
   width: 500px !important;
