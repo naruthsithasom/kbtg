@@ -1,4 +1,17 @@
+ 
 export default {
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: "custom",
+        path: "*",
+        component: resolve(__dirname, "pages/404.vue"),
+      });
+    },
+  },
+  loading: {
+    continuous: true,
+  },
   ssr: false,
   target: "static",
   server: {
@@ -26,38 +39,6 @@ export default {
         href: "/Asset16 _32x32.png",
       },
     ],
-    // link: [
-    //   {
-    //     rel: "icon",
-    //     type: "image/png",
-    //     href: "/Asset16 _32x32.png",
-    //   },
-    //   {
-    //     rel: "stylesheet",
-    //     href:
-    //       "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css",
-    //   },
-    // ],
-    // link: [
-    //   {
-    //     rel: "preconnect",
-    //     href: "https://fonts.gstatic.com",
-    //   },
-    // ],
-    // link: [
-    //   {
-    //     rel: "stylesheet",
-    //     href:
-    //       "https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap",
-    //   },
-    // ],
-    // link: [
-    //   {
-    //     rel: "stylesheet",
-    //     href:
-    //       "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap",
-    //   },
-    // ],
   },
   css: [
     { src: "~/assets/css/reset.css" },
@@ -68,7 +49,11 @@ export default {
     { src: "~/assets/WOW-master/css/libs/animate.css" },
     { src: "~/assets/WOW-master/css/site.css" },
   ],
-  plugins: ["~/plugins/vue-wow.js", "~/plugins/navbar-link.js"],
+  plugins: [
+    "~/plugins/vue-wow.js",
+    "~/plugins/navbar-link.js",
+    "~/plugins/axios.js",
+  ],
   components: true,
   buildModules: [],
   build: {},
@@ -105,4 +90,3 @@ export default {
   devtool: "inline-source-map",
   loaders: [{ test: /\.js$/, loader: "babel", query: { compact: false } }],
 };
-

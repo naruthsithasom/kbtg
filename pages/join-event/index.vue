@@ -46,8 +46,9 @@
                 </p>
 
                 <div class="submit">
-                  <button >
-                    <a class="submit job"
+                  <button>
+                    <a
+                      class="submit job"
                       :href="`mailto:kbtginspire@kbtg.tech?subject=Apply Application`"
                       >Apply Now</a
                     >
@@ -70,7 +71,8 @@
 
                 <div class="submit">
                   <button>
-                    <a class="submit event"
+                    <a
+                      class="submit event"
                       :href="`mailto:kbtginspire@kbtg.tech?subject=Event Only`"
                       >Apply Now</a
                     >
@@ -102,7 +104,9 @@
               </p>
               <div class="submit">
                 <button>
-                  <a class="submit refer" :href="`mailto:kbtginspire@kbtg.tech?subject=Job Referral`"
+                  <a
+                    class="submit refer"
+                    :href="`mailto:kbtginspire@kbtg.tech?subject=Job Referral`"
                     >Apply Now</a
                   >
                 </button>
@@ -120,81 +124,64 @@ export default {
   head: {
     script: [
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/jquery-3.3.1.slim.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/jquery.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/popper.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/bootstrap.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/jquery.flexslider.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/js/shCore.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/js/shBrushJScript.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "WOW-master/dist/wow.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/wow.js",
       },
     ],
   },
   data() {
-    return {
-      GET_TITLE: null,
-    };
+    return {};
   },
-  computed:{
-    
+  computed: {},
+ async mounted() {
+    console.log("Loading...");
+   await this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
+    });
   },
-  mounted() {
-    if(this.GET_TITLE == null){
-      this.GET_TITLE = 'Apply Now'
-    } else {
-      this.GET_TITLE = this.$route.query.job;
-    }
-    console.log("query>>", this.$route.params);
-    console.log("query>>", this.$route.query);
-    console.log("hash>>", this.$route.hash);
-    
-  },
-  methods:{
-    checkEmail(data){
-      if(this.GET_TITLE === null){
-       return this.GET_TITLE = 'Apply Now'
-      }
-    },
-    checkSubject(){
-       this.GET_TITLE === null ? 'checkSubject' : this.GET_TITLE
-    }
-  }
+  methods: {},
 };
 </script>
 <style>

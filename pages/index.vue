@@ -8,7 +8,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 section wow fadeInUp" data-wow-delay="1.0">
-              <h1 class="h1-l1 my-3"><span >KBTG</span> INSPIRE</h1>
+              <h1 class="h1-l1 my-3"><span>KBTG</span> INSPIRE</h1>
               <h2 class="h2-l2 mt-2">WE INSPIRE YOU WITH OUR INSIGHTS,</h2>
               <h2 class="h2-l2 mt-2">YOU INSPIRE US WITH YOUR TALENTS</h2>
             </div>
@@ -21,8 +21,7 @@
             <div class="col-12 col-md-5 t-right">
               <div class="day">
                 <img src="~/assets/images/Asset13.png" />
-                <span class="mr-5 pr-5">21 - 23 May, 2021</span
-                >
+                <span class="mr-5 pr-5">21 - 23 May, 2021</span>
               </div>
             </div>
             <div class="col-12 col-md-7">
@@ -37,13 +36,13 @@
       </div>
     </div>
     <div class="content-about">
-      <div class="container">
+      <div class="container py-3">
         <div class="row">
           <div class="col-12 col-md-6">
-            <h4 class="section wow fadeInLeft mb-4" data-wow-delay="500">
+            <h4 class="section wow fadeInLeft" data-wow-delay="500">
               ABOUT KBTG INSPIRE
             </h4>
-            <p class="section wow fadeInUp pb-4" data-wow-delay="0.5">
+            <p class="section wow fadeInUp" data-wow-delay="0.5">
               {{ $t("AboutKBTGInspire") }}
             </p>
             <a
@@ -58,7 +57,7 @@
               <div class="pb-5"></div>
               <div class="cropped1">
                 <img
-                  src="~/assets/images/img-about02.png"
+                  src="~/assets/images/img-about03.png"
                   class="img-fluid resize"
                 />
               </div>
@@ -351,7 +350,9 @@
                 data-wow-duration="200"
                 data-wow-delay="200"
               >
-                FIND YOUR INSPIRATION<a href="/agenda" class="a-l1">View all Agenda</a>
+                FIND YOUR INSPIRATION<a href="/agenda" class="a-l1"
+                  >View all Agenda</a
+                >
               </h4>
               <div class="row justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4">
@@ -627,50 +628,59 @@
   </div>
 </template>
 <script>
-export default { 
+export default {
   head: {
     script: [
       {
+        body: true,
         async: true,
         type: "text/javascript",
         src: "js/jquery-3.3.1.slim.min.js",
       },
       {
+        body: true,
         async: true,
         type: "text/javascript",
         src: "js/jquery.min.js",
       },
       {
+        body: true,
         async: true,
         type: "text/javascript",
         src: "js/popper.min.js",
       },
       {
+        body: true,
         async: true,
         type: "text/javascript",
         src: "js/bootstrap.min.js",
       },
       {
+        body: true,
         async: true,
         type: "text/javascript",
         src: "flexslider/jquery.flexslider.js",
       },
       {
+        body: true,
         async: true,
         type: "text/javascript",
         src: "flexslider/js/shCore.js",
       },
       {
+        body: true,
         async: true,
         type: "text/javascript",
         src: "flexslider/js/shBrushJScript.js",
       },
       {
+        body: true,
         async: true,
         type: "text/javascript",
         src: "WOW-master/dist/wow.js",
       },
       {
+        body: true,
         async: true,
         type: "text/javascript",
         src: "js/wow.js",
@@ -733,10 +743,16 @@ export default {
       }
     },
   },
+  async mounted() {
+    console.log("Loading...");
+    await this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
+    });
+  },
 };
 </script>
 <style>
- 
 .home-enter-active,
 .home-leave-active {
   transition: opacity 0.5s;
@@ -745,5 +761,4 @@ export default {
 .home-leave-active {
   opacity: 0;
 }
- 
 </style>

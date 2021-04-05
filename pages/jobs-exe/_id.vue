@@ -24,16 +24,17 @@
             data-wow-delay="0.7"
           >
             <h4>
-              {{ GET_JOBS.title
+              {{ GET_JOBS.title.toUpperCase()
               }}<span><img src="~/assets/images/fresh-b.png" /></span>
             </h4>
             <b>{{ GET_JOBS.levels }}</b>
             <p>
               {{ GET_JOBS.description }}
             </p>
-            <button class="active">
-               <nuxt-link
-                :to="{ path:'/jobs-apply', query: { job: GET_JOBS.title,id: GET_JOBS.id } }"
+
+            <button class="active pt-5">
+              <nuxt-link
+                :to="{ path: '/jobs-apply', query: { id: GET_JOBS.id } }"
                 >Apply Now</nuxt-link
               >
             </button>
@@ -86,14 +87,14 @@
             <div class="content-detail" style="margin-top: 5px">
               <button class="active">
                 <nuxt-link
-                  :to="{ path:'/jobs-apply', query: { job: GET_JOBS.title } }"
+                  :to="{ path: '/jobs-apply', query: { job: GET_JOBS.title } }"
                   >Apply Now</nuxt-link
                 >
               </button>
-              <nuxt to="/jobs-exe" class="backmore"
+              <a href="/jobs-exe" class="backmore"
                 >View more jobs<span
                   ><img src="~/assets/images/Asset15.png" /></span
-              ></nuxt>
+              ></a>
             </div>
           </div>
         </div>
@@ -106,66 +107,90 @@ export default {
   head: {
     script: [
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/jquery-3.3.1.slim.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/jquery.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/popper.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/bootstrap.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/jquery.flexslider.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/js/shCore.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/js/shBrushJScript.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "WOW-master/dist/wow.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/wow.js",
       },
     ],
   },
+  async mounted() {
+    console.log("Loading...");
+    await this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
+    });
+  },
   async asyncData({ $axios, params }) {
     const json = await $axios.$get(`/jobs.json`);
     const GET_JOBS = json.jobs[params.id - 1];
-    const GET_CARE = GET_JOBS.responsibilities;
-    const GET_MERIT = GET_JOBS.qualifications;
-    const GET_WORKPLACE = GET_JOBS.locations;
-    //console.log("params>", GET_JOBS);
+    const GET_MERIT = GET_JOBS.qualification;
+    const GET_CARE = GET_JOBS.responsibility;
+    const GET_WORKPLACE = GET_JOBS.location;
+
     return { GET_JOBS, GET_CARE, GET_MERIT, GET_WORKPLACE };
   },
-
+  validate({ params }) {
+    const re = /^\d+$/;
+    if (re.test(params.id)) {
+      console.log(true);
+      return true;
+    } else {
+      console.log(false);
+      return false;
+    }
+  },
   data() {
     return {};
   },
-  methods: {
-  },
+  methods: {},
 };
 </script>
+<style scoped>
+.f-bt {
+  display: flex !important;
+  flex-direction: row;
+}
+.d-flex > button {
+  height: 100%;
+}
+</style>

@@ -175,14 +175,19 @@ h2 {
   font-size: 38px;
 }
 
+.cropped1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
 .cropped1>.resize {
   /* width: 540px !important;
        height: 277px !important;
     object-fit: none;  */
-    width: 480px !important;
-}
-
-.resize {
+  width: 400px !important;
+ 
+ 
 }
 
 .img-fluid {
@@ -433,23 +438,13 @@ header .navbar-light .language .nav-item.active .nav-link {
 }
 
 .content-about {
-  background: url(../images/bg-about.jpg);
-  /* background-size: cover;
-  background-position: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto; */
+  background: url(../images/bg-about_re02.jpg);
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 15px 0;
 }
 
 .content-about h4 {
@@ -725,7 +720,8 @@ header .navbar-light .language .nav-item.active .nav-link {
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 40px 0;
-  z-index: -1;
+  /* z-index: -1; old*/
+  z-index: 0; 
 }
 
 .bg-line2::after {
@@ -739,7 +735,8 @@ header .navbar-light .language .nav-item.active .nav-link {
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 40px 0;
-  z-index: -1;
+  /* z-index: -1; old*/
+  z-index: 0;
 }
 
 .bottom.bg-line {
@@ -1609,6 +1606,8 @@ a {
 footer {
   background: #62CBC9;
   padding-top: 20px;
+  /* new */
+  position: relative;
 }
 
 .inspire {

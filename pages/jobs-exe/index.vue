@@ -132,12 +132,12 @@
                           /></span>
                         </nuxt-link>
                       </div>
-                      <div class="level">{{ item.levels }}</div>
+                      <div class="level">{{ item.level }}</div>
                     </li>
                   </ul>
                 </div>
                 <div class="next">
-                  <ul>
+                  <!-- <ul>
                     <li
                       class=""
                       :class="{ active: pageNumber === choose }"
@@ -149,42 +149,43 @@
                         {{ pageNumber }}
                       </button>
                     </li>
-                  </ul>
-                  <!-- <ul>
+                  </ul> -->
+                  <ul>
                     <li>
                       <div class="title"></div>
                       <div class="level">
                         <button
                           v-if="page != 1"
-                          type=" button"
-                          class="btn-warning sm mr-2 active"
+                          type="btn b-number mr-2 sm rounded-0 "
+                          class="sm mr-2 active"
                           @click="page--"
                         >
-                          {{ page }} 
+                          {{ page - 1 }}
                         </button>
 
                         <button
-                          class="btn b-number mr-2 sm rounded-0 "
+                          class="btn b-number mr-2 sm rounded-0"
                           type=" button"
-                          v-for="pageNumber in pages.slice(page - 1, page + 10)" :key="pageNumber"
+                          v-for="pageNumber in pages.slice(page - 1, page + 10)"
+                          :key="pageNumber"
                           @click="page = pageNumber"
                         >
                           <small style="font-size: 12px">{{
                             pageNumber
                           }}</small>
                         </button>
-                          
+
                         <button
                           class="btn-success sm mr-2"
                           type=" button"
                           @click="page++"
                           v-if="page < pages.length"
                         >
-                          <small style="font-size: 12px">{{page}}</small>
-                        </button> 
+                          <small style="font-size: 12px">{{ page }}</small>
+                        </button>
                       </div>
                     </li>
-                  </ul> -->
+                  </ul>
                 </div>
               </div>
             </div>
@@ -196,61 +197,61 @@
 </template>
 <script>
 export default {
-   head: {
-    script: [
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/jquery-3.3.1.slim.min.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/jquery.min.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/popper.min.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/bootstrap.min.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "flexslider/jquery.flexslider.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "flexslider/js/shCore.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "flexslider/js/shBrushJScript.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "WOW-master/dist/wow.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/wow.js",
-      },
-    ],
+  head: {
+    // script: [
+    //   {
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "js/jquery-3.3.1.slim.min.js",
+    //   },
+    //   {
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "js/jquery.min.js",
+    //   },
+    //   {
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "js/popper.min.js",
+    //   },
+    //   {
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "js/bootstrap.min.js",
+    //   },
+    //   {
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "flexslider/jquery.flexslider.js",
+    //   },
+    //   {
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "flexslider/js/shCore.js",
+    //   },
+    //   {
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "flexslider/js/shBrushJScript.js",
+    //   },
+    //   {
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "WOW-master/dist/wow.js",
+    //   },
+    //   {
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "js/wow.js",
+    //   },
+    // ],
   },
   data() {
     return {
       JOBS: null,
       search: null,
       SERACH: [],
-
+      POSITION: [],
       opened: "custom-select opened",
       status: false,
 
@@ -265,13 +266,20 @@ export default {
     };
   },
   async mounted() {
+    console.log("Loading...");
+    await this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
+    });
+
     await this.$axios.$get(`/jobs.json`).then((res) => {
       this.JOBS = res.jobs;
       this.posts = res.jobs;
     });
 
     for (let i in this.JOBS) {
-      this.SERACH[i] = this.JOBS[i].title;
+      this.SERACH[i] = this.JOBS[i].title.toUpperCase();
+       this.JOBS[i].title = this.posts[i].title.toUpperCase();
     }
   },
   computed: {
@@ -286,7 +294,7 @@ export default {
           this.posts.push({
             id: this.JOBS[i].id,
             title: this.JOBS[i].title,
-            levels: this.JOBS[i].levels,
+            level: this.JOBS[i].level,
           });
           console.log("search>>", this.search);
         }
@@ -323,16 +331,16 @@ export default {
           this.posts.push({
             id: this.JOBS[i].id,
             title: this.JOBS[i].title,
-            levels: this.JOBS[i].levels,
+            level: this.JOBS[i].level,
           });
         }
       } else {
         for (let i in this.JOBS) {
-          if (this.JOBS[i].levels === data) {
+          if (this.JOBS[i].level === data) {
             this.posts.push({
               id: this.JOBS[i].id,
               title: this.JOBS[i].title,
-              levels: this.JOBS[i].levels,
+              level: this.JOBS[i].level,
             });
           }
         }
@@ -346,7 +354,7 @@ export default {
           this.posts.push({
             id: this.JOBS[i].id,
             title: this.JOBS[i].title,
-            levels: this.JOBS[i].levels,
+            level: this.JOBS[i].level,
           });
           // console.log("keyup>>", this.posts[0].id);
           this.$router.push(`/jobs-exe/${this.posts[0].id}`);
@@ -355,14 +363,17 @@ export default {
     },
     selectNumber(number) {
       this.choose = number;
-      console.log(number)
-     
+      console.log(number);
+    },
+    upper(s) {
+      let str = s.toUpperCase()
+      return str;
     },
   },
 };
 </script>
 <style>
-.sm{
+.sm {
   color: #ffffff;
   font-size: 14px !important;
 }

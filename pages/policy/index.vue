@@ -580,6 +580,14 @@ export default {
       },
     ],
   },
+  mounted() {
+    console.log("Loading...");
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
+    });
+  },
+
   data() {
     return {};
   },

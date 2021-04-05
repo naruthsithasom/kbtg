@@ -28,7 +28,6 @@
               >
                 REGISTER<span class="back"
                   ><nuxt-link
-                    
                     :to="`/jobs-exe/${GET_ID}`"
                     class="section wow fadeInRight"
                     data-wow-delay="0.7"
@@ -50,9 +49,14 @@
                   <button>
                     <a
                       class="submit job"
-                      :href="`mailto:kbtginspire@kbtg.tech?subject=${GET_TITLE}`"
+                      :href="`mailto:kbtginspire@kbtg.tech?subject=Apply Application`"
                       >Apply Now</a
                     >
+                    <!-- <a
+                      class="submit job"
+                      :href="`mailto:kbtginspire@kbtg.tech?subject=${GET_TITLE}`"
+                      >Apply Now</a
+                    > -->
                   </button>
                 </div>
               </div>
@@ -74,9 +78,14 @@
                   <button>
                     <a
                       class="submit event"
-                      :href="`mailto:kbtginspire@kbtg.tech?subject=${GET_TITLE}`"
+                      :href="`mailto:kbtginspire@kbtg.tech?subject=Event Only`"
                       >Apply Now</a
                     >
+                    <!-- <a
+                      class="submit event"
+                      :href="`mailto:kbtginspire@kbtg.tech?subject=${GET_TITLE}`"
+                      >Apply Now</a
+                    > -->
                   </button>
                 </div>
               </div>
@@ -107,7 +116,7 @@
                 <button>
                   <a
                     class="submit refer"
-                    :href="`mailto:kbtginspire@kbtg.tech?subject=${GET_TITLE}`"
+                    :href="`mailto:kbtginspire@kbtg.tech?subject=Job Referral`"
                     >Apply Now</a
                   >
                 </button>
@@ -125,68 +134,82 @@ export default {
   head: {
     script: [
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/jquery-3.3.1.slim.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/jquery.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/popper.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/bootstrap.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/jquery.flexslider.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/js/shCore.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/js/shBrushJScript.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "WOW-master/dist/wow.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/wow.js",
       },
     ],
   },
+
   data() {
     return {
       GET_TITLE: null,
       GET_ID: null,
+      GET_INFO: null,
     };
   },
-  computed: {},
-  mounted() {
-    console.log("parmas>>", this.$route.params);
-    console.log("query>>", this.$route.query);
-    console.log("hash>>", this.$route.hash);
-    this.GET_TITLE = this.$route.query.job;
-    this.GET_ID = this.$route.query.id
-   
+ async mounted() {
+     console.log("Loading...");
+    await this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
+    });
+    // console.log("parmas?", this.$route.params);
+    //console.log("query>>", this.$route.query);
+    // console.log("hash>>", this.$route.hash);
+    this.GET_ID = this.$route.query.id;
+    this.getData();
   },
-  methods: {},
+  methods: {
+    async getData() {
+      await this.$axios.$get(`/jobs.json`).then((res) => {
+        //console.log('res>>',JSON.stringify(res.jobs[this.GET_ID - 1]))
+        this.GET_TITLE = res.jobs[this.GET_ID - 1].title;
+        //  this.GET_INFO = res.map( x => x.id === this.GET_ID)
+      });
+      //console.log('Done>>>',this.GET_TITLE)
+    },
+  },
 };
 </script>
 <style>

@@ -2,9 +2,9 @@
   "jobs": [{
       "id": 1,
       "title": "Software Engineer",
-      "level": "All Levels",
+      "levels": "All Levels",
       "description": "In this role, you will be responsible for the application design and development of application components or multiple application solutions to meet business and customer requirements.",
-      "responsibility": [
+      "responsibilities": [
         "Develop accurate and efficient programs",
         "Maintain current knowledge of standard language, coding methods, and operations requirements",
         "Thoroughly tests the operation of completed programs and linkage to other programs",
@@ -12,7 +12,7 @@
         "Build software and deploy to UIS/SIT/UAT environment",
         "Support defect/problem investigation"
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's degree in Computer Engineer, Computer Science, IT or other related fields (fresh grads welcome!)",
         "At least 3 years of experience in JAVA software development or other programing languages (GO, JavaScript, Node.js, Python, C#, Android, Swift)",
         "Experience working with one or more from the following: web application development, Unix environments, mobile application development, information retrieval, networking, developing large-scale software system, version control system, and/or security software development",
@@ -20,15 +20,15 @@
         "Knowledge of SVN,GIT"
       ],
       "skills": "Programing Languages (Java, GO, JavaScript, Java (Android), Swift, Node.js, C#, Python)​",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)", "K+ Building (Samyan, Bangkok)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)", "K+ Building (Samyan, Bangkok)"],
       "fresh_grad": true
     },
     {
       "id": 2,
       "title": "Test Manager/Test Engineer",
-      "level": "All Levels",
+      "levels": "All Levels",
       "description": "In this role, you will be the key person to drive software quality through test management strategy to ensure that software delivered with quality and zero incident. If you are experienced in software development, software testing, test management, agile testing, test automation, testing technology and tools, this is the role for you.",
-      "responsibility": [
+      "responsibilities": [
         "Design test strategy and test approach to ensure the software quality in all aspect cover functional and non-functional",
         "Design test scenario, test environment, test data and test coverage based on business requirement and system impact",
         "Conduct and manage testing dependency across multiple applications and complex environment, help the team find ways that software can break and come up with recommendation to prevent those from happening",
@@ -44,15 +44,15 @@
         "Teamwork, high responsibility and result oriented, strong analytical thinking, conceptual thinking and problem-solving"
       ],
       "skills": "Automation Skill",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": true
     },
     {
       "id": 3,
       "title": "System Engineer - Server Management",
-      "level": "All Levels",
+      "levels": "All Levels",
       "description": "In this role, you will have fun working on various kinds of database management, configuring and tuning middleware software, managing vendor on day to day operation and so on.",
-      "responsibility": [
+      "responsibilities": [
         "Responsible for implementation, configuration and maintenance system according to standard best practice guideline",
         "Design and recommend J2EE Middleware Infrastructure architecture to support the business requirements ",
         "Supporting day-to-day operation incident and change ",
@@ -60,7 +60,7 @@
         "Investigating and coordinating with peers/cross team to perform root cause analysis ",
         "Automate regular administrative tasks using scripting "
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's Degree in Computer Engineer, Computer Science or related field (fresh grads welcome!)",
         "1-3 years of experience with knowledge on Middleware and/or Java Enterprise Technology ",
         "DBA - Oracle, MSSQL, IBM DB2, MongoDB, ",
@@ -72,15 +72,15 @@
         "Ability to work as a team "
       ],
       "skills": "DBA, Middleware Infrastructure Architecture, Unix  ",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": true
     },
     {
       "id": 4,
       "title": "Data Scientist",
-      "level": "All Levels",
+      "levels": "All Levels",
       "description": "In this role, you will enjoy working with rich data sets, cutting-edge technology, and the ability to see your insights turned into real impact on customers and society as part of our Machine Learning and Data Science team .",
-      "responsibility": [
+      "responsibilities": [
         "Work in a cross-functional team to define problems, quantify metrics, explore data, build analytical models, conduct experimentation, and make recommendations ",
         "Build and maintain optimization models, visualizations, experiments, forecasting algorithms, and machine learning models ",
         "Leverage various tools in data processing and modeling to drive efficient advanced analytics ",
@@ -91,7 +91,7 @@
         "Be part of an active group of data science and machine learning practitioners that shape the direction of machine learning and artificial intelligence of the organization "
 
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's Degree or higher in quantitative field e.g. Computer Science, Engineering, Mathematics, Statistics, Operations Research or other related field",
         "Good communication with strong analytical and problem-solving skills ",
         "Experience with Machine Learning, Statistics, or other data analysis tools and techniques ",
@@ -105,15 +105,15 @@
 
       ],
       "skills": "Statistics Methods and Computer Tools",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": true
     },
     {
       "id": 5,
       "title": "IT Operation - System Operator",
-      "level": "All Levels",
+      "levels": "All Levels",
       "description": "In this role, you will utilize your passion for computer operations/systems, strong problem solving skills and the ability to troubleshoot computer problems to resolve any malfunctions in IT operation.",
-      "responsibility": [
+      "responsibilities": [
         "Investigate and understand root cause for issues in IT Operation ",
         "Provide consulting service and develop corrective actions to solve the operation issues",
         "Ensure operation related activities are performed in compliance with standard and regulations ",
@@ -124,7 +124,7 @@
         "Assist in the development and maintenance of operation standards and procedures"
 
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's Degree in Computer Engineer, ICT or related field (fresh grad welcome!)",
         "Demonstrate a thorough knowledge of computer functions and strong computer operation skills",
         "Capable of working efficiently with minimal supervision ",
@@ -137,46 +137,48 @@
 
       ],
       "skills": "Computer Functions and Computer Operation",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": true
     },
     {
       "id": 6,
-      "title": "Data Engineer",
-      "level": "All Levels",
-      "description": "In this role, you will express your passion about data and insights of large data set as you work closely with Data Scientist, Machine Engineer, Business Analysts and other stakeholders across the company. ",
-      "responsibility": [
-        "Conduct meeting with users to understand data requirements and perform database design based on data understanding and requirements with consideration for performance ",
-        "Maintain data dictionary, relationship and its interpretation ",
-        "Analyze problem and find resolution, as well as work closely with administrators to monitor performance and advise any necessary infrastructure changes",
-        "Work with business domain experts, data scientists and application developers to identify relevant data for analysis. ",
-        "Develop big data solutions for batch processing and near real-time streaming ",
-        "Own end-to-end data ETL/ELT process framework of Data Lake from Data Source to Data Mart and Data Exchange with peripheral systems, with process alignment to KBANK policies and implement ETL/ELT Process ",
-        "Select and integrate appropriate tools and frameworks required to provide requested capabilities ",
-        "Design and develop BI solutions",
-        "Keep abreast of new developments in the big data ecosystem and learn new technologies"
+      "title": "Technology Research Engineer",
+      "levels": "Junior – Middle",
+      "description": "In this role, you will be responsible for deploying and debugging cloud stacks, educating teams on new cloud initiatives, and ensuring the security of the cloud infrastructure. ",
+      "responsibilities": [
+        "Collaborate with engineering and development teams to evaluate and identify optimal cloud solutions",
+        "Modify and improve existing systems",
+        "Educate teams on the implementation of new cloud technologies and initiatives",
+        "Design, develop, and deploy modular cloud-based systems",
+        "Develop and maintain cloud solutions in accordance with best practices",
+        " Ensure efficient functioning of data storage and processing functions in accordance with company security policies and best practices in cloud security",
+        " Identify, analyze, and resolve infrastructure vulnerabilities and application deployment issues",
+        " Review existing systems and making recommendations for improvements",
+        "Interact with clients, provide cloud support, and make recommendations based on client needs"
 
       ],
-      "qualification": [
-        "Bachelor's or Master's Degree in Computer Engineer, Computer Science, Information Technology, Mathematics, Statistics or related fields ",
-        "2-5 years of experience in database design, data integration, data pipeline development, big data, or business intelligence applications in a competitive service industry preferably in banking, financial services, or telecom ",
-        "Working knowledge of DB2, Hadoop, Data Virtualization, Qlikview/Qliksense is a plus ",
-        "Good oral and written communication in Thai and English languages ",
-        "Hands-on development mentality, with a willingness to troubleshoot and solve complex problems. ",
-        "Ability to effectively work independently and handle multiple priorities"
+      "qualifications": [
+        "Bachelor's or Master's Degree in Computer Engineering, Computer Science, IT or related field (fresh grads welcome!)",
+        "At least 3 years of experience in the field of cloud computing",
+        "Experience with CI/CD systems ",
+        "Experience with SysOps",
+        " Azure, AWS, GCP and Huawei Cloud certifications is a plus ",
+        "Troubleshooting and analytical skills",
+        " Good communication and collaboration skills",
+        "Client management skills"
 
       ],
-      "skills": "Skill in Big Data, ETL/ELT, Hadoop, etc.",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "skills": "Cloud Technology and Infrastructure",
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": true
     },
 
     {
       "id": 7,
       "title": "Business Analyst",
-      "level": "Junior – Middle",
+      "levels": "Junior – Middle",
       "description": "In this role, you will be the liaison between the business users and technical team to ensure the proper solutions is developed and delivered according to the business needs.",
-      "responsibility": [
+      "responsibilities": [
         "Assist in business conceptualization and rationalization (feasibility, cost/benefit, fit/gap analysis) ",
         "Develop plan and approach for requirement analysis and design phase ",
         "Understand, analyze, prioritize and confirm end-to-end business requirements and processes ",
@@ -191,7 +193,7 @@
         "Supervise and coach subordinate(s) "
 
       ],
-      "qualification": [
+      "qualifications": [
         "1-4 years of experience as Business Analyst or System Analyst (fresh grads welcome!)",
         "Background in banking and financial services business is a plus ",
         "Strong analytical and proven ability to quickly understand complex business and systems and provide appropriate solution ",
@@ -201,54 +203,52 @@
 
       ],
       "skills": "Business Knowledge of Banking and Finance and Technical Knowledge to Certain Extent",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": true
     },
     {
       "id": 8,
-      "title": "Technology Research Engineer",
-      "level": "Junior – Middle",
-      "description": "In this role, you will be responsible for deploying and debugging cloud stacks, educating teams on new cloud initiatives, and ensuring the security of the cloud infrastructure. ",
-      "responsibility": [
-        "Collaborate with engineering and development teams to evaluate and identify optimal cloud solutions",
-        "Modify and improve existing systems",
-        "Educate teams on the implementation of new cloud technologies and initiatives",
-        "Design, develop, and deploy modular cloud-based systems",
-        "Develop and maintain cloud solutions in accordance with best practices",
-        " Ensure efficient functioning of data storage and processing functions in accordance with company security policies and best practices in cloud security",
-        " Identify, analyze, and resolve infrastructure vulnerabilities and application deployment issues",
-        " Review existing systems and making recommendations for improvements",
-        "Interact with clients, provide cloud support, and make recommendations based on client needs"
+      "title": "Data Engineer",
+      "levels": "All Levels",
+      "description": "In this role, you will express your passion about data and insights of large data set as you work closely with Data Scientist, Machine Engineer, Business Analysts and other stakeholders across the company. ",
+      "responsibilities": [
+        "Conduct meeting with users to understand data requirements and perform database design based on data understanding and requirements with consideration for performance ",
+        "Maintain data dictionary, relationship and its interpretation ",
+        "Analyze problem and find resolution, as well as work closely with administrators to monitor performance and advise any necessary infrastructure changes",
+        "Work with business domain experts, data scientists and application developers to identify relevant data for analysis. ",
+        "Develop big data solutions for batch processing and near real-time streaming ",
+        "Own end-to-end data ETL/ELT process framework of Data Lake from Data Source to Data Mart and Data Exchange with peripheral systems, with process alignment to KBANK policies and implement ETL/ELT Process ",
+        "Select and integrate appropriate tools and frameworks required to provide requested capabilities ",
+        "Design and develop BI solutions",
+        "Keep abreast of new developments in the big data ecosystem and learn new technologies"
 
       ],
-      "qualification": [
-        "Bachelor's or Master's Degree in Computer Engineering, Computer Science, IT or related field (fresh grads welcome!)",
-        "At least 3 years of experience in the field of cloud computing",
-        "Experience with CI/CD systems ",
-        "Experience with SysOps",
-        " Azure, AWS, GCP and Huawei Cloud certifications is a plus ",
-        "Troubleshooting and analytical skills",
-        " Good communication and collaboration skills",
-        "Client management skills"
+      "qualifications": [
+        "Bachelor's or Master's Degree in Computer Engineer, Computer Science, Information Technology, Mathematics, Statistics or related fields ",
+        "2-5 years of experience in database design, data integration, data pipeline development, big data, or business intelligence applications in a competitive service industry preferably in banking, financial services, or telecom ",
+        "Working knowledge of DB2, Hadoop, Data Virtualization, Qlikview/Qliksense is a plus ",
+        "Good oral and written communication in Thai and English languages ",
+        "Hands-on development mentality, with a willingness to troubleshoot and solve complex problems. ",
+        "Ability to effectively work independently and handle multiple priorities"
 
       ],
-      "skills": "Cloud Technology and Infrastructure",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "skills": "Skill in Big Data, ETL/ELT, Hadoop, etc.",
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": true
     },
 
     {
       "id": 9,
       "title": "Agile Coach",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will be a change agent to drive change-welcoming culture and empower team to deliver excellent software under the agility of Banking Industry environment.",
-      "responsibility": [
+      "responsibilities": [
         "Work closely with development teams to build Agile mindset and coach the relevant practices",
         "Establish technical excellence & agility culture",
         "Create continuous improvement culture and close the feedback loop back to management"
 
       ],
-      "qualification": [
+      "qualifications": [
         "4-5 years of experience working in Software Development in any role",
         "Has proven experience leading software development or Agile transformation. Other roles in SDLC with passion to be Agile evangelist are also qualified.",
         "Strong experience in Agile concepts, practices and techniques",
@@ -258,15 +258,15 @@
 
       ],
       "skills": "Agile or Software Development",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 10,
       "title": "IT Infrastructure Project Manager",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will be responsible for the continued availability and support of all infrastructure projects as a part of our infrastructure team. The role will be expected to work in a fast pace. ",
-      "responsibility": [
+      "responsibilities": [
         "Identify infrastructure goals and project delivery clearly",
         "Coordinate and get requirement into plan to cumulate in client acceptance of results of production deployment",
         "Collaborate effectively with infrastructure associates across entire business units along with management levels ",
@@ -276,7 +276,7 @@
         "Develop and maintain project plan "
 
       ],
-      "qualification": [
+      "qualifications": [
         "At least 5 years of experience in an Infrastructure Project Manager role",
         "Ability to run multiple projects while maintaining quality and control ",
         "Ability to lead and provide guidance to infrastructure engineers drawing on their project and technical experience ",
@@ -288,21 +288,21 @@
 
       ],
       "skills": "Infrastructure and Project Management",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 11,
       "title": "IT Security Architect (Security Engineer and Advisory Architect)",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will define bank's cybersecurity strategy, enterprise security architecture and roadmap, including developing relevant security requirements and standards for Information Technology. ",
-      "responsibility": [
+      "responsibilities": [
         "Experience in R&D for new technology solution for each project initiatives i.e. Security Control, Security Operation, Networking/ System Security",
         "Develop and Execute strategy to implementation from company's roadmap and improve current security solution better ",
         "Collaborate with Technology department to ensure all security controls and solutions meet standard to prevent all failures that might happen. ",
         "Keep searching and up-to-date trends and technology for Vulnerabilities, exploits, any threats related to information  "
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelors or Master Degree in Computer Engineering, Computer Science, Information Security or similar Engineering discipline or equivalent experience",
         "At least 3 years of experience in IT security fields",
         "Strong analytical and problem solving capabilities",
@@ -314,15 +314,15 @@
 
       ],
       "skills": " IT Security Threats and DevOps Skill  ",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 12,
       "title": "IT Security Architect (DevSecOps)",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will help development team deliver software and product more quickly by shifting left security processes into DevOps process.",
-      "responsibility": [
+      "responsibilities": [
         "Manage and get requirement for each application’s integration to prepare DevSecOps component, pipeline template, scanner image",
         "Get plan and manage resources based on submitted timeline ",
         "Investigate any technical incident ",
@@ -331,7 +331,7 @@
         "Get system requirement from related person and coordinate with IT Infrastructure and DevOps Team to implement/improvement and develop project ",
         "Transfer DevSecOps knowledge sharing to application team"
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor 's or Master's Degree in Computer Engineering, Computer Science, Information Technology or similar Engineering discipline or equivalent experience",
         "At least 2 years of experience in DevOps or IT security fields",
         "Understand Agile, DevOps, DevSecOps Continuous Integration and Continuous Delivery Concepts",
@@ -347,15 +347,15 @@
 
       ],
       "skills": "IT Security Threats and DevOps Skill",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 13,
       "title": "IT & Security Assurance",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will oversee all information security policy and procedures to ensure that they follow the bank's standard. Your work will also include developing and maintaining security management and compliance dashboard to detect and track all non-compliance issues.",
-      "responsibility": [
+      "responsibilities": [
         "Develop and enhance information security policy, procedures and processes",
         "Provide security awareness session to enhance understanding level of security policy and requirements",
         "Perform project tracking and report(track issues related to IT operation and security until closed or at risk acceptable level)",
@@ -366,7 +366,7 @@
         "Carry out any other special assignment and administrative works as required in order to support departmental activities and management’ s assignment"
 
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor 's or Master's Degree in Information Technology, Computer Engineering, Computer Science, Information Security",
         "3 - 5 years of experience in a relevant discipline",
         "Knowledge in IT & security governance / audit",
@@ -378,15 +378,15 @@
 
       ],
       "skills": "  IT & Security Governance / Audit  ",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 14,
       "title": "Cyber Security - Vulnerability and Threat Intelligence",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will identify threats, vulnerabilities and their associated security risks within KBank by performing vulnerability testing and penetration testing across the CSOC constituency and provide advice on how to remediate the vulnerabilities discovered. ",
-      "responsibility": [
+      "responsibilities": [
         "Perform security vulnerability assessment and penetration testing of internal, perimeter, external and wireless network and web and mobile applications ",
         "Identify security weaknesses and vulnerabilities, and non-compliance within the CSOC constituency ",
         "Characterize threats and provide recommendation for remediation ",
@@ -398,7 +398,7 @@
         "Advise appropriate business units on technical configuration and process changes, remediation and best practices to adapt to changing threat, vulnerabilities and new attack methods  "
 
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor’s Degree in a related field such as information security, management or computer engineering ",
         "5 years of relevant experience working in the Information Security field, including any of the following: threat intelligence, security operations, incident response, malware analysis, and/or vulnerability management",
         "Experience with open source and Dark Web intelligence analysis tools ",
@@ -413,15 +413,15 @@
 
       ],
       "skills": "Security Vulnerability Assessment and Penetration Testing",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 15,
       "title": "Enterprise Architect",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will demonstrate your knowledge of technology and enterprise architecture to design architectures and strategic roadmaps, lead clients as a subject matter expert, and partner with them as a trusted advisor in their future digital experience and strategy execution",
-      "responsibility": [
+      "responsibilities": [
         "Plan, design, develop and execute the effective EA to strengthen the business of KBank ",
         "Design and Create the future enterprise architect for banking business ",
         "Analyze and become an expert on banking reference architectures to suggest new and emerging technologies to our clients ",
@@ -429,22 +429,22 @@
         "Perform other duties as assigned "
 
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's Degree or higher in Computer Engineering, Computer Science, IT Management, MIS, etc. ",
         "1-2 years of experience in Architecture Design",
         "3-6 years of experience in IT or Banking Industry"
 
       ],
       "skills": "Architecture Knowledge and Design  ",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 16,
       "title": "Project Management Officer",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will assist Project Manager or Delivery Manager to oversee projects and/or team status and drive for excellent outcome.",
-      "responsibility": [
+      "responsibilities": [
         "Consolidate project and/or team progress, develop status report and conduct status update, including issue log and risk log ",
         "Change Request Management: manage all CRs and SRs, track and follow-up for progress, and conduct status update ",
         "Defect and Problem Management: manage all production defects and problem tickets, track and follow-up for progress, and conduct status update ",
@@ -454,7 +454,7 @@
         "Develop minutes of meetings "
 
       ],
-      "qualification": [
+      "qualifications": [
         "2-9 years of experience in PMO or more than 2 years in project manager ",
         "Familiar with Software Development Life Cycle (SDLC) ",
         "Strong interpersonal and communication skills and ability to effectively collaborate with diverse people such as developers, tester, or change implementer ",
@@ -464,15 +464,15 @@
 
       ],
       "skills": "Project Management",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 17,
       "title": "Project Manager",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will lead a team on small project or segment of a larger project to deliver solutions to a client within project charter, project agreement or contract as well as corporate guidelines and legal requirements.",
-      "responsibility": [
+      "responsibilities": [
         "Develop project plan and work break-down Structure (WBS) ",
         "Estimate required schedule, time, cost and resources ",
         "Manage projects and provide day-to-day direction to the project teams  ",
@@ -482,7 +482,7 @@
         "Handle other possible tasks e.g. translation of client requirement into plan to cumulate in client acceptance of results, financial cost management  "
 
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's Degree in IT related field or industrial engineer",
         "7-10 years of experience in IT related field, leading team and in IT project management ",
         "Professional Knowledge of market segment/industry/technology/project management methodology, technical management ",
@@ -491,15 +491,15 @@
 
       ],
       "skills": "IT Project Management",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 18,
       "title": "Development Excellence Engineer",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will enhance the productivity of KBTG’s software development by developing practices and tools to for fellow developers.",
-      "responsibility": [
+      "responsibilities": [
         "Define and recommend guidelines about software development best practices",
         "Research, develop, and operate software, tools, or services that help improve software development quality and productivity",
         "Provide consultation and support complex, organization-wide issues in software development",
@@ -508,7 +508,7 @@
         "Strive for continuous improvement in software engineering excellence "
 
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's or Master's Degree in Computer Engineering, Computer Science, Information Technology, or related field",
         "4-10 years of relevant experience in position",
         "Expertise and experience in designing tools and practices that help improve developer productivity",
@@ -518,21 +518,21 @@
 
       ],
       "skills": " Analytical Skill, Programming Languages (Frontend, Backend) DevSecOps, Microservice, SQL/NoSQL, Containers ",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)", "K+ Building (Samyan, Bangkok)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)", "K+ Building (Samyan, Bangkok)"],
       "fresh_grad": false
     },
     {
       "id": 19,
       "title": "DeFi / Blockchain Venture Architect",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will oversee the whole process from ideation, strategy, to the success of next generation’s financial products ecosystem. Gain an ownership over end-to-end ecosystem products as well as the ability to influence the creation, design, and execution of future products.",
-      "responsibility": [
+      "responsibilities": [
         "Identify new business opportunities, strategy, business case analysis using various methods such as market research, design sprint, etc.",
         "Work with various teams both inside and outside the company to validate, develop, launch, and achieve product’s success.",
         "Manage and execute all aspects of the venture projects end-to-end with all stakeholders and users. "
 
       ],
-      "qualification": [
+      "qualifications": [
         "Deep passion as an entrepreneur and corporate innovator",
         "Strong background in venture creation, business strategy, quantitative modeling, disruptive technologies, and product developments",
         "Ability to work in high-pressure, fast-paced startup environments with exposure to multidisciplinary teams",
@@ -542,22 +542,22 @@
 
       ],
       "skills": "Entrepreneur and Innovation, Venture Creation, Business Strategy, Quantitative Modeling  ",
-      "location": ["K+ Building (Samyan, Bangkok)"],
+      "locations": ["K+ Building (Samyan, Bangkok)"],
       "fresh_grad": false
     },
     {
       "id": 20,
       "title": "DeFi / Blockchain Tech Lead",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will gain an ownership over end-to-end ecosystem products, while ensuring a consistent, high-quality products that deliver great user experience across the ecosystem with robustness and security.",
-      "responsibility": [
+      "responsibilities": [
         "Participate in discussions from the initial product ideas to launch",
         "Work closely with internal and external parties to rapidly iterate, experiment, and launch products",
         "Own product end-to-end",
         "Research, design, develop, test, and implement end-to-end systems and core & periphery smart contracts and mechanisms of DeFi products "
 
       ],
-      "qualification": [
+      "qualifications": [
         "Deep understanding of Solidity and the Ethereum Virtual Machine",
         "Prior experience deploying complex smart contract systems to the Ethereum mainnet",
         "Experience building and maintaining a production system at scale",
@@ -568,21 +568,21 @@
 
       ],
       "skills": "Solidity and the Ethereum, or Javascript and Web3 Product Development ",
-      "location": ["K+ Building (Samyan, Bangkok)"],
+      "locations": ["K+ Building (Samyan, Bangkok)"],
       "fresh_grad": false
     },
     {
       "id": 21,
       "title": "UX / UI Designer",
-      "level": "Middle",
+      "levels": "Middle",
       "description": "In this role, you will design solution for user interface and interaction that leverages start-of-the-art UX/UI design trends and techniques.",
-      "responsibility": [
+      "responsibilities": [
         "Lead and execute interaction and visual design sessions with solution architects, software developers and business analysts",
         "Define innovative and cutting-edge design solution for user interface and interaction",
         "Work as a part of highly collaborative and fast paced multi-discipline software development teams and be in charge of end-to-end UX/UI solution ",
         "oversee the implementation and testing of the design including functionality, usability and scalability"
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's or Master's Degree in Graphic Design, Interaction Design, New Media Design, Industrial Design or related fields ",
         "3-5 years of experience in graphic design or visual design",
         "Strong understanding in UX/UI design patterns and standard UCD methodologies",
@@ -597,22 +597,22 @@
 
       ],
       "skills": " User Interaction and Visualization Design Focusing on Web and Mobile Apps ",
-      "location": ["K+ Building (Samyan, Bangkok)"],
+      "locations": ["K+ Building (Samyan, Bangkok)"],
       "fresh_grad": false
     },
     {
       "id": 22,
       "title": " Tech Community Relationship Professional",
-      "level": "Middle",
+      "levels": "Middle",
       "description": "In this role, you will ensure that our community of developers, partnership and tech audiences all share the same understanding on our KBTG brand essence and keep good relationship with them through different approaches such as conference, events and meeting.",
-      "responsibility": [
+      "responsibilities": [
         "Ensure that the company vision and brand image is communicated correctly and effectively ",
         "Understand KBTG products thoroughly, able to simplify and communicate with related stakeholders through all KBTG channels ",
         "Initiate new methods/techniques to engage IT community ",
         "Organize facilities and manage all event’s details from idea to execution "
 
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's or Master's Degree in IT, Communication Arts or related field ",
         "3-5 years of relevant experience in community engagement or event management ",
         "Eagerness to learn new things, especially IT business ",
@@ -624,15 +624,15 @@
 
       ],
       "skills": "Basic knowledge of IT / Developer, Community Engagement ",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 23,
       "title": "Cyber Security - IT & Security Operation",
-      "level": "Senior",
+      "levels": "Senior",
       "description": "In this role, you will be in the center of the organization employing people, processes, and technology to continuously monitor and improve the security posture while preventing, detecting, analyzing, and responding to cybersecurity incidents. That includes Access Management of Privileged Identity and Cryptography.",
-      "responsibility": [
+      "responsibilities": [
         "Manage the CSOC team to maintain and deliver appropriate services ",
         "Oversee the delivery of all CSOC services in the service portfolio such as Real Time Security Monitoring, Threat Intelligence and Research, and Security Incident Response and Investigation activities ",
         "Develop and support the implementation plans of new projects within the CSOC. ",
@@ -642,7 +642,7 @@
         "Maintain knowledge of relevant regulations, compliance requirements and policies that may have direct or indirect impact upon the CSOC and its services "
 
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor’s Degree in a related field such as Information Security, Management or Computer Engineering ",
         "Active CISSP & CISM certifications are required ",
         "At least 10 years of experience in Information Security Operations, with minimum of 5 years in leadership role ",
@@ -655,15 +655,15 @@
 
       ],
       "skills": " Management of Security Analytics, Threat Intelligence and Platform  ",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 24,
       "title": "Cyber Security - Security Analysts and Incident Responder",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will be responsible for the validation and analysis of investigations passed up from tier 1 analysts. Tier 2 incident responder and investigator will complete the documentation of the investigation, determine the validity and priority of the activity and escalate to the Incident Manager and activate the Incident Response Plan (IR Plan) if appropriate.",
-      "responsibility": [
+      "responsibilities": [
         "Recognize successful intrusions and compromises through review and analysis of relevant event detail information ",
         "Investigate potential security incidents, recognize attacks based on techniques, tactics and procedures and differentiates false positives from true intrusion attempts ",
         "Follow up and track investigations to resolution ",
@@ -677,7 +677,7 @@
         "Update CSOC processes and procedures as necessary ",
         "Follow and implement the KBank’s change management process "
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor’s Degree in Science or Engineering ",
         "At least 5 years of full-time experience in information security ",
         "Expert level analytical and problem-solving skills ",
@@ -699,21 +699,21 @@
 
       ],
       "skills": "Security Incidents Services Management",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 25,
       "title": "Cyber Security - Security Incident Management",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will monitor and track remediation work from the beginning to the end to ensures that security incidents are successfully closed and that escalation can be triggered when required.",
-      "responsibility": [
+      "responsibilities": [
         "Coordinate with other departments and team to ensure remediation work is carried out because of incident detected",
         "Monitor and track remediation work by the respective team, manage the affected systems from the beginning of the incident to closure ",
         "Generate and publish remediation progress reports on a regular basis ",
         "Escalate the case should remediation progress be reported "
       ],
-      "qualification": [
+      "qualifications": [
         " Bachelor's Degree in a related field such as Information Technology, Security Management or Computer Engineering ",
         "At least 5 years of related experience with a background in IT Operations, including support of applications and services",
         "Experience working in a Security Operations Centre (SOC), Managed Security Service (MSS), or enterprise network environment is preferred",
@@ -724,15 +724,15 @@
         "Excellent organizational and time management skills."
       ],
       "skills": "Security Management (Security Operations Centre (SOC), Managed Security Service (MSS), or Enterprise Network Environment)",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
     {
       "id": 26,
       "title": "Cyber Security - Security Platform Management",
-      "level": "Middle - Senior",
+      "levels": "Middle - Senior",
       "description": "In this role, you will be a key person for the overall CSOC architecture design and integration between the various platforms and components. You will be testing and building new, or updating existing, automation within CSOC technologies and integration between such technologies, including the larger set of systems and applications within KBank.",
-      "responsibility": [
+      "responsibilities": [
         "Identify, evaluate, design new systems and technologies and provide security engineering guidance and recommendations",
         "Work with the Threat Intelligence team to develop the technical design of the use case to be implemented in the SIEM",
         "Develop reporting dashboards and track key performance indicators ",
@@ -746,7 +746,7 @@
         "Manage all security and other data collected and stored by the CSOC ",
         "Implement, configure and onboard new data source"
       ],
-      "qualification": [
+      "qualifications": [
         "Bachelor's Degree in a related field such as Information Security, Management or Computer Engineering ",
         "Platform-specific certifications is preferred ",
         "Extensive experience with the design, development, implementation and management of security analytics, threat intelligence, security use case management and other CSOC and information security platforms ",
@@ -757,7 +757,7 @@
         "Excellent organizational and time management skills "
       ],
       "skills": "CSOC and Information Security Platforms",
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "locations": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     }
   ]

@@ -331,46 +331,55 @@ export default {
   head: {
     script: [
       {
+        body:true,
         async: true,
         type: "text/javascript",
         src: "js/jquery-3.3.1.slim.min.js",
       },
       {
+        body:true,
         async: true,
         type: "text/javascript",
         src: "js/jquery.min.js",
       },
       {
+        body:true,
         async: true,
         type: "text/javascript",
         src: "js/popper.min.js",
       },
       {
+        body:true,
         async: true,
         type: "text/javascript",
         src: "js/bootstrap.min.js",
       },
       {
+        body:true,
         async: true,
         type: "text/javascript",
         src: "flexslider/jquery.flexslider.js",
       },
       {
+        body:true,
         async: true,
         type: "text/javascript",
         src: "flexslider/js/shCore.js",
       },
       {
+        body:true,
         async: true,
         type: "text/javascript",
         src: "flexslider/js/shBrushJScript.js",
       },
       {
+        body:true,
         async: true,
         type: "text/javascript",
         src: "WOW-master/dist/wow.js",
       },
       {
+        body:true,
         async: true,
         type: "text/javascript",
         src: "js/wow.js",
