@@ -531,7 +531,55 @@
 
 <script>
 export default {
- 
+  head: {
+    script: [
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery-3.3.1.slim.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/popper.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/bootstrap.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/jquery.flexslider.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shCore.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shBrushJScript.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "WOW-master/dist/wow.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/wow.js",
+      },
+    ],
+  },
   data() {
     return {};
   },

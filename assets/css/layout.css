@@ -82,14 +82,6 @@
 }
 
 @font-face {
-  font-family: 'Gotham-Black';
-  src: url('../hco_fonts/woff2/GothamSSm-Black_Web.woff2') format('woff2'),
-    url('../hco_fonts/woff/GothamSSm-Black_Web.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'HCo Gotham SSm';
   src: url('../hco_fonts/woff2/GothamSSm-BlackItalic_Web.woff2') format('woff2'),
     url('../hco_fonts/woff/GothamSSm-BlackItalic_Web.woff') format('woff');
@@ -97,14 +89,35 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('../hco_fonts/woff2/GothamSSm-Book_Web.woff2') format('woff2'),
+    url('../hco_fonts/woff/GothamSSm-Book_Web.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('../hco_fonts/woff/GothamSSm-Medium_Web.woff') format('woff'),
+    url('../hco_fonts/woff2/GothamSSm-Medium_Web.woff2') format('woff2')
+}
+
 .h1-l1 {
   font-family: 'Gotham-Bold' !important;
 }
 
-.h2-l2 {
-  font-family: 'Gotham-Black' !important;
+.h4-l1 {
+  font-family: 'Gotham-Bold' !important;
 }
 
+.h2-l2 {
+  font-family: 'Gotham-Book' !important;
+}
+
+/* .p-sub {
+  font-family: 'Gotham-Book' !important;
+} */
 body {
   font-family: 'Kanit', 'HCo Gotham SSm';
   /* font-family: 'HCo Gotham SSm'; 
@@ -162,12 +175,14 @@ h2 {
   font-size: 38px;
 }
 
+.cropped1>.resize {
+  /* width: 540px !important;
+       height: 277px !important;
+    object-fit: none;  */
+    width: 480px !important;
+}
 
-.cropped1 {
-  width: 532px !important;
-  height: 293px !important;
-  -o-object-fit: cover;
-  object-fit: none;
+.resize {
 }
 
 .img-fluid {
@@ -419,12 +434,22 @@ header .navbar-light .language .nav-item.active .nav-link {
 
 .content-about {
   background: url(../images/bg-about.jpg);
-  background-size: cover;
+  /* background-size: cover;
   background-position: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  height: auto; */
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
 }
 
 .content-about h4 {
@@ -439,7 +464,7 @@ header .navbar-light .language .nav-item.active .nav-link {
   line-height: 26px;
   color: #fff;
   /* new */
-  font-family: 'Gotham-Bold';
+  /* font-family:'Gotham-Book' */
 }
 
 .content-about a {
@@ -448,6 +473,7 @@ header .navbar-light .language .nav-item.active .nav-link {
   color: #fff;
   background: #62CBC9;
   border-radius: 30px;
+  font-family: 'Gotham-Medium';
 }
 
 
@@ -461,6 +487,10 @@ header .navbar-light .language .nav-item.active .nav-link {
   color: #62CBC9;
   font-weight: 300;
   margin-top: 5px;
+}
+
+.a-l1 {
+  font-family: 'Gotham-Medium' !important;
 }
 
 .detail {
@@ -493,9 +523,9 @@ header .navbar-light .language .nav-item.active .nav-link {
 }
 
 .bgblack {
-  font-family: 'Gotham-Bold';
+
   background: #393536;
-  background-image: url(../images/line3.png);
+  background-image: url(../images/line3_re03.png);
   background-position: top 0px right 0px;
   background-repeat: no-repeat;
   padding: 40px 0;
@@ -1298,8 +1328,21 @@ button:focus {
   font-size: 20px;
 }
 
+.schedule {
+  background-color: #fff;
+  position: relative;
+}
+
+.schedule>.nav,
+.nav-tabs,
+a {
+  z-index: 0;
+}
+
 .talk_speaker {
   position: relative;
+  /* new */
+  background: #FFFFFF;
 }
 
 .talk_speaker::before {
@@ -2130,7 +2173,9 @@ footer {
 
 @media (min-width: 1442px) {
   .bgblack {
-    background-position: top -7px right -84px !important;
-    background-size: 49% !important;
+    background-position: top 0% right 0% !important;
+    background-size: 44% !important;
+    background-repeat: no-repeat;
+    padding: 80px 0;
   }
 }

@@ -125,7 +125,7 @@
         </div>
       </div>
     </div>
-    <div class="talk_speaker ">
+    <div class="talk_speaker">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -278,349 +278,357 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div
-            class="date_schedule wow fadeInUp"
-            data-wow-duration="200"
-            data-wow-delay="200"
-           
-          >
-          
-            <h4><span>KBTG</span> INSPIRE SCHEDULE</h4>
-            <div class="event-wrap w-100">
-              <div class="row">
-                <div class="col-md-12 col-sm-12 col-lg-3">
-                  <ul class="nav nav-tabs">
-                    <li class="item-tabs active">
-                      <a
-                        class="nav-link active"
-                        data-toggle="tab"
-                        href="#event-tab1"
-                        title=""
-                        >Day 1<span>May 21, 2021</span></a
-                      >
-                    </li>
-                    <li class="item-tabs">
-                      <a
-                        class="nav-link"
-                        data-toggle="tab"
-                        href="#event-tab2"
-                        title=""
-                        >Day 2<span>May 22, 2021</span></a
-                      >
-                    </li>
-                    <li class="item-tabs">
-                      <a
-                        class="nav-link"
-                        data-toggle="tab"
-                        href="#event-tab3"
-                        title=""
-                        >Day 3<span>May 23, 2021</span></a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-12 col-sm-12 col-lg-9">
-                  <div class="tab-content">
-                    <div class="tab-pane fade active show" id="event-tab1">
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">09:00 - 10:00 AM.</span>
+    <div class="schedule">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="date_schedule wow fadeInUp"
+              data-wow-duration="200"
+              data-wow-delay="200"
+            >
+              <h4><span>KBTG</span> INSPIRE SCHEDULE</h4>
+              <div class="event-wrap w-100">
+                <div class="row">
+                  <div class="col-md-12 col-sm-12 col-lg-3">
+                    <ul class="nav nav-tabs">
+                      <li class="item-tabs active">
+                        <a
+                          class="nav-link active"
+                          data-toggle="tab"
+                          href="#event-tab1"
+                          title=""
+                          >Day 1<span>May 21, 2021</span></a
+                        >
+                      </li>
+                      <li class="item-tabs">
+                        <a
+                          class="nav-link"
+                          data-toggle="tab"
+                          href="#event-tab2"
+                          title=""
+                          >Day 2<span>May 22, 2021</span></a
+                        >
+                      </li>
+                      <li class="item-tabs">
+                        <a
+                          class="nav-link"
+                          data-toggle="tab"
+                          href="#event-tab3"
+                          title=""
+                          >Day 3<span>May 23, 2021</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-lg-9">
+                    <div class="tab-content">
+                      <div class="tab-pane fade active show" id="event-tab1">
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">09:00 - 10:00 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">{{ $t("Register") }}</a>
+                            </h3>
+                          </div>
                         </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">{{ $t("Register") }}</a>
-                          </h3>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:00 - 10:15 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Welcome to KBTG</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>{{ $t("CharassriPhaholyotin") }}</li>
+                            </ul>
+                          </div>
                         </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">10:00 - 10:15 AM.</span>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:15 - 10:45 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Inspire Talk</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>
+                                {{ $t("WikanesThongmeeUnyamaneeKetcharoen") }}
+                              </li>
+                            </ul>
+                            <p class="mb-0">
+                              {{ $t("text1") }}
+                            </p>
+                          </div>
                         </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Welcome to KBTG</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>{{ $t("CharassriPhaholyotin") }}</li>
-                          </ul>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:45 - 12:00 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Fireside Chat</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>{{ $t("by1") }}</li>
+                            </ul>
+                            <p class="mb-0">
+                              {{ $t("text2") }}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">10:15 - 10:45 AM.</span>
+                        <div class="event-style1 w-100 bg-gray">
+                          <div class="event-meta text-right">
+                            <span class="d-block">12:00 - 13:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Lunch Break</a>
+                            </h3>
+                          </div>
                         </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Inspire Talk</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>
-                              {{ $t("WikanesThongmeeUnyamaneeKetcharoen") }}
-                            </li>
-                          </ul>
-                          <p class="mb-0">
-                            {{ $t("text1") }}
-                          </p>
-                        </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">10:45 - 12:00 AM.</span>
-                        </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Fireside Chat</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>{{ $t("by1") }}</li>
-                          </ul>
-                          <p class="mb-0">
-                            {{ $t("text2") }}
-                          </p>
-                        </div>
-                      </div>
-                      <div class="event-style1 w-100 bg-gray">
-                        <div class="event-meta text-right">
-                          <span class="d-block">12:00 - 13:00 PM.</span>
-                        </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Lunch Break</a>
-                          </h3>
-                        </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">13:00 - 18:00 PM.</span>
-                        </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Agile Playground</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>KBTG Team</li>
-                          </ul>
-                          <p class="mb-0">
-                            {{ $t("text3") }}
-                          </p>
-                          <br />
-                          <h3 class="mb-0">
-                            <a href="#" title="">1:1 Career Mantorship</a>
-                          </h3>
-                          <br />
-                          <h3 class="mb-0">
-                            <a href="#" title="">Interview + Final Interview</a>
-                          </h3>
-                          <p class="mb-0">- Project Management Officer</p>
-                          <p class="mb-0">- Project Manager</p>
-                          <p class="mb-0">- IT Operation</p>
-                          <p class="mb-0">- UX / UI Designer</p>
-                          <p class="mb-0">
-                            - DeFi / Blockchain Venture Architect
-                          </p>
-                          <p class="mb-0">- DeFi / Blockchain Tech Lead</p>
-                          <p class="mb-0">- DevX</p>
-                          <p class="mb-0">- Business Analyst</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="event-tab2">
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">09:00 - 10:00 AM.</span>
-                        </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">{{ $t("Register") }}</a>
-                          </h3>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">13:00 - 18:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Agile Playground</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="mb-0">
+                              {{ $t("text3") }}
+                            </p>
+                            <br />
+                            <h3 class="mb-0">
+                              <a href="#" title="">1:1 Career Mantorship</a>
+                            </h3>
+                            <br />
+                            <h3 class="mb-0">
+                              <a href="#" title=""
+                                >Interview + Final Interview</a
+                              >
+                            </h3>
+                            <p class="mb-0">- Project Management Officer</p>
+                            <p class="mb-0">- Project Manager</p>
+                            <p class="mb-0">- IT Operation</p>
+                            <p class="mb-0">- UX / UI Designer</p>
+                            <p class="mb-0">
+                              - DeFi / Blockchain Venture Architect
+                            </p>
+                            <p class="mb-0">- DeFi / Blockchain Tech Lead</p>
+                            <p class="mb-0">- DevX</p>
+                            <p class="mb-0">- Business Analyst</p>
+                          </div>
                         </div>
                       </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">10:00 - 10:15 AM.</span>
+                      <div class="tab-pane fade" id="event-tab2">
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">09:00 - 10:00 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">{{ $t("Register") }}</a>
+                            </h3>
+                          </div>
                         </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Welcome to KBTG</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>{{ $t("ChutimarKasemkornkit") }}</li>
-                          </ul>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:00 - 10:15 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Welcome to KBTG</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>{{ $t("ChutimarKasemkornkit") }}</li>
+                            </ul>
+                          </div>
                         </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">10:15 - 10:45 AM.</span>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:15 - 10:45 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Inspire Talk</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>
+                                {{
+                                  $t("PanuwatKenchatPhitsineeSincharoenpong")
+                                }}
+                              </li>
+                            </ul>
+                            <p class="mb-0">
+                              {{ $t("text1") }}
+                            </p>
+                          </div>
                         </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Inspire Talk</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>
-                              {{ $t("PanuwatKenchatPhitsineeSincharoenpong") }}
-                            </li>
-                          </ul>
-                          <p class="mb-0">
-                            {{ $t("text1") }}
-                          </p>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:45 - 12:00 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Fireside Chat</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>{{ $t("by1") }}</li>
+                            </ul>
+                            <p class="mb-0">
+                              {{ $t("text2") }}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">10:45 - 12:00 AM.</span>
+                        <div class="event-style1 w-100 bg-gray">
+                          <div class="event-meta text-right">
+                            <span class="d-block">12:00 - 13:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Lunch Break</a>
+                            </h3>
+                          </div>
                         </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Fireside Chat</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>{{ $t("by1") }}</li>
-                          </ul>
-                          <p class="mb-0">
-                            {{ $t("text2") }}
-                          </p>
-                        </div>
-                      </div>
-                      <div class="event-style1 w-100 bg-gray">
-                        <div class="event-meta text-right">
-                          <span class="d-block">12:00 - 13:00 PM.</span>
-                        </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Lunch Break</a>
-                          </h3>
-                        </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">13:00 - 18:00 PM.</span>
-                        </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Agile Playground</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>{{ $t("by2") }}</li>
-                          </ul>
-                          <p class="mb-0">
-                            {{ $t("text3") }}
-                          </p>
-                          <br />
-                          <h3 class="mb-0">
-                            <a href="#" title="">1:1 Career Mantorship</a>
-                          </h3>
-                          <br />
-                          <h3 class="mb-0">
-                            <a href="#" title="">Interview + Final Interview</a>
-                          </h3>
-                          <p class="mb-0">- Business Analyst</p>
-                          <p class="mb-0">- Software Engineer</p>
-                          <p class="mb-0">- Data Scientist (MLE)</p>
-                          <p class="mb-0">- New Grad Business Analyst</p>
-                          <p class="mb-0">- Agile Coach</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tab-pane fade" id="event-tab3">
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">09:00 - 10:00 AM.</span>
-                        </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">{{ $t("Register") }}</a>
-                          </h3>
-                        </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">10:00 - 10:15 AM.</span>
-                        </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Welcome to KBTG</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>{{ $t("ChetaphanSiridanupath") }}</li>
-                          </ul>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">13:00 - 18:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Agile Playground</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>{{ $t("by2") }}</li>
+                            </ul>
+                            <p class="mb-0">
+                              {{ $t("text3") }}
+                            </p>
+                            <br />
+                            <h3 class="mb-0">
+                              <a href="#" title="">1:1 Career Mantorship</a>
+                            </h3>
+                            <br />
+                            <h3 class="mb-0">
+                              <a href="#" title=""
+                                >Interview + Final Interview</a
+                              >
+                            </h3>
+                            <p class="mb-0">- Business Analyst</p>
+                            <p class="mb-0">- Software Engineer</p>
+                            <p class="mb-0">- Data Scientist (MLE)</p>
+                            <p class="mb-0">- New Grad Business Analyst</p>
+                            <p class="mb-0">- Agile Coach</p>
+                          </div>
                         </div>
                       </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">10:15 - 10:45 AM.</span>
+                      <div class="tab-pane fade" id="event-tab3">
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">09:00 - 10:00 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">{{ $t("Register") }}</a>
+                            </h3>
+                          </div>
                         </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Inspire Talk</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>
-                              {{ $t("PaweenPiyasilChayaponSaepung") }}
-                            </li>
-                          </ul>
-                          <p class="mb-0">
-                            {{ $t("text1") }}
-                          </p>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:00 - 10:15 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Welcome to KBTG</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>{{ $t("ChetaphanSiridanupath") }}</li>
+                            </ul>
+                          </div>
                         </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">10:45 - 12:00 AM.</span>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:15 - 10:45 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Inspire Talk</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>
+                                {{ $t("PaweenPiyasilChayaponSaepung") }}
+                              </li>
+                            </ul>
+                            <p class="mb-0">
+                              {{ $t("text1") }}
+                            </p>
+                          </div>
                         </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Fireside Chat</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>{{ $t("by1") }}</li>
-                          </ul>
-                          <p class="mb-0">
-                            {{ $t("text2") }}
-                          </p>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:45 - 12:00 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Fireside Chat</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>{{ $t("by1") }}</li>
+                            </ul>
+                            <p class="mb-0">
+                              {{ $t("text2") }}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div class="event-style1 w-100 bg-gray">
-                        <div class="event-meta text-right">
-                          <span class="d-block">12:00 - 13:00 PM.</span>
+                        <div class="event-style1 w-100 bg-gray">
+                          <div class="event-meta text-right">
+                            <span class="d-block">12:00 - 13:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Lunch Break</a>
+                            </h3>
+                          </div>
                         </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Lunch Break</a>
-                          </h3>
-                        </div>
-                      </div>
-                      <div class="event-style1 w-100">
-                        <div class="event-meta text-right">
-                          <span class="d-block">13:00 - 18:00 PM.</span>
-                        </div>
-                        <div class="event-info">
-                          <h3 class="mb-0">
-                            <a href="#" title="">Agile Playground</a>
-                          </h3>
-                          <ul class="event-org mb-0 list-unstyled">
-                            <li>{{ $t("by2") }}</li>
-                          </ul>
-                          <p class="mb-0">
-                            {{ $t("text3") }}
-                          </p>
-                          <br />
-                          <h3 class="mb-0">
-                            <a href="#" title="">1:1 Career Mantorship</a>
-                          </h3>
-                          <br />
-                          <h3 class="mb-0">
-                            <a href="#" title="">Interview + Final Interview</a>
-                          </h3>
-                          <p class="mb-0">- IT Security Engineer</p>
-                          <p class="mb-0">- IT Security Operation</p>
-                          <p class="mb-0">- Enterprise Architect</p>
-                          <p class="mb-0">- Test Manager/ Test Engineer</p>
-                          <p class="mb-0">- Network and Security</p>
-                          <p class="mb-0">- Server Management</p>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">13:00 - 18:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0">
+                              <a href="#" title="">Agile Playground</a>
+                            </h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>{{ $t("by2") }}</li>
+                            </ul>
+                            <p class="mb-0">
+                              {{ $t("text3") }}
+                            </p>
+                            <br />
+                            <h3 class="mb-0">
+                              <a href="#" title="">1:1 Career Mantorship</a>
+                            </h3>
+                            <br />
+                            <h3 class="mb-0">
+                              <a href="#" title=""
+                                >Interview + Final Interview</a
+                              >
+                            </h3>
+                            <p class="mb-0">- IT Security Engineer</p>
+                            <p class="mb-0">- IT Security Operation</p>
+                            <p class="mb-0">- Enterprise Architect</p>
+                            <p class="mb-0">- Test Manager/ Test Engineer</p>
+                            <p class="mb-0">- Network and Security</p>
+                            <p class="mb-0">- Server Management</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -632,7 +640,7 @@
         </div>
       </div>
     </div>
-    <div class="bottom bg-line ">
+    <div class="bottom bg-line">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -655,15 +663,61 @@
 
 <script>
 export default {
- head:{
-   script:[
+   head: {
+    script: [
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery-3.3.1.slim.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/popper.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/bootstrap.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/jquery.flexslider.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shCore.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shBrushJScript.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "WOW-master/dist/wow.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/wow.js",
+      },
       {
         defer: true,
         type: "text/javascript",
         src: "js/agenda-tap.js",
       },
-   ]
- },
+    ],
+  },
+ 
   data() {
     return {};
   },

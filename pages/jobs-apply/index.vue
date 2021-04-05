@@ -29,7 +29,7 @@
                 REGISTER<span class="back"
                   ><nuxt-link
                     
-                    to="/jobs-exe"
+                    :to="`/jobs-exe/${GET_ID}`"
                     class="section wow fadeInRight"
                     data-wow-delay="0.7"
                   >
@@ -122,18 +122,68 @@
 
 <script>
 export default {
- 
+  head: {
+    script: [
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery-3.3.1.slim.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/popper.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/bootstrap.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/jquery.flexslider.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shCore.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shBrushJScript.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "WOW-master/dist/wow.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/wow.js",
+      },
+    ],
+  },
   data() {
     return {
       GET_TITLE: null,
+      GET_ID: null,
     };
   },
   computed: {},
   mounted() {
-    console.log("query>>", this.$route.params);
+    console.log("parmas>>", this.$route.params);
     console.log("query>>", this.$route.query);
     console.log("hash>>", this.$route.hash);
     this.GET_TITLE = this.$route.query.job;
+    this.GET_ID = this.$route.query.id
    
   },
   methods: {},

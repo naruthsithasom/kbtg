@@ -8,9 +8,9 @@
         <div class="container">
           <div class="row">
             <div class="col-12 section wow fadeInUp" data-wow-delay="1.0">
-              <h1 class="h1-l1 "><span >KBTG</span> INSPIRE</h1>
-              <h2 class="h2-l2">WE INSPIRE YOU WITH OUR INSIGHTS,</h2>
-              <h2 class="h2-l2">YOU INSPIRE US WITH YOUR TALENTS</h2>
+              <h1 class="h1-l1 my-3"><span >KBTG</span> INSPIRE</h1>
+              <h2 class="h2-l2 mt-2">WE INSPIRE YOU WITH OUR INSIGHTS,</h2>
+              <h2 class="h2-l2 mt-2">YOU INSPIRE US WITH YOUR TALENTS</h2>
             </div>
           </div>
         </div>
@@ -21,7 +21,7 @@
             <div class="col-12 col-md-5 t-right">
               <div class="day">
                 <img src="~/assets/images/Asset13.png" />
-                <span class="mr-5">21 - 23 May, 2021</span
+                <span class="mr-5 pr-5">21 - 23 May, 2021</span
                 >
               </div>
             </div>
@@ -40,10 +40,10 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6">
-            <h4 class="section wow fadeInLeft" data-wow-delay="500">
+            <h4 class="section wow fadeInLeft mb-4" data-wow-delay="500">
               ABOUT KBTG INSPIRE
             </h4>
-            <p class="section wow fadeInUp" data-wow-delay="0.5">
+            <p class="section wow fadeInUp pb-4" data-wow-delay="0.5">
               {{ $t("AboutKBTGInspire") }}
             </p>
             <a
@@ -55,11 +55,11 @@
           </div>
           <div class="col-12 col-md-6">
             <div class="section wow fadeInRight" data-wow-delay="500">
-              <div class="py-4"></div>
-              <div class="">
+              <div class="pb-5"></div>
+              <div class="cropped1">
                 <img
-                  src="~/assets/images/img-about.png"
-                  class="img-fluid cropped1"
+                  src="~/assets/images/img-about02.png"
+                  class="img-fluid resize"
                 />
               </div>
             </div>
@@ -70,7 +70,7 @@
     <div class="item_slider">
       <img src="~/assets/images/img-professional_1.png" class="img-fluid" />
     </div>
-    <div class="container item-col3">
+    <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="content-job my-5">
@@ -80,7 +80,7 @@
               data-wow-delay="200"
             >
               JOBS AT <span style="color: #62cbc9">KBTG</span> INSPIRE
-              <nuxt-link to="/jobs-exe">View all Jobs</nuxt-link>
+              <nuxt-link to="/jobs-exe" class="a-l1">View all Jobs</nuxt-link>
             </h4>
             <div class="row">
               <div class="col-12 col-md-6 col-lg-4">
@@ -347,11 +347,11 @@
           <div class="col-12">
             <div class="content-find">
               <h4
-                class="wow fadeInUp"
+                class="wow fadeInUp h4-l1"
                 data-wow-duration="200"
                 data-wow-delay="200"
               >
-                FIND YOUR INSPIRATION<a href="/agenda">View all Agenda</a>
+                FIND YOUR INSPIRATION<a href="/agenda" class="a-l1">View all Agenda</a>
               </h4>
               <div class="row justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4">
@@ -628,56 +628,55 @@
 </template>
 <script>
 export default { 
-  /*head: {
+  head: {
     script: [
       {
-         defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/jquery-3.3.1.slim.min.js",
       },
       {
-         defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/jquery.min.js",
       },
       {
-         defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/popper.min.js",
       },
       {
-         defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/bootstrap.min.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/jquery.flexslider.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/js/shCore.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "flexslider/js/shBrushJScript.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "WOW-master/dist/wow.js",
       },
       {
-        defer: true,
+        async: true,
         type: "text/javascript",
         src: "js/wow.js",
       },
     ],
   },
-*/
   data() {
     return {
       status_q1: false,

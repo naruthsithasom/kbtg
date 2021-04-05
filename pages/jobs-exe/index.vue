@@ -50,9 +50,10 @@
                       type="text"
                       placeholder="Find your KBTG job today!"
                       :state="getSearch"
+                      @keyup.enter="keyupSearch()"
                     ></b-form-input>
                     <datalist id="my-list-id">
-                      <option v-for="list in GET_TITLE" :key="list">
+                      <option v-for="list in SERACH" :key="list">
                         {{ list }}
                       </option>
                     </datalist>
@@ -77,19 +78,8 @@
                         Job Title
                       </div>
                       <div class="level">
-                        <div id="dd2" class="custom-select-wrapper">
-                          <select
-                            name="district"
-                            class="custom-select"
-                            id="dd2"
-                            placeholder="Level"
-                            style="display: none"
-                          >
-                            <option value="">Level</option>
-                            <option value=""></option>
-                          </select>
+                        <div class="custom-select-wrapper">
                           <div
-                            id="dd2"
                             @click="toglleLevel"
                             :class="{
                               'custom-select': !status,
@@ -98,14 +88,19 @@
                           >
                             <span class="custom-select-trigger">Level</span>
                             <div class="custom-options">
+                              <!-- <span
+                                class="custom-option"
+                                @click="selectLevels('Level')"
+                                >All Levels</span
+                              > -->
                               <span
                                 class="custom-option"
-                                @click="selectLevels('all')"
+                                @click="selectLevels('All Levels')"
                                 >All Levels</span
                               >
                               <span
                                 class="custom-option"
-                                @click="selectLevels('Junior-Middle')"
+                                @click="selectLevels('Junior – Middle')"
                                 >Junior - Middle</span
                               >
                               <span
@@ -115,7 +110,7 @@
                               >
                               <span
                                 class="custom-option"
-                                @click="selectLevels('Middle-Senior')"
+                                @click="selectLevels('Middle - Senior')"
                                 >Middle - Senior</span
                               >
                               <span
@@ -139,56 +134,57 @@
                       </div>
                       <div class="level">{{ item.levels }}</div>
                     </li>
-                    <!--<li>
+                  </ul>
+                </div>
+                <div class="next">
+                  <ul>
+                    <li
+                      class=""
+                      :class="{ active: pageNumber === choose }"
+                      v-for="pageNumber in pages"
+                      :key="pageNumber"
+                      @click="selectNumber(pageNumber)"
+                    >
+                      <button class="btn rounded-0 sm button-h">
+                        {{ pageNumber }}
+                      </button>
+                    </li>
+                  </ul>
+                  <!-- <ul>
+                    <li>
                       <div class="title"></div>
                       <div class="level">
                         <button
-                          type=" button"
-                          class="btn b-number mr-2"
                           v-if="page != 1"
+                          type=" button"
+                          class="btn-warning sm mr-2 active"
                           @click="page--"
                         >
-                          <small style="font-size: 12px">&#60;</small>
+                          {{ page }} 
                         </button>
 
                         <button
-                          class="btn b-number mr-2 rounded-0"
+                          class="btn b-number mr-2 sm rounded-0 "
                           type=" button"
-                          v-for="pageNumber in pages.slice(page - 1, page + 10)"
-                          :key="pageNumber"
+                          v-for="pageNumber in pages.slice(page - 1, page + 10)" :key="pageNumber"
                           @click="page = pageNumber"
                         >
                           <small style="font-size: 12px">{{
                             pageNumber
                           }}</small>
                         </button>
-
+                          
                         <button
-                          class="btn b-number mr-2"
+                          class="btn-success sm mr-2"
                           type=" button"
                           @click="page++"
                           v-if="page < pages.length"
                         >
-                          <small style="font-size: 12px">&#62;</small>
-                        </button>
+                          <small style="font-size: 12px">{{page}}</small>
+                        </button> 
                       </div>
-                    </li> -->
-                  </ul>
-                </div>
-                <div class="next">
-                  <ul>
-                    <li class="" :class="{'active': pageNumber == 1}"
-                      v-for="pageNumber in pages"
-                      :key="pageNumber"
-                      @click="selectNumber(pageNumber)"
-                    >
-                      <button
-                        class="btn rounded-0 b-number"
-                      >
-                        {{ pageNumber }}
-                      </button>
                     </li>
-                  </ul>
+                  </ul> -->
                 </div>
               </div>
             </div>
@@ -200,14 +196,61 @@
 </template>
 <script>
 export default {
+   head: {
+    script: [
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery-3.3.1.slim.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/popper.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/bootstrap.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/jquery.flexslider.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shCore.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shBrushJScript.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "WOW-master/dist/wow.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/wow.js",
+      },
+    ],
+  },
   data() {
     return {
       JOBS: null,
       search: null,
-      GET_TITLE: [],
-      GET_IDTITE: [],
-      GET_LEVELS: [],
-      GET_REPAIRLEVEL: [],
+      SERACH: [],
+
       opened: "custom-select opened",
       status: false,
 
@@ -215,9 +258,10 @@ export default {
       page: 1,
       perPage: 10,
       pages: [],
-      result: [],
+      before: 0,
 
       status_numer: false,
+      choose: false,
     };
   },
   async mounted() {
@@ -227,18 +271,26 @@ export default {
     });
 
     for (let i in this.JOBS) {
-      this.GET_TITLE[i] = this.JOBS[i].title;
-      this.GET_IDTITE[i] = this.JOBS[i].id;
-      this.GET_LEVELS[i] = this.JOBS[i].levels;
+      this.SERACH[i] = this.JOBS[i].title;
     }
-    this.GET_REPAIRLEVEL = [...new Set(this.GET_LEVELS)];
   },
   computed: {
     displayedPosts() {
       return this.paginate(this.posts);
     },
     getSearch() {
-      console.log("search>>", this.search);
+      for (let i in this.JOBS) {
+        if (this.search === this.JOBS[i].title) {
+          this.posts = [];
+          this.pages = [];
+          this.posts.push({
+            id: this.JOBS[i].id,
+            title: this.JOBS[i].title,
+            levels: this.JOBS[i].levels,
+          });
+          console.log("search>>", this.search);
+        }
+      }
     },
   },
   watch: {
@@ -249,7 +301,6 @@ export default {
   methods: {
     toglleLevel() {
       this.status = !this.status;
-      console.log(this.status);
     },
     setPages() {
       let numberOfPages = Math.ceil(this.posts.length / this.perPage);
@@ -264,69 +315,20 @@ export default {
       let to = page * perPage;
       return posts.slice(from, to);
     },
-    selectLevels(level) {
-      if (level === "all") {
-        this.posts = [""];
-        this.pages = [];
-
+    selectLevels(data) {
+      this.posts = [];
+      this.pages = [];
+      if (data === "All Levels") {
         for (let i in this.JOBS) {
-          if (this.JOBS[i].levels === "All Levels") {
-            this.posts.push({
-              id: this.JOBS[i].id,
-              title: this.JOBS[i].title,
-              levels: this.JOBS[i].levels,
-            });
-          }
+          this.posts.push({
+            id: this.JOBS[i].id,
+            title: this.JOBS[i].title,
+            levels: this.JOBS[i].levels,
+          });
         }
-      }
-      if (level === "Junior-Middle") {
-        this.posts = [""];
-        this.pages = [];
-
+      } else {
         for (let i in this.JOBS) {
-          if (this.JOBS[i].levels === "Junior – Middle") {
-            this.posts.push({
-              id: this.JOBS[i].id,
-              title: this.JOBS[i].title,
-              levels: this.JOBS[i].levels,
-            });
-          }
-        }
-      }
-      if (level === "Middle") {
-        this.posts = [""];
-        this.pages = [];
-
-        for (let i in this.JOBS) {
-          if (this.JOBS[i].levels === "Middle") {
-            this.posts.push({
-              id: this.JOBS[i].id,
-              title: this.JOBS[i].title,
-              levels: this.JOBS[i].levels,
-            });
-          }
-        }
-      }
-      if (level === "Middle-Senior") {
-        this.posts = [""];
-        this.pages = [];
-
-        for (let i in this.JOBS) {
-          if (this.JOBS[i].levels === "Middle - Senior") {
-            this.posts.push({
-              id: this.JOBS[i].id,
-              title: this.JOBS[i].title,
-              levels: this.JOBS[i].levels,
-            });
-          }
-        }
-      }
-      if (level === "Senior") {
-        this.posts = [""];
-        this.pages = [];
-
-        for (let i in this.JOBS) {
-          if (this.JOBS[i].levels === "Senior") {
+          if (this.JOBS[i].levels === data) {
             this.posts.push({
               id: this.JOBS[i].id,
               title: this.JOBS[i].title,
@@ -336,22 +338,44 @@ export default {
         }
       }
     },
-    selectNumber(number) {
-      console.log("test select number", number);
-      if (number === 1) {
-        this.status_numer = true;
+    keyupSearch() {
+      for (let i in this.JOBS) {
+        if (this.search === this.JOBS[i].title) {
+          this.posts = [];
+          this.pages = [];
+          this.posts.push({
+            id: this.JOBS[i].id,
+            title: this.JOBS[i].title,
+            levels: this.JOBS[i].levels,
+          });
+          // console.log("keyup>>", this.posts[0].id);
+          this.$router.push(`/jobs-exe/${this.posts[0].id}`);
+        }
       }
+    },
+    selectNumber(number) {
+      this.choose = number;
+      console.log(number)
+     
     },
   },
 };
 </script>
 <style>
-.b-number {
+.sm{
   color: #ffffff;
   font-size: 14px !important;
 }
 .b-active {
   border-bottom: 1px solid #62cbc9;
+}
+.sm:hover {
+  background-color: #393536;
+  color: #ffffff;
+}
+.sm:focus {
+  outline: none;
+  box-shadow: none;
 }
 .offset {
   width: 500px !important;

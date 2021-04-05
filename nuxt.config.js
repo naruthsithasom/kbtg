@@ -4,6 +4,9 @@ export default {
   server: {
     port: 80,
   },
+  static: {
+    prefix: false,
+  },
   head: {
     title: "KBTG INSPIRE",
     htmlAttrs: {
@@ -15,6 +18,13 @@ export default {
       { name: "keywords", content: "" },
       { ["http-equiv"]: "X-UA-Compatible", content: "IE-edge" },
       { hid: "description", name: "description", content: "" },
+    ],
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/Asset16 _32x32.png",
+      },
     ],
     // link: [
     //   {
