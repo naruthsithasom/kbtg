@@ -167,7 +167,7 @@
                       >
                     </li>
                     <li
-                      class="nav-item"
+                        class="nav-item"
                       data-toggle="collapse"
                       data-target="#navmenu"
                       aria-controls="navmenu"
@@ -175,9 +175,9 @@
                       :class="{ active: statusJoin }"
                       @click="navClick('JOIN')"
                     >
-                      <nuxt-link class="nav-link join" to="/join-event"
+                       <nuxt-link class="nav-link join" to="/join-event"
                         >JOIN EVENT</nuxt-link
-                      >
+                      > 
                     </li>
                   </ul>
 
@@ -483,7 +483,7 @@ export default {
         this.statusJobs = false;
         this.statusAgenda = false;
         this.statusFaq = false;
-        this.statusJoin = false;
+        this.statusJoin = true;
         this.statusContact = false;
       }
     },

@@ -321,13 +321,15 @@ header .navbar-light .navbar-nav .nav-link.join {
   color: #fff;
   background: #62CBC9;
   padding: 5px 30px;
-  border-radius: 20px;
+   border-radius: 20px;
 }
 
 header .navbar-light .navbar-nav .nav-link.join:hover {
   border: none;
 }
-
+.join:hover{
+  height:33px;
+}
 header .navbar-light .navbar-nav .nav-link:hover,
 header .navbar-light .nav-item.active .nav-link {
   border-bottom: 2px solid #62CBC9;
@@ -1945,10 +1947,6 @@ footer {
   .form-job .modal-dialog {
     max-width: 90%;
     font-size: 14px;
-  }
-
-  .social ul {
-    float: left;
   }
 
   .copy {

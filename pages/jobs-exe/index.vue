@@ -5,12 +5,16 @@
         <div class="imgHeader position-relative">
           <div class="">
             <b-carousel
-               style="text-shadow: 0px 0px 2px #000"
+              style="text-shadow: 0px 0px 2px #000"
               fade
               :interval="4000"
             >
               <b-carousel-slide
-                :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
               ></b-carousel-slide>
               <!-- <b-carousel-slide
                 :img-src="
@@ -92,7 +96,10 @@
             <div class="row">
               <div class="col-12">
                 <div class="career">
-                  <h3 class="section wow fadeInLeft f-job-h3 mb-4" data-wow-delay="0.5">
+                  <h3
+                    class="section wow fadeInLeft f-job-h3 mb-4"
+                    data-wow-delay="0.5"
+                  >
                     WE ARE <span style="color: #62cbc9">HIRING!</span>
                   </h3>
 
@@ -142,13 +149,13 @@
                         </div>
                       </div>
                     </li>
-                    <li v-for="item in displayedPosts" :key="item">
-                      <!-- <li v-for="item in display" :key="item"> -->
+
+                    <li v-for="item in display" :key="item">
                       <div class="title">
                         <nuxt-link :to="`/jobs-exe/${item.id}`">
                           {{ item.title }}
                           <span v-if="item.fresh_grad"
-                            ><img src="~/assets/images/icon_fresh_grad.png"
+                            ><img src="~/assets/images/icon_fresh_grad.svg"
                           /></span>
                         </nuxt-link>
                       </div>
@@ -257,7 +264,10 @@ export default {
       choose: false,
 
       checkLevel: null,
-      switchLang: '',
+      switchLang: "",
+
+      Freshes: [],
+      GET_fresh_grad: [],
     };
   },
   async mounted() {
@@ -267,20 +277,31 @@ export default {
       setTimeout(() => this.$nuxt.$loading.finish(), 2000);
     });
     this.switchLang = this.$router.app._i18n.localeProperties.code;
-     console.log('lang: ',this.switchLang)
-    if(this.switchLang === 'th') {
-      console.log('sw lang::',this.switchLang)
+    console.log("lang: ", this.switchLang);
+    if (this.switchLang === "th") {
+      console.log("sw lang::", this.switchLang);
     }
+    this.display = []
     await this.$axios.$get(`/jobs.json`).then((res) => {
       this.JOBS = res.jobs;
-       this.posts = res.jobs;
+      this.posts = res.jobs;
+       this.GET_fresh_grad = res.jobs.fresh_grad
     });
-       let div = Math.ceil(this.posts.length / 10);
-      for (let i = 1; i <= div; i++) {
-        this.pages.push(i);
-      }
+    let div = Math.ceil(this.posts.length / 10);
+    for (let i = 1; i <= div; i++) {
+      this.pages.push(i);
+    }
+    for(let i in this.JOBS){
+      if(10 === this.JOBS[i].id){ return false}
+      this.display.push({
+        id: this.JOBS[i].id,
+        title: this.JOBS[i].title,
+        fresh_grad: this.JOBS[i].fresh_grad,
+        level: this.JOBS[i].level
+      })
+    }
 
-        return  this.switchLang 
+    return  (this.switchLang, this.display)
     //  for (let i in this.JOBS) {
     //   this.SERACH[i] = this.JOBS[i].title.toUpperCase();
     //   this.JOBS[i].title = this.posts[i].title.toUpperCase();
@@ -289,15 +310,26 @@ export default {
   computed: {
     displayedPosts() {
       // return this.paginate(this.posts);
-      for(let i in this.JOBS){
-          if(10 >= +this.JOBS[i].id){
-             this.display.push({id: this.JOBS[i].id, title: this.JOBS[i].title, level: this.JOBS[i].level })
-          }
-          if(this.JOBS[i].id >10 && this.JOBS[i].id < 20) {
-            this.display.push({id: this.JOBS[i].id, title: this.JOBS[i].title, level: this.JOBS[i].level})
-          }
-      }
-      return this.display
+      // for (let i in this.JOBS) {
+      //   if (10 >= +this.JOBS[i].id) {
+      //     this.display.push({
+      //       id: this.JOBS[i].id,
+      //       title: this.JOBS[i].title,
+      //       fresh_grad: this.JOBS[i].fresh_grad,
+      //       level: this.JOBS[i].level,
+      //     });
+      //   }
+      //   if (this.JOBS[i].id > 10 && this.JOBS[i].id < 20) {
+      //     this.display.push({
+      //       id: this.JOBS[i].id,
+      //       title: this.JOBS[i].title,
+      //       fresh_grad: this.JOBS[i].fresh_grad,
+      //       level: this.JOBS[i].level,
+      //     });
+      //   }
+      // }
+      // console.log('display',this.display)
+      // return this.display;
     },
     getSearch() {
       for (let i in this.JOBS) {
@@ -338,22 +370,24 @@ export default {
     // },
     selectLevels(data) {
       this.checkLevel = data;
-      this.posts = [];
+      this.display = [];
       this.pages = [];
       if (data === "All Levels") {
         for (let i in this.JOBS) {
-          this.posts.push({
+          this.display.push({
             id: this.JOBS[i].id,
             title: this.JOBS[i].title,
+            fresh_grad: this.JOBS[i].fresh_grad,
             level: this.JOBS[i].level,
           });
         }
       } else {
         for (let i in this.JOBS) {
           if (this.JOBS[i].level === data) {
-            this.posts.push({
+            this.display.push({
               id: this.JOBS[i].id,
               title: this.JOBS[i].title,
+              fresh_grad: this.JOBS[i].fresh_grad,
               level: this.JOBS[i].level,
             });
           }
@@ -363,7 +397,7 @@ export default {
     keyupSearch() {
       for (let i in this.JOBS) {
         if (this.search === this.JOBS[i].title) {
-          this.posts = [];
+          this.display = [];
           this.pages = [];
           this.posts.push({
             id: this.JOBS[i].id,
@@ -376,36 +410,64 @@ export default {
       }
     },
     selectNumber(data) {
-      console.log(data)
+      console.log(data);
       this.choose = data;
       this.display = [];
       this.pages = [];
 
-       let numberOfPages = Math.ceil(this.JOBS.length / 10);
+      let numberOfPages = Math.ceil(this.JOBS.length / 10);
       for (let index = 1; index <= numberOfPages; index++) {
         this.pages.push(index);
       }
-      
-       if ( (Number(data) && this.checkLevel == null) || this.checkLevel == "All Levels") {
-           if(1 === data){ 
-             for(let i=0; i<10; i++){
-              //  this.display.push({id: this.JOBS[i].id, title: this.JOBS[i].title, level: this.JOBS[i].level })
-               this.display[i] = {id: this.JOBS[i+1].id, title: this.JOBS[i+1].title, level: this.JOBS[i+1].level }
-             }
-            return this.display
-           } 
-           if(2 === data){
-             let x = (data * 10) - 10
-             let y = data * 10
-             for(let i=1; i<=10; i++){
-               this.display[i-1] = {id: this.JOBS[x + i].id, title: this.JOBS[x + i].title, level: this.JOBS[x + i].level}
-             }
-           }
+
+      if (
+        (Number(data) && this.checkLevel == null) ||
+        this.checkLevel == "All Levels"
+      ) {
+        if (1 === data) {
+          for (let i = 0; i < 10; i++) {
+            //  this.display.push({id: this.JOBS[i].id, title: this.JOBS[i].title, level: this.JOBS[i].level })
+            this.display[i] = {
+              id: this.JOBS[i].id,
+              title: this.JOBS[i].title,
+              fresh_grad: this.JOBS[i].fresh_grad,
+              level: this.JOBS[i].level,
+            };
+          }
+          return this.display;
+        }
+        if (2 === data) {
+          let x = data * 10 - 10;
+          let y = 0
+           for (let i = 1; i <= 10; i++) {
+             y =  x + i
+            this.display[i - 1] = {
+              id: this.JOBS[y].id,
+              title: this.JOBS[y].title,
+              fresh_grad: this.JOBS[y].fresh_grad,
+              level: this.JOBS[y].level,
+            };
+          }
+        }
+           if (3 === data) {
+          let x = (data * 10) - 10;
+          let y = 0
+           for (let i = 1; i <= 10; i++) {
+             y = x + i
+             if(y === this.JOBS.length) { return}
+              this.display[i - 1] = {
+              id: this.JOBS[y].id,
+              title: this.JOBS[y].title,
+              fresh_grad: this.JOBS[y].fresh_grad,
+              level: this.JOBS[y].level,
+            };
+          }
+        }
         //    else {
         //       let start = (Number(data) * 10) - 10;
         //       let stop = Number(data) * 10;
         //       let count = 1
-        //       for (start; start < this.JOBS.length; start++) { 
+        //       for (start; start < this.JOBS.length; start++) {
         //       if (start === stop) { return; }
         //       //this.display.push({ id: this.JOBS[start].id, title: this.JOBS[start].title,level: this.JOBS[start].level })
         //        this.display[count - 1] = { id: this.JOBS[start].id, title: this.JOBS[start].title,level: this.JOBS[start].level }
@@ -413,7 +475,7 @@ export default {
         //     }
         //     return this.display
         // }
-      } 
+      }
     },
   },
 };

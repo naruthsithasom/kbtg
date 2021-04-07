@@ -23,7 +23,7 @@
             <div class="row">
               <div class="col-12 col-md-5 t-right">
                 <div class="day">
-                  <img src="~/assets/images/Asset13.png" />
+                  <img src="~/assets/images/Asset13.svg" />
                   <span class="mr-5 pr-5">21 - 23 May, 2021</span>
                 </div>
               </div>
