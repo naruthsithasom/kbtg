@@ -3,34 +3,58 @@
     <client-only>
       <div class="wrapper">
         <div class="imgHeader position-relative">
-          <div
-            id="carouselExampleSlidesOnly"
-            class="carousel slide"
-            data-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="~/assets/images/banner1.png" class="img-fluid" />
-              </div>
-              <div class="carousel-item">
-                <img src="~/assets/images/banner2.png" class="img-fluid" />
-              </div>
-              <div class="carousel-item">
-                <img src="~/assets/images/banner3.png" class="img-fluid" />
-              </div>
-              <div class="carousel-item">
-                <img src="~/assets/images/banner4.png" class="img-fluid" />
-              </div>
-              <div class="carousel-item">
-                <img src="~/assets/images/banner5.png" class="img-fluid" />
-              </div>
-              <div class="carousel-item">
-                <img src="~/assets/images/banner6.png" class="img-fluid" />
-              </div>
-              <div class="carousel-item">
-                <img src="~/assets/images/banner7.png" class="img-fluid" />
-              </div>
-            </div>
+          <div class="">
+            <b-carousel
+               style="text-shadow: 0px 0px 2px #000"
+              fade
+              :interval="4000"
+            >
+              <b-carousel-slide
+                :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"
+              ></b-carousel-slide>
+              <!-- <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide> -->
+            </b-carousel>
           </div>
           <div class="position-absolute">
             <div class="container">
@@ -63,14 +87,14 @@
             </div>
           </div>
         </div>
-        <div class="bg-line">
+        <div class="bg-line-job">
           <div class="container jobs">
             <div class="row">
               <div class="col-12">
                 <div class="career">
-                  <h4 class="section wow fadeInLeft" data-wow-delay="0.5">
+                  <h3 class="section wow fadeInLeft f-job-h3 mb-4" data-wow-delay="0.5">
                     WE ARE <span style="color: #62cbc9">HIRING!</span>
-                  </h4>
+                  </h3>
 
                   <ul class="section wow fadeInUp" data-wow-delay="0.7">
                     <li class="txt-header">
@@ -88,11 +112,6 @@
                           >
                             <span class="custom-select-trigger">Level</span>
                             <div class="custom-options">
-                              <!-- <span
-                                class="custom-option"
-                                @click="selectLevels('Level')"
-                                >All Levels</span
-                              > -->
                               <span
                                 class="custom-option"
                                 @click="selectLevels('All Levels')"
@@ -124,6 +143,7 @@
                       </div>
                     </li>
                     <li v-for="item in displayedPosts" :key="item">
+                      <!-- <li v-for="item in display" :key="item"> -->
                       <div class="title">
                         <nuxt-link :to="`/jobs-exe/${item.id}`">
                           {{ item.title }}
@@ -137,10 +157,14 @@
                   </ul>
                 </div>
                 <div class="next">
-                  <!-- <ul>
+                  <ul>
                     <li
                       class=""
-                      :class="{ active: pageNumber === choose }"
+                      :class="{
+                        active:
+                          pageNumber == choose ||
+                          (pageNumber > choose && pageNumber <= 1),
+                      }"
                       v-for="pageNumber in pages"
                       :key="pageNumber"
                       @click="selectNumber(pageNumber)"
@@ -148,42 +172,6 @@
                       <button class="btn rounded-0 sm button-h">
                         {{ pageNumber }}
                       </button>
-                    </li>
-                  </ul> -->
-                  <ul>
-                    <li>
-                      <div class="title"></div>
-                      <div class="level">
-                        <button
-                          v-if="page != 1"
-                          type="btn b-number mr-2 sm rounded-0 "
-                          class="sm mr-2 active"
-                          @click="page--"
-                        >
-                          {{ page - 1 }}
-                        </button>
-
-                        <button
-                          class="btn b-number mr-2 sm rounded-0"
-                          type=" button"
-                          v-for="pageNumber in pages.slice(page - 1, page + 10)"
-                          :key="pageNumber"
-                          @click="page = pageNumber"
-                        >
-                          <small style="font-size: 12px">{{
-                            pageNumber
-                          }}</small>
-                        </button>
-
-                        <button
-                          class="btn-success sm mr-2"
-                          type=" button"
-                          @click="page++"
-                          v-if="page < pages.length"
-                        >
-                          <small style="font-size: 12px">{{ page }}</small>
-                        </button>
-                      </div>
                     </li>
                   </ul>
                 </div>
@@ -198,57 +186,60 @@
 <script>
 export default {
   head: {
-    // script: [
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/jquery-3.3.1.slim.min.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/jquery.min.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/popper.min.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/bootstrap.min.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "flexslider/jquery.flexslider.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "flexslider/js/shCore.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "flexslider/js/shBrushJScript.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "WOW-master/dist/wow.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/wow.js",
-    //   },
-    // ],
+    script: [
+      {
+        async: true,
+        type: "text/javascript",
+        src: "js/jquery-3.3.1.slim.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "js/jquery.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "js/popper.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "js/bootstrap.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "flexslider/jquery.flexslider.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "flexslider/js/shCore.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "flexslider/js/shBrushJScript.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "WOW-master/dist/wow.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "js/wow.js",
+      },
+    ],
+    bodyAttrs: {
+      class: "bg-all",
+    },
   },
   data() {
     return {
-      JOBS: null,
+      JOBS: [],
       search: null,
       SERACH: [],
       POSITION: [],
@@ -261,8 +252,12 @@ export default {
       pages: [],
       before: 0,
 
+      display: [],
       status_numer: false,
       choose: false,
+
+      checkLevel: null,
+      switchLang: '',
     };
   },
   async mounted() {
@@ -271,20 +266,38 @@ export default {
       this.$nuxt.$loading.start();
       setTimeout(() => this.$nuxt.$loading.finish(), 2000);
     });
-
+    this.switchLang = this.$router.app._i18n.localeProperties.code;
+     console.log('lang: ',this.switchLang)
+    if(this.switchLang === 'th') {
+      console.log('sw lang::',this.switchLang)
+    }
     await this.$axios.$get(`/jobs.json`).then((res) => {
       this.JOBS = res.jobs;
-      this.posts = res.jobs;
+       this.posts = res.jobs;
     });
+       let div = Math.ceil(this.posts.length / 10);
+      for (let i = 1; i <= div; i++) {
+        this.pages.push(i);
+      }
 
-    for (let i in this.JOBS) {
-      this.SERACH[i] = this.JOBS[i].title.toUpperCase();
-       this.JOBS[i].title = this.posts[i].title.toUpperCase();
-    }
+        return  this.switchLang 
+    //  for (let i in this.JOBS) {
+    //   this.SERACH[i] = this.JOBS[i].title.toUpperCase();
+    //   this.JOBS[i].title = this.posts[i].title.toUpperCase();
+    // }
   },
   computed: {
     displayedPosts() {
-      return this.paginate(this.posts);
+      // return this.paginate(this.posts);
+      for(let i in this.JOBS){
+          if(10 >= +this.JOBS[i].id){
+             this.display.push({id: this.JOBS[i].id, title: this.JOBS[i].title, level: this.JOBS[i].level })
+          }
+          if(this.JOBS[i].id >10 && this.JOBS[i].id < 20) {
+            this.display.push({id: this.JOBS[i].id, title: this.JOBS[i].title, level: this.JOBS[i].level})
+          }
+      }
+      return this.display
     },
     getSearch() {
       for (let i in this.JOBS) {
@@ -302,28 +315,29 @@ export default {
     },
   },
   watch: {
-    posts() {
-      this.setPages();
-    },
+    // posts() {
+    //   this.setPages();
+    // },
   },
   methods: {
     toglleLevel() {
       this.status = !this.status;
     },
-    setPages() {
-      let numberOfPages = Math.ceil(this.posts.length / this.perPage);
-      for (let index = 1; index <= numberOfPages; index++) {
-        this.pages.push(index);
-      }
-    },
-    paginate(posts) {
-      let page = this.page;
-      let perPage = this.perPage;
-      let from = page * perPage - perPage;
-      let to = page * perPage;
-      return posts.slice(from, to);
-    },
+    // setPages() {
+    //   let numberOfPages = Math.ceil(this.posts.length / this.perPage);
+    //   for (let index = 1; index <= numberOfPages; index++) {
+    //     this.pages.push(index);
+    //   }
+    // },
+    // paginate(posts) {
+    //   let page = this.page;
+    //   let perPage = this.perPage;
+    //   let from = page * perPage - perPage;
+    //   let to = page * perPage;
+    //   return posts.slice(from, to);
+    // },
     selectLevels(data) {
+      this.checkLevel = data;
       this.posts = [];
       this.pages = [];
       if (data === "All Levels") {
@@ -361,13 +375,45 @@ export default {
         }
       }
     },
-    selectNumber(number) {
-      this.choose = number;
-      console.log(number);
-    },
-    upper(s) {
-      let str = s.toUpperCase()
-      return str;
+    selectNumber(data) {
+      console.log(data)
+      this.choose = data;
+      this.display = [];
+      this.pages = [];
+
+       let numberOfPages = Math.ceil(this.JOBS.length / 10);
+      for (let index = 1; index <= numberOfPages; index++) {
+        this.pages.push(index);
+      }
+      
+       if ( (Number(data) && this.checkLevel == null) || this.checkLevel == "All Levels") {
+           if(1 === data){ 
+             for(let i=0; i<10; i++){
+              //  this.display.push({id: this.JOBS[i].id, title: this.JOBS[i].title, level: this.JOBS[i].level })
+               this.display[i] = {id: this.JOBS[i+1].id, title: this.JOBS[i+1].title, level: this.JOBS[i+1].level }
+             }
+            return this.display
+           } 
+           if(2 === data){
+             let x = (data * 10) - 10
+             let y = data * 10
+             for(let i=1; i<=10; i++){
+               this.display[i-1] = {id: this.JOBS[x + i].id, title: this.JOBS[x + i].title, level: this.JOBS[x + i].level}
+             }
+           }
+        //    else {
+        //       let start = (Number(data) * 10) - 10;
+        //       let stop = Number(data) * 10;
+        //       let count = 1
+        //       for (start; start < this.JOBS.length; start++) { 
+        //       if (start === stop) { return; }
+        //       //this.display.push({ id: this.JOBS[start].id, title: this.JOBS[start].title,level: this.JOBS[start].level })
+        //        this.display[count - 1] = { id: this.JOBS[start].id, title: this.JOBS[start].title,level: this.JOBS[start].level }
+        //       count = count + 1
+        //     }
+        //     return this.display
+        // }
+      } 
     },
   },
 };

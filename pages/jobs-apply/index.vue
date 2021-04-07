@@ -49,7 +49,7 @@
                   <button>
                     <a
                       class="submit job"
-                      :href="`mailto:kbtginspire@kbtg.tech?subject=Apply Application`"
+                      :href="`mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Job Application`"
                       >Apply Now</a
                     >
                     <!-- <a
@@ -78,7 +78,7 @@
                   <button>
                     <a
                       class="submit event"
-                      :href="`mailto:kbtginspire@kbtg.tech?subject=Event Only`"
+                      :href="`mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Event Only`"
                       >Apply Now</a
                     >
                     <!-- <a
@@ -116,7 +116,7 @@
                 <button>
                   <a
                     class="submit refer"
-                    :href="`mailto:kbtginspire@kbtg.tech?subject=Job Referral`"
+                    :href="`mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Job Referral`"
                     >Apply Now</a
                   >
                 </button>
@@ -131,55 +131,56 @@
 
 <script>
 export default {
-  head: {
-    script: [
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/jquery-3.3.1.slim.min.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/jquery.min.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/popper.min.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/bootstrap.min.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "flexslider/jquery.flexslider.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "flexslider/js/shCore.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "flexslider/js/shBrushJScript.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "WOW-master/dist/wow.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/wow.js",
-      },
-    ],
-  },
+  
+  // head: {
+  //   script: [
+  //     {
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/jquery-3.3.1.slim.min.js",
+  //     },
+  //     {
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/jquery.min.js",
+  //     },
+  //     {
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/popper.min.js",
+  //     },
+  //     {
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/bootstrap.min.js",
+  //     },
+  //     {
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "flexslider/jquery.flexslider.js",
+  //     },
+  //     {
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "flexslider/js/shCore.js",
+  //     },
+  //     {
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "flexslider/js/shBrushJScript.js",
+  //     },
+  //     {
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "WOW-master/dist/wow.js",
+  //     },
+  //     {
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/wow.js",
+  //     },
+  //   ],
+  // },
 
   data() {
     return {

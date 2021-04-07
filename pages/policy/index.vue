@@ -1,12 +1,12 @@
 <template>
   <div>
     <client-only>
-      <div class="wrapper">
+      <div class="wrapper bg-policy">
         <div class="container">
           <div class="row">
             <div class="col-12">
               <div
-                class="content-policy section wow fadeInUp"
+                class="content-policy section wow fadeInUp f-policy"
                 data-wow-delay="0.7"
               >
                 <h2 class="section wow fadeInLeft" data-wow-delay="0.7">
@@ -531,55 +531,60 @@
 
 <script>
 export default {
-  head: {
-    script: [
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/jquery-3.3.1.slim.min.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/jquery.min.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/popper.min.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/bootstrap.min.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "flexslider/jquery.flexslider.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "flexslider/js/shCore.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "flexslider/js/shBrushJScript.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "WOW-master/dist/wow.js",
-      },
-      {
-        defer: true,
-        type: "text/javascript",
-        src: "js/wow.js",
-      },
-    ],
+  head:{
+      bodyAttrs:{
+      class:"bg-all"
+    }
   },
+  // head: {
+  //   script: [
+  //     {
+  //       defer: true,
+  //       type: "text/javascript",
+  //       src: "js/jquery-3.3.1.slim.min.js",
+  //     },
+  //     {
+  //       defer: true,
+  //       type: "text/javascript",
+  //       src: "js/jquery.min.js",
+  //     },
+  //     {
+  //       defer: true,
+  //       type: "text/javascript",
+  //       src: "js/popper.min.js",
+  //     },
+  //     {
+  //       defer: true,
+  //       type: "text/javascript",
+  //       src: "js/bootstrap.min.js",
+  //     },
+  //     {
+  //       defer: true,
+  //       type: "text/javascript",
+  //       src: "flexslider/jquery.flexslider.js",
+  //     },
+  //     {
+  //       defer: true,
+  //       type: "text/javascript",
+  //       src: "flexslider/js/shCore.js",
+  //     },
+  //     {
+  //       defer: true,
+  //       type: "text/javascript",
+  //       src: "flexslider/js/shBrushJScript.js",
+  //     },
+  //     {
+  //       defer: true,
+  //       type: "text/javascript",
+  //       src: "WOW-master/dist/wow.js",
+  //     },
+  //     {
+  //       defer: true,
+  //       type: "text/javascript",
+  //       src: "js/wow.js",
+  //     },
+  //   ],
+  // },
   mounted() {
     console.log("Loading...");
     this.$nextTick(() => {

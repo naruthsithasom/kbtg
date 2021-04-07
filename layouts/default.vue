@@ -5,7 +5,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <nav class="navbar navbar-expand-lg navbar-light">
+              <nav class="navbar navbar-expand-lg navbar-light px-0">
                 <a class="navbar-brand" href="/">
                   <svg
                     id="Layer_1"
@@ -135,8 +135,8 @@
                       :class="{ active: statusAgenda }"
                       @click="navClick('AGENDA')"
                     >
-                      <nuxt-link to="/agenda" class="nav-link"
-                        >AGENDA</nuxt-link
+                      <nuxt-link to="/activites" class="nav-link"
+                        >ACTIVITIES</nuxt-link
                       >
                     </li>
                     <li
@@ -144,7 +144,7 @@
                       data-toggle="collapse"
                       data-target="#navmenu"
                       aria-controls="navmenu"
-                      aria-expanded="false"                      
+                      aria-expanded="false"
                       :class="{ active: statusFaq }"
                       @click="navClick('FAQ')"
                     >
@@ -185,29 +185,18 @@
                     <li
                       class="nav-item"
                       data-toggle="collapse"
-                      data-target="#navmenu"
-                      aria-controls="navmenu"
-                      aria-expanded="false"
-                      :class="{ 'nav-item active': EN }"
-                      @click="changeLanguage('EN')"
+                      :class="{ 'active': !showActive }"
                     >
-                      <nuxt-link :to="switchLocalePath('en')" class="nav-link"
-                        >EN</nuxt-link
-                      >
+                    
+                      <button @click="switchLanguage('en')" class="nav-link on">EN</button>
                     </li>
                     <span style="margin: 5px 0">/</span>
                     <li
                       class="nav-item"
                       data-toggle="collapse"
-                      data-target="#navmenu"
-                      aria-controls="navmenu"
-                      aria-expanded="false"
-                      :class="{ 'nav-item active': TH }"
-                      @click="changeLanguage('TH')"
+                      :class="{ 'active': showActive }"
                     >
-                      <nuxt-link :to="switchLocalePath('th')" class="nav-link"
-                        >TH</nuxt-link
-                      >
+                      <button @click="switchLanguage('th')" class="nav-link on">TH</button>
                     </li>
                   </ul>
                 </div>
@@ -216,6 +205,7 @@
           </div>
         </div>
       </header>
+
       <Nuxt />
       <footer>
         <div class="container">
@@ -223,7 +213,10 @@
             <div class="col-12 col-md-9">
               <div class="nav-footer">
                 <div class="inspire">
-                  <img src="~/assets/images/logo-footer.png" />
+                  <img
+                    src="~/assets/images/logo-footer01.svg"
+                    style="width: 91px; height: 41px"
+                  />
                   <ul>
                     <li
                       class="nav-item"
@@ -244,7 +237,7 @@
                       :class="{ active: statusAgenda }"
                       @click="navClick('AGENDA')"
                     >
-                      <nuxt-link to="/agenda" class="">AGENDA</nuxt-link>
+                      <nuxt-link to="/activites" class="">ACTIVITIES</nuxt-link>
                     </li>
                     <li class="nav-item" @click="navClick('policy')">
                       <nuxt-link to="/policy" class=""
@@ -268,7 +261,10 @@
                   </ul>
                 </div>
                 <div class="kbtg">
-                  <img src="~/assets/images/logo-kbtg.png" />
+                  <img
+                    src="~/assets/images/logo-footer02.svg"
+                    style="width: 80px; height: 27px"
+                  />
                   <ul>
                     <li>
                       <a href="https://www.kbtg.tech/" target="_blank"
@@ -292,19 +288,19 @@
             <div class="col-12 col-md-3">
               <div class="social">
                 <ul>
-                  <li>
+                  <li class="ml-2">
                     <a href="https://www.facebook.com/KBTGLive" target="_blank"
                       ><img src="~/assets/images/facebook.png"
                     /></a>
                   </li>
-                  <li>
+                  <li class="ml-2">
                     <a
                       href="https://www.linkedin.com/company/kasikorn-business-technology-group"
                       target="_blank"
                       ><img src="~/assets/images/in.png"
                     /></a>
                   </li>
-                  <li>
+                  <li class="ml-2">
                     <a
                       href="https://www.youtube.com/channel/UCXZMCLAYewhJbRd-YMA8KMA"
                       target="_blank"
@@ -328,69 +324,78 @@
 </template>
 <script>
 export default {
-  head: {
-    script: [
-      {
-        body:true,
-        async: true,
-        type: "text/javascript",
-        src: "js/jquery-3.3.1.slim.min.js",
-      },
-      {
-        body:true,
-        async: true,
-        type: "text/javascript",
-        src: "js/jquery.min.js",
-      },
-      {
-        body:true,
-        async: true,
-        type: "text/javascript",
-        src: "js/popper.min.js",
-      },
-      {
-        body:true,
-        async: true,
-        type: "text/javascript",
-        src: "js/bootstrap.min.js",
-      },
-      {
-        body:true,
-        async: true,
-        type: "text/javascript",
-        src: "flexslider/jquery.flexslider.js",
-      },
-      {
-        body:true,
-        async: true,
-        type: "text/javascript",
-        src: "flexslider/js/shCore.js",
-      },
-      {
-        body:true,
-        async: true,
-        type: "text/javascript",
-        src: "flexslider/js/shBrushJScript.js",
-      },
-      {
-        body:true,
-        async: true,
-        type: "text/javascript",
-        src: "WOW-master/dist/wow.js",
-      },
-      {
-        body:true,
-        async: true,
-        type: "text/javascript",
-        src: "js/wow.js",
-      },
-    ],
-  },
+  // head: {
+  //   script: [
+  //     {
+  //       body:true,
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/jquery-3.3.1.slim.min.js",
+  //     },
+  //     {
+  //       body:true,
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/jquery.min.js",
+  //     },
+  //     {
+  //       body:true,
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/popper.min.js",
+  //     },
+  //     {
+  //       body:true,
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/bootstrap.min.js",
+  //     },
+  //     {
+  //       body:true,
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "flexslider/jquery.flexslider.js",
+  //     },
+  //     {
+  //       body:true,
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "flexslider/js/shCore.js",
+  //     },
+  //     {
+  //       body:true,
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "flexslider/js/shBrushJScript.js",
+  //     },
+  //     {
+  //       body:true,
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "WOW-master/dist/wow.js",
+  //     },
+  //     {
+  //       body:true,
+  //       async: true,
+  //       type: "text/javascript",
+  //       src: "js/wow.js",
+  //     },
+  //   ],
+  // },
 
   components: {},
+  // head() {
+  //   return this.$nuxtI18nHead();
+  // },
+  // header() {
+  //   return this.$t("header");
+  // },
+  // availableLocales() {
+  //   return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
+  // },
+
   data() {
     return {
-      isStripeLoaded: false,
       active: "true",
       statusHome: true,
       statusJobs: false,
@@ -400,20 +405,29 @@ export default {
       statusJoin: false,
       EN: true,
       TH: false,
-      default: false,
+      showActive:false,
     };
   },
+    mounted(){
+    this.switchLang = this.$router.app._i18n.localeProperties.code;
+     console.log('check',this.switchLang)
+    if(this.switchLang === 'th') {
+      console.log('>>>>>>>>sw:',this.switchLang)
+    }
+    return  this.switchLang 
+  },
   methods: {
-    changeLanguage(language) {
-      if (language === "EN") {
-        this.EN = true;
-        this.TH = false;
-      }
-      if (language === "TH") {
-        this.TH = true;
-        this.EN = false;
+    switchLanguage(sw){
+      if(sw === 'en'){
+        this.$router.push(this.switchLocalePath('en'))
+        this.showActive = false
+         }
+      if(sw === 'th'){
+        this.$router.push(this.switchLocalePath('th'))
+        this.showActive = true
       }
     },
+ 
     navClick(data) {
       if (data === "HOME") {
         this.statusHome = true;
@@ -466,10 +480,10 @@ export default {
       }
       if (data === "JOIN") {
         this.statusHome = false;
-        this.statusJobs = true;
+        this.statusJobs = false;
         this.statusAgenda = false;
         this.statusFaq = false;
-        this.statusJoin = true;
+        this.statusJoin = false;
         this.statusContact = false;
       }
     },
@@ -477,4 +491,9 @@ export default {
 };
 </script>
 <style>
+.on{
+  text-decoration: none;
+  background-color: #ffffff;
+   border: 0;
+}
 </style>

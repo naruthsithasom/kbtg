@@ -34,7 +34,7 @@
         "Conduct and manage testing dependency across multiple applications and complex environment, help the team find ways that software can break and come up with recommendation to prevent those from happening",
         "Research and develop new testing technology that can be adopted by other teams"
       ],
-      "qualifications": [
+      "qualification": [
         "Bachelor's or Master's Degree in Computer Engineering, Computer Science, IT or related field (fresh grads welcome!)",
         "0-5 years of experience in Software Application Testing",
         "Good knowledge of Software Testing Methodology and Processes",
@@ -55,9 +55,9 @@
       "responsibility": [
         "Responsible for implementation, configuration and maintenance system according to standard best practice guideline",
         "Design and recommend J2EE Middleware Infrastructure architecture to support the business requirements ",
-        "Supporting day-to-day operation incident and change ",
-        "Understanding relevance of known problems and resolutions, make recommendations for improvement ",
-        "Investigating and coordinating with peers/cross team to perform root cause analysis ",
+        "Support day-to-day operation incident and change ",
+        "Understand relevance of known problems and resolutions, make recommendations for improvement ",
+        "Investigate and coordinate with peers/cross team to perform root cause analysis ",
         "Automate regular administrative tasks using scripting "
       ],
       "qualification": [
@@ -168,7 +168,7 @@
       ],
       "skills": "Skill in Big Data, ETL/ELT, Hadoop, etc.",
       "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
-      "fresh_grad": true
+      "fresh_grad": false
     },
 
     {
@@ -283,7 +283,8 @@
         "Be highly collaborative with the current team, management structure and business leaders ",
         "Demonstrate a very high level of customer service and empathy to the customer issues delivering solutions while working within budget",
         "Negotiate with suppliers to provide best balance of quality, service and price ",
-        "Good communication skill• Background in banking and financial services business is an advantage",
+        "Good communication skill",
+        "Background in banking and financial services business is an advantage",
         "Background in banking and financial services business is an advantage "
 
       ],
@@ -306,11 +307,11 @@
         "Bachelors or Master Degree in Computer Engineering, Computer Science, Information Security or similar Engineering discipline or equivalent experience",
         "At least 3 years of experience in IT security fields",
         "Strong analytical and problem solving capabilities",
-        "Excellent teamwork and inter - personal skills",
-        "Self - motivated individual that is willing to develop the solutions on his / her own or in a team of highly skilled staff",
+        "Excellent teamwork and interpersonal skills",
+        "Self-motivated individual that is willing to develop the solutions on his/her own or in a team of highly skilled staff",
         "Rapid learning capability and able to work under pressure",
         "Good oral and written communication in Thai and English languages",
-        "Certified security professional such as CISSP, CSSLP, CISA, CISM, CompTIA Security + , ISO 27001 Lead Auditor / Implementer is preferred"
+        "Certified security professional such as CISSP, CSSLP, CISA, CISM, CompTIA Security + , ISO 27001 Lead Auditor/Implementer is preferred"
 
       ],
       "skills": " IT Security Threats and DevOps Skill  ",
@@ -341,7 +342,7 @@
         "Experience with DevOps tools such as Jenkins, JFrog Artifactoy, Grafana, and etc.",
         "Strong analytical and problem solving capabilities",
         "Excellent teamwork and interpersonal skills",
-        "Self - motivated individual that is willing to develop the solutions on his / her own or in a team of highly skilled staff",
+        "Self-motivated individual that is willing to develop the solutions on his/her own or in a team of highly skilled staff",
         "Rapid learning capability and able to work under pressure",
         "Good oral and written communication in Thai and English languages"
 
@@ -360,21 +361,21 @@
         "Provide security awareness session to enhance understanding level of security policy and requirements",
         "Perform project tracking and report(track issues related to IT operation and security until closed or at risk acceptable level)",
         "Performing project management related to ISO27001 & PCI DSS compliance",
-        "Monitor and work with IT infrastructure and software development teams to close the deviations and non - compliance issues",
-        "Handle day - to - day governance issues related to IT and cybersecurity concerns to ensure compliance of security policy, standard, and procedure",
+        "Monitor and work with IT infrastructure and software development teams to close the deviations and non-compliance issues",
+        "Handle day-to-day governance issues related to IT and cybersecurity concerns to ensure compliance of security policy, standard, and procedure",
         "Develop and maintain security management and compliance dashboard",
-        "Carry out any other special assignment and administrative works as required in order to support departmental activities and management’ s assignment"
+        "Carry out any other special assignment and administrative works as required in order to support departmental activities and management’s assignment"
 
       ],
       "qualification": [
-        "Bachelor 's or Master's Degree in Information Technology, Computer Engineering, Computer Science, Information Security",
-        "3 - 5 years of experience in a relevant discipline",
-        "Knowledge in IT & security governance / audit",
+        "Bachelor's or Master's Degree in Information Technology, Computer Engineering, Computer Science, Information Security",
+        "3-5 years of experience in a relevant discipline",
+        "Knowledge in IT & security governance/audit",
         "Good analytical and problem solving skills",
         "Good project management skill",
         "Ability to work under pressure and time constraint",
         "Good oral and written communication in Thai and English languages",
-        "Certified security professional such as CISA, CISM, ISO 27001 Lead Auditor / Implementer are a plus"
+        "Certified security professional such as CISA, CISM, ISO 27001 Lead Auditor/Implementer are a plus"
 
       ],
       "skills": "  IT & Security Governance / Audit  ",
@@ -549,7 +550,7 @@
       "id": 20,
       "title": "DeFi / Blockchain Tech Lead",
       "level": "Middle - Senior",
-      "description": "In this role, you will gain an ownership over end-to-end ecosystem products, while ensuring a consistent, high-quality products that deliver great user experience across the ecosystem with robustness and security.",
+      "description": "In this role, you will gain an ownership over end-to-end ecosystem products while ensuring a consistent, high-quality products that deliver great user experience across the ecosystem with robustness and security.",
       "responsibility": [
         "Participate in discussions from the initial product ideas to launch",
         "Work closely with internal and external parties to rapidly iterate, experiment, and launch products",
@@ -573,14 +574,14 @@
     },
     {
       "id": 21,
-      "title": "UX / UI Designer",
+      "title": "UX/UI Designer",
       "level": "Middle",
       "description": "In this role, you will design solution for user interface and interaction that leverages start-of-the-art UX/UI design trends and techniques.",
       "responsibility": [
         "Lead and execute interaction and visual design sessions with solution architects, software developers and business analysts",
         "Define innovative and cutting-edge design solution for user interface and interaction",
         "Work as a part of highly collaborative and fast paced multi-discipline software development teams and be in charge of end-to-end UX/UI solution ",
-        "oversee the implementation and testing of the design including functionality, usability and scalability"
+        "Oversee the implementation and testing of the design including functionality, usability and scalability"
       ],
       "qualification": [
         "Bachelor's or Master's Degree in Graphic Design, Interaction Design, New Media Design, Industrial Design or related fields ",
@@ -758,6 +759,33 @@
       ],
       "skills": "CSOC and Information Security Platforms",
       "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 27,
+      "title": "Senior DeFi Frontend Engineer",
+      "level": "Middle - Senior",
+      "description": "In this role, you will help us build the next generation of financial product ecosystem while influencing the creation, design, and execution of future products.",
+      "responsibility": [
+        "Work closely with internal and external parties to rapidly iterate, experiment, and launch products",
+        "Create a unified component library for using across all products",
+        "Rapidly implement functional UI elements from design mocks, with an eye toward performance and accessibility",
+        "Know when to create abstractions vs. one-off features",
+        "Ensure that components are functional, elegant, performant, and mobile-friendly",
+        "Understand when and how to run UI tests"
+      ],
+      "qualification": [
+        "Rich experience in React",
+        "A deep understanding of architecture of modern client-side React applications",
+        "Prior experience working with component libraries or design teams in user-facing applications",
+        "Prior experience creating a design system or component library",
+        "A desire to keep up with modern best practices in web development",
+        "Familiarity with the Web3 frontend stack (ethers.js / web3.js, EIP-1193, client-side private key management, etc.)",
+        "Familiarity with React Hooks and TypeScript in React"
+
+      ],
+      "skills": "React Hooks and TypeScript in React, Web3 Frontend Stack (Ethers.js / Web3.js, EIP-1193, Client-Side Private Key Management, etc.)",
+      "location": ["K+ Building"],
       "fresh_grad": false
     }
   ]

@@ -1,7 +1,24 @@
 <template>
   <div class="wrapper">
     <div class="imgHeader position-relative">
-      <img src="~/assets/images/banner1.png" class="img-fluid" />
+        <div class="carousel-inner"> 
+           <b-carousel
+                  id="carousel-fade"
+                  style="text-shadow: 0px 0px 2px #000"
+                  fade
+                  :interval="2000"  
+                >
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>   
+          </b-carousel>
+        </div>
+      <!-- <img :src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7)}.jpg`)" class="img-fluid" /> -->
       <div class="position-absolute">
         <div class="container">
           <div class="row">
@@ -23,15 +40,16 @@
             class="col-12 col-md-6 section wow fadeInLeft"
             data-wow-delay="0.7"
           >
+          <div class="d-flex justify-content-between">
             <h4>
-              {{ GET_JOBS.title.toUpperCase()
-              }}<span><img src="~/assets/images/fresh-b.png" /></span>
+              {{ GET_JOBS.title.toUpperCase()}}
             </h4>
+            <span class="" v-if="GET_FRESH"><img src="~/assets/images/fresh-b.png" /></span>
+          </div>
             <b>{{ GET_JOBS.levels }}</b>
             <p>
               {{ GET_JOBS.description }}
-            </p>
-
+            </p>            
             <button class="active pt-5">
               <nuxt-link
                 :to="{ path: '/jobs-apply', query: { id: GET_JOBS.id } }"
@@ -43,7 +61,18 @@
             class="col-12 col-md-6 section wow fadeInRight"
             data-wow-delay="0.7"
           >
-            <img src="~/assets/images/img-exe.png" class="img-fluid" />
+          <b-carousel
+              id="carousel-fade"
+              style="text-shadow: 0px 0px 2px #000"
+              fade
+              :interval="5000"  
+              >
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/random/${Math.floor(Math.random() * 13) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/random/${Math.floor(Math.random() * 13) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/random/${Math.floor(Math.random() * 13) + 1}.jpg`)"></b-carousel-slide>
+              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/random/${Math.floor(Math.random() * 13) + 1}.jpg`)"></b-carousel-slide>
+          </b-carousel>
+            <!-- <img :src="require(`~/assets/images/random/${Math.floor(Math.random() * 13) + 1}.jpg`)" class="img-fluid" /> -->
           </div>
         </div>
         <hr style="border-bottom: 1px solid #62cbc9; margin: 0" />
@@ -87,7 +116,7 @@
             <div class="content-detail" style="margin-top: 5px">
               <button class="active">
                 <nuxt-link
-                  :to="{ path: '/jobs-apply', query: { job: GET_JOBS.title } }"
+                  :to="{ path: '/jobs-apply', query: { job: GET_JOBS.id } }"
                   >Apply Now</nuxt-link
                 >
               </button>
@@ -104,60 +133,11 @@
 </template>
 <script>
 export default {
-  head: {
-    script: [
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/jquery-3.3.1.slim.min.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/jquery.min.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/popper.min.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/bootstrap.min.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "flexslider/jquery.flexslider.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "flexslider/js/shCore.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "flexslider/js/shBrushJScript.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "WOW-master/dist/wow.js",
-      },
-      {
-        async: true,
-        type: "text/javascript",
-        src: "js/wow.js",
-      },
-    ],
-  },
   async mounted() {
     console.log("Loading...");
     await this.$nextTick(() => {
       this.$nuxt.$loading.start();
-      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
+      setTimeout(() => this.$nuxt.$loading.finish(), 3000);
     });
   },
   async asyncData({ $axios, params }) {
@@ -166,8 +146,9 @@ export default {
     const GET_MERIT = GET_JOBS.qualification;
     const GET_CARE = GET_JOBS.responsibility;
     const GET_WORKPLACE = GET_JOBS.location;
+    const GET_FRESH = GET_JOBS.fresh_grad;
 
-    return { GET_JOBS, GET_CARE, GET_MERIT, GET_WORKPLACE };
+    return { GET_JOBS, GET_CARE, GET_MERIT, GET_WORKPLACE ,GET_FRESH};
   },
   validate({ params }) {
     const re = /^\d+$/;

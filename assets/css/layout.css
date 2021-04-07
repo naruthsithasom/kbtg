@@ -103,6 +103,14 @@
     url('../hco_fonts/woff2/GothamSSm-Medium_Web.woff2') format('woff2')
 }
 
+@font-face {
+  font-family: 'Kanit-light';
+  src: url('../fonts/Kanit/Kanit-Light.ttf');
+}
+@font-face {
+  font-family: 'Kanit-Regular';
+  src: url('../fonts/Kanit/Kanit-Regular.ttf');
+}
 .h1-l1 {
   font-family: 'Gotham-Bold' !important;
 }
@@ -114,12 +122,34 @@
 .h2-l2 {
   font-family: 'Gotham-Book' !important;
 }
-
+.order{
+      list-style-type: decimal !important;
+}
 /* .p-sub {
   font-family: 'Gotham-Book' !important;
 } */
+.f-THaiH{
+  font-family: 'Kanit-Regular' !important;
+}
+.f-thai {
+  font-family: 'Kanit-Light' !important;
+  line-height: 33px !important;
+}
+.f-thai_job{
+   font-family: 'Kanit-Light' !important;
+   line-height: 30px !important;
+}
+.f-policy{
+    font-family: 'Kanit-Light' !important;
+    line-height: 30px !important;
+    letter-spacing: 0.05rem !important;
+}
+.bg-all{
+  background: none ;
+}
 body {
-  font-family: 'Kanit', 'HCo Gotham SSm';
+
+  font-family: 'HCo Gotham SSm';
   /* font-family: 'HCo Gotham SSm'; 
   font-family: 'Kanit',sans-serif; */
   font-weight: inherit;
@@ -175,19 +205,20 @@ h2 {
   font-size: 38px;
 }
 
-.cropped1{
+.cropped1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
+
 .cropped1>.resize {
   /* width: 540px !important;
        height: 277px !important;
     object-fit: none;  */
   width: 400px !important;
- 
- 
+
+
 }
 
 .img-fluid {
@@ -268,7 +299,8 @@ header {
   width: 100%;
   position: fixed;
   background: #fff;
-  z-index: 1;
+  /* z-index: 1;  old */
+  z-index: 2;
 }
 
 header .navbar-light .navbar-nav {
@@ -355,6 +387,8 @@ header .navbar-light .language .nav-item.active .nav-link {
 .imgHeader .position-absolute {
   width: 100%;
   top: 50%;
+  /* Add new */
+  z-index: 1;
 }
 
 .imgHeader .position-absolute h1 {
@@ -438,13 +472,20 @@ header .navbar-light .language .nav-item.active .nav-link {
 }
 
 .content-about {
-  background: url(../images/bg-about_re02.jpg);
+  background: url(../images/bg-about.jpg);
+  /*
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 0; */
+  background-size: cover;
+  background-position: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 0;
 }
 
 .content-about h4 {
@@ -462,21 +503,49 @@ header .navbar-light .language .nav-item.active .nav-link {
   /* font-family:'Gotham-Book' */
 }
 
+.wrap-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wrap-link>a {
+  width: 180px;
+  margin-right: 20px;
+  text-align: center;
+}
+
 .content-about a {
   font-size: 14px;
-  padding: 10px 45px;
+  padding: 10px 15px;
   color: #fff;
   background: #62CBC9;
   border-radius: 30px;
   font-family: 'Gotham-Medium';
+
 }
 
 
 .item_slider .flex-control-nav {
   display: none;
 }
+.f-register-h3,
+.f-job-h3 {
+  color: #FFFFFF;
+  font-family:'Gotham-Bold';
+}
+.f-register-h3  a {
+  font-size: 12px;
+  float: right;
+  color: #62CBC9;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.content-job h3 {
+  font-family: 'Gotham-Bold'
+}
 
-.content-job h4 a {
+.content-job h3 a {
   font-size: 12px;
   float: right;
   color: #62CBC9;
@@ -523,14 +592,19 @@ header .navbar-light .language .nav-item.active .nav-link {
   background-image: url(../images/line3_re03.png);
   background-position: top 0px right 0px;
   background-repeat: no-repeat;
-  padding: 40px 0;
+  padding: 30px 0 10px 0;
   background-size: 100%;
 }
 
 .content-find h4 {
+  font-family: 'Gotham-Bold';
   color: #fff;
 }
 
+.content-find h3 {
+  font-family: 'Gotham-Bold';
+  color: #fff;
+}
 .content-find h4 a {
   font-size: 12px;
   float: right;
@@ -538,7 +612,13 @@ header .navbar-light .language .nav-item.active .nav-link {
   font-weight: 300;
   margin-top: 5px;
 }
-
+.content-find h3 a {
+  font-size: 12px;
+  float: right;
+  color: #62CBC9;
+  font-weight: 300;
+  margin-top: 5px;
+}
 .item {
   margin-top: 30px;
   color: #fff;
@@ -569,11 +649,13 @@ header .navbar-light .language .nav-item.active .nav-link {
 
 .item h5 {
   text-align: center;
+  font-family: 'Gotham-Medium';
 }
 
 .item p {
   padding: 0 20px 0 36px;
   /* text-align: center; */
+  font-family: 'Gotham-Book';
 }
 
 .bgblack-faq {
@@ -583,7 +665,12 @@ header .navbar-light .language .nav-item.active .nav-link {
   background-position: 0 200%;
   background-repeat: no-repeat;
   background-size: 15%;
-  padding: 40px 0;
+  padding: 20px 0px 40px 0px;
+}
+
+.f-q {
+  color: #62cbc9;
+  /* font-family:'Gotham-Book' !important; */
 }
 
 .accordion {
@@ -665,10 +752,14 @@ header .navbar-light .language .nav-item.active .nav-link {
 
 .bg-line {
   background: #393536;
-  padding: 30px 0;
+  padding: 30px 0px 0px 0px;
   position: relative;
 }
-
+.bg-line-job {
+  background: #393536;
+  padding: 30px 0px 30px 0px;
+  position: relative;
+}
 
 .bg-line::before {
   content: '';
@@ -705,31 +796,32 @@ header .navbar-light .language .nav-item.active .nav-link {
 }
 
 .bg-line2 {
-  padding: 30px 0;
+  padding: 20px 0 10px 0;
   position: relative;
 }
 
 .bg-line2::before {
   content: '';
-  width: 250px;
-  height: 300px;
-  position: absolute;
-  bottom: -85px;
-  left: 0;
+      content: '';
+      width: 202px;
+      height: 256px;
+      position: absolute;
+      bottom: -85px;
+      left: -44px;
   background-image: url(../images/lineColor1.png);
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 40px 0;
   /* z-index: -1; old*/
-  z-index: 0; 
+  z-index: 0;
 }
 
 .bg-line2::after {
   content: '';
-  width: 250px;
-  height: 300px;
-  position: absolute;
-  right: 0;
+width: 199px;
+height: 275px;
+position: absolute;
+right: 60px;
   bottom: -210px;
   background-image: url(../images/lineColor2.png);
   background-size: 100%;
@@ -879,7 +971,7 @@ header .navbar-light .language .nav-item.active .nav-link {
 }
 
 .register {
-  margin: 30px 0;
+  margin: 40px 0;
   color: #fff;
 }
 
@@ -895,7 +987,7 @@ header .navbar-light .language .nav-item.active .nav-link {
 }
 
 .referred {
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .referred h5 {
@@ -1300,12 +1392,14 @@ button:focus {
   color: #fff;
   background: #62CBC9;
 }
-
+.bg-policy{
+  background: #393536 !important;
+}
 .content-policy {
   margin-top: 100px;
   color: #fff;
   font-size: 14px;
-  margin-bottom: 20%;
+  margin-bottom: 50px;
 }
 
 .content-policy .improve-day {
@@ -1621,7 +1715,7 @@ footer {
 }
 
 .inspire ul li {
-  width: 50%;
+  width: 39%;
   float: left;
   font-size: 14px;
   margin-bottom: 5px;

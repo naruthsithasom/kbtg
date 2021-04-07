@@ -1,25 +1,25 @@
  
 export default {
-  router: {
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: "custom",
-        path: "*",
-        component: resolve(__dirname, "pages/404.vue"),
-      });
-    },
-  },
-  loading: {
-    continuous: true,
-  },
+  // router: {
+  //   extendRoutes(routes, resolve) {
+  //     routes.push({
+  //       name: "custom",
+  //       path: "*",
+  //       component: resolve(__dirname, "pages/404.vue"),
+  //     });
+  //   },
+  // },
+  // loading: {
+  //   continuous: true,
+  // },
   ssr: false,
   target: "static",
   server: {
     port: 80,
   },
-  static: {
-    prefix: false,
-  },
+  // static: {
+  //   prefix: false,
+  // },
   head: {
     title: "KBTG INSPIRE",
     htmlAttrs: {
@@ -36,10 +36,19 @@ export default {
       {
         rel: "icon",
         type: "image/x-icon",
-        href: "/Asset16 _32x32.png",
+        href: "/favicon32.svg",
       },
     ],
+  
   },
+  script: [
+    {
+      src: "js/bootstrap.bundle.min.js",
+    },
+    {
+      src: "js/agenda-tap.js",
+    },
+  ],
   css: [
     { src: "~/assets/css/reset.css" },
     { src: "~/assets/css/print.css" },
@@ -77,16 +86,22 @@ export default {
     },
   },
   i18n: {
-    locales: ["en", "th"],
+    // parsePages: false,
+    // encodePaths: false,
+    locales: [
+      { code: "en", iso: "en-US", file: "./static/lang/en.json" },
+      { code: "th", iso: "th-TH", file: "./static/lang/en.json" },
+    ],
+    noPrefixDefaultLocale: true,
     defaultLocale: "en",
     vueI18n: {
-      fallbackLocale: "en",
+      fallbackLocale: "",
       messages: {
         en: require("./static/lang/en.json"),
         th: require("./static/lang/th.json"),
       },
     },
   },
-  devtool: "inline-source-map",
-  loaders: [{ test: /\.js$/, loader: "babel", query: { compact: false } }],
+  // devtool: "inline-source-map",
+  // loaders: [{ test: /\.js$/, loader: "babel", query: { compact: false } }],
 };
