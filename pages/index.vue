@@ -4,7 +4,10 @@
     <div class="wrapper bg-white">
       <div class="imgHeader home position-relative">
         <video autoplay="" loop="" id="video-background" muted="">
-          <source src="~/assets/images/KBTG_Inspire_50_2.mp4" type="video/mp4" />
+          <source
+            src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"
+            type="video/mp4"
+          />
         </video>
         <!-- <img src="~/assets/images/Test01.jpg"/> -->
         <div class="position-absolute">
@@ -22,7 +25,7 @@
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-5 t-right">
-                <div class="day">
+                <div class="day" style="height: 17px">
                   <img src="~/assets/images/Asset13.svg" />
                   <span class="mr-5 pr-5">21 - 23 May, 2021</span>
                 </div>
@@ -42,28 +45,35 @@
         <div class="container py-3">
           <div class="row">
             <div class="col-12 col-md-12">
-                <h3 class="section wow fadeInLeft text-white pt-3" data-wow-delay="500">
+              <h3
+                class="section wow fadeInLeft text-white pt-3"
+                data-wow-delay="500"
+              >
                 ABOUT KBTG INSPIRE
               </h3>
             </div>
           </div>
           <div class="row">
             <div class="col-12 col-md-6">
-              <p class="section wow fadeInUp " :class="{'f-thai': switchLang === 'th' }" data-wow-delay="0.5">
+              <p
+                class="section wow fadeInUp"
+                :class="{ 'f-thai': switchLang === 'th' }"
+                data-wow-delay="0.5"
+              >
                 {{ $t("AboutKBTGInspire") }}
               </p>
               <div class="wrap-link">
-                <a
-                  href="/jobs-exe"
+                <nuxt-link
+                  to="/jobs-exe"
                   class="section wow fadeInUp"
                   data-wow-delay="0.7"
-                  >See Positions</a
+                  >See Positions</nuxt-link>
                 >
-                <a
-                  href="/activites"
+                <nuxt-link
+                  to="/activites"
                   class="section wow fadeInUp"
                   data-wow-delay="0.7"
-                  >View Activities</a
+                  >View Activities</nuxt-link>
                 >
               </div>
             </div>
@@ -71,10 +81,7 @@
               <div class="section wow fadeInRight" data-wow-delay="500">
                 <div class=""></div>
                 <div class="">
-                  <img
-                    src="~/assets/images/img-about.jpg"
-                    class="img-fluid"
-                  />
+                  <img src="~/assets/images/img-about.jpg" class="img-fluid" />
                 </div>
               </div>
             </div>
@@ -112,7 +119,9 @@
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
                     </h5>
-                    <span class="location">KBTG Building &amp; K+ Building</span>
+                    <span class="location"
+                      >KBTG Building &amp; K+ Building</span
+                    >
                     <p>
                       In this role, you will be responsible for the application
                       design and development of application components or
@@ -369,8 +378,8 @@
                   data-wow-duration="200"
                   data-wow-delay="200"
                 >
-                  FIND YOUR INSPIRATION<a href="/activites" class="a-l1"
-                    >View all Agenda</a
+                  FIND YOUR INSPIRATION<nuxt-link to="/activites" class="a-l1"
+                    >View all Activites</nuxt-link>
                   >
                 </h3>
                 <div class="row justify-content-center">
@@ -387,7 +396,7 @@
                         /></span>
                       </div>
                       <h5>Job Interview (+Test)</h5>
-                      <p :class="{'f-thai': switchLang === 'th' }">
+                      <p :class="{ 'f-thai': switchLang === 'th' }">
                         {{ $t("JobInterview") }}
                       </p>
                     </div>
@@ -405,7 +414,7 @@
                         /></span>
                       </div>
                       <h5>Agile Playground</h5>
-                      <p :class="{'f-thai': switchLang === 'th' }">
+                      <p :class="{ 'f-thai': switchLang === 'th' }">
                         {{ $t("AgilePlayground") }}
                       </p>
                     </div>
@@ -423,7 +432,7 @@
                         /></span>
                       </div>
                       <h5>Inspire Talk</h5>
-                      <p :class="{'f-thai': switchLang === 'th' }">
+                      <p :class="{ 'f-thai': switchLang === 'th' }">
                         {{ $t("InspireTalk") }}
                       </p>
                     </div>
@@ -441,7 +450,7 @@
                         /></span>
                       </div>
                       <h5>1:1 Career Mentorship</h5>
-                      <p :class="{'f-thai': switchLang === 'th' }">
+                      <p :class="{ 'f-thai': switchLang === 'th' }">
                         {{ $t("1:1CareerMentorship") }}
                       </p>
                     </div>
@@ -459,7 +468,7 @@
                         /></span>
                       </div>
                       <h5>Fireside Chat</h5>
-                      <p :class="{'f-thai': switchLang === 'th' }">
+                      <p :class="{ 'f-thai': switchLang === 'th' }">
                         {{ $t("FiresideChat") }}
                       </p>
                     </div>
@@ -477,7 +486,7 @@
                         /></span>
                       </div>
                       <h5>Upskill Workshop</h5>
-                      <p :class="{'f-thai': switchLang === 'th' }">
+                      <p :class="{ 'f-thai': switchLang === 'th' }">
                         {{ $t("Upskill") }}
                       </p>
                     </div>
@@ -510,47 +519,69 @@
                     @click="clickFaq('q1')"
                     v-b-toggle.l1
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q1, active: status_q1, 'f-THaiH': switchLang === 'th' }"
+                    :class="{
+                      acvite: !status_q1,
+                      active: status_q1,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q1") }}
                   </h4>
                   <b-collapse id="l1">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A1") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A1") }}
+                    </p>
                   </b-collapse>
 
                   <h4
                     @click="clickFaq('q2')"
                     v-b-toggle.l2
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q2, active: status_q2,'f-THaiH': switchLang === 'th'  }"
+                    :class="{
+                      acvite: !status_q2,
+                      active: status_q2,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q2") }}
                   </h4>
                   <b-collapse id="l2">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}" >{{ $t("A2") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A2") }}
+                    </p>
                   </b-collapse>
                   <h4
                     @click="clickFaq('q3')"
                     v-b-toggle.l3
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q3, active: status_q3,'f-THaiH': switchLang === 'th'  }"
+                    :class="{
+                      acvite: !status_q3,
+                      active: status_q3,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q3") }}
                   </h4>
                   <b-collapse id="l3">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A3") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A3") }}
+                    </p>
                   </b-collapse>
 
                   <h4
                     @click="clickFaq('q4')"
                     v-b-toggle.l4
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q4, active: status_q4,'f-THaiH': switchLang === 'th'  }"
+                    :class="{
+                      acvite: !status_q4,
+                      active: status_q4,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q4") }}
                   </h4>
                   <b-collapse id="l4">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
                       {{ $t("A4") }}
                       <a
                         style="color: #62cbc9"
@@ -565,84 +596,126 @@
                     @click="clickFaq('q5')"
                     v-b-toggle.l5
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q5, active: status_q5,'f-THaiH': switchLang === 'th'  }"
+                    :class="{
+                      acvite: !status_q5,
+                      active: status_q5,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q5") }}
                   </h4>
                   <b-collapse id="l5">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A5") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A5") }}
+                    </p>
                   </b-collapse>
 
                   <h4
                     @click="clickFaq('q6')"
                     v-b-toggle.l6
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q6, active: status_q6 ,'f-THaiH': switchLang === 'th' }"
+                    :class="{
+                      acvite: !status_q6,
+                      active: status_q6,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q6") }}
                   </h4>
 
                   <b-collapse id="l6">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A6") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A6") }}
+                    </p>
                   </b-collapse>
                   <h4
                     @click="clickFaq('q7')"
                     v-b-toggle.l7
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q7, active: status_q7,'f-THaiH': switchLang === 'th'  }"
+                    :class="{
+                      acvite: !status_q7,
+                      active: status_q7,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q7") }}
                   </h4>
                   <b-collapse id="l7">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A7") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A7") }}
+                    </p>
                   </b-collapse>
 
                   <h4
                     @click="clickFaq('q8')"
                     v-b-toggle.l8
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q8, active: status_q8,'f-THaiH': switchLang === 'th'  }"
+                    :class="{
+                      acvite: !status_q8,
+                      active: status_q8,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q8") }}
                   </h4>
                   <b-collapse id="l8">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A8") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A8") }}
+                    </p>
                   </b-collapse>
 
                   <h4
                     @click="clickFaq('q9')"
                     v-b-toggle.l9
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q9, active: status_q9 ,'f-THaiH': switchLang === 'th' }"
+                    :class="{
+                      acvite: !status_q9,
+                      active: status_q9,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q9") }}
                   </h4>
                   <b-collapse id="l9">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A9") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A9") }}
+                    </p>
                   </b-collapse>
 
                   <h4
                     @click="clickFaq('q10')"
                     v-b-toggle.l10
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q10, active: status_q10,'f-THaiH': switchLang === 'th'  }"
+                    :class="{
+                      acvite: !status_q10,
+                      active: status_q10,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q10") }}
                   </h4>
                   <b-collapse id="l10">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A10") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A10") }}
+                    </p>
                   </b-collapse>
 
                   <h4
                     @click="clickFaq('q11')"
                     v-b-toggle.l11
                     class="accordion-toggle"
-                    :class="{ acvite: !status_q11, active: status_q11 ,'f-THaiH': switchLang === 'th' }"
+                    :class="{
+                      acvite: !status_q11,
+                      active: status_q11,
+                      'f-THaiH': switchLang === 'th',
+                    }"
                   >
                     {{ $t("Q11") }}
                   </h4>
                   <b-collapse id="l11">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A11") }}</p>
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A11") }}
+                    </p>
                   </b-collapse>
 
                   <!-- <h4
@@ -725,10 +798,16 @@ export default {
         type: "text/javascript",
         src: "js/wow.js",
       },
+      {
+        body: true,
+        async: true,
+        type: "text/javascript",
+        src: "js/agenda-tap.js",
+      },
     ],
-    bodyAttrs:{
-      class:"bg-all"
-    }
+    bodyAttrs: {
+      class: "bg-all",
+    },
   },
   data() {
     return {
@@ -744,7 +823,7 @@ export default {
       status_q10: false,
       status_q11: false,
       status_q12: false,
-      switchLang: ""
+      switchLang: "",
     };
   },
   methods: {
@@ -794,19 +873,18 @@ export default {
       setTimeout(() => this.$nuxt.$loading.finish(), 3000);
     });
 
-     this.switchLang = this.$router.app._i18n.localeProperties.code;
+    this.switchLang = this.$router.app._i18n.localeProperties.code;
+    this.switchLang = "th";
     //console.log(this.$t("AboutKBTGInspire"))
-   // console.log('check',this.switchLang)
+    // console.log('check',this.switchLang)
     /*if(this.switchLang === 'th') {
       console.log('>>>>>>>>sw:',this.switchLang)
     }*/
-    return  this.switchLang 
-
+    return this.switchLang;
   },
 };
 </script>
 <style>
-
 .home-enter-active,
 .home-leave-active {
   transition: opacity 0.5s;

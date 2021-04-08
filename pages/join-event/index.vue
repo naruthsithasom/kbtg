@@ -96,13 +96,10 @@
               </h3>
               <div class="register section wow fadeInUp" data-wow-delay="0.7">
                 <h5>“Job Interview + Activities” Package</h5>
-                <p :class="{ 'f-thai_job': switchLang === 'th' }">
-                  {{ $t("job1Detail") }}
-                </p>
-                <p class="m-0">1.&nbsp;&nbsp;&nbsp;{{ $t("job1-1") }}</p>
-                <p class="m-0" :class="{ 'f-thai_job_': switchLang === 'th' }">
-                  2.&nbsp;&nbsp;{{ $t("job1-2") }}
-                </p>
+                <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job1Detail") }}</p>
+                <!-- <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }} +</p> -->
+                <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }}</p>
+                <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">2.&nbsp;&nbsp;{{ $t("job1-2") }}</p>
                 <div class="submit">
                   <button>
                     <a
@@ -247,6 +244,10 @@ export default {
     };
   },
   async mounted() {
+      setTimeout(function(){ 
+       $("#navmenu li").removeClass('active');
+    $("#navmenu li:eq(4)").addClass('active');
+    }, 1000);
     await this.$nextTick(() => {
       this.$nuxt.$loading.start();
       console.log("Loading...");

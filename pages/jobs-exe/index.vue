@@ -4,6 +4,7 @@
       <div class="wrapper">
         <div class="imgHeader position-relative">
           <div class="">
+            
             <b-carousel
               style="text-shadow: 0px 0px 2px #000"
               fade
@@ -16,13 +17,6 @@
                   }.jpg`)
                 "
               ></b-carousel-slide>
-              <!-- <b-carousel-slide
-                :img-src="
-                  require(`~/assets/images/JobBanner/${
-                    Math.floor(Math.random() * 7) + 1
-                  }.jpg`)
-                "
-              ></b-carousel-slide>
               <b-carousel-slide
                 :img-src="
                   require(`~/assets/images/JobBanner/${
@@ -57,8 +51,16 @@
                     Math.floor(Math.random() * 7) + 1
                   }.jpg`)
                 "
-              ></b-carousel-slide> -->
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide> 
             </b-carousel>
+            
           </div>
           <div class="position-absolute">
             <div class="container">
@@ -70,7 +72,7 @@
                     >
                   </h2>
                   <div class="form-group has-search">
-                    <span class="fa fa-search form-control-feedback"></span>
+                    <!-- <span class="fa fa-search form-control-feedback"></span> -->
                     <b-form-input
                       v-model.trim="search"
                       list="my-list-id"
@@ -81,8 +83,8 @@
                       @keyup.enter="keyupSearch()"
                     ></b-form-input>
                     <datalist id="my-list-id">
-                      <option v-for="list in SERACH" :key="list">
-                        {{ list }}
+                      <option v-for="list in JOBS" :key="list">
+                        {{ list.title }}
                       </option>
                     </datalist>
                   </div>
@@ -271,7 +273,14 @@ export default {
     };
   },
   async mounted() {
-    console.log("Loading...");
+
+   
+    setTimeout(function(){ 
+       $("#navmenu li").removeClass('active');
+    $("#navmenu li:eq(1)").addClass('active');
+    }, 1000);
+
+    console.log("Loading... job");
     await this.$nextTick(() => {
       this.$nuxt.$loading.start();
       setTimeout(() => this.$nuxt.$loading.finish(), 2000);
@@ -292,7 +301,7 @@ export default {
       this.pages.push(i);
     }
     for(let i in this.JOBS){
-      if(10 === this.JOBS[i].id){ return false}
+      if(11 === this.JOBS[i].id){ return false}
       this.display.push({
         id: this.JOBS[i].id,
         title: this.JOBS[i].title,
@@ -300,12 +309,12 @@ export default {
         level: this.JOBS[i].level
       })
     }
+     for (let i in this.JOBS) {
+      this.SERACH[i] = this.JOBS[i].title.toUpperCase();
+      this.JOBS[i].title = this.posts[i].title.toUpperCase();
+    }
 
     return  (this.switchLang, this.display)
-    //  for (let i in this.JOBS) {
-    //   this.SERACH[i] = this.JOBS[i].title.toUpperCase();
-    //   this.JOBS[i].title = this.posts[i].title.toUpperCase();
-    // }
   },
   computed: {
     displayedPosts() {
@@ -334,17 +343,16 @@ export default {
     getSearch() {
       for (let i in this.JOBS) {
         if (this.search === this.JOBS[i].title) {
-          this.posts = [];
-          this.pages = [];
-          this.posts.push({
+            this.display.push({
             id: this.JOBS[i].id,
             title: this.JOBS[i].title,
-            level: this.JOBS[i].level,
+            level: this.JOBS[i].level
           });
-          console.log("search>>", this.search);
+          // console.log("search>>", this.search);
         }
       }
-    },
+      return this.display
+     },
   },
   watch: {
     // posts() {
@@ -398,14 +406,13 @@ export default {
       for (let i in this.JOBS) {
         if (this.search === this.JOBS[i].title) {
           this.display = [];
-          this.pages = [];
-          this.posts.push({
+           this.display.push({
             id: this.JOBS[i].id,
             title: this.JOBS[i].title,
             level: this.JOBS[i].level,
           });
           // console.log("keyup>>", this.posts[0].id);
-          this.$router.push(`/jobs-exe/${this.posts[0].id}`);
+          this.$router.push(`/jobs-exe/${this.display[0].id}`);
         }
       }
     },
@@ -439,27 +446,25 @@ export default {
         if (2 === data) {
           let x = data * 10 - 10;
           let y = 0
-           for (let i = 1; i <= 10; i++) {
-             y =  x + i
-            this.display[i - 1] = {
-              id: this.JOBS[y].id,
-              title: this.JOBS[y].title,
-              fresh_grad: this.JOBS[y].fresh_grad,
-              level: this.JOBS[y].level,
+           for (let i = 0; i < 10; i++) {
+             this.display[i] = {
+              id: this.JOBS[x+i].id,
+              title: this.JOBS[x+i].title,
+              fresh_grad: this.JOBS[x+i].fresh_grad,
+              level: this.JOBS[x+i].level,
             };
           }
         }
            if (3 === data) {
           let x = (data * 10) - 10;
           let y = 0
-           for (let i = 1; i <= 10; i++) {
-             y = x + i
-             if(y === this.JOBS.length) { return}
-              this.display[i - 1] = {
-              id: this.JOBS[y].id,
-              title: this.JOBS[y].title,
-              fresh_grad: this.JOBS[y].fresh_grad,
-              level: this.JOBS[y].level,
+           for (let i = 0; i < 10; i++) {
+              if((x+i) === this.JOBS.length) { return}
+              this.display[i] = {
+              id: this.JOBS[x+i].id,
+              title: this.JOBS[x+i].title,
+              fresh_grad: this.JOBS[x+i].fresh_grad,
+              level: this.JOBS[x+i].level,
             };
           }
         }

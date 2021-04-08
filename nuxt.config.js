@@ -9,9 +9,9 @@ export default {
   //     });
   //   },
   // },
-  // loading: {
-  //   continuous: true,
-  // },
+  loading: {
+    continuous: true,
+  },
   ssr: false,
   target: "static",
   server: {

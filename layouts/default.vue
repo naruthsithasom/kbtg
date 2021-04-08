@@ -101,17 +101,17 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navmenu">
-                  <ul class="navbar-nav mr-auto">
+                  <ul class="navbar-nav mr-auto" style="height: 25px;">
                     <li
                       class="nav-item"
                       data-toggle="collapse"
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ active: statusHome }"
-                      @click="navClick('HOME')"
+                      :class="{'active': $router.currentRoute.path === '/' }"
                     >
-                      <nuxt-link to="/" class="nav-link">HOME</nuxt-link>
+                      <!-- @click="navClick('HOME')" -->
+                       <a href="/" class="nav-link">HOME</a>
                     </li>
                     <li
                       class="nav-item"
@@ -119,11 +119,11 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ active: statusJobs }"
-                      @click="navClick('JOBS')"
+                      :class="{ 'active': $router.currentRoute.path === '/jobs-exe' }"
                     >
-                      <nuxt-link to="/jobs-exe" class="nav-link"
-                        >JOBS</nuxt-link
+                      <!-- @click="navClick('JOBS')" -->
+                      <a href="/jobs-exe" class="nav-link"
+                        >JOBS</a
                       >
                     </li>
                     <li
@@ -132,11 +132,11 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ active: statusAgenda }"
-                      @click="navClick('AGENDA')"
+                      :class="{ 'active': $router.currentRoute.path === '/activites' }"
                     >
-                      <nuxt-link to="/activites" class="nav-link"
-                        >ACTIVITIES</nuxt-link
+                      <!-- @click="navClick('AGENDA')" -->
+                      <a href="/activites" class="nav-link"
+                        >ACTIVITIES</a
                       >
                     </li>
                     <li
@@ -145,7 +145,7 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ active: statusFaq }"
+                      :class="{ 'active':statusFaq || $router.currentRoute.hash === '#faq'}"
                       @click="navClick('FAQ')"
                     >
                       <nuxt-link to="/#faq" class="nav-link">FAQ</nuxt-link>
@@ -156,9 +156,9 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ active: statusContact }"
-                      @click="navClick('CONTANCT')"
+                      :class="{ 'active': false }"
                     >
+                      <!-- @click="navClick('CONTANCT')" -->
                       <a
                         class="nav-link"
                         href="https://www.facebook.com/KBTGLive"
@@ -172,9 +172,9 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ active: statusJoin }"
-                      @click="navClick('JOIN')"
+                      :class="{ 'active': statusJoin }"
                     >
+                      <!-- @click="navClick('JOIN')" -->
                        <nuxt-link class="nav-link join" to="/join-event"
                         >JOIN EVENT</nuxt-link
                       > 
@@ -183,18 +183,18 @@
 
                   <ul class="navbar-nav language my-2 my-lg-0">
                     <li
-                      class="nav-item"
+                      class="nav-item" style="border-radius: 50%;"
                       data-toggle="collapse"
-                      :class="{ 'active': !showActive }"
+                      :class="{ 'active': storage === 'en'? true : false }"
                     >
                     
-                      <button @click="switchLanguage('en')" class="nav-link on">EN</button>
+                      <button @click="switchLanguage('en')" class="nav-link on" >EN</button>
                     </li>
                     <span style="margin: 5px 0">/</span>
                     <li
-                      class="nav-item"
+                      class="nav-item"  style="border-radius: 50%;"
                       data-toggle="collapse"
-                      :class="{ 'active': showActive }"
+                      :class="{ 'active': storage === 'th'? true : false  }"
                     >
                       <button @click="switchLanguage('th')" class="nav-link on">TH</button>
                     </li>
@@ -220,10 +220,9 @@
                   <ul>
                     <li
                       class="nav-item"
-                      :class="{ active: statusHome }"
-                      @click="navClick('HOME')"
+                      :class="{'active': $router.currentRoute.path === '/' }"
                     >
-                      <nuxt-link to="/" class="">HOME</nuxt-link>
+                       <a href="/" class="">HOME</a>
                     </li>
                     <li
                       class="nav-item"
@@ -240,16 +239,17 @@
                       <nuxt-link to="/activites" class="">ACTIVITIES</nuxt-link>
                     </li>
                     <li class="nav-item" @click="navClick('policy')">
-                      <nuxt-link to="/policy" class=""
-                        >PRIVACY POLICY</nuxt-link
+                      <a href="/policy" class=""
+                        >PRIVACY POLICY</a
                       >
                     </li>
                     <li
                       class="nav-item"
-                      :class="{ active: statusJobs }"
-                      @click="navClick('JOBS')"
+                      :class="{ 'active': $router.currentRoute.path === '/jobs-exe' }"
                     >
-                      <nuxt-link to="/jobs-exe" class="">JOBS</nuxt-link>
+                        <a href="/jobs-exe" class=""
+                        >JOBS</a
+                      >
                     </li>
                     <li>
                       <a
@@ -397,7 +397,7 @@ export default {
   data() {
     return {
       active: "true",
-      statusHome: true,
+      statusHome: false,
       statusJobs: false,
       statusAgenda: false,
       statusFaq: false,
@@ -405,27 +405,41 @@ export default {
       statusJoin: false,
       EN: true,
       TH: false,
-      showActive:false,
+      showActive: null,
+      storage: 'en',
     };
   },
     mounted(){
-    this.switchLang = this.$router.app._i18n.localeProperties.code;
-     console.log('check',this.switchLang)
+    this.$router.push(this.switchLocalePath('th'))
+    this.switchLang = 'th'
+     //console.log('check',this.switchLang)
     if(this.switchLang === 'th') {
-      console.log('>>>>>>>>sw:',this.switchLang)
+      //console.log('>>>>>>>>sw:',this.switchLang)
     }
+    this.storage = localStorage.getItem('lang');
+    console.log('>>>>',this.storage)
+      if(this.storage === null){ 
+        localStorage.setItem('lang', 'en');
+        this.storage = 'en'
+      } 
+        this.$router.push(this.switchLocalePath(this.storage))
+    // console.log('path: --------',this.$router.currentRoute)   
     return  this.switchLang 
   },
   methods: {
     switchLanguage(sw){
+      this.showActive = sw
       if(sw === 'en'){
+         localStorage.setItem('lang', 'en');
+        this.storage = 'en'
         this.$router.push(this.switchLocalePath('en'))
-        this.showActive = false
-         }
+          }
       if(sw === 'th'){
+         localStorage.setItem('lang', 'th');
+         this.storage = 'th'
+    
         this.$router.push(this.switchLocalePath('th'))
-        this.showActive = true
-      }
+       }
     },
  
     navClick(data) {
@@ -458,11 +472,11 @@ export default {
         this.statusContact = false;
       }
       if (data === "CONTANCT") {
-        this.statusHome = false;
-        this.statusJobs = false;
-        this.statusAgenda = false;
-        this.statusFaq = false;
-        this.statusContact = true;
+        this.statusHome 
+        this.statusJobs
+        this.statusAgenda 
+        this.statusFaq 
+        this.statusContact 
       }
       if (data === "JobsApply") {
         this.statusHome = false;

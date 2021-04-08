@@ -190,6 +190,10 @@ export default {
     };
   },
  async mounted() {
+     setTimeout(function(){ 
+       $("#navmenu li").removeClass('active');
+    $("#navmenu li:eq(1)").addClass('active');
+    }, 1000);
      console.log("Loading...");
     await this.$nextTick(() => {
       this.$nuxt.$loading.start();

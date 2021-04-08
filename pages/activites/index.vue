@@ -16,18 +16,18 @@
         </div>
       </div>
     </div>
-    <div class="bg-line">
+    <div class="bg-line pb30">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="content-find">
-              <h4
+              <h3
                 class="wow fadeInUp"
                 data-wow-duration="200"
                 data-wow-delay="200"
               >
                 FIND YOUR INSPIRATION
-              </h4>
+              </h3>
               <div class="row justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4">
                   <div
@@ -42,7 +42,7 @@
                       /></span>
                     </div>
                     <h5>Job Interview (+Test)</h5>
-                    <p>
+                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
                       {{ $t("JobInterview") }}
                     </p>
                   </div>
@@ -60,7 +60,7 @@
                       /></span>
                     </div>
                     <h5>Agile Playground</h5>
-                    <p>
+                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
                       {{ $t("AgilePlayground") }}
                     </p>
                   </div>
@@ -78,7 +78,7 @@
                       /></span>
                     </div>
                     <h5>Inspire Talk</h5>
-                    <p>
+                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
                       {{ $t("InspireTalk") }}
                     </p>
                   </div>
@@ -95,8 +95,9 @@
                         ><img src="~/assets/images/Asset16.png"
                       /></span>
                     </div>
+                    
                     <h5>1:1 Career Mentorship</h5>
-                    <p>
+                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
                       {{ $t("1:1CareerMentorship") }}
                     </p>
                   </div>
@@ -114,7 +115,7 @@
                       /></span>
                     </div>
                     <h5>Fireside Chat</h5>
-                    <p>
+                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
                       {{ $t("FiresideChat") }}
                     </p>
                   </div>
@@ -132,7 +133,7 @@
                       /></span>
                     </div>
                     <h5>Upskill Workshop</h5>
-                    <p>
+                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
                       {{ $t("Upskill") }}
                     </p>
                   </div>
@@ -147,13 +148,14 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h4
-              class="wow fadeInUp"
+            <h3 f-h3-act
+               
+              class="wow fadeInUp text-white mt-5"
               data-wow-duration="200"
               data-wow-delay="200"
             >
-              INSPIRE TALK SPEAKER
-            </h4>
+              WELCOME TALK SPEAKER
+            </h3>
             <div class="row">
               <div class="col-12 col-md-4 col-lg-4">
                 <div
@@ -179,7 +181,7 @@
                     src="~/assets/images/talk-speaker2.png"
                     class="img-fluid"
                   />
-                  <h5>{{ $t("ChutimarKasemkornkit") }}</h5>
+                  <h5 >{{ $t("ChutimarKasemkornkit") }}</h5>
                   <p>Deputy Managing Director</p>
                 </div>
               </div>
@@ -193,21 +195,21 @@
                     src="~/assets/images/talk-speaker3.png"
                     class="img-fluid"
                   />
-                  <h5>{{ $t("ChetaphanSiridanupath") }}</h5>
-                  <p>Senior Principal Visionary Architect</p>
+                  <h5 class="text-center">{{ $t("ChetaphanSiridanupath") }}</h5>
+                  <p class="text-center">Senior Principal Visionary Architect</p>
                 </div>
               </div>
               <div class="col-12">
-                <h4
+                <!-- <h4
                   class="wow fadeInUp"
                   data-wow-duration="200"
                   data-wow-delay="200"
                   style="width: 100%; color: #252525"
                 >
                   INSPIRE TALK SPEAKER
-                </h4>
+                </h4> -->
               </div>
-              <div class="col-12 col-md-4 col-lg-4">
+              <!-- <div class="col-12 col-md-4 col-lg-4">
                 <div
                   class="item wow fadeInUp"
                   data-wow-duration="1000"
@@ -290,7 +292,7 @@
                   <h5>{{ $t("ChayaponSaepung") }}</h5>
                   <p>Advanced System Engineer - Server Management</p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -305,32 +307,35 @@
               data-wow-duration="200"
               data-wow-delay="200"
             >
-              <h4><span>KBTG</span> INSPIRE SCHEDULE</h4>
-              <div class="event-wrap w-100">
+              <h3 class="f-h3-act mb-5"><span class="f-kbtg-h3">KBTG</span> INSPIRE SCHEDULE</h3>
+              <div class="event-wrap ew nt w-100">
                 <div class="row">
                   <div class="col-md-12 col-sm-12 col-lg-3">
-                    <ul class="nav nav-tabs">
-                      <li class="item-tabs active">
+                    <ul class="nav nav-tabs" >
+                      <li class="item-tabs " :class="{'active': status_tap === 1? true : false }">
                         <a
-                          class="nav-link active"
+                          @click="clickTap(1)"
+                          class="nav-link " :class="{'active': status_tap === 1? true : false }"
                           data-toggle="tab"
                           href="#event-tab1"
                           title=""
                           >Day 1<span>May 21, 2021</span></a
                         >
                       </li>
-                      <li class="item-tabs">
+                      <li class="item-tabs" :class="{'active': status_tap === 2? true : false }">
                         <a
-                          class="nav-link"
+                          @click="clickTap(2)"
+                          class="nav-link day2 " :class="{'active': status_tap === 2? true : false }"
                           data-toggle="tab"
-                          href="#event-tab2"
+                          href="#event-tab2 "
                           title=""
                           >Day 2<span>May 22, 2021</span></a
                         >
                       </li>
-                      <li class="item-tabs">
+                      <li class="item-tabs " :class="{'active': status_tap === 3? true : false }">
                         <a
-                          class="nav-link"
+                        @click="clickTap(3)"
+                          class="nav-link day2" :class="{'active': status_tap === 3? true : false }"
                           data-toggle="tab"
                           href="#event-tab3"
                           title=""
@@ -341,91 +346,107 @@
                   </div>
                   <div class="col-md-12 col-sm-12 col-lg-9">
                     <div class="tab-content">
-                      <div class="tab-pane fade active show" id="event-tab1">
+                      <div class="tab-pane fade " :class="{'active show': status_tap === 1? true : false }" id="event-tab1">
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">09:00 - 10:00 AM.</span>
+                            <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
-                          <div class="event-info">
+                          <div class="event-info f-date-h3">
                             <h3 class="mb-0">
-                              <a href="#" title="">{{ $t("Register") }}</a>
+                              <!-- <span :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("Register") }}</span> -->
+                              Register
                             </h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">10:00 - 10:15 AM.</span>
+                            <span class="d-block">10:30 - 11:00 AM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">Welcome to KBTG</a>
+                              <span  title="">Welcome to KBTG and KBTG Beyond</span>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li>{{ $t("CharassriPhaholyotin") }}</li>
+                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
                             </ul>
+                           
+                              <p  :class="{ 'f-thai': !switchLang !== 'en' }">
+                                
+                                {{ $t('txt1-day1')}}
+                                </p> 
+                          
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">10:15 - 10:45 AM.</span>
+                            <span class="d-block">11:00 - 11:30 AM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">Inspire Talk</a>
+                              <p  title="">Inspire Talk</p>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>
-                                {{ $t("WikanesThongmeeUnyamaneeKetcharoen") }}
+                                Guest Speaker
                               </li>
                             </ul>
-                            <p class="mb-0">
+                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
                               {{ $t("text1") }}
                             </p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">10:45 - 12:00 AM.</span>
+                            <span class="d-block">11:30 - 12:00 PM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">Fireside Chat</a>
+                              <span  title="">Fireside Chat</span>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li>{{ $t("by1") }}</li>
+                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("by1") }}</li>
                             </ul>
-                            <p class="mb-0">
+                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
                               {{ $t("text2") }}
                             </p>
                           </div>
                         </div>
                         <div class="event-style1 w-100 bg-gray">
                           <div class="event-meta text-right">
-                            <span class="d-block">12:00 - 13:00 PM.</span>
+                            <span class="d-block">12:00 - 01:00 PM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">Lunch Break</a>
+                              <span   title="">Lunch Break</span>
                             </h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">13:00 - 18:00 PM.</span>
+                            <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">Agile Playground</a>
+                              <p  title="">Agile Playground</p>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                            <p class="mb-0">
+                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
                               {{ $t("text3") }}
                             </p>
                             <br />
+                            <h3 class="mb-0"><p title="">Upskill Workshop</p></h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="p-0 m-0">- {{$t('upskillDetail-1')}}</p>
+                            <p class="p-0 m-0">- {{$t('upskillDetail-2')}}</p>
+                            <p class="p-0 m-0">- {{$t('upskillDetail-3')}}</p>
+
+                            <br/>
                             <h3 class="mb-0">
-                              <a href="#" title="">1:1 Career Mantorship</a>
+                              <a href="#" title="">1:1 Career Mentorship</a>
                             </h3>
                             <br />
                             <h3 class="mb-0">
@@ -436,7 +457,8 @@
                             <p class="mb-0">- Project Management Officer</p>
                             <p class="mb-0">- Project Manager</p>
                             <p class="mb-0">- IT Operation</p>
-                            <p class="mb-0">- UX / UI Designer</p>
+                            <p class="mb-0">- UX/UI Designer</p>
+                            <p class="mb-0">- Senior DeFi Frontend Engineer</p>
                             <p class="mb-0">
                               - DeFi / Blockchain Venture Architect
                             </p>
@@ -446,33 +468,37 @@
                           </div>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="event-tab2">
+                      <div class="tab-pane fade" :class="{'active show': status_tap === 2? true : false }" id="event-tab2">
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">09:00 - 10:00 AM.</span>
+                            <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <a href="#" title="">{{ $t("Register") }}</a>
+                             <h3 class="mb-0">
+                              <!-- <span  :class="{ 'f-thai': !switchLang !== 'en' }" title="">{{ $t("Register") }}</span> -->
+                              Register
                             </h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">10:00 - 10:15 AM.</span>
+                            <span class="d-block">10:30 - 11:00 AM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">Welcome to KBTG</a>
+                              <span href="#" title="">Welcome to KBTG and KBTG Beyond</span>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li>{{ $t("ChutimarKasemkornkit") }}</li>
+                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
                             </ul>
+                            <p  :class="{ 'f-thai': !switchLang !== 'en' }">
+                              {{$t('kickoffDay3')}}
+                            </p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">10:15 - 10:45 AM.</span>
+                            <span class="d-block">11:00 - 11:30 AM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
@@ -480,35 +506,33 @@
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>
-                                {{
-                                  $t("PanuwatKenchatPhitsineeSincharoenpong")
-                                }}
+                               Guest Speaker
                               </li>
                             </ul>
-                            <p class="mb-0">
-                              {{ $t("text1") }}
+                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
+                              {{ $t("immerDay2") }}
                             </p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">10:45 - 12:00 AM.</span>
+                            <span class="d-block">11:30 - 12:00 PM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
                               <a href="#" title="">Fireside Chat</a>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li>{{ $t("by1") }}</li>
+                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t('PanuwatKenchatPhitsineeSincharoenpong') }}</li>
                             </ul>
-                            <p class="mb-0">
-                              {{ $t("text2") }}
+                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
+                              {{ $t('connectDay2') }}
                             </p>
                           </div>
                         </div>
                         <div class="event-style1 w-100 bg-gray">
                           <div class="event-meta text-right">
-                            <span class="d-block">12:00 - 13:00 PM.</span>
+                            <span class="d-block">12:00 - 01:00 PM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
@@ -518,21 +542,30 @@
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">13:00 - 18:00 PM.</span>
+                            <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
+                       <h3 class="mb-0">
                               <a href="#" title="">Agile Playground</a>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li>{{ $t("by2") }}</li>
+                              <li>KBTG Team</li>
                             </ul>
-                            <p class="mb-0">
+                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
                               {{ $t("text3") }}
                             </p>
                             <br />
+                            <h3 class="mb-0"><a href="#" title="">Upskill Workshop</a></h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="p-0 m-0">- {{$t('day2Jouney')}}</p>
+                            <p class="p-0 m-0">- {{$t('day2How')}}</p>
+                            <p class="p-0 m-0">- {{$t('day2Ob')}}</p>
+
+                            <br/>
                             <h3 class="mb-0">
-                              <a href="#" title="">1:1 Career Mantorship</a>
+                              <a href="#" title="">1:1 Career Mentorship</a>
                             </h3>
                             <br />
                             <h3 class="mb-0">
@@ -541,40 +574,44 @@
                               >
                             </h3>
                             <p class="mb-0">- Business Analyst</p>
-                            <p class="mb-0">- Software Engineer</p>
-                            <p class="mb-0">- Data Scientist (MLE)</p>
-                            <p class="mb-0">- New Grad Business Analyst</p>
-                            <p class="mb-0">- Agile Coach</p>
+                            <p class="mb-0">- Software Engineer (Testing)</p>
+                            <p class="mb-0">- Data Scientist (MLE) (Testing)</p>
+                            <p class="mb-0">- New Grad Business Analyst (Testing)</p>
+                            <p class="mb-0">- Agile Coach (Testing)</p>
                           </div>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="event-tab3">
+                      <div class="tab-pane fade" :class="{'active show': status_tap === 3? true : false }" id="event-tab3">
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">09:00 - 10:00 AM.</span>
+                            <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">{{ $t("Register") }}</a>
+                              <!-- <span  :class="{ 'f-thai': !switchLang !== 'en' }" title="">{{ $t("Register") }}</span> -->
+                              Register
                             </h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">10:00 - 10:15 AM.</span>
+                            <span class="d-block">10:30 - 11:00 AM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">Welcome to KBTG</a>
+                              <span href="#" title="">Welcome to KBTG and KBTG Beyond</span>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li>{{ $t("ChetaphanSiridanupath") }}</li>
+                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("RuangrojPoonpolChetaphanSiridanupath") }}</li>
                             </ul>
+                            <p  :class="{ 'f-thai': !switchLang !== 'en' }">
+                              {{$t('kickoffDay3')}}
+                            </p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">10:15 - 10:45 AM.</span>
+                            <span class="d-block">11:00 - 11:30 AM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
@@ -582,68 +619,76 @@
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>
-                                {{ $t("PaweenPiyasilChayaponSaepung") }}
+                                Guest Speaker
                               </li>
                             </ul>
-                            <p class="mb-0">
-                              {{ $t("text1") }}
+                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
+                              {{ $t("immerDay3") }}
                             </p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">10:45 - 12:00 AM.</span>
+                            <span class="d-block">11:30 - 12:00 PM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
                               <a href="#" title="">Fireside Chat</a>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li>{{ $t("by1") }}</li>
+                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("PaweenPiyasilChayaponSaepung") }}</li>
                             </ul>
-                            <p class="mb-0">
-                              {{ $t("text2") }}
+                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
+                              {{ $t("connectDay3") }}
                             </p>
                           </div>
                         </div>
                         <div class="event-style1 w-100 bg-gray">
                           <div class="event-meta text-right">
-                            <span class="d-block">12:00 - 13:00 PM.</span>
+                            <span class="d-block">12:00 - 01:00 PM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">Lunch Break</a>
+                              <span href="#" title="">Lunch Break</span>
                             </h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
-                            <span class="d-block">13:00 - 18:00 PM.</span>
+                            <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <a href="#" title="">Agile Playground</a>
+                              <span href="#" title="">Agile Playground</span>
                             </h3>
-                            <ul class="event-org mb-0 list-unstyled">
-                              <li>{{ $t("by2") }}</li>
+                                        <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
                             </ul>
-                            <p class="mb-0">
+                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
                               {{ $t("text3") }}
                             </p>
                             <br />
+                            <h3 class="mb-0"><a href="#" title="">Upskill Workshop</a></h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="p-0 m-0" >- {{$t('letunderDay3')}}</p>
+                            <p class="p-0 m-0">- {{$t('howDay3')}}</p>
+ 
+                            <br />
                             <h3 class="mb-0">
-                              <a href="#" title="">1:1 Career Mantorship</a>
+                              <span href="#" title="">1:1 Career Mentorship</span>
                             </h3>
                             <br />
                             <h3 class="mb-0">
-                              <a href="#" title=""
-                                >Interview + Final Interview</a
+                              <span href="#" title=""
+                                >Interview + Final Interview</span
                               >
                             </h3>
                             <p class="mb-0">- IT Security Engineer</p>
                             <p class="mb-0">- IT Security Operation</p>
                             <p class="mb-0">- Enterprise Architect</p>
-                            <p class="mb-0">- Test Manager/ Test Engineer</p>
+                            <p class="mb-0">- Test Manager/Test Engineer</p>
                             <p class="mb-0">- Network and Security</p>
                             <p class="mb-0">- Server Management</p>
                           </div>
@@ -681,10 +726,18 @@
 
 <script>
 export default {
-  head:{
-      bodyAttrs:{
-      class:"bg-all"
-    }
+  head: {
+    bodyAttrs: {
+      class: "bg-all",
+    },
+    // script:[
+    //     {
+    //     body: true,
+    //     async: true,
+    //     type: "text/javascript",
+    //     src: "/js/agenda-tap.js",
+    //   },
+    // ]
   },
   // head: {
   //   script: [
@@ -741,14 +794,29 @@ export default {
   //   ],
   // },
   async mounted() {
+      setTimeout(function(){ 
+       $("#navmenu li").removeClass('active');
+    $("#navmenu li:eq(2)").addClass('active');
+    }, 1000);
     console.log("Loading...");
     await this.$nextTick(() => {
       this.$nuxt.$loading.start();
       setTimeout(() => this.$nuxt.$loading.finish(), 2000);
     });
-  },
+    // this.switchLang = this.$router.currentRoute.code
+   // console.log('sdfsdfsdaf>>',this.$router)
+   },
   data() {
-    return {};
+    return {
+      status_tap: 1,
+      switchLang: 'en',
+     };
+  },
+  methods: {
+    clickTap(data) {
+      this.status_tap = data;
+      
+    },
   },
 };
 </script>
