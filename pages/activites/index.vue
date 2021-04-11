@@ -42,7 +42,7 @@
                       /></span>
                     </div>
                     <h5>Job Interview (+Test)</h5>
-                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("JobInterview") }}
                     </p>
                   </div>
@@ -60,7 +60,7 @@
                       /></span>
                     </div>
                     <h5>Agile Playground</h5>
-                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
+                    <p :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("AgilePlayground") }}
                     </p>
                   </div>
@@ -78,7 +78,7 @@
                       /></span>
                     </div>
                     <h5>Inspire Talk</h5>
-                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("InspireTalk") }}
                     </p>
                   </div>
@@ -97,7 +97,7 @@
                     </div>
                     
                     <h5>1:1 Career Mentorship</h5>
-                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("1:1CareerMentorship") }}
                     </p>
                   </div>
@@ -115,7 +115,7 @@
                       /></span>
                     </div>
                     <h5>Fireside Chat</h5>
-                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("FiresideChat") }}
                     </p>
                   </div>
@@ -133,7 +133,7 @@
                       /></span>
                     </div>
                     <h5>Upskill Workshop</h5>
-                    <p  :class="{ 'f-thai': !switchLang !== 'en' }">
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("Upskill") }}
                     </p>
                   </div>
@@ -167,8 +167,8 @@
                     src="~/assets/images/talk-speaker1.png"
                     class="img-fluid"
                   />
-                  <h5>{{ $t("CharassriPhaholyotin") }}</h5>
-                  <p>Chief IT Operation Officer</p>
+                  <h5 :class="{ 'f-thai': switchLang === 'th'  }" >{{ $t("CharassriPhaholyotin") }}</h5>
+                  <p class="text-center">Chief IT Operation Officer</p>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-4">
@@ -181,8 +181,8 @@
                     src="~/assets/images/talk-speaker2.png"
                     class="img-fluid"
                   />
-                  <h5 >{{ $t("ChutimarKasemkornkit") }}</h5>
-                  <p>Deputy Managing Director</p>
+                  <h5  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("ChutimarKasemkornkit") }}</h5>
+                  <p class="text-center">Deputy Managing Director</p>
                 </div>
               </div>
               <div class="col-12 col-md-4 col-lg-4">
@@ -195,7 +195,7 @@
                     src="~/assets/images/talk-speaker3.png"
                     class="img-fluid"
                   />
-                  <h5 class="text-center">{{ $t("ChetaphanSiridanupath") }}</h5>
+                  <h5  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("ChetaphanSiridanupath") }}</h5>
                   <p class="text-center">Senior Principal Visionary Architect</p>
                 </div>
               </div>
@@ -315,11 +315,10 @@
                       <li class="item-tabs " :class="{'active': status_tap === 1? true : false }">
                         <a
                           @click="clickTap(1)"
-                          class="nav-link " :class="{'active': status_tap === 1? true : false }"
+                          class="nav-link " :class="{'active': status_tap === 1? true : false}"
                           data-toggle="tab"
                           href="#event-tab1"
-                          title=""
-                          >Day 1<span>May 21, 2021</span></a
+                           >Day 1<span>May 21, 2021</span></a
                         >
                       </li>
                       <li class="item-tabs" :class="{'active': status_tap === 2? true : false }">
@@ -344,16 +343,17 @@
                       </li>
                     </ul>
                   </div>
+                  <!-- -----------------------------------Day 1 ---------------------------------------->
                   <div class="col-md-12 col-sm-12 col-lg-9">
                     <div class="tab-content">
-                      <div class="tab-pane fade " :class="{'active show': status_tap === 1? true : false }" id="event-tab1">
+                      <div class="tab-pane fade" :class="{'active show': status_tap === 1? true : false }" id="event-tab1" >
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
                             <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
                           <div class="event-info f-date-h3">
                             <h3 class="mb-0">
-                              <!-- <span :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("Register") }}</span> -->
+                              <!-- <span :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("Register") }}</span> -->
                               Register
                             </h3>
                           </div>
@@ -367,14 +367,9 @@
                               <span  title="">Welcome to KBTG and KBTG Beyond</span>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
                             </ul>
-                           
-                              <p  :class="{ 'f-thai': !switchLang !== 'en' }">
-                                
-                                {{ $t('txt1-day1')}}
-                                </p> 
-                          
+                           <p  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('txt1-day1')}}</p>                         
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -382,17 +377,11 @@
                             <span class="d-block">11:00 - 11:30 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <p  title="">Inspire Talk</p>
-                            </h3>
+                            <h3 class="mb-0">Inspire Talk</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li>
-                                Guest Speaker
-                              </li>
+                              <li class="">Guest Speaker</li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
-                              {{ $t("text1") }}
-                            </p>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }"> {{ $t("text1") }}</p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -401,12 +390,12 @@
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <span  title="">Fireside Chat</span>
+                              <span >Fireside Chat</span>
                             </h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("by1") }}</li>
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("by1") }}</li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">
                               {{ $t("text2") }}
                             </p>
                           </div>
@@ -426,48 +415,41 @@
                             <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <p  title="">Agile Playground</p>
-                            </h3>
+                            <h3 class="mb-0">Agile Playgroundd</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">
                               {{ $t("text3") }}
                             </p>
                             <br />
-                            <h3 class="mb-0"><p title="">Upskill Workshop</p></h3>
+                            <h3 class="mb-0">Upskill Workshop</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                            <p class="p-0 m-0">- {{$t('upskillDetail-1')}}</p>
-                            <p class="p-0 m-0">- {{$t('upskillDetail-2')}}</p>
-                            <p class="p-0 m-0">- {{$t('upskillDetail-3')}}</p>
-
+                            <!-- <p class="">- {{$t('upskillDetail-1')}}</p>
+                            <p class="">- {{$t('upskillDetail-2')}}</p>
+                            <p class="">- {{$t('upskillDetail-3')}}</p> -->
+                              <p class="mb-0">- How to Manage Projects Valued > 1 Billion Baht?</p>
+                              <p class="mb-0">- Business Analyst in Agile World</p>
+                              <p class="mb-0">- How to Secure Your Smart Contract</p>
                             <br/>
-                            <h3 class="mb-0">
-                              <a href="#" title="">1:1 Career Mentorship</a>
-                            </h3>
+                            <h3 class="mb-0">1:1 Career Mentorship</h3>
                             <br />
-                            <h3 class="mb-0">
-                              <a href="#" title=""
-                                >Interview + Final Interview</a
-                              >
-                            </h3>
-                            <p class="mb-0">- Project Management Officer</p>
-                            <p class="mb-0">- Project Manager</p>
-                            <p class="mb-0">- IT Operation</p>
-                            <p class="mb-0">- UX/UI Designer</p>
-                            <p class="mb-0">- Senior DeFi Frontend Engineer</p>
-                            <p class="mb-0">
-                              - DeFi / Blockchain Venture Architect
-                            </p>
-                            <p class="mb-0">- DeFi / Blockchain Tech Lead</p>
-                            <p class="mb-0">- DevX</p>
-                            <p class="mb-0">- Business Analyst</p>
+                            <h3 class="mb-0">Interview + Final Interview</h3>
+                              <p class="mb-0">- Project Management Officer</p>
+                              <p class="mb-0">- Project Manager</p>
+                              <p class="mb-0">- IT Operation</p>
+                              <p class="mb-0">- UX/UI Designer</p>
+                              <p class="mb-0">- Senior DeFi Frontend Engineer</p>
+                              <p class="mb-0">- DeFi / Blockchain Venture Architect</p>
+                              <p class="mb-0">- DeFi / Blockchain Tech Lead</p>
+                              <p class="mb-0">- DevX</p>
+                              <p class="mb-0">- Business Analyst</p>
                           </div>
                         </div>
                       </div>
+                      <!-- -----------------------------------Day 2 ---------------------------------------->
                       <div class="tab-pane fade" :class="{'active show': status_tap === 2? true : false }" id="event-tab2">
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
@@ -475,7 +457,7 @@
                           </div>
                           <div class="event-info">
                              <h3 class="mb-0">
-                              <!-- <span  :class="{ 'f-thai': !switchLang !== 'en' }" title="">{{ $t("Register") }}</span> -->
+                              <!-- <span  :class="{ 'f-thai': switchLang === 'th'  }" title="">{{ $t("Register") }}</span> -->
                               Register
                             </h3>
                           </div>
@@ -485,15 +467,11 @@
                             <span class="d-block">10:30 - 11:00 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <span href="#" title="">Welcome to KBTG and KBTG Beyond</span>
-                            </h3>
+                            <h3 class="mb-0">Welcome to KBTG and KBTG Beyond</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
                             </ul>
-                            <p  :class="{ 'f-thai': !switchLang !== 'en' }">
-                              {{$t('kickoffDay3')}}
-                            </p>
+                            <p  :class="{ 'f-thai': switchLang === 'th'  }">{{$t('kickoffDay3')}}</p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -501,17 +479,13 @@
                             <span class="d-block">11:00 - 11:30 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <a href="#" title="">Inspire Talk</a>
-                            </h3>
+                            <h3 class="mb-0">Inspire Talk</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>
-                               Guest Speaker
+                                 Guest Speaker
                               </li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
-                              {{ $t("immerDay2") }}
-                            </p>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("immerDay2") }}</p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -519,15 +493,11 @@
                             <span class="d-block">11:30 - 12:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <a href="#" title="">Fireside Chat</a>
-                            </h3>
+                            <h3 class="mb-0">Fireside Chat</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t('PanuwatKenchatPhitsineeSincharoenpong') }}</li>
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('PanuwatKenchatPhitsineeSincharoenpong') }}</li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
-                              {{ $t('connectDay2') }}
-                            </p>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('connectDay2') }}</p>
                           </div>
                         </div>
                         <div class="event-style1 w-100 bg-gray">
@@ -535,9 +505,7 @@
                             <span class="d-block">12:00 - 01:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <a href="#" title="">Lunch Break</a>
-                            </h3>
+                            <h3 class="mb-0">Lunch Break</h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -545,34 +513,28 @@
                             <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
-                       <h3 class="mb-0">
-                              <a href="#" title="">Agile Playground</a>
-                            </h3>
+                          <h3 class="mb-0">Agile Playground</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
-                              {{ $t("text3") }}
-                            </p>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("text3") }}</p>
                             <br />
-                            <h3 class="mb-0"><a href="#" title="">Upskill Workshop</a></h3>
+                            <h3 class="mb-0">Upskill Workshop</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                            <p class="p-0 m-0">- {{$t('day2Jouney')}}</p>
-                            <p class="p-0 m-0">- {{$t('day2How')}}</p>
-                            <p class="p-0 m-0">- {{$t('day2Ob')}}</p>
-
+                            <p class="mb-0">- {{$t('day2Jouney')}}</p>
+                            <p class="mb-0">- {{$t('day2How')}}</p>
+                            <p class="mb-0">- {{$t('day2Ob')}}</p>
+                            <!-- <ul class=" mb-0 list-unstyled   " > 
+                              <li>{{$t('day2Jouney')}}</li>
+                              <li>{{$t('day2How')}}</li>
+                              <li>{{$t('day2Ob')}}</li>
+                            </ul> -->
                             <br/>
-                            <h3 class="mb-0">
-                              <a href="#" title="">1:1 Career Mentorship</a>
-                            </h3>
+                            <h3 class="mb-0">1:1 Career Mentorship</h3>
                             <br />
-                            <h3 class="mb-0">
-                              <a href="#" title=""
-                                >Interview + Final Interview</a
-                              >
-                            </h3>
+                            <h3 class="mb-0">Interview + Final Interview</h3>
                             <p class="mb-0">- Business Analyst</p>
                             <p class="mb-0">- Software Engineer (Testing)</p>
                             <p class="mb-0">- Data Scientist (MLE) (Testing)</p>
@@ -581,6 +543,7 @@
                           </div>
                         </div>
                       </div>
+                       <!-- -----------------------------------Day 3 ---------------------------------------->
                       <div class="tab-pane fade" :class="{'active show': status_tap === 3? true : false }" id="event-tab3">
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
@@ -588,7 +551,7 @@
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0">
-                              <!-- <span  :class="{ 'f-thai': !switchLang !== 'en' }" title="">{{ $t("Register") }}</span> -->
+                              <!-- <span  :class="{ 'f-thai': switchLang === 'th'  }" title="">{{ $t("Register") }}</span> -->
                               Register
                             </h3>
                           </div>
@@ -598,15 +561,11 @@
                             <span class="d-block">10:30 - 11:00 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <span href="#" title="">Welcome to KBTG and KBTG Beyond</span>
-                            </h3>
+                            <h3 class="mb-0">Welcome to KBTG and KBTG Beyond</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("RuangrojPoonpolChetaphanSiridanupath") }}</li>
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolChetaphanSiridanupath") }}</li>
                             </ul>
-                            <p  :class="{ 'f-thai': !switchLang !== 'en' }">
-                              {{$t('kickoffDay3')}}
-                            </p>
+                            <p  :class="{ 'f-thai': switchLang === 'th'  }">{{$t('kickoffDay3')}}</p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -614,17 +573,13 @@
                             <span class="d-block">11:00 - 11:30 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <a href="#" title="">Inspire Talk</a>
-                            </h3>
+                            <h3 class="mb-0">Inspire Talk</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>
                                 Guest Speaker
                               </li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
-                              {{ $t("immerDay3") }}
-                            </p>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("immerDay3") }}</p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -632,15 +587,11 @@
                             <span class="d-block">11:30 - 12:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <a href="#" title="">Fireside Chat</a>
-                            </h3>
+                            <h3 class="mb-0">Fireside Chat</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("PaweenPiyasilChayaponSaepung") }}</li>
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("PaweenPiyasilChayaponSaepung") }}</li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
-                              {{ $t("connectDay3") }}
-                            </p>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("connectDay3") }}</p>
                           </div>
                         </div>
                         <div class="event-style1 w-100 bg-gray">
@@ -648,9 +599,7 @@
                             <span class="d-block">12:00 - 01:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <span href="#" title="">Lunch Break</span>
-                            </h3>
+                            <h3 class="mb-0">Lunch Break</h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -658,33 +607,24 @@
                             <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <span href="#" title="">Agile Playground</span>
-                            </h3>
-                                        <ul class="event-org mb-0 list-unstyled">
-                              <li>KBTG Team</li>
-                            </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': !switchLang !== 'en' }">
-                              {{ $t("text3") }}
-                            </p>
-                            <br />
-                            <h3 class="mb-0"><a href="#" title="">Upskill Workshop</a></h3>
+                            <h3 class="mb-0">Agile Playground</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                            <p class="p-0 m-0" >- {{$t('letunderDay3')}}</p>
-                            <p class="p-0 m-0">- {{$t('howDay3')}}</p>
- 
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("text3") }}</p>
                             <br />
-                            <h3 class="mb-0">
-                              <span href="#" title="">1:1 Career Mentorship</span>
-                            </h3>
+                            <h3 class="mb-0">Upskill Workshop</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="mb-0">- Let's Understand Enterprise Architecture in the Innovation World</p>
+                            <p class="mb-0">- How to Handle High Volume Transaction Infrastructure in Crisis Situation</p>
+                            <!-- <p class="p-0 m-0" >- {{$t('letunderDay3')}}</p>
+                            <p class="p-0 m-0">- {{$t('howDay3')}}</p> -->
                             <br />
-                            <h3 class="mb-0">
-                              <span href="#" title=""
-                                >Interview + Final Interview</span
-                              >
-                            </h3>
+                            <h3 class="mb-0">1:1 Career Mentorship</h3>
+                            <br />
+                            <h3 class="mb-3">Interview + Final Interview</h3>
                             <p class="mb-0">- IT Security Engineer</p>
                             <p class="mb-0">- IT Security Operation</p>
                             <p class="mb-0">- Enterprise Architect</p>
@@ -727,91 +667,80 @@
 <script>
 export default {
   head: {
-    bodyAttrs: {
+ script: [
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/jquery-3.3.1.slim.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/jquery.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/popper.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/bootstrap.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/flexslider/jquery.flexslider.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/flexslider/js/shCore.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/flexslider/js/shBrushJScript.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/WOW-master/dist/wow.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/wow.js",
+      },
+    ],
+     bodyAttrs: {
       class: "bg-all",
     },
-    // script:[
-    //     {
-    //     body: true,
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "/js/agenda-tap.js",
-    //   },
-    // ]
   },
-  // head: {
-  //   script: [
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "js/jquery-3.3.1.slim.min.js",
-  //     },
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "js/jquery.min.js",
-  //     },
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "js/popper.min.js",
-  //     },
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "js/bootstrap.min.js",
-  //     },
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "flexslider/jquery.flexslider.js",
-  //     },
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "flexslider/js/shCore.js",
-  //     },
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "flexslider/js/shBrushJScript.js",
-  //     },
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "WOW-master/dist/wow.js",
-  //     },
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "js/wow.js",
-  //     },
-  //     {
-  //       async: true,
-  //       type: "text/javascript",
-  //       src: "js/agenda-tap.js",
-  //     },
-  //   ],
-  // },
+    data() {
+      return {
+        status_tap: 1,
+        switchLang: 'en',
+        storage: 'en'
+       };
+    },
   async mounted() {
-      setTimeout(function(){ 
-       $("#navmenu li").removeClass('active');
-    $("#navmenu li:eq(2)").addClass('active');
-    }, 1000);
-    console.log("Loading...");
-    await this.$nextTick(() => {
-      this.$nuxt.$loading.start();
-      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
-    });
-    // this.switchLang = this.$router.currentRoute.code
-   // console.log('sdfsdfsdaf>>',this.$router)
+      await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
+      //setTimeout(function(){ $("#navmenu li").removeClass('active');$("#navmenu li:eq(2)").addClass('active');}, 1000);
+      console.log("Loading... /activites");
+
+      this.switchLang = localStorage.getItem('lang');
+
+      if(this.switchLang === null){ 
+        localStorage.setItem('lang', 'en');
+        this.switchLang = 'en'
+      } 
+
+      this.$router.push(this.switchLocalePath(this.switchLang))
+
    },
-  data() {
-    return {
-      status_tap: 1,
-      switchLang: 'en',
-     };
-  },
+   
   methods: {
     clickTap(data) {
       this.status_tap = data;
@@ -821,4 +750,19 @@ export default {
 };
 </script>
 <style>
+.cus-tap1{
+  margin-bottom: 1195px !important;
+}
+.cus-tap2{
+  margin-bottom: 1054px !important;
+}
+.list-ul {
+  list-style-type: none;
+}
+
+.list-ul li:before {
+  content: "-";
+  position: absolute;
+  margin-left: 0px;
+}
 </style>

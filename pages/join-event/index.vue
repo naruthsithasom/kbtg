@@ -3,7 +3,7 @@
     <div class="imgHeader position-relative">
       <!-- <img src="~/assets/images/JobBanner/1.jpg" class="img-fluid" /> -->
       <div class="carousel-inner">
-        <b-carousel
+        <!-- <b-carousel
           id="carousel-fade"
           style="text-shadow: 0px 0px 2px #000"
           fade
@@ -58,7 +58,55 @@
               }.jpg`)
             "
           ></b-carousel-slide>
-        </b-carousel>
+        </b-carousel> -->
+      <b-carousel
+              style="text-shadow: 0px 0px 2px #000"
+              fade
+              :interval="4000"
+            >
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/R${
+                  random
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+                  <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/R${
+                  random
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+                  <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/R${
+                  random
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+                  <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/R${
+                  random
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+                  <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/R${
+                  random
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+                  <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/R${
+                  random
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+            </b-carousel>
       </div>
       <div class="position-absolute">
         <div class="container">
@@ -150,11 +198,7 @@
         <div class="row">
           <div class="col-12">
             <div class="referred">
-              <h5>
-                Referred by a Current Employee<span class="ml-2"
-                  ><img src="~/assets/images/Asset2.png"
-                /></span>
-              </h5>
+              <h5>Referred by a Current Employee<span><img  class="img-sm-job" src="~/assets/images/Asset2.png"/></span></h5>
               <p :class="{ 'f-thai_job': switchLang === 'th' }">
                 {{ $t("job3Detail") }}
               </p>
@@ -187,80 +231,95 @@
 <script>
 export default {
   head: {
+      script: [
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/jquery-3.3.1.slim.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/jquery.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/popper.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/bootstrap.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/flexslider/jquery.flexslider.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/flexslider/js/shCore.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/flexslider/js/shBrushJScript.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/WOW-master/dist/wow.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/wow.js",
+      },
+    ],
     bodyAttrs: {
       class: "bg-all",
     },
-    // script: [
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/jquery-3.3.1.slim.min.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/jquery.min.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/popper.min.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/bootstrap.min.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "flexslider/jquery.flexslider.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "flexslider/js/shCore.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "flexslider/js/shBrushJScript.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "WOW-master/dist/wow.js",
-    //   },
-    //   {
-    //     async: true,
-    //     type: "text/javascript",
-    //     src: "js/wow.js",
-    //   },
-    // ],
   },
   data() {
     return {
-      switchLang: "",
+      GET_TITLE: null,
+      GET_ID: null,
+      GET_INFO: null,
+       switchLang: 'en',
     };
   },
   async mounted() {
-      setTimeout(function(){ 
-       $("#navmenu li").removeClass('active');
-    $("#navmenu li:eq(4)").addClass('active');
-    }, 1000);
-    await this.$nextTick(() => {
-      this.$nuxt.$loading.start();
-      console.log("Loading...");
-      setTimeout(() => this.$nuxt.$loading.finish(), 3000);
-    });
-    this.switchLang = this.$router.app._i18n.localeProperties.code;
-    console.log("check", this.switchLang);
-    if (this.switchLang === "th") {
-      console.log(">>>>>>>>sw:", this.switchLang);
-    }
-    return this.switchLang;
+  await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
+
+  // setTimeout(function(){ $("#navmenu li").removeClass('active'); $("#navmenu li:eq(4)").addClass('active');}, 1000);
+  
+  this.GET_ID = this.$route.query.id;
+   // this.getData();
+
+      this.switchLang = localStorage.getItem('lang');
+
+      if(this.switchLang === null){ 
+        localStorage.setItem('lang', 'en');
+        this.switchLang = 'en'
+      } 
+
+      this.$router.push(this.switchLocalePath(this.switchLang))
   },
-  methods: {},
+  computed: {
+ random(){
+ return Math.floor(Math.random() * 7) + 1
+ },
+ },
+  methods: {
+    // async getData() {
+    //   await this.$axios.$get(`/jobs.json`).then((res) => {
+    //     this.GET_TITLE = res.jobs[this.GET_ID - 1].title;
+    //   });
+
+    // },
+  },
 };
 </script>
 <style>

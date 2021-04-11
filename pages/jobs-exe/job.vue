@@ -3,22 +3,65 @@
     <client-only>
       <div class="wrapper">
         <div class="imgHeader position-relative">
-            <div class="carousel-inner">
-                <b-carousel
-                  id="carousel-fade"
-                  style="text-shadow: 0px 0px 2px #000"
-                  fade
-                  :interval="4000"  
-                >
-              <b-carousel-slide :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
-              <b-carousel-slide :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
-              <b-carousel-slide :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
-              <b-carousel-slide :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
-              <b-carousel-slide :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
-              <b-carousel-slide :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
-              <b-carousel-slide :img-src="require(`~/assets/images/JobBanner/${Math.floor(Math.random() * 7) + 1}.jpg`)"></b-carousel-slide>
-              </b-carousel>
-            </div>
+          <div class="">
+            
+            <b-carousel
+              style="text-shadow: 0px 0px 2px #000"
+              fade
+              :interval="4000"
+            >
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide>
+              <b-carousel-slide
+                :img-src="
+                  require(`~/assets/images/JobBanner/${
+                    Math.floor(Math.random() * 7) + 1
+                  }.jpg`)
+                "
+              ></b-carousel-slide> 
+            </b-carousel>
+            
+          </div>
           <div class="position-absolute">
             <div class="container">
               <div class="row">
@@ -29,7 +72,7 @@
                     >
                   </h2>
                   <div class="form-group has-search">
-                    <span class="fa fa-search form-control-feedback"></span>
+                    <!-- <span class="fa fa-search form-control-feedback"></span> -->
                     <b-form-input
                       v-model.trim="search"
                       list="my-list-id"
@@ -40,8 +83,8 @@
                       @keyup.enter="keyupSearch()"
                     ></b-form-input>
                     <datalist id="my-list-id">
-                      <option v-for="list in SERACH" :key="list">
-                        {{ list }}
+                      <option v-for="list in JOBS" :key="list">
+                        {{ list.title }}
                       </option>
                     </datalist>
                   </div>
@@ -50,14 +93,17 @@
             </div>
           </div>
         </div>
-        <div class="bg-line">
+        <div class="bg-line-job">
           <div class="container jobs">
             <div class="row">
               <div class="col-12">
                 <div class="career">
-                  <h4 class="section wow fadeInLeft" data-wow-delay="0.5">
+                  <h3
+                    class="section wow fadeInLeft f-job-h3 mb-4"
+                    data-wow-delay="0.5"
+                  >
                     WE ARE <span style="color: #62cbc9">HIRING!</span>
-                  </h4>
+                  </h3>
 
                   <ul class="section wow fadeInUp" data-wow-delay="0.7">
                     <li class="txt-header">
@@ -105,12 +151,13 @@
                         </div>
                       </div>
                     </li>
-                    <li v-for="item in displayedPosts" :key="item">
+
+                    <li v-for="item in display" :key="item">
                       <div class="title">
                         <nuxt-link :to="`/jobs-exe/${item.id}`">
                           {{ item.title }}
                           <span v-if="item.fresh_grad"
-                            ><img src="~/assets/images/icon_fresh_grad.png"
+                            ><img src="~/assets/images/icon_fresh_grad.svg"
                           /></span>
                         </nuxt-link>
                       </div>
@@ -122,52 +169,20 @@
                   <ul>
                     <li
                       class=""
-                      :class="{ active: pageNumber == choose || (pageNumber > choose && pageNumber <= 1)} "
-                        v-for="pageNumber in pages"
-                        :key="pageNumber"
-                        @click="selectNumber(pageNumber)"
-                      >
+                      :class="{
+                        active:
+                          pageNumber == choose ||
+                          (pageNumber > choose && pageNumber <= 1),
+                      }"
+                      v-for="pageNumber in pages"
+                      :key="pageNumber"
+                      @click="selectNumber(pageNumber)"
+                    >
                       <button class="btn rounded-0 sm button-h">
                         {{ pageNumber }}
                       </button>
                     </li>
                   </ul>
-                  <!-- <ul>
-                    <li>
-                      <div class="title"></div>
-                      <div class="level">
-                        <button
-                          v-if="page != 1"
-                          type="btn b-number mr-2 sm rounded-0 "
-                          class="sm mr-2 active"
-                          @click="page--"
-                        >
-                          {{ page - 1 }}
-                        </button>
-
-                        <button
-                          class="btn b-number mr-2 sm rounded-0"
-                          type=" button"
-                          v-for="pageNumber in pages.slice(page - 1, page + 10)"
-                          :key="pageNumber"
-                          @click="page = pageNumber"
-                        >
-                          <small style="font-size: 12px">{{
-                            pageNumber
-                          }}</small>
-                        </button>
-
-                        <button
-                          class="btn-success sm mr-2"
-                          type=" button"
-                          @click="page++"
-                          v-if="page < pages.length"
-                        >
-                          <small style="font-size: 12px">{{ page }}</small>
-                        </button>
-                      </div>
-                    </li>
-                  </ul> -->
                 </div>
               </div>
             </div>
@@ -227,126 +242,112 @@ export default {
         src: "js/wow.js",
       },
     ],
-      bodyAttrs:{
-      class:"bg-all"
-    }
+    bodyAttrs: {
+      class: "bg-all",
+    },
   },
   data() {
     return {
       JOBS: [],
       search: null,
-      SERACH: [],
-      POSITION: [],
       opened: "custom-select opened",
       status: false,
 
-      posts: [""],
-      page: 1,
-      perPage: 10,
+      posts: [],
       pages: [],
-      before: 0,
-
-      status_numer: false,
-      choose: false,
+ 
+      display: [],
+      choose: 0,
 
       checkLevel: null,
+      switchLang: "",
+
+       GET_fresh_grad: [],
     };
   },
   async mounted() {
 
-    console.log("Loading...");
-    await this.$nextTick(() => {
-      this.$nuxt.$loading.start();
-      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
-    });
+   
+    setTimeout(function(){ 
+    $("#navmenu li").removeClass('active');
+    $("#navmenu li:eq(1)").addClass('active');
+    }, 1000);
 
+    console.log("Loading... jobs-exe-");
+    // await this.$nextTick(() => {
+    //   this.$nuxt.$loading.start();
+    //   setTimeout(() => this.$nuxt.$loading.finish(), 2000);
+    // });
+
+    this.switchLang = this.$router.app._i18n.localeProperties.code;
+    console.log("/job-exe/lang: ", this.switchLang);
+  
     await this.$axios.$get(`/jobs.json`).then((res) => {
       this.JOBS = res.jobs;
       this.posts = res.jobs;
+       this.GET_fresh_grad = res.jobs.fresh_grad
     });
 
-    for (let i in this.JOBS) {
-      this.SERACH[i] = this.JOBS[i].title.toUpperCase();
-      this.JOBS[i].title = this.posts[i].title.toUpperCase();
+    let div = Math.ceil(this.posts.length / 10);
+    for (let i = 1; i <= div; i++) {
+      this.pages.push(i);
     }
 
-    let div = Math.ceil(this.posts.length / 10)
-    for(let i=1; i<=div; i++){
-      this.pages.push(i)
-        let start = i * 10 - 10;
-        let stop = i * 10;
-         for (start; start < div; start++) { 
-          if (start == stop) { return; }
-            this.posts.push({ id: this.JOBS[start].id, title: this.JOBS[start].title,level: this.JOBS[start].level,
-          });
-        }
+    for(let i in this.JOBS){
+      if(11 === this.JOBS[i].id){ return false}
+      this.display.push({
+        id: this.JOBS[i].id,
+        title: this.JOBS[i].title,
+        fresh_grad: this.JOBS[i].fresh_grad,
+        level: this.JOBS[i].level
+      })
+    }
+     for (let i in this.JOBS) {
+       this.JOBS[i].title = this.posts[i].title.toUpperCase();
     }
 
+    //return  (this.switchLang, this.display)
   },
   computed: {
-    displayedPosts() {
-      // return this.paginate(this.posts);
-      return this.posts;
-    },
+ 
     getSearch() {
       for (let i in this.JOBS) {
         if (this.search === this.JOBS[i].title) {
-          this.posts = [];
-          this.pages = [];
-          this.posts.push({
+            this.display.push({
             id: this.JOBS[i].id,
             title: this.JOBS[i].title,
-            level: this.JOBS[i].level,
+            level: this.JOBS[i].level
           });
-          console.log("search>>", this.search);
-        }
+         }
       }
-    },
+      return this.display
+     },
   },
-  watch: {
-    // posts() {
-    //   this.setPages();
-    // },
-  },
+ 
   methods: {
-      displayedPosts() {
-      // return this.paginate(this.posts);
-      return this.posts;
-    },
     toglleLevel() {
       this.status = !this.status;
     },
-    // setPages() {
-    //   let numberOfPages = Math.ceil(this.posts.length / this.perPage);
-    //   for (let index = 1; index <= numberOfPages; index++) {
-    //     this.pages.push(index);
-    //   }
-    // },
-    // paginate(posts) {
-    //   let page = this.page;
-    //   let perPage = this.perPage;
-    //   let from = page * perPage - perPage;
-    //   let to = page * perPage;
-    //   return posts.slice(from, to);
-    // },
     selectLevels(data) {
       this.checkLevel = data;
-      this.posts = [];
+      this.display = [];
       this.pages = [];
       if (data === "All Levels") {
         for (let i in this.JOBS) {
-          this.posts.push({
+          this.display.push({
             id: this.JOBS[i].id,
             title: this.JOBS[i].title,
+            fresh_grad: this.JOBS[i].fresh_grad,
             level: this.JOBS[i].level,
           });
         }
       } else {
         for (let i in this.JOBS) {
           if (this.JOBS[i].level === data) {
-            this.posts.push({
+            this.display.push({
               id: this.JOBS[i].id,
               title: this.JOBS[i].title,
+              fresh_grad: this.JOBS[i].fresh_grad,
               level: this.JOBS[i].level,
             });
           }
@@ -356,52 +357,68 @@ export default {
     keyupSearch() {
       for (let i in this.JOBS) {
         if (this.search === this.JOBS[i].title) {
-          this.posts = [];
-          this.pages = [];
-          this.posts.push({
+          this.display = [];
+           this.display.push({
             id: this.JOBS[i].id,
             title: this.JOBS[i].title,
             level: this.JOBS[i].level,
           });
-          // console.log("keyup>>", this.posts[0].id);
-          this.$router.push(`/jobs-exe/${this.posts[0].id}`);
+           this.$router.push(`/jobs-exe/${this.display[0].id}`);
         }
       }
     },
     selectNumber(data) {
-
+      console.log(data);
       this.choose = data;
-      /*
-      this.posts = [];
+      this.display = [];
       this.pages = [];
 
-       let numberOfPages = Math.ceil(this.JOBS.length / 10);
+      let numberOfPages = Math.ceil(this.JOBS.length / 10);
       for (let index = 1; index <= numberOfPages; index++) {
         this.pages.push(index);
       }
-      
-       if ( (Number(data) && this.checkLevel == null) || this.checkLevel == "All Levels") {
-          let start = data * 10 - 10;
-          let stop = data * 10;
-         for (start; start < this.JOBS.length; start++) { 
-          if (start == stop) { return; }
-            this.posts.push({ id: this.JOBS[start].id, title: this.JOBS[start].title,level: this.JOBS[start].level,
-          });
+
+      if (
+        (Number(data) && this.checkLevel == null) ||
+        this.checkLevel == "All Levels"
+      ) {
+        if (1 === data) {
+          for (let i = 0; i < 10; i++) {
+            this.display[i] = {
+              id: this.JOBS[i].id,
+              title: this.JOBS[i].title,
+              fresh_grad: this.JOBS[i].fresh_grad,
+              level: this.JOBS[i].level,
+            };
+          }
+          return this.display;
         }
-      } 
-      */
-      // if ( (Number(data) && this.checkLevel == null) || this.checkLevel == "Middle - Senior") {
- 
-      //     for (let i in this.JOBS) {
-      //     if (this.JOBS[i].level === checkLevel) {
-      //       this.posts.push({
-      //         id: this.JOBS[i].id,
-      //         title: this.JOBS[i].title,
-      //         level: this.JOBS[i].level,
-      //       });
-      //     }
-      //   }
-      // } 
+        if (2 === data) {
+          let x = data * 10 - 10;
+          let y = 0
+           for (let i = 0; i < 10; i++) {
+             this.display[i] = {
+              id: this.JOBS[x+i].id,
+              title: this.JOBS[x+i].title,
+              fresh_grad: this.JOBS[x+i].fresh_grad,
+              level: this.JOBS[x+i].level,
+            };
+          }
+        }
+           if (3 === data) {
+          let x = (data * 10) - 10;
+          let y = 0
+           for (let i = 0; i < 10; i++) {
+              if((x+i) === this.JOBS.length) { return}
+              this.display[i] = {
+              id: this.JOBS[x+i].id,
+              title: this.JOBS[x+i].title,
+              fresh_grad: this.JOBS[x+i].fresh_grad,
+              level: this.JOBS[x+i].level,
+            };
+          }
+        }
+      }
     },
   },
 };

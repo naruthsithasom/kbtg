@@ -63,18 +63,18 @@
                 {{ $t("AboutKBTGInspire") }}
               </p>
               <div class="wrap-link">
-                <nuxt-link
-                  to="/jobs-exe"
+                <a
+                  href="/jobs-exe"
                   class="section wow fadeInUp"
                   data-wow-delay="0.7"
-                  >See Positions</nuxt-link>
-                >
-                <nuxt-link
-                  to="/activites"
+                  >See Positions</a>
+                
+                <a
+                  href="/activites"
                   class="section wow fadeInUp"
                   data-wow-delay="0.7"
-                  >View Activities</nuxt-link>
-                >
+                  >View Activities</a>
+
               </div>
             </div>
             <div class="col-12 col-md-6">
@@ -98,30 +98,25 @@
         <div class="row">
           <div class="col-12">
             <div class="content-job mb-4 pt-5">
-              <h3
-                class="section wow fadeInUp"
-                data-wow-duration="200"
-                data-wow-delay="200"
-              >
+              <!-- <h3 class="section wow fadeInUp" data-wow-duration="200" data-wow-delay="200" >
                 JOBS AT <span style="color: #62cbc9">KBTG</span> INSPIRE
                 <nuxt-link to="/jobs-exe" class="a-l1">View all Jobs</nuxt-link>
-              </h3>
+              </h3> -->
+              <div class="flex-content">
+                <h3 class="section wow fadeInUp" data-wow-duration="200" data-wow-delay="200" >JOBS AT <span style="color: #62cbc9">KBTG</span> INSPIRE </h3>
+                <nuxt-link to="/jobs-exe" class="a-l1">View all Jobs</nuxt-link>
+              </div>
+             
               <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
                   <div
                     class="detail wow fadeInUp"
                     data-wow-duration="400"
-                    data-wow-delay="200"
-                  >
+                    data-wow-delay="200">
                     <h5>
-                      <nuxt-link to="jobs-exe/1"
-                        >Software Engineer<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
+                      <nuxt-link to="jobs-exe/1">Software Engineer<span><img src="~/assets/images/Asset15.png" /></span></nuxt-link>
                     </h5>
-                    <span class="location"
-                      >KBTG Building &amp; K+ Building</span
-                    >
+                    <span class="location">KBTG Building &amp; K+ Building</span>
                     <p>
                       In this role, you will be responsible for the application
                       design and development of application components or
@@ -137,10 +132,10 @@
                     data-wow-delay="200"
                   >
                     <h5>
-                      <nuxt-link to="jobs-exe/2"
+                      <a href="jobs-exe/2"
                         >Test Manager/Test Engineer<span
                           ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
+                      ></a>
                     </h5>
                     <span class="location">KBTG Building</span>
                     <p>
@@ -380,7 +375,6 @@
                 >
                   FIND YOUR INSPIRATION<nuxt-link to="/activites" class="a-l1"
                     >View all Activites</nuxt-link>
-                  >
                 </h3>
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-6 col-lg-4">
@@ -867,19 +861,11 @@ export default {
     },
   },
   async mounted() {
-    await this.$nextTick(() => {
-      this.$nuxt.$loading.start();
-      console.log("Loading...");
-      setTimeout(() => this.$nuxt.$loading.finish(), 3000);
-    });
+
+    await this.$nextTick(() => { this.$nuxt.$loading.start(); console.log("Loading... index"); setTimeout(() => this.$nuxt.$loading.finish(), 3000);});
 
     this.switchLang = this.$router.app._i18n.localeProperties.code;
-    this.switchLang = "th";
-    //console.log(this.$t("AboutKBTGInspire"))
-    // console.log('check',this.switchLang)
-    /*if(this.switchLang === 'th') {
-      console.log('>>>>>>>>sw:',this.switchLang)
-    }*/
+    console.log('/index lang: ',this.switchLang)
     return this.switchLang;
   },
 };
