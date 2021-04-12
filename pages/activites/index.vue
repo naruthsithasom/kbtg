@@ -352,10 +352,7 @@
                             <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
                           <div class="event-info f-date-h3">
-                            <h3 class="mb-0">
-                              <!-- <span :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("Register") }}</span> -->
-                              Register
-                            </h3>
+                            <h3 class="mb-0 py-2">Register</h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -363,9 +360,7 @@
                             <span class="d-block">10:30 - 11:00 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <span  title="">Welcome to KBTG and KBTG Beyond</span>
-                            </h3>
+                            <h3 class="mb-0 pt-2">Welcome to KBTG and KBTG Beyond</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
                             </ul>
@@ -377,7 +372,7 @@
                             <span class="d-block">11:00 - 11:30 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Inspire Talk</h3>
+                            <h3 class="mb-0 pt-2">Inspire Talk</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li class="">Guest Speaker</li>
                             </ul>
@@ -389,9 +384,7 @@
                             <span class="d-block">11:30 - 12:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <span >Fireside Chat</span>
-                            </h3>
+                            <h3 class="mb-0 pt-2">Fireside Chat</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("by1") }}</li>
                             </ul>
@@ -405,9 +398,7 @@
                             <span class="d-block">12:00 - 01:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
-                              <span   title="">Lunch Break</span>
-                            </h3>
+                            <h3 class="mb-0 pt-2">Lunch Break</h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -415,7 +406,7 @@
                             <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Agile Playgroundd</h3>
+                            <h3 class="mb-0 pt-2">Agile Playgroundd</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
@@ -427,9 +418,6 @@
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                            <!-- <p class="">- {{$t('upskillDetail-1')}}</p>
-                            <p class="">- {{$t('upskillDetail-2')}}</p>
-                            <p class="">- {{$t('upskillDetail-3')}}</p> -->
                               <p class="mb-0">- How to Manage Projects Valued > 1 Billion Baht?</p>
                               <p class="mb-0">- Business Analyst in Agile World</p>
                               <p class="mb-0">- How to Secure Your Smart Contract</p>
@@ -456,10 +444,7 @@
                             <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
                           <div class="event-info">
-                             <h3 class="mb-0">
-                              <!-- <span  :class="{ 'f-thai': switchLang === 'th'  }" title="">{{ $t("Register") }}</span> -->
-                              Register
-                            </h3>
+                             <h3 class="mb-0 py-2">Register</h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -467,7 +452,7 @@
                             <span class="d-block">10:30 - 11:00 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Welcome to KBTG and KBTG Beyond</h3>
+                            <h3 class="mb-0 pt-2">Welcome to KBTG and KBTG Beyond</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
                             </ul>
@@ -479,7 +464,7 @@
                             <span class="d-block">11:00 - 11:30 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Inspire Talk</h3>
+                            <h3 class="mb-0 pt-2">Inspire Talk</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>
                                  Guest Speaker
@@ -493,7 +478,7 @@
                             <span class="d-block">11:30 - 12:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Fireside Chat</h3>
+                            <h3 class="mb-0 pt-2">Fireside Chat</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('PanuwatKenchatPhitsineeSincharoenpong') }}</li>
                             </ul>
@@ -505,7 +490,7 @@
                             <span class="d-block">12:00 - 01:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Lunch Break</h3>
+                            <h3 class="mb-0 pt-2">Lunch Break</h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -513,7 +498,7 @@
                             <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
-                          <h3 class="mb-0">Agile Playground</h3>
+                          <h3 class="mb-0 pt-2">Agile Playground</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
@@ -550,7 +535,7 @@
                             <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">
+                            <h3 class="mb-0 pt-2">
                               <!-- <span  :class="{ 'f-thai': switchLang === 'th'  }" title="">{{ $t("Register") }}</span> -->
                               Register
                             </h3>
@@ -561,7 +546,7 @@
                             <span class="d-block">10:30 - 11:00 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Welcome to KBTG and KBTG Beyond</h3>
+                            <h3 class="mb-0 pt-2">Welcome to KBTG and KBTG Beyond</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolChetaphanSiridanupath") }}</li>
                             </ul>
@@ -573,7 +558,7 @@
                             <span class="d-block">11:00 - 11:30 AM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Inspire Talk</h3>
+                            <h3 class="mb-0 pt-2">Inspire Talk</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>
                                 Guest Speaker
@@ -587,7 +572,7 @@
                             <span class="d-block">11:30 - 12:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Fireside Chat</h3>
+                            <h3 class="mb-0 pt-2">Fireside Chat</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("PaweenPiyasilChayaponSaepung") }}</li>
                             </ul>
@@ -599,7 +584,7 @@
                             <span class="d-block">12:00 - 01:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Lunch Break</h3>
+                            <h3 class="mb-0 pt-2">Lunch Break</h3>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -607,7 +592,7 @@
                             <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0">Agile Playground</h3>
+                            <h3 class="mb-0 pt-2">Agile Playground</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>

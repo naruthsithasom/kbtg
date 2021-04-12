@@ -59,53 +59,12 @@
             "
           ></b-carousel-slide>
         </b-carousel> -->
-      <b-carousel
-              style="text-shadow: 0px 0px 2px #000"
-              fade
-              :interval="4000"
-            >
-              <b-carousel-slide
-                :img-src="
-                  require(`~/assets/images/JobBanner/R${
-                  random
-                  }.jpg`)
-                "
-              ></b-carousel-slide>
-                  <b-carousel-slide
-                :img-src="
-                  require(`~/assets/images/JobBanner/R${
-                  random
-                  }.jpg`)
-                "
-              ></b-carousel-slide>
-                  <b-carousel-slide
-                :img-src="
-                  require(`~/assets/images/JobBanner/R${
-                  random
-                  }.jpg`)
-                "
-              ></b-carousel-slide>
-                  <b-carousel-slide
-                :img-src="
-                  require(`~/assets/images/JobBanner/R${
-                  random
-                  }.jpg`)
-                "
-              ></b-carousel-slide>
-                  <b-carousel-slide
-                :img-src="
-                  require(`~/assets/images/JobBanner/R${
-                  random
-                  }.jpg`)
-                "
-              ></b-carousel-slide>
-                  <b-carousel-slide
-                :img-src="
-                  require(`~/assets/images/JobBanner/R${
-                  random
-                  }.jpg`)
-                "
-              ></b-carousel-slide>
+           <b-carousel id="carousel-1" v-model="slide" :interval="4000" @sliding-start="onSlideStart" @sliding-end="onSlideEnd" >
+             <div v-for="list in loop" :key="list">
+              <b-carousel-slide :img-src=" require(`~/assets/images/JobBanner/R${ Math.floor(Math.random() * 7) + 1 }.jpg`)"></b-carousel-slide>
+             </div>
+              <!-- <b-carousel-slide :img-src=" require(`~/assets/images/JobBanner/R${ Math.floor(Math.random() * 7) + 1 }.jpg`)"></b-carousel-slide> -->
+              <!-- <b-carousel-slide :img-src=" require(`~/assets/images/JobBanner/R${ Math.floor(Math.random() * 7) + 1 }.jpg`)"></b-carousel-slide> -->
             </b-carousel>
       </div>
       <div class="position-absolute">
@@ -284,10 +243,11 @@ export default {
   },
   data() {
     return {
-      GET_TITLE: null,
-      GET_ID: null,
-      GET_INFO: null,
-       switchLang: 'en',
+       getID: null,
+        switchLang: 'en',
+        slide: 0,
+        sliding: null,
+        loop:[0,1,2,3,4,5,6,7]
     };
   },
   async mounted() {
@@ -295,7 +255,7 @@ export default {
 
   // setTimeout(function(){ $("#navmenu li").removeClass('active'); $("#navmenu li:eq(4)").addClass('active');}, 1000);
   
-  this.GET_ID = this.$route.query.id;
+  this.getID = this.$route.query.id;
    // this.getData();
 
       this.switchLang = localStorage.getItem('lang');
@@ -308,14 +268,20 @@ export default {
       this.$router.push(this.switchLocalePath(this.switchLang))
   },
   computed: {
- random(){
- return Math.floor(Math.random() * 7) + 1
- },
+ random(){ 
+   return Math.floor(Math.random() * 7) + 1 
+   },
  },
   methods: {
+     onSlideStart(slide) {
+        this.sliding = true
+      },
+      onSlideEnd(slide) {
+        this.sliding = false
+      }
     // async getData() {
     //   await this.$axios.$get(`/jobs.json`).then((res) => {
-    //     this.GET_TITLE = res.jobs[this.GET_ID - 1].title;
+    //     this.GET_TITLE = res.jobs[this.getID - 1].title;
     //   });
 
     // },

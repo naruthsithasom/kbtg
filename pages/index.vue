@@ -666,10 +666,8 @@
   </div>
 </template>
 <script>
-import Loading from '../components/Loading';
- export default {
-  components: { Loading },
-  head: {
+  export default {
+   head: {
     script: [
       {
         body: true,

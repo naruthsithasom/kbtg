@@ -1,6 +1,7 @@
 <template>
   <div>
     <client-only>
+      <Loading />
       <header>
         <div class="container">
           <div class="row">
@@ -131,7 +132,7 @@
                   />
                   <ul>
                     <li class="nav-item" :class="{'active': $router.currentRoute.path === '/'||  $router.currentRoute.path === '/th/'}"><a href="/" class="">HOME</a></li>
-                    <li class="nav-item" @click="navClick('#faq')" :class="{ 'active': $router.currentRoute.hash=== '#faq' }"  ><a href="/#faq" class="">FAQ</a></li>
+                    <li class="nav-item" @click="navClick('#faq')" :class="{ 'active': $router.currentRoute.hash=== '#faq' }"  ><a :href="`/${isThFaq}`" class="nav-link">FAQ</a></li>
                     <li class="nav-item" :class="{ 'active': ($router.currentRoute.path === '/activites/' || $router.currentRoute.path === '/th/activites/') && !( faq === '#faq')}"><a href="/activites" class="">ACTIVITIES</a></li>
                     <li class="nav-item" @click="navClick('policy')"><a href="/policy" class="">PRIVACY POLICY</a></li>
                     <li class="nav-item"  :class="{ 'active': ($router.currentRoute.path === '/jobs-exe/' || $router.currentRoute.path === '/th/job-exe/') && !( faq === '#faq')}"><a href="/jobs-exe" class="">JOBS</a></li>
@@ -165,6 +166,7 @@
   </div>
 </template>
 <script>
+import Loading from "../components/Loading"
 export default {
   head: {
     script: [
@@ -216,7 +218,7 @@ export default {
       },
     ],
   },
-
+  components:{ Loading },
   data() {
     return {
       statusFaq: false,

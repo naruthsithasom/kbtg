@@ -2,19 +2,15 @@
   <div>
     <client-only>
       <div class="wrapper">
-        <Loading />
         <div class="imgHeader position-relative">
-           <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item"><img src="~/assets/images/JobBanner/R1.jpg" /></div>
-                </div>
-           </div> -->
-             <b-carousel style="text-shadow: 0px 0px 2px #000" fade :interval="4000">
-              <b-carousel-slide class="  img-banner-job" :img-src="require(`~/assets/images/JobBanner/R${random}.jpg`)"></b-carousel-slide>
-              <!-- <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/R${random}.jpg`)"></b-carousel-slide>
-              <b-carousel-slide class="img-fluid" :img-src="require(`~/assets/images/JobBanner/R${random}.jpg`)"></b-carousel-slide> -->
-            </b-carousel> 
- 
+          <b-carousel id="carousel-1" v-model="slide" :interval="4000" @sliding-start="onSlideStart" @sliding-end="onSlideEnd" >
+             <div v-for="list in loop" :key="list">
+              <b-carousel-slide :img-src=" require(`~/assets/images/JobBanner/R1.jpg`)"></b-carousel-slide>
+              <b-carousel-slide :img-src=" require(`~/assets/images/JobBanner/R4.jpg`)"></b-carousel-slide>
+              <b-carousel-slide :img-src=" require(`~/assets/images/JobBanner/R5.jpg`)"></b-carousel-slide>
+              <b-carousel-slide :img-src=" require(`~/assets/images/JobBanner/R${ Math.floor(Math.random() * 7) + 1 }.jpg`)"></b-carousel-slide>
+              </div>
+          </b-carousel>      
           <div class="position-absolute">
             <div class="container">
               <div class="row">
@@ -25,8 +21,6 @@
 
                   <div class="form-group has-search">
                     <span class="fa fa-search form-control-feedback"></span>
-                      <!-- :state="getSearch"
-                      @keyup.enter="keyupSearch()" -->
                     <b-form-input v-model.trim="search" :state="getSearch"  @keyup.enter="keyupSearch()" list="my-list-id" class="text-dark form-control" type="text" placeholder="Find your KBTG job today!"></b-form-input>
                     <datalist id="my-list-id"><option v-for="list in res" :key="list.id">{{ list.title }}</option></datalist>
                   </div>
@@ -86,10 +80,8 @@
   </div>
 </template>
 <script>
-import Loading from '~/components/Loading.vue';
-export default {
-  components: { Loading },
-  head: {
+ export default {
+   head: {
     script: [
       {
         async: true,
@@ -143,6 +135,9 @@ export default {
   },
   data() {
     return {
+      slide: 0,
+      sliding: null,
+      loop:[0,1,2,3,4,5,6,7],
       JOBS: [],
       posts: [],
       Pages: [],
@@ -162,7 +157,7 @@ export default {
       S:"Senior",
       listFirst:0,
       listLast:10,
-  
+      notFound:["{id: 1, title: 'ไม่พบตำแหน่งนี้!!!'}"],
     };
   },
  
@@ -203,6 +198,12 @@ export default {
   },
  
   methods: {
+    onSlideStart(slide) {
+        this.sliding = true
+      },
+      onSlideEnd(slide) {
+        this.sliding = false
+      },
      async fetchData(){
         const response =  await this.$axios.$get('/jobs.json')
         this.res = [...response.jobs]
@@ -219,7 +220,7 @@ export default {
        for(let i in this.res){
           this.displays.push({id: this.res[i].id, title: this.res[i].title, fresh_grad: this.res[i].fresh_grad, level: this.res[i].level})
         }
-      console.log('displays:',this.displays.length)
+      // console.log('displays:',this.displays.length)
       return (this.displays)
     },
     groupLevels(level) {
@@ -251,15 +252,15 @@ export default {
     toglleLevel() {
       this.status = !this.status;
     },
-    keyupSearch() {
+    async keyupSearch() {
 
      let data  =  this.res.filter( x => x.title === this.search)
-     this.$router.push(`/jobs-exe/${data[0].id}`)
+    if( data.length === 0 ){ return } 
+    else { this.$router.push(`/jobs-exe/${data[0].id}`) }
     },
     selectNumber(data) {
-      console.log(data);
+      // console.log(data);
       this.choose = data;
-      
       if(data === 1){  this.listFirst = (data * 10) -10}
       else{  this.listFirst = (data * 10) - 9 }
       this.listLast = data * 10
