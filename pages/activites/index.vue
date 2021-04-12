@@ -315,7 +315,7 @@
                       <li class="item-tabs " :class="{'active': status_tap === 1? true : false }">
                         <a
                           @click="clickTap(1)"
-                          class="nav-link " :class="{'active': status_tap === 1? true : false,'day1-tap1': switchLang === 'th' && status_tap === 1}"
+                          class="nav-link " :class="{'active': status_tap === 1? true : false,'day1-tap1-th': switchLang === 'th' && status_tap === 1}"
                           data-toggle="tab"
                           href="#event-tab1"
                            >Day 1<span>May 21, 2021</span></a
@@ -324,7 +324,7 @@
                       <li class="item-tabs" :class="{'active ': status_tap === 2? true : false }">
                         <a
                           @click="clickTap(2)"
-                          class="nav-link day2 " :class="{'active': status_tap === 2? true : false,'day2-tap2': status_tap === 2 && switchLang === 'en'}"
+                          class="nav-link day2 " :class="{'active': status_tap === 2? true : false,'day2-tap2-en': status_tap === 2 && switchLang === 'en'}"
                           data-toggle="tab"
                           href="#event-tab2 "
                           title=""

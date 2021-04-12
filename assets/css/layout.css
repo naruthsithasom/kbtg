@@ -1620,13 +1620,13 @@ a {
   color: #393536;
   background-color: #62CBC9;
   /* margin-bottom: 73rem ; */
-  margin-bottom: 1126px;
+  margin-bottom: 1161px;
 }
-.day1-tap1{
-  margin-bottom: 1195px !important;
+.day1-tap1-th{
+  margin-bottom: 1230px !important;
 }
-.day2-tap2{
-  margin-bottom: 1054px !important;
+.day2-tap2-en{
+  margin-bottom: 1089px !important;
 }
 .event-wrap .nav-tabs li a:before {
   content: "";
