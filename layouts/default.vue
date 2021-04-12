@@ -35,6 +35,7 @@
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
+                  <!-- @click="switchLanguage('x')" -->
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
@@ -99,11 +100,16 @@
                     </li>
                       <!-- @click="navClick('join')"> -->
                   </ul>
-                  <ul class="navbar-nav language my-2 my-lg-0">
-                    <li class="nav-item " :class="{'active':  storage === 'en'? true : false}"><a @click="switchLanguage('en')"  class="nav-link" href="">EN</a></li>
-                      <span style="margin: 5px 0;">/</span>
-                    <li  class="nav-item " :class="{'active':  storage  === 'th'? true : false}"><a  @click="switchLanguage('th')"  class="nav-link" href="">TH</a></li>
-                  </ul>
+                  <div class="d-flex justify-content-start language my-2 my-lg-0 btn-lang">
+                     <span class="nav-item " :class="{'active':  storage === 'en'? true : false }" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" ><button   @click="switchLanguage('en')"  class="nav-link border-0  "  >EN</button></span>
+                        <span style="margin: 5px 0;">/</span>
+                      <span class="nav-item" :class="{'active':  storage === 'th'? true : false}"  data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" ><button  @click="switchLanguage('th')"  class="nav-link border-0 "  >TH</button></span>
+                  </div>
+                    <!-- <ul class="navbar-nav language my-2 my-lg-0">
+                       <li class="nav-item" :class="{'active':  storage === 'en'? true : false}"><button   @click="switchLanguage('en')"  class="nav-link border-0  "  >EN</button></li>
+                        <span style="margin: 5px 0;">/</span>
+                      <li class="nav-item" :class="{'active':  storage === 'th'? true : false}" ><button  @click="switchLanguage('th')"  class="nav-link border-0 "  >TH</button></li>
+                  </ul> -->
                 </div>
               </nav>
             </div>
@@ -216,9 +222,10 @@ export default {
       statusFaq: false,
       statusJoin: false,
       statusContact:false,
-
       storage: 'en',
       faq: "",
+      path: "",
+      isShow: "false",
     };
   },
     async mounted(){
@@ -230,11 +237,12 @@ export default {
 
     console.log('layout default---------lang:>>',this.storage)
       if(this.storage === null){ 
-        localStorage.setItem('lang>>', 'en');
+        localStorage.setItem('lang', 'en');
         this.storage = 'en'
       } 
     this.$router.push(this.switchLocalePath(this.storage))
     console.log('current:>> ',this.$router.currentRoute)
+
     return this.storage
   },
   computed:{
@@ -242,17 +250,25 @@ export default {
   },
   methods: {
     switchLanguage(sw){
-      
+
+      if(sw === 'x'){ this.isShow = false} 
+      else{ 
+        this.isShow = false
+      }
+
+
       if(sw === 'en'){
          localStorage.setItem('lang', 'en');
         this.storage = 'en'
-        this.$router.push(this.switchLocalePath('en'))
+         this.$router.push(this.switchLocalePath('en'))
+        //this.switchLocalePath('en')
           }
       if(sw === 'th'){
          localStorage.setItem('lang', 'th');
          this.storage = 'th'
     
-        this.$router.push(this.switchLocalePath('th'))
+         this.$router.push(this.switchLocalePath('th'))
+         //this.switchLocalePath('th')
        }
     },
     navClick(data) {

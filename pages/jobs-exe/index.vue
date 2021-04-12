@@ -26,7 +26,7 @@
                     <span class="fa fa-search form-control-feedback"></span>
                       <!-- :state="getSearch"
                       @keyup.enter="keyupSearch()" -->
-                    <b-form-input v-model.trim="search" :state="getSearch" list="my-list-id" class="text-dark form-control" type="text" placeholder="Find your KBTG job today!"></b-form-input>
+                    <b-form-input v-model.trim="search" :state="getSearch"  @keyup.enter="keyupSearch()" list="my-list-id" class="text-dark form-control" type="text" placeholder="Find your KBTG job today!"></b-form-input>
                     <datalist id="my-list-id"><option v-for="list in res" :key="list.id">{{ list.title }}</option></datalist>
                   </div>
 
@@ -52,10 +52,10 @@
                             <span class="custom-select-trigger">Level</span>
                             <div class="custom-options">
                               <span @click="groupLevels(A)" class="custom-option" >All Levels</span>
-                              <span @click="groupLevels(`Junior - Middle`)" class="custom-option" >Junior - Middle</span>
-                              <span @click="groupLevels('M')" class="custom-option"  >Middle</span>
-                              <span @click="groupLevels('MS')" class="custom-option" >Middle - Senior</span>
-                              <span @click="groupLevels('S')" class="custom-option" >Senior</span>
+                              <span @click="groupLevels(JM)" class="custom-option" >Junior - Middle</span>
+                              <span @click="groupLevels(M)" class="custom-option"  >Middle</span>
+                              <span @click="groupLevels(MS)" class="custom-option" >Middle - Senior</span>
+                              <span @click="groupLevels(S)" class="custom-option" >Senior</span>
                             </div>
                           </div>
                         </div>
@@ -71,8 +71,7 @@
                 </div>
                 <div class="next">
                   <ul>
-                    <li :class="{ active: list == choose || (list > choose && list <= 1)}"
-                      v-for="list in Pages" :key="list.id" @click="selectNumber(list)">
+                    <li :class="{ active: list == choose || (list > choose && list <= 1)}" v-for="list in Pages" :key="list.id" @click="selectNumber(list)">
                       <button class="btn rounded-0 sm button-h">{{ list }}</button>
                     </li>
                   </ul>
@@ -92,47 +91,47 @@ export default {
       {
         async: true,
         type: "text/javascript",
-        src: "js/jquery-3.3.1.slim.min.js",
+        src: "/js/jquery-3.3.1.slim.min.js",
       },
       {
         async: true,
         type: "text/javascript",
-        src: "js/jquery.min.js",
+        src: "/js/jquery.min.js",
       },
       {
         async: true,
         type: "text/javascript",
-        src: "js/popper.min.js",
+        src: "/js/popper.min.js",
       },
       {
         async: true,
         type: "text/javascript",
-        src: "js/bootstrap.min.js",
+        src: "/js/bootstrap.min.js",
       },
       {
         async: true,
         type: "text/javascript",
-        src: "flexslider/jquery.flexslider.js",
+        src: "/flexslider/jquery.flexslider.js",
       },
       {
         async: true,
         type: "text/javascript",
-        src: "flexslider/js/shCore.js",
+        src: "/flexslider/js/shCore.js",
       },
       {
         async: true,
         type: "text/javascript",
-        src: "flexslider/js/shBrushJScript.js",
+        src: "/flexslider/js/shBrushJScript.js",
       },
       {
         async: true,
         type: "text/javascript",
-        src: "WOW-master/dist/wow.js",
+        src: "/WOW-master/dist/wow.js",
       },
       {
         async: true,
         type: "text/javascript",
-        src: "js/wow.js",
+        src: "/js/wow.js",
       },
     ],
     bodyAttrs: {
@@ -153,9 +152,11 @@ export default {
       choose: 0,
       checkLevel: "",
       switchLang: "",
-      watcDisply:"",
-      A:"All levels",
-      JM:"Junior - Middle",
+      A:"All Levels",
+      JM:"Junior – Middle",
+      M:"Middle",
+      MS:"Middle - Senior",
+      S:"Senior",
       listFirst:0,
       listLast:10,
   
@@ -164,44 +165,17 @@ export default {
  
   async mounted() {
 
-    await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
-    // setTimeout(function(){ $("#navmenu li").removeClass('active');$("#navmenu li:eq(1)").addClass('active');}, 1000);
+    setTimeout(function(){ $("#navmenu li").removeClass('active');$("#navmenu li:eq(1)").addClass('active');}, 1000);
+ 
+    // await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
     
     this.switchLang = this.$router.app._i18n.localeProperties.code;
     
     console.log("Loading... jobs-exe-");
     console.log("/job-exe/lang: ", this.switchLang);
-
     console.log('/job-exe: ',this.$router.currentRoute.name)
-    //await this.fetchData()
+    
     await this.fetchData()
-  //  await this.create() 
-    //await this.create()
-    // const res =  await this.$axios.$get('/jobs.json')
-    // this.res = res
-    //.then((res) => { res.jobs
-    // this.res = [...res.jobs];
-    // return res.jobs
-    //this.GET_fresh_grad = res.jobs.fresh_grad
-    // });
-
-    // let div = Math.ceil(this.posts.length / 10);
-    // for (let i = 1; i <= div; i++) {
-    //   this.pages.push(i);
-    // }
-
-    // for(let i in this.JOBS){
-    //   if(11 === this.JOBS[i].id){ return false}
-    //   this.display.push({
-    //     id: this.JOBS[i].id,
-    //     title: this.JOBS[i].title,
-    //     fresh_grad: this.JOBS[i].fresh_grad,
-    //     level: this.JOBS[i].level
-    //   })
-    // }
-    //  for (let i in this.JOBS) {
-    //    this.JOBS[i].title = this.posts[i].title.toUpperCase();
-    // }
   },
   computed: {
     
@@ -209,7 +183,6 @@ export default {
       return Math.floor(Math.random() * 7) + 1
     },
     getSearch() {
-      //let data = []
        if(this.search != ""){
          let data =  this.res.filter( x => x.title === this.search )
         if(data.length !== 0){ 
@@ -223,7 +196,6 @@ export default {
           this.Pagination(3)
         }
       }
-      //console.log('serach>>',this.search.length + "arr"+data.length)
      },
   },
  
@@ -247,17 +219,26 @@ export default {
       console.log('displays:',this.displays.length)
       return (this.displays)
     },
-    groupLevels(level){
+    groupLevels(level) {
+
       let data = []
-      this.displays = []
-      this.Pages = []
-      for(let i=0; i<this.res.length; i++){
-        if(level === this.res[i].level){
-          data[i] = this.res[i]
-          console.log(data[i])
-        }
+      this.clearSet()
+
+      if(level === this.A) { 
+        data = this.res.filter( x => x)
+        let page = Math.ceil(data.length / 10)
+        this.Pagination(page)
       }
-      // console.log(this.res[0].level)
+      else {
+        data = this.res.filter(x => x.level === level)
+        let page = Math.ceil(data.length / 10);
+        this.Pagination(page)
+      }
+
+      for(let i in data){
+        this.displays.push(data[i])
+      }
+
     },
     Pagination(count){
        for (let i = 1; i <= count; i++) {
@@ -268,17 +249,9 @@ export default {
       this.status = !this.status;
     },
     keyupSearch() {
-      // for (let i in this.JOBS) {
-      //   if (this.search === this.JOBS[i].title) {
-      //     this.display = [];
-      //      this.display.push({
-      //       id: this.JOBS[i].id,
-      //       title: this.JOBS[i].title,
-      //       level: this.JOBS[i].level,
-      //     });
-      //      this.$router.push(`/jobs-exe/${this.display[0].id}`);
-      //   }
-      // }
+
+     let data  =  this.res.filter( x => x.title === this.search)
+     this.$router.push(`/jobs-exe/${data[0].id}`)
     },
     selectNumber(data) {
       console.log(data);
@@ -287,85 +260,17 @@ export default {
       if(data === 1){  this.listFirst = (data * 10) -10}
       else{  this.listFirst = (data * 10) - 9 }
       this.listLast = data * 10
-      console.log('first',this.listFirst )
-      console.log('last',this.listLast )
-    
-    
-      // this.display = [];
-      // this.pages = [];
-
-      // let numberOfPages = Math.ceil(this.JOBS.length / 10);
-      // for (let index = 1; index <= numberOfPages; index++) {
-      //   this.pages.push(index);
-      // }
-
-      // if (
-      //   (Number(data) && this.checkLevel == null) ||
-      //   this.checkLevel == "All Levels"
-      // ) {
-      //   if (1 === data) {
-      //     for (let i = 0; i < 10; i++) {
-      //       this.display[i] = {
-      //         id: this.JOBS[i].id,
-      //         title: this.JOBS[i].title,
-      //         fresh_grad: this.JOBS[i].fresh_grad,
-      //         level: this.JOBS[i].level,
-      //       };
-      //     }
-      //     return this.display;
-      //   }
-      //   if (2 === data) {
-      //     let x = data * 10 - 10;
-      //     let y = 0
-      //      for (let i = 0; i < 10; i++) {
-      //        this.display[i] = {
-      //         id: this.JOBS[x+i].id,
-      //         title: this.JOBS[x+i].title,
-      //         fresh_grad: this.JOBS[x+i].fresh_grad,
-      //         level: this.JOBS[x+i].level,
-      //       };
-      //     }
-      //   }
-      //      if (3 === data) {
-      //     let x = (data * 10) - 10;
-      //     let y = 0
-      //      for (let i = 0; i < 10; i++) {
-      //         if((x+i) === this.JOBS.length) { return}
-      //         this.display[i] = {
-      //         id: this.JOBS[x+i].id,
-      //         title: this.JOBS[x+i].title,
-      //         fresh_grad: this.JOBS[x+i].fresh_grad,
-      //         level: this.JOBS[x+i].level,
-      //       };
-      //     }
-      //   }
-      // }
     },
     clearSet(){
+      this.choose = 1
       this.displays = []
       this.Pages = []
-    }
+      this.listFirst = 0
+      this.listLast = 10
+     }
   },
 };
 </script>
 <style>
-.sm {
-  color: #ffffff;
-  font-size: 14px !important;
-}
-.b-active {
-  border-bottom: 1px solid #62cbc9;
-}
-.sm:hover {
-  background-color: #393536;
-  color: #ffffff;
-}
-.sm:focus {
-  outline: none;
-  box-shadow: none;
-}
-.offset {
-  width: 500px !important;
-  margin: 20px auto;
-}
+ 
 </style>

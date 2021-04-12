@@ -1,25 +1,15 @@
  
 export default {
-  // router: {
-  //   extendRoutes(routes, resolve) {
-  //     routes.push({
-  //       name: "custom",
-  //       path: "*",
-  //       component: resolve(__dirname, "pages/404.vue"),
-  //     });
-  //   },
-  // },
+ 
   loading: {
-    continuous: true,
+    continuous: false,
   },
   ssr: false,
   target: "static",
   server: {
     port: 80,
   },
-  // static: {
-  //   prefix: false,
-  // },
+ 
   head: {
     title: "KBTG INSPIRE",
     htmlAttrs: {
@@ -100,9 +90,7 @@ export default {
     },
   },
   i18n: {
-    // parsePages: false,
-    // encodePaths: false,
-    locales: [
+     locales: [
       { code: "en", iso: "en-US", file: "./static/lang/en.json" },
       { code: "th", iso: "th-TH", file: "./static/lang/en.json" },
     ],
@@ -116,6 +104,4 @@ export default {
       },
     },
   },
-  // devtool: "inline-source-map",
-  // loaders: [{ test: /\.js$/, loader: "babel", query: { compact: false } }],
-};
+  };

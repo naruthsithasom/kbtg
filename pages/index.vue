@@ -1,16 +1,28 @@
 <template>
   <div>
-    <!-- <Header /> -->
-    <div class="wrapper bg-white">
+     <div class="wrapper bg-white">
       <div class="imgHeader home position-relative">
-        <video autoplay="" loop="" id="video-background" muted="">
+       <b-button class="h-100 m-0 p-0 border-0 w-100 bg-white" id="show-btn" @click="$bvModal.show('bv-modal-example')"> 
+         <video autoplay="" loop="" id="video-background" muted="">
           <source
             src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"
             type="video/mp4"
           />
         </video>
-        <!-- <img src="~/assets/images/Test01.jpg"/> -->
-        <div class="position-absolute">
+       </b-button>
+      <div>
+        <!-- <b-button id="show-btn" @click="$bvModal.show('bv-modal-example')">Open Modal</b-button> -->
+          <b-modal id="bv-modal-example"   hide-footer>
+          <div>
+            <!-- <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></b-embed> -->   
+          <video autoplay="" loop="" id="" muted="false"  width="100%" height="100%" controls> 
+          <source src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"  type="video/mp4"
+          />
+        </video>
+          </div>
+          </b-modal>
+      </div>
+         <div class="position-absolute">
           <div class="container">
             <div class="row">
               <div class="col-12 section wow fadeInUp" data-wow-delay="1.0">
@@ -45,36 +57,15 @@
         <div class="container py-3">
           <div class="row">
             <div class="col-12 col-md-12">
-              <h3
-                class="section wow fadeInLeft text-white pt-3"
-                data-wow-delay="500"
-              >
-                ABOUT KBTG INSPIRE
-              </h3>
+              <h3 class="section wow fadeInLeft text-white pt-3" data-wow-delay="500">ABOUT KBTG INSPIRE</h3>
             </div>
           </div>
           <div class="row">
             <div class="col-12 col-md-6">
-              <p
-                class="section wow fadeInUp"
-                :class="{ 'f-thai': switchLang === 'th' }"
-                data-wow-delay="0.5"
-              >
-                {{ $t("AboutKBTGInspire") }}
-              </p>
+              <p class="section wow fadeInUp" :class="{ 'f-thai': switchLang === 'th' }" data-wow-delay="0.5">{{ $t("AboutKBTGInspire") }}</p>
               <div class="wrap-link">
-                <a
-                  href="/jobs-exe"
-                  class="section wow fadeInUp"
-                  data-wow-delay="0.7"
-                  >See Positions</a>
-                
-                <a
-                  href="/activites"
-                  class="section wow fadeInUp"
-                  data-wow-delay="0.7"
-                  >View Activities</a>
-
+                <a  href="/jobs-exe" class="section wow fadeInUp" data-wow-delay="0.7" >See Positions</a>
+                <a href="/activites" class="section wow fadeInUp" data-wow-delay="0.7" >View Activities</a>
               </div>
             </div>
             <div class="col-12 col-md-6">
@@ -98,10 +89,7 @@
         <div class="row">
           <div class="col-12">
             <div class="content-job mb-4 pt-5">
-              <!-- <h3 class="section wow fadeInUp" data-wow-duration="200" data-wow-delay="200" >
-                JOBS AT <span style="color: #62cbc9">KBTG</span> INSPIRE
-                <nuxt-link to="/jobs-exe" class="a-l1">View all Jobs</nuxt-link>
-              </h3> -->
+
               <div class="flex-content">
                 <h3 class="section wow fadeInUp" data-wow-duration="200" data-wow-delay="200" >JOBS AT <span style="color: #62cbc9">KBTG</span> INSPIRE </h3>
                 <nuxt-link to="/jobs-exe" class="a-l1">View all Jobs</nuxt-link>
@@ -114,7 +102,7 @@
                     data-wow-duration="400"
                     data-wow-delay="200">
                     <h5>
-                      <nuxt-link to="jobs-exe/1">Software Engineer<span><img src="~/assets/images/Asset15.png" /></span></nuxt-link>
+                      <nuxt-link to="jobs-exe/1" class="">Software Engineer<span  ><img  src="~/assets/images/Asset15.png" /></span></nuxt-link>
                     </h5>
                     <span class="location">KBTG Building &amp; K+ Building</span>
                     <p>
@@ -132,10 +120,10 @@
                     data-wow-delay="200"
                   >
                     <h5>
-                      <a href="jobs-exe/2"
+                      <nuxt-link to="jobs-exe/2"
                         >Test Manager/Test Engineer<span
                           ><img src="~/assets/images/Asset15.png" /></span
-                      ></a>
+                      ></nuxt-link>
                     </h5>
                     <span class="location">KBTG Building</span>
                     <p>
@@ -155,11 +143,7 @@
                     data-wow-delay="200"
                   >
                     <h5>
-                      <nuxt-link to="jobs-exe/3"
-                        >System Engineer - Server Management<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </nuxt-link>
+                      <nuxt-link to="jobs-exe/3" style="line-height: 30px;">System Engineer - Server Management<span><img src="~/assets/images/Asset15.png"/></span></nuxt-link>
                     </h5>
                     <span class="location">KBTG Building</span>
                     <p>
@@ -495,55 +479,15 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div
-                class="content wow fadeInLeft"
-                data-wow-duration="200"
-                data-wow-delay="200"
-              >
-                <h3 style="color: #fff">
-                  FREQUENTLY ASKED QUESTIONS
-                  <span style="color: #62cbc9; font-family: ">(FAQ)</span>
-                </h3>
-                <div
-                  class="accordion wow fadeInUp"
-                  data-wow-duration="200"
-                  data-wow-delay="200"
-                >
-                  <h4
-                    @click="clickFaq('q1')"
-                    v-b-toggle.l1
-                    class="accordion-toggle"
-                    :class="{
-                      acvite: !status_q1,
-                      active: status_q1,
-                      'f-THaiH': switchLang === 'th',
-                    }"
-                  >
-                    {{ $t("Q1") }}
-                  </h4>
-                  <b-collapse id="l1">
-                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
-                      {{ $t("A1") }}
-                    </p>
-                  </b-collapse>
+              <div class="content wow fadeInLeft" data-wow-duration="200" data-wow-delay="200">
+                <h3 style="color: #fff">FREQUENTLY ASKED QUESTIONS<span style="color: #62cbc9; font-family: ">(FAQ)</span></h3>
+                <div class="accordion wow fadeInUp" data-wow-duration="200" data-wow-delay="200">
+                  <h4 @click="clickFaq('q1')" v-b-toggle.l1 class="accordion-toggle" :class="{ acvite: !status_q1, active: status_q1, 'f-THaiH': switchLang === 'th'}">{{ $t("Q1") }}</h4>
+                  <b-collapse id="l1"><p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("A1") }}</p></b-collapse>
 
-                  <h4
-                    @click="clickFaq('q2')"
-                    v-b-toggle.l2
-                    class="accordion-toggle"
-                    :class="{
-                      acvite: !status_q2,
-                      active: status_q2,
-                      'f-THaiH': switchLang === 'th',
-                    }"
-                  >
-                    {{ $t("Q2") }}
-                  </h4>
-                  <b-collapse id="l2">
-                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
-                      {{ $t("A2") }}
-                    </p>
-                  </b-collapse>
+                  <h4 @click="clickFaq('q2')" v-b-toggle.l2 class="accordion-toggle" :class="{ acvite: !status_q2, active: status_q2, 'f-THaiH': switchLang === 'th',}">{{ $t("Q2") }}</h4>
+                  <b-collapse id="l2"><p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">{{ $t("A2") }}</p></b-collapse>
+                  
                   <h4
                     @click="clickFaq('q3')"
                     v-b-toggle.l3
@@ -711,18 +655,6 @@
                       {{ $t("A11") }}
                     </p>
                   </b-collapse>
-
-                  <!-- <h4
-                    @click="clickFaq('q12')"
-                    v-b-toggle.l12
-                    class="accordion-toggle"
-                    :class="{ acvite: !status_q12, active: status_q12 ,'f-THaiH': switchLang === 'th' }"
-                  >
-                    {{ $t("Q12") }}
-                  </h4> -->
-                  <!-- <b-collapse id="l12">
-                    <p class="f-q" :class="{'f-thai': !switchLang !== 'en'}">{{ $t("A12") }}</p>
-                  </b-collapse> -->
                 </div>
               </div>
             </div>
@@ -748,55 +680,55 @@ export default {
         body: true,
         async: true,
         type: "text/javascript",
-        src: "js/jquery.min.js",
+        src: "/js/jquery.min.js",
       },
       {
         body: true,
         async: true,
         type: "text/javascript",
-        src: "js/popper.min.js",
+        src: "/js/popper.min.js",
       },
       {
         body: true,
         async: true,
         type: "text/javascript",
-        src: "js/bootstrap.min.js",
+        src: "/js/bootstrap.min.js",
       },
       {
         body: true,
         async: true,
         type: "text/javascript",
-        src: "flexslider/jquery.flexslider.js",
+        src: "/flexslider/jquery.flexslider.js",
       },
       {
         body: true,
         async: true,
         type: "text/javascript",
-        src: "flexslider/js/shCore.js",
+        src: "/flexslider/js/shCore.js",
       },
       {
         body: true,
         async: true,
         type: "text/javascript",
-        src: "flexslider/js/shBrushJScript.js",
+        src: "/flexslider/js/shBrushJScript.js",
       },
       {
         body: true,
         async: true,
         type: "text/javascript",
-        src: "WOW-master/dist/wow.js",
+        src: "/WOW-master/dist/wow.js",
       },
       {
         body: true,
         async: true,
         type: "text/javascript",
-        src: "js/wow.js",
+        src: "/js/wow.js",
       },
       {
         body: true,
         async: true,
         type: "text/javascript",
-        src: "js/agenda-tap.js",
+        src: "/js/agenda-tap.js",
       },
     ],
     bodyAttrs: {

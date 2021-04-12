@@ -98,13 +98,15 @@
         <div class="row content-top">
           <div class="col-12 col-md-6 section wow fadeInLeft " data-wow-delay="0.7">
             <div class="d-flex justify-content-between">
-              <h4> {{ GET_JOBS.title.toUpperCase() }}</h4>
-              <span class="" v-if="GET_FRESH"><img class="imgMobileFresh" src="~/assets/images/fresh-b.png" /></span>
+              <h4> {{ res.title.toUpperCase() }}</h4>
+              <span class="" v-if="getFresh"><img class="imgMobileFresh" src="~/assets/images/fresh-b.png" /></span>
             </div>
-            <b>{{ GET_JOBS.levels }}</b>
-            <p>{{ GET_JOBS.description }}</p>
+            <b>{{ res.levels }}</b>
+            <p>{{ res.description }}</p>
             <div class="btn-job-apply">
-              <button class="active"><nuxt-link :to="{ path: '/jobs-apply', query: { id: GET_JOBS.id } }">Apply Now</nuxt-link></button>
+              <button class="active">
+                <nuxt-link :to="{ path: '/jobs-apply', query: { id: res.id } }">Apply Now</nuxt-link>
+              </button>
             </div>
           </div>
           <div class="col-12 col-md-6 section wow fadeInRight" data-wow-delay="0.7">
@@ -133,26 +135,28 @@
           <div class="col-12 col-md-7 section wow fadeInLeft" data-wow-delay="0.5">
             <div class="content-detail">
               <h5>RESPONSIBILITIES</h5>
-              <ul><li v-for="list in GET_CARE" :key="list">{{ list }}</li></ul>
-              <br />
+              <ul><li v-for="list in getCare" :key="list">{{ list }}</li></ul>
+            <br />
               <h5>QUALIFICATIONS</h5>
-              <ul><li v-for="list in GET_MERIT" :key="list">{{ list }}</li></ul>
+              <ul><li v-for="list in getMerit" :key="list">{{ list }}</li></ul>
             </div>
           </div>
 
           <div class="col-12 col-md-5 section wow fadeInRight" data-wow-delay="0.5">
             <div class="content-detail skills">
               <h5>PREFERRED SKILLS</h5>
-              <ul><li>{{ GET_JOBS.skills }}</li></ul>
-              <br />
+              <ul><li>{{ res.skills }}</li></ul>
+            <br />
               <h5>WORK LOCATION</h5>
-              <ul><li v-for="list in GET_WORKPLACE" :key="list">{{ list }}</li></ul>
+              <ul><li v-for="list in getWorkplace" :key="list">{{ list }}</li></ul>
             </div>
           </div>
 
           <div class="col-12 section wow fadeInRight" >
             <div class="content-detail" style="margin-top: 5px">
-              <button class="active"><nuxt-link :to="{ path: '/jobs-apply', query: { job: GET_JOBS.id } }" class="btnApplyJpb">Apply Now</nuxt-link></button>
+              <button class="active">
+                <nuxt-link :to="{ path: '/jobs-apply', query: { id: res.id } }" class="btnApplyJpb">Apply Now</nuxt-link>
+              </button>
               <a href="/jobs-exe" class="backmore" >View more jobs<span><img src="~/assets/images/Asset15.png" /></span></a>
             </div>
           </div>
@@ -166,38 +170,33 @@
 export default {
 
   async mounted() {
-    console.log("/jobs-exe/");
+    setTimeout(function(){ $("#navmenu li").removeClass('active');$("#navmenu li:eq(1)").addClass('active');}, 1000);
+    console.log("/jobs-exe/_id");
+    console.log('/job-exe: ',this.$router.currentRoute)
+      //console.log('/last: ',path.slice(-1))
+      
+    // await this.$nextTick(() => { this.$nuxt.$loading.start(); setTimeout(() => this.$nuxt.$loading.finish(), 3000); });
 
-    await this.$nextTick(() => {
-      this.$nuxt.$loading.start();
-      setTimeout(() => this.$nuxt.$loading.finish(), 3000);
-    });
   },
   
   async asyncData({ $axios, params }) {
-    const json = await $axios.$get(`/jobs.json`);
-    const GET_JOBS = json.jobs[params.id - 1];
-    const GET_MERIT = GET_JOBS.qualification;
-    const GET_CARE = GET_JOBS.responsibility;
-    const GET_WORKPLACE = GET_JOBS.location;
-    const GET_FRESH = GET_JOBS.fresh_grad;
 
-    return { GET_JOBS, GET_CARE, GET_MERIT, GET_WORKPLACE, GET_FRESH };
+    const json = await $axios.$get(`/jobs.json`);
+    const res = json.jobs[params.id - 1];
+    const getMerit = res.qualification;
+    const getCare = res.responsibility;
+    const getWorkplace = res.location;
+    const getFresh = res.fresh_grad;
+
+    return { res, getCare, getMerit, getWorkplace, getFresh };
   },
   validate({ params }) {
     const re = /^\d+$/;
-    if (re.test(params.id)) {
-      //console.log(true);
-      return true;
-    } else {
-      //console.log(false);
-      return false;
-    }
+    if (re.test(params.id)) { return true; } 
+    else {return false; }
   },
   computed:{
-     random(){
-  return Math.floor(Math.random() * 7) + 1
-    },
+     random(){ return Math.floor(Math.random() * 7) + 1},
   },
   data() {
     return {};
