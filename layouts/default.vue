@@ -78,7 +78,7 @@
                       aria-expanded="false"
                       :class="{ 'active': $router.currentRoute.hash=== '#faq' }"
                       @click="navClick('#faq')">
-                      <a href="/#faq" class="nav-link">FAQ</a>
+                      <a :href="`/${isThFaq}`" class="nav-link">FAQ</a>
                     </li>
                     <li
                       class="nav-item"
@@ -223,6 +223,7 @@ export default {
       statusJoin: false,
       statusContact:false,
       storage: 'en',
+      isThFaq:"th/#faq",
       faq: "",
       path: "",
       isShow: "false",
@@ -275,6 +276,8 @@ export default {
   
       if(data ==='#faq'){
         this.faq = data
+        if(this.storage === 'en')this.isThFaq = this.isThFaq
+        if(this.storage === 'th')this.isThFaq = '#faq'
       }
        if(data ==='join'){
         this.statusJoin = data

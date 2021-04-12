@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <Loading /> -->
      <div class="wrapper bg-white">
       <div class="imgHeader home position-relative">
        <b-button class="h-100 m-0 p-0 border-0 w-100 bg-white" id="show-btn" @click="$bvModal.show('bv-modal-example')"> 
@@ -34,7 +35,7 @@
           </div>
         </div>
         <div class="day-location">
-          <div class="container">
+          <div class="container pl-0">
             <div class="row">
               <div class="col-12 col-md-5 t-right">
                 <div class="day" style="height: 17px">
@@ -665,9 +666,9 @@
   </div>
 </template>
 <script>
-import Header from "../components/header";
-export default {
-  components: { Header },
+import Loading from '../components/Loading';
+ export default {
+  components: { Loading },
   head: {
     script: [
       {

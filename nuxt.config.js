@@ -1,9 +1,7 @@
  
 export default {
  
-  loading: {
-    continuous: false,
-  },
+  loading: '~/components/Loading.vue',
   ssr: false,
   target: "static",
   server: {

@@ -2,6 +2,7 @@
   <div>
     <client-only>
       <div class="wrapper">
+        <Loading />
         <div class="imgHeader position-relative">
            <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -85,7 +86,9 @@
   </div>
 </template>
 <script>
+import Loading from '~/components/Loading.vue';
 export default {
+  components: { Loading },
   head: {
     script: [
       {
