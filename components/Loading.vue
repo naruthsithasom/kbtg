@@ -1,20 +1,20 @@
 <template>
-  <div v-if="loading" class="loading-page fade-in">
+  <div v-if="loading" class="loading-page fade-in ">
     <img src="~/assets/images/logo.png" alt="">
    </div>
 </template>
 
 <script>
   export default {
-    data: () => ({
+    data:   () =>   ({
       loading: false
     }),
-    methods: {
-      start() {
+      methods: {
+        start() {
         this.loading = true
       },
-      finish() {
-        this.loading = false
+        finish() {
+          this.loading = false
       }
     }
   }
@@ -36,6 +36,7 @@
     font-style:'GB';
     z-index: 1;
     background: rgba(255, 255, 255, 0.5); /* Black color with 50% alpha/opacity */
+    /* animation: fadeWipe 1s ease-in-out   ; */
   }
   .loading-page > img{
   position: absolute;
@@ -52,9 +53,10 @@
  	animation-timing-function: ease-in;
 	animation-duration: 3s;
 }
+ 
 @keyframes fadeInOpacity {
 	   from {
-      animation-timing-function: ease-in;
+      animation-timing-function:ease;
       opacity: 1;
     }
     50% {
@@ -66,5 +68,6 @@
       opacity: 1;
     }
 }
+ 
 </style>
 

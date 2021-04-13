@@ -1,7 +1,7 @@
 <template>
   <div>
     <client-only>
-      <Loading />
+      <!-- <Loading /> -->
       <header>
         <div class="container">
           <div class="row">
@@ -96,7 +96,7 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ 'active': ($router.currentRoute.path === '/join-event/' || $router.currentRoute.path === '/th/join-event/') && !( faq === '#faq')}">
+                      :class="{ 'active': ($router.currentRoute.path === '/join-event/' || $router.currentRoute.path === '/th/join-event/'|| $router.currentRoute.path === '/policy/') && !( faq === '#faq')}">
                         <a class="nav-link join" href="/join-event">JOIN EVENT</a> 
                     </li>
                       <!-- @click="navClick('join')"> -->
@@ -132,7 +132,7 @@
                   />
                   <ul>
                     <li class="nav-item" :class="{'active': $router.currentRoute.path === '/'||  $router.currentRoute.path === '/th/'}"><a href="/" class="">HOME</a></li>
-                    <li class="nav-item" @click="navClick('#faq')" :class="{ 'active': $router.currentRoute.hash=== '#faq' }"  ><a :href="`/${isThFaq}`" class="nav-link">FAQ</a></li>
+                    <li class="nav-item" @click="navClick('#faq')" :class="{ 'active': $router.currentRoute.hash=== '#faq' }"  ><a :href="`/${isThFaq}`" class="">FAQ</a></li>
                     <li class="nav-item" :class="{ 'active': ($router.currentRoute.path === '/activites/' || $router.currentRoute.path === '/th/activites/') && !( faq === '#faq')}"><a href="/activites" class="">ACTIVITIES</a></li>
                     <li class="nav-item" @click="navClick('policy')"><a href="/policy" class="">PRIVACY POLICY</a></li>
                     <li class="nav-item"  :class="{ 'active': ($router.currentRoute.path === '/jobs-exe/' || $router.currentRoute.path === '/th/job-exe/') && !( faq === '#faq')}"><a href="/jobs-exe" class="">JOBS</a></li>

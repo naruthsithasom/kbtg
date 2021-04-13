@@ -157,7 +157,10 @@
 .bg-all{
   background: none ;
 }
- 
+
+html{
+  scroll-behavior: smooth;
+ }
 body {
 
   font-family: 'HCo Gotham SSm';
@@ -1620,13 +1623,41 @@ a {
   color: #393536;
   background-color: #62CBC9;
   /* margin-bottom: 73rem ; */
-  margin-bottom: 1161px;
+  /* margin-bottom: 1161px; */
+  animation: keyframesTap1 500ms ease-in forwards;
+}
+@keyframes keyframesTap1
+{ 
+  from { margin-bottom: 0px;}
+  to { margin-bottom: 1161px;}
 }
 .day1-tap1-th{
-  margin-bottom: 1230px !important;
+  /* margin-bottom: 1230px !important; */
+  animation:  keyframesTap4 500ms ease-in-out forwards !important
+}
+@keyframes keyframesTap4{
+  from { margin-bottom: 0px;}
+  to { margin-bottom: 1230px;}
 }
 .day2-tap2-en{
-  margin-bottom: 1089px !important;
+  /* margin-bottom: 1089px !important; */
+animation: keyframesTap2 500ms ease-in forwards !important;
+
+}
+@keyframes keyframesTap2
+{ 
+  from { margin-bottom: 0px;}
+  to { margin-bottom: 1089px;}
+}
+.day3-tap3-en{
+  /* margin-bottom: 1089px !important; */
+animation: keyframesTap3 500ms ease-in forwards !important;
+
+}
+@keyframes keyframesTap3
+{ 
+  from { margin-bottom: 1089px;}
+  to { margin-bottom: 0px;}
 }
 .event-wrap .nav-tabs li a:before {
   content: "";
@@ -2042,9 +2073,20 @@ footer {
   .referred h5 {
     font-size: 18px;
   }
-  .day1-tap1, .day2-tap2{
+  .day1-tap1-th{
     margin-bottom: 0 !important;
   }
+  .day2-tap2-en{
+    margin-bottom: 0 !important;
+    animation: day2Tap2en 500ms ease-in-out forwards ;
+
+  }
+  @keyframes day2Tap2en
+  { 
+    from { margin-bottom: 0px;}
+    50% { margin-bottom: 10px;}
+    to { margin-bottom: 0;}
+}
   .backmore {
     position: static;
     margin-top: 30px;
@@ -2107,9 +2149,15 @@ footer {
   }
 
   .event-wrap .nav-tabs li a.nav-link.active {
-    margin-bottom: 0px;
-  }
-
+    margin-bottom: 0px ;
+    animation: keyframeMobile2 500ms ease-in-out forwards ;
+  }   
+  @keyframes keyframeMobile2
+  { 
+    from { margin-bottom: 0px;}
+    50% { margin-bottom: 10px;}
+    to { margin-bottom: 0;}
+}
   .event-wrap .tab-content {
     width: 100%;
     margin: 0;

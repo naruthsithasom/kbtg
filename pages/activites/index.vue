@@ -312,31 +312,28 @@
                 <div class="row">
                   <div class="col-md-12 col-sm-12 col-lg-3">
                     <ul class="nav nav-tabs" >
-                      <li class="item-tabs " :class="{'active': status_tap === 1? true : false }">
+                      <li @click="clickTap(1)" class="item-tabs " :class="{'active': status_tap === 1? true : false }">
                         <a
-                          @click="clickTap(1)"
+                          :href="`${eventTap1}`"
                           class="nav-link " :class="{'active': status_tap === 1? true : false,'day1-tap1-th': switchLang === 'th' && status_tap === 1}"
                           data-toggle="tab"
-                          href="#event-tab1"
                            >Day 1<span>May 21, 2021</span></a
                         >
                       </li>
-                      <li class="item-tabs" :class="{'active ': status_tap === 2? true : false }">
+                      <li @click="clickTap(2)" class="item-tabs" :class="{'active ': status_tap === 2? true : false }">
                         <a
-                          @click="clickTap(2)"
+                          
+                          :href="`${eventTap2}`"
                           class="nav-link day2 " :class="{'active': status_tap === 2? true : false,'day2-tap2-en': status_tap === 2 && switchLang === 'en'}"
                           data-toggle="tab"
-                          href="#event-tab2 "
-                          title=""
-                          >Day 2<span>May 22, 2021</span></a
+                           >Day 2<span>May 22, 2021</span></a
                         >
                       </li>
-                      <li class="item-tabs " :class="{'active': status_tap === 3? true : false }">
+                      <li @click="clickTap(3)" class="item-tabs" :class="{'active': status_tap === 3? true : false }">
                         <a
-                        @click="clickTap(3)"
-                          class="nav-link day2" :class="{'active': status_tap === 3? true : false }"
-                          data-toggle="tab"
                           href="#event-tab3"
+                          class="nav-link day2 " :class="{'active': status_tap === 3? true : false }"
+                          data-toggle="tab"
                           title=""
                           >Day 3<span>May 23, 2021</span></a
                         >
@@ -707,7 +704,9 @@ export default {
       return {
         status_tap: 1,
         switchLang: 'en',
-        storage: 'en'
+        storage: 'en',
+        eventTap1: '#event-tab1',
+        eventTap2: '#event-tab2',
        };
     },
   async mounted() {
@@ -729,7 +728,6 @@ export default {
   methods: {
     clickTap(data) {
       this.status_tap = data;
-      
     },
   },
 };
