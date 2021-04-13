@@ -21,14 +21,14 @@
         <div class="row content-top">
           <div class="col-12 col-md-6 section wow fadeInLeft " data-wow-delay="0.7">
             <div class="d-flex justify-content-between">
-              <h4> {{ res.title }}</h4>
+              <h4> {{ getPosition.toUpperCase() }}</h4>
               <span class="" v-if="getFresh"><img class="imgMobileFresh" src="~/assets/images/fresh-b.png" /></span>
             </div>
-            <b>{{ res.levels }}</b>
-            <p>{{ res.description }}</p>
+            <b>{{ getLevel }}</b>
+            <p>{{ getDescription }}</p>
             <div class="btn-job-apply">
               <button class="active">
-                <nuxt-link :to="{ path: '/jobs-apply', query: { id: res.id } }">Apply Now</nuxt-link>
+                <nuxt-link :to="{ path: '/jobs-apply', query: { id: $route.params.id } }">Apply Now</nuxt-link>
               </button>
             </div>
           </div>
@@ -90,7 +90,7 @@
           <div class="col-12 section wow fadeInRight" >
             <div class="content-detail" style="margin-top: 5px">
               <button class="active">
-                <nuxt-link :to="{ path: '/jobs-apply', query: { id: res.id } }" class="btnApplyJpb">Apply Now</nuxt-link>
+                <nuxt-link :to="{ path: '/jobs-apply', query: { id: $route.params.id } }" class="btnApplyJpb">Apply Now</nuxt-link>
               </button>
               <a href="/jobs-exe" class="backmore" >View more jobs<span><img src="~/assets/images/Asset15.png" /></span></a>
             </div>
@@ -112,13 +112,24 @@ export default {
     const response =  await this.$axios.$get('/jobs.json')
     const res = response.jobs[this.$route.params.id - 1]
     //console.log('res>>>', res)
+    this.getPosition = res.title
+    this.getLevel = res.level
+    this.getDescription = res.description
     this.getMerit = res.qualification
     this.getCare = res.responsibility
     this.getSkill = res.skill
     this.getWorkplace = res.location
     this.getFresh = res.fresh_grad
 
-    return ( this.getCare, this.getMerit, this.getWorkplace, this.getFresh)
+    return ( 
+      this.getPosition,
+      this.getLevel,
+      this.description,
+      this.getMerit,
+      this.getCare,
+      this.getSkill,
+      this.getWorkplace,
+      this.getFresh )
 
   },
   
@@ -158,6 +169,9 @@ export default {
       getCare: [],
       getWorkplace: [],
       getSkill: "",
+      getPosition: "",
+      getLevel:"",
+      getDescription: ""
     };
   },
   methods: {

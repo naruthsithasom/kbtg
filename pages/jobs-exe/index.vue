@@ -58,7 +58,7 @@
                     </li>
                     <li v-for="item in displays.slice(listFirst,listLast)" :key="item.id" >
                       <div class="title" v-if="item.id" :class="{'effectList1':item.id > 0}">
-                        <nuxt-link :to="`/jobs-exe/${item.id}`">{{ item.title }}<span v-if="item.fresh_grad"><img v-if="item.id" class="imgMobileFresh" src="~/assets/images/icon_fresh_grad.svg"/></span></nuxt-link>
+                        <nuxt-link :to="`/jobs-exe/${item.id}`">{{ item.title.toUpperCase() }}<span v-if="item.fresh_grad"><img v-if="item.id" class="imgMobileFresh" src="~/assets/images/icon_fresh_grad.svg"/></span></nuxt-link>
                       </div>
                       <div v-if="item.id" class="level" :class="{'effectList1':item.id > 0}">{{ item.level }}</div>
                     </li>
