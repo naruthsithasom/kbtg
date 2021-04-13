@@ -159,7 +159,7 @@
 }
 
 html{
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
  }
 body {
 
@@ -1611,10 +1611,6 @@ a {
   /* opacity: 0; */
 }
 
-/* .event-wrap .nav-tabs li a.nav-link.active span {
-    opacity: 1;
-} */
-
 .event-wrap .nav-tabs li a.nav-link {
   background-color: #e4e4e5;
 }
@@ -1623,8 +1619,7 @@ a {
   color: #393536;
   background-color: #62CBC9;
   /* margin-bottom: 73rem ; */
-  /* margin-bottom: 1161px; */
-  animation: keyframesTap1 500ms ease-in forwards;
+   animation: keyframesTap1 500ms ease-in forwards;
 }
 @keyframes keyframesTap1
 { 
@@ -1804,23 +1799,7 @@ animation: keyframesTap3 500ms ease-in forwards !important;
 }
 
 
-
-
-
-
-
-
 /* tabs */
-
-
-
-
-
-
-
-
-
-
 
 
 /* footer */
@@ -1892,7 +1871,7 @@ footer {
 }
 
 
-/* ------------------------------------------------------- Mobile --------------------------------------------------------------------- */
+/* ------------------------------------------------------- Mobile ---------------------------------------------------------------------------------------------- */
 
 @media (max-width: 575.98px) {
 
@@ -2399,49 +2378,6 @@ footer {
   }
 }
 
-@media (min-width:380px) and (max-width: 512px) {
-  /* .custom-options {
-    position: absolute;
-    display: block;
-    top: 100%;
-    right: 0 !important;
-    min-width: 100%;
-    margin: 10px 0;
-    border: 1px solid #ebebeb;
-    box-sizing: border-box;
-    background: #fff;
-    transition: all .2s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateY(-15px);
-    z-index: 1;
-    width: max-content;
-  }
-
-  .custom-select.opened .custom-options {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-    transform: translateY(0);
-  }
-
-  .custom-options:before {
-    position: absolute;
-    display: block;
-    content: '';
-    bottom: 100%;
-    left: 70%;
-    width: 10px;
-    height: 10px;
-    margin-bottom: -5px;
-    border-top: 1px solid #ebebeb;
-    border-left: 1px solid #ebebeb;
-    background: #fff;
-    transform: rotate(45deg);
-    transition: all .2s ease-in-out;
-  } */
-}
 
 @media (min-width:993px) and (max-width: 1209px) {
   .bgblack {

@@ -296,9 +296,4 @@ export default {
 };
 </script>
 <style>
-.onSW{
-  text-decoration: none;
-  background-color: #ffffff;
-   border: 0;
-}
 </style>

@@ -16,6 +16,7 @@
         </div>
       </div>
     </div>
+
     <div class="bg-line pb30">
       <div class="container">
         <div class="row">
@@ -300,6 +301,9 @@
     </div>
     <div class="schedule">
       <div class="container">
+        <div id="move1"></div>
+        <div id="move2"></div>
+        <div id="move3"></div>
         <div class="row">
           <div class="col-12">
             <div
@@ -307,44 +311,44 @@
               data-wow-duration="200"
               data-wow-delay="200"
             >
+             
               <h3 class="f-h3-act mb-5"><span class="f-kbtg-h3">KBTG</span> INSPIRE SCHEDULE</h3>
               <div class="event-wrap ew nt w-100">
                 <div class="row">
                   <div class="col-md-12 col-sm-12 col-lg-3">
                     <ul class="nav nav-tabs" >
-                      <li @click="clickTap(1)" class="item-tabs " :class="{'active': status_tap === 1? true : false }">
-                        <a
-                          :href="`${eventTap1}`"
+                    <li @click="clickTap(1)" class="item-tabs " :class="{'active': status_tap === 1? true : false }">
+                        <nuxt-link
+                          to="#move1"
                           class="nav-link " :class="{'active': status_tap === 1? true : false,'day1-tap1-th': switchLang === 'th' && status_tap === 1}"
                           data-toggle="tab"
-                           >Day 1<span>May 21, 2021</span></a
+                           >Day 1<span>May 21, 2021</span></nuxt-link
                         >
                       </li>
                       <li @click="clickTap(2)" class="item-tabs" :class="{'active ': status_tap === 2? true : false }">
-                        <a
-                          
-                          :href="`${eventTap2}`"
+                        <nuxt-link
+                          to="#move2"
                           class="nav-link day2 " :class="{'active': status_tap === 2? true : false,'day2-tap2-en': status_tap === 2 && switchLang === 'en'}"
                           data-toggle="tab"
-                           >Day 2<span>May 22, 2021</span></a
+                           >Day 2<span>May 22, 2021</span></nuxt-link
                         >
                       </li>
                       <li @click="clickTap(3)" class="item-tabs" :class="{'active': status_tap === 3? true : false }">
-                        <a
-                          href="#event-tab3"
+                        <nuxt-link
+                          to="#move3"
                           class="nav-link day2 " :class="{'active': status_tap === 3? true : false }"
                           data-toggle="tab"
                           title=""
-                          >Day 3<span>May 23, 2021</span></a
+                          >Day 3<span>May 23, 2021</span></nuxt-link
                         >
-                      </li>
+                      </li> 
                     </ul>
                   </div>
                   <!-- -----------------------------------Day 1 ---------------------------------------->
                   <div class="col-md-12 col-sm-12 col-lg-9">
                     <div class="tab-content">
-                      <div class="tab-pane fade " :class="{'active show': status_tap === 1? true : false }" id="event-tab1" >
-                        <div class="event-style1 w-100">
+                      <div class="tab-pane fade " :class="{'active show': status_tap === 1? true : false }" id="" >
+                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
                             <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
@@ -435,8 +439,9 @@
                         </div>
                       </div>
                       <!-- -----------------------------------Day 2 ---------------------------------------->
-                      <div class="tab-pane fade" :class="{'active show': status_tap === 2? true : false }" id="event-tab2">
-                        <div class="event-style1 w-100">
+                      
+                      <div class="tab-pane fade" :class="{'active show': status_tap === 2? true : false }" id="">
+                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
                             <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
@@ -526,8 +531,8 @@
                         </div>
                       </div>
                        <!-- -----------------------------------Day 3 ---------------------------------------->
-                      <div class="tab-pane fade" :class="{'active show': status_tap === 3? true : false }" id="event-tab3">
-                        <div class="event-style1 w-100">
+                      <div class="tab-pane fade" :class="{'active show': status_tap === 3? true : false }" id="">
+                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
                             <span class="d-block">09:30 - 10:30 AM.</span>
                           </div>
@@ -625,7 +630,7 @@
         </div>
       </div>
     </div>
-    <div class="bottom bg-line">
+     <div class="bottom bg-line">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -695,6 +700,11 @@ export default {
         type: "text/javascript",
         src: "/js/wow.js",
       },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/agenda-tap.js",
+      },
     ],
      bodyAttrs: {
       class: "bg-all",
@@ -707,6 +717,7 @@ export default {
         storage: 'en',
         eventTap1: '#event-tab1',
         eventTap2: '#event-tab2',
+        tap2: '',
        };
     },
   async mounted() {
@@ -728,24 +739,18 @@ export default {
   methods: {
     clickTap(data) {
       this.status_tap = data;
+      if(this.tap2 === data){}
     },
   },
 };
 </script>
-<style>
-.cus-tap1{
-  margin-bottom: 1195px !important;
+<style scoped>
+html{
+  scroll-behavior: smooth !important;
 }
-.cus-tap2{
-  margin-bottom: 1054px !important;
-}
-.list-ul {
-  list-style-type: none;
-}
-
-.list-ul li:before {
-  content: "-";
-  position: absolute;
-  margin-left: 0px;
-}
+#move1, #move2, #move3{
+position: absolute;
+top: 0;
+ }
 </style>
+
