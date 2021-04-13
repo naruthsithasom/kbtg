@@ -2,13 +2,10 @@
   <div>
     <!-- <Loading /> -->
      <div class="wrapper bg-white">
-      <div class="imgHeader home position-relative">
+       <div class="imgHeader home position-relative">
        <b-button class="h-100 m-0 p-0 border-0 w-100 bg-white" id="show-btn" @click="$bvModal.show('bv-modal-example')"> 
          <video autoplay="" loop="" id="video-background" muted="">
-          <source
-            src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"
-            type="video/mp4"
-          />
+          <source src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4" type="video/mp4"/>
         </video>
        </b-button>
       <div>
@@ -16,10 +13,9 @@
           <b-modal id="bv-modal-example"   hide-footer>
           <div>
             <!-- <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></b-embed> -->   
-          <video autoplay="" loop="" id="" muted="false"  width="100%" height="100%" controls> 
-          <source src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"  type="video/mp4"
-          />
-        </video>
+            <video autoplay="" loop="" id="" muted="false"  width="100%" height="100%" controls> 
+              <source src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"  type="video/mp4"/>
+            </video>
           </div>
           </b-modal>
       </div>
@@ -45,9 +41,7 @@
               </div>
               <div class="col-12 col-md-7">
                 <div class="location">
-                  <img src="~/assets/images/Asset14.png" /><span
-                    >KBTG Muang Thong Thani, Nonthaburi</span
-                  >
+                  <img src="~/assets/images/Asset14.png" /><span>KBTG Muang Thong Thani, Nonthaburi</span>
                 </div>
               </div>
             </div>
@@ -65,7 +59,7 @@
             <div class="col-12 col-md-6">
               <p class="section wow fadeInUp" :class="{ 'f-thai': switchLang === 'th' }" data-wow-delay="0.5">{{ $t("AboutKBTGInspire") }}</p>
               <div class="wrap-link">
-                <a  href="/jobs-exe" class="section wow fadeInUp" data-wow-delay="0.7" >See Positions</a>
+                <a href="/jobs-exe" class="section wow fadeInUp" data-wow-delay="0.7" >See Positions</a>
                 <a href="/activites" class="section wow fadeInUp" data-wow-delay="0.7" >View Activities</a>
               </div>
             </div>
@@ -93,58 +87,36 @@
 
               <div class="flex-content">
                 <h3 class="section wow fadeInUp" data-wow-duration="200" data-wow-delay="200" >JOBS AT <span style="color: #62cbc9">KBTG</span> INSPIRE </h3>
-                <nuxt-link to="/jobs-exe" class="a-l1">View all Jobs</nuxt-link>
+                <a href="/jobs-exe" class="a-l1">View all Jobs</a>
               </div>
              
               <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="400"
-                    data-wow-delay="200">
+                  <div class="detail wow fadeInUp" data-wow-duration="400" data-wow-delay="200">
                     <h5>
-                      <nuxt-link to="jobs-exe/1" class="">Software Engineer<span  ><img  src="~/assets/images/Asset15.png" /></span></nuxt-link>
+                      <nuxt-link to="/jobs-exe/1" class="">Software Engineer<span  ><img  src="~/assets/images/Asset15.png" /></span></nuxt-link>
                     </h5>
                     <span class="location">KBTG Building &amp; K+ Building</span>
                     <p>
-                      In this role, you will be responsible for the application
-                      design and development of application components or
-                      multiple application solutions to meet business and
-                      customer requirements.
+                      In this role, you will be responsible for the application design and development of application components or multiple application solutions to meet business and customer requirements.
                     </p>
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="600"
-                    data-wow-delay="200"
-                  >
+                  <div class="detail wow fadeInUp" data-wow-duration="600" data-wow-delay="200">
                     <h5>
-                      <nuxt-link to="jobs-exe/2"
-                        >Test Manager/Test Engineer<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
+                      <nuxt-link to="/jobs-exe/2">Test Manager/Test Engineer<span><img src="~/assets/images/Asset15.png" /></span></nuxt-link>
                     </h5>
                     <span class="location">KBTG Building</span>
                     <p>
-                      In this role, you will be the key person to drive software
-                      quality through test management strategy to ensure that
-                      software delivered with quality and zero incident. If you
-                      are experienced in software development, software testing,
-                      test management, agile testing, test automation, testing
-                      technology and tools, this is the role for you.
+                      In this role, you will be the key person to drive software quality through test management strategy to ensure that software delivered with quality and zero incident. If you are experienced in software development, software testing, test management, agile testing, test automation, testing technology and tools, this is the role for you.
                     </p>
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="800"
-                    data-wow-delay="200"
-                  >
+                  <div class="detail wow fadeInUp" data-wow-duration="800" data-wow-delay="200">
                     <h5>
-                      <nuxt-link to="jobs-exe/3" style="line-height: 30px;">System Engineer - Server Management<span><img src="~/assets/images/Asset15.png"/></span></nuxt-link>
+                      <nuxt-link to="/jobs-exe/3" style="line-height: 30px;">System Engineer - Server Management<span><img src="~/assets/images/Asset15.png"/></span></nuxt-link>
                     </h5>
                     <span class="location">KBTG Building</span>
                     <p>
@@ -156,16 +128,9 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="1000"
-                    data-wow-delay="200"
-                  >
+                  <div class="detail wow fadeInUp" data-wow-duration="1000" data-wow-delay="200">
                     <h5>
-                      <nuxt-link to="jobs-exe/4"
-                        >Data Scientist<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
+                      <nuxt-link to="/jobs-exe/4">Data Scientist<span><img src="~/assets/images/Asset15.png" /></span></nuxt-link>
                     </h5>
                     <span class="location">KBTG Building</span>
                     <p>
@@ -177,16 +142,9 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="1200"
-                    data-wow-delay="200"
-                  >
+                  <div class="detail wow fadeInUp" data-wow-duration="1200" data-wow-delay="200">
                     <h5>
-                      <nuxt-link to="/jobs-exe/5"
-                        >IT Operation - System Operator<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
+                      <nuxt-link to="/jobs-exe/5">IT Operation - System Operator<span><img src="~/assets/images/Asset15.png" /></span></nuxt-link>
                     </h5>
                     <span class="location">KBTG Building</span>
                     <p>
@@ -353,67 +311,35 @@
           <div class="row">
             <div class="col-12">
               <div class="content-find">
-                <h3
-                  class="wow fadeInUp h3-l1"
-                  data-wow-duration="200"
-                  data-wow-delay="200"
-                >
-                  FIND YOUR INSPIRATION<nuxt-link to="/activites" class="a-l1"
-                    >View all Activites</nuxt-link>
-                </h3>
+                <h3 class="wow fadeInUp h3-l1" data-wow-duration="200" data-wow-delay="200">FIND YOUR INSPIRATION<a href="/activites" class="a-l1">View all Activites</a></h3>
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-6 col-lg-4">
-                    <div
-                      class="item wow fadeInUp"
-                      data-wow-duration="400"
-                      data-wow-delay="200"
-                    >
+                    <div class="item wow fadeInUp" data-wow-duration="400" data-wow-delay="200">
                       <div class="img-find">
                         <img src="~/assets/images/img-find.png" />
                         <span class="icon"
-                          ><img src="~/assets/images/Asset16.png"
-                        /></span>
+                          ><img src="~/assets/images/Asset16.png"/></span>
                       </div>
                       <h5>Job Interview (+Test)</h5>
-                      <p :class="{ 'f-thai': switchLang === 'th' }">
-                        {{ $t("JobInterview") }}
-                      </p>
+                      <p :class="{ 'f-thai': switchLang === 'th' }">{{ $t("JobInterview") }}</p>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4">
-                    <div
-                      class="item wow fadeInUp"
-                      data-wow-duration="600"
-                      data-wow-delay="200"
-                    >
+                    <div class="item wow fadeInUp" data-wow-duration="600" data-wow-delay="200">
                       <div class="img-find">
-                        <img src="~/assets/images/img-find1.png" />
-                        <span class="icon"
-                          ><img src="~/assets/images/Asset16.png"
-                        /></span>
+                        <img src="~/assets/images/img-find1.png" /><span class="icon"><img src="~/assets/images/Asset16.png"/></span>
                       </div>
                       <h5>Agile Playground</h5>
-                      <p :class="{ 'f-thai': switchLang === 'th' }">
-                        {{ $t("AgilePlayground") }}
-                      </p>
+                      <p :class="{ 'f-thai': switchLang === 'th' }">{{ $t("AgilePlayground") }}</p>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4">
-                    <div
-                      class="item wow fadeInUp"
-                      data-wow-duration="800"
-                      data-wow-delay="200"
-                    >
+                    <div class="item wow fadeInUp" data-wow-duration="800" data-wow-delay="200">
                       <div class="img-find">
-                        <img src="~/assets/images/img-find2.png" />
-                        <span class="icon"
-                          ><img src="~/assets/images/Asset16.png"
-                        /></span>
+                        <img src="~/assets/images/img-find2.png" /><span class="icon"><img src="~/assets/images/Asset16.png"/></span>
                       </div>
                       <h5>Inspire Talk</h5>
-                      <p :class="{ 'f-thai': switchLang === 'th' }">
-                        {{ $t("InspireTalk") }}
-                      </p>
+                      <p :class="{ 'f-thai': switchLang === 'th' }">{{ $t("InspireTalk") }}</p>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4">
@@ -662,7 +588,7 @@
           </div>
         </div>
       </div>
-    </div>
+      </div>
   </div>
 </template>
 <script>
@@ -810,4 +736,7 @@
 .home-leave-active {
   opacity: 0;
 }
+ 
+
+ 
 </style>

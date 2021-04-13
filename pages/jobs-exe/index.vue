@@ -56,11 +56,11 @@
                         </div>
                       </div>
                     </li>
-                    <li v-for="item in displays.slice(listFirst,listLast)" :key="item.id">
-                      <div class="title" v-if="item.id" >
+                    <li v-for="item in displays.slice(listFirst,listLast)" :key="item.id" >
+                      <div class="title" v-if="item.id" :class="{'effectList1':item.id > 0}">
                         <nuxt-link :to="`/jobs-exe/${item.id}`">{{ item.title }}<span v-if="item.fresh_grad"><img v-if="item.id" class="imgMobileFresh" src="~/assets/images/icon_fresh_grad.svg"/></span></nuxt-link>
                       </div>
-                      <div v-if="item.id" class="level">{{ item.level }}</div>
+                      <div v-if="item.id" class="level" :class="{'effectList1':item.id > 0}">{{ item.level }}</div>
                     </li>
                   </ul>
                 </div>
@@ -158,6 +158,7 @@
       listFirst:0,
       listLast:10,
       notFound:["{id: 1, title: 'ไม่พบตำแหน่งนี้!!!'}"],
+      effectList1: "effectList1",
     };
   },
  
@@ -276,5 +277,11 @@
 };
 </script>
 <style>
- 
+ .effectList1{
+   animation: kf1  500ms ease-in-out forwards;
+ }
+ @keyframes kf1{
+   from { opacity: 0;}
+   to { opacity: 1;}
+ }
 </style>

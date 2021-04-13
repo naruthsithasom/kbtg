@@ -1633,7 +1633,7 @@ a {
 }
 .day1-tap1-th{
   /* margin-bottom: 1230px !important; */
-  animation:  keyframesTap4 500ms ease-in-out forwards !important
+  animation:  keyframesTap4 500ms ease-in-out forwards !important;
 }
 @keyframes keyframesTap4{
   from { margin-bottom: 0px;}
@@ -2073,17 +2073,26 @@ footer {
   .referred h5 {
     font-size: 18px;
   }
+
   .day1-tap1-th{
-    margin-bottom: 0 !important;
-  }
+    /* margin-bottom: 0 !important; */
+    animation: day1Tap1th 500ms ease-in-out forwards !important;
+   }
+
+   @keyframes day1Tap1th
+   { 
+     from { margin-top: 20px;}
+     50% { margin-bottom: 10px;}
+     to { margin-bottom: 0;}
+ }
   .day2-tap2-en{
-    margin-bottom: 0 !important;
-    animation: day2Tap2en 500ms ease-in-out forwards ;
+    /* margin-bottom: 0 !important; */
+    animation: day1Tap1th 500ms ease-in-out forwards !important;
 
   }
   @keyframes day2Tap2en
   { 
-    from { margin-bottom: 0px;}
+    from { margin-bottom: 20px;}
     50% { margin-bottom: 10px;}
     to { margin-bottom: 0;}
 }
@@ -2154,7 +2163,7 @@ footer {
   }   
   @keyframes keyframeMobile2
   { 
-    from { margin-bottom: 0px;}
+    from { margin-top: 20px;}
     50% { margin-bottom: 10px;}
     to { margin-bottom: 0;}
 }

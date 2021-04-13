@@ -35,9 +35,8 @@
     font-size: 30px;
     font-style:'GB';
     z-index: 1;
-    background: rgba(255, 255, 255, 0.5); /* Black color with 50% alpha/opacity */
-    /* animation: fadeWipe 1s ease-in-out   ; */
-  }
+    background: rgba(255, 255, 255, 0.5); 
+   }
   .loading-page > img{
   position: absolute;
   top: 50%;

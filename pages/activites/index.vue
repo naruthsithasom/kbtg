@@ -343,7 +343,7 @@
                   <!-- -----------------------------------Day 1 ---------------------------------------->
                   <div class="col-md-12 col-sm-12 col-lg-9">
                     <div class="tab-content">
-                      <div class="tab-pane fade" :class="{'active show': status_tap === 1? true : false }" id="event-tab1" >
+                      <div class="tab-pane fade " :class="{'active show': status_tap === 1? true : false }" id="event-tab1" >
                         <div class="event-style1 w-100">
                           <div class="event-meta text-right">
                             <span class="d-block">09:30 - 10:30 AM.</span>
