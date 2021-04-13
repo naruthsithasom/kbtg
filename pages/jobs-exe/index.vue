@@ -170,9 +170,9 @@
     
     this.switchLang = this.$router.app._i18n.localeProperties.code;
     
-    console.log("Loading... jobs-exe-");
-    console.log("/job-exe/lang: ", this.switchLang);
-    console.log('/job-exe: ',this.$router.currentRoute.name)
+    //console.log("Loading... jobs-exe-");
+    //console.log("/job-exe/lang: ", this.switchLang);
+    //console.log('/job-exe: ',this.$router.currentRoute.name)
     
     await this.fetchData()
   },

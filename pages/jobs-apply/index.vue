@@ -151,7 +151,7 @@ export default {
     // setTimeout(function () {$("#navmenu li").removeClass("active");$("#navmenu li:eq(1)").addClass("active");}, 1000);
 
     this.getID = this.$route.query.id;
-    console.log('id',this.getID)
+    //console.log('id',this.getID)
     this.getData();
 
     this.switchLang = localStorage.getItem("lang");

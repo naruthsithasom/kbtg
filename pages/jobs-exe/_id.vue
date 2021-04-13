@@ -21,7 +21,7 @@
         <div class="row content-top">
           <div class="col-12 col-md-6 section wow fadeInLeft " data-wow-delay="0.7">
             <div class="d-flex justify-content-between">
-              <h4> {{ res.title.toUpperCase() }}</h4>
+              <h4> {{ res.title }}</h4>
               <span class="" v-if="getFresh"><img class="imgMobileFresh" src="~/assets/images/fresh-b.png" /></span>
             </div>
             <b>{{ res.levels }}</b>
@@ -80,7 +80,7 @@
           <div class="col-12 col-md-5 section wow fadeInRight" data-wow-delay="0.5">
             <div class="content-detail skills">
               <h5>PREFERRED SKILLS</h5>
-              <ul><li>{{ res.skills }}</li></ul>
+              <ul><li>{{ getSkill }}</li></ul>
             <br />
               <h5>WORK LOCATION</h5>
               <ul><li v-for="list in getWorkplace" :key="list">{{ list }}</li></ul>
@@ -106,26 +106,41 @@ export default {
 
   async mounted() {
     setTimeout(function(){ $("#navmenu li").removeClass('active');$("#navmenu li:eq(1)").addClass('active');}, 1000);
-    console.log("/jobs-exe/_id");
-    console.log('/job-exe: ',this.$router.currentRoute)      
+    //console.log("/jobs-exe/_id");
+    //console.log('/job-exe: ',this.$router.currentRoute)      
     // await this.$nextTick(() => { this.$nuxt.$loading.start(); setTimeout(() => this.$nuxt.$loading.finish(), 3000); });
+    const response =  await this.$axios.$get('/jobs.json')
+    const res = response.jobs[this.$route.params.id - 1]
+    //console.log('res>>>', res)
+    this.getMerit = res.qualification
+    this.getCare = res.responsibility
+    this.getSkill = res.skill
+    this.getWorkplace = res.location
+    this.getFresh = res.fresh_grad
+
+    return ( this.getCare, this.getMerit, this.getWorkplace, this.getFresh)
+
   },
   
-  async asyncData({ $axios, params }) {
+  // async asyncData({ $axios, params }) {
 
-    const json = await $axios.$get(`/jobs.json`);
-    const res = json.jobs[params.id - 1];
-    const getMerit = res.qualification;
-    const getCare = res.responsibility;
-    const getWorkplace = res.location;
-    const getFresh = res.fresh_grad;
+  //   const json = await $axios.$get(`/jobs.json`);
+  //   const res = json.jobs[params.id - 1];
+  //   const getMerit = res.qualification;
+  //   const getCare = res.responsibility;
+  //   const getWorkplace = res.location;
+  //   const getFresh = res.fresh_grad;
 
-    return { res, getCare, getMerit, getWorkplace, getFresh };
-  },
+  //   return { res, getCare, getMerit, getWorkplace, getFresh };
+  // },
   validate({ params }) {
     const re = /^\d+$/;
-    if (re.test(params.id)) { return true; } 
-    else {return false; }
+    if (re.test(params.id)) { 
+       return true; 
+     } 
+    else {
+       return false;
+      }
   },
   computed:{
      random(){ return Math.floor(Math.random() * 7) + 1},
@@ -135,7 +150,14 @@ export default {
        slide: 0,
       sliding: null,
       loop:[0,1,2,3,4,5,6,7],
-      loop2:[0,1,2,3,4,5,6,7,8,9,10,11,12]
+      loop2:[0,1,2,3,4,5,6,7,8,9,10,11,12],
+      res: [],
+      id: this.$route.params.id,
+      getMerit: [],
+      getFresh: [],
+      getCare: [],
+      getWorkplace: [],
+      getSkill: "",
     };
   },
   methods: {

@@ -238,13 +238,13 @@ export default {
     this.$router.push(this.switchLocalePath('th'))
     this.storage = localStorage.getItem('lang');
 
-    console.log('layout default---------lang:>>',this.storage)
+    //console.log('layout default---------lang:>>',this.storage)
       if(this.storage === null){ 
         localStorage.setItem('lang', 'en');
         this.storage = 'en'
       } 
     this.$router.push(this.switchLocalePath(this.storage))
-    console.log('current:>> ',this.$router.currentRoute)
+    //console.log('current:>> ',this.$router.currentRoute)
 
     return this.storage
   },

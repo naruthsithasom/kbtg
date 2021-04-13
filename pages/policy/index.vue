@@ -587,7 +587,7 @@ export default {
   // },
   async mounted() {
     await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
-    console.log("Loading... /policy");
+    //console.log("Loading... /policy");
     //   setTimeout(function(){ 
     //    $("#navmenu li").removeClass('active');
     // $("#navmenu li:eq(5)").addClass('active');

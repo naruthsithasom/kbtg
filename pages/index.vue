@@ -722,7 +722,7 @@
     await this.$nextTick(() => { this.$nuxt.$loading.start(); console.log("Loading... index"); setTimeout(() => this.$nuxt.$loading.finish(), 3000);});
 
     this.switchLang = this.$router.app._i18n.localeProperties.code;
-    console.log('/index lang: ',this.switchLang)
+    //console.log('/index lang: ',this.switchLang)
     return this.switchLang;
   },
 };

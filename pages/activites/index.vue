@@ -723,7 +723,7 @@ export default {
   async mounted() {
       await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
       //setTimeout(function(){ $("#navmenu li").removeClass('active');$("#navmenu li:eq(2)").addClass('active');}, 1000);
-      console.log("Loading... /activites");
+      //console.log("Loading... /activites");
 
       this.switchLang = localStorage.getItem('lang');
 
