@@ -106,23 +106,15 @@
         <div class="row">
           <div class="col-12">
             <div class="content">
-              <h3
-                class="section wow fadeInLeft f-register-h3"
-                data-wow-delay="0.5"
-                style="border-bottom: 1px solid #62cbc9; padding-bottom: 10px"
-              >
-                REGISTER<span class="back"
-                  ><a
-                    href="/jobs-exe"
-                    class="section wow fadeInRight"
-                    data-wow-delay="0.7"
-                  >
+              <h1 class="section wow fadeInLeft f-register-h1" data-wow-delay="0.5" style="">
+                REGISTER<span class="back">
+                  <a href="/jobs-exe" class="section wow fadeInRight" data-wow-delay="0.7">
                     &lt; Back to job description
                   </a></span
                 >
-              </h3>
+              </h1>
               <div class="register section wow fadeInUp" data-wow-delay="0.7">
-                <h5>“Job Interview + Activities” Package</h5>
+                <h2>“Job Interview + Activities” Package</h2>
                 <p :class="{ 'f-thai_job': switchLang === 'th' }">
                   {{ $t("job1Detail") }}
                 </p>
@@ -148,7 +140,7 @@
                 "
               />
               <div class="register section wow fadeInUp" data-wow-delay="0.7">
-                <h5>“Activities Only” Package</h5>
+                <h2>“Activities Only” Package</h2>
                 <p :class="{ 'f-thai_job': switchLang === 'th' }">
                   {{ $t("job2Detail") }}
                 </p>
@@ -179,11 +171,11 @@
         <div class="row">
           <div class="col-12">
             <div class="referred">
-              <h5>
+              <h2>
                 Referred by a Current Employee<span
                   ><img class="img-sm-job" src="~/assets/images/Asset2.png"
                 /></span>
-              </h5>
+              </h2>
               <p :class="{ 'f-thai_job': switchLang === 'th' }">
                 {{ $t("job3Detail") }}
               </p>

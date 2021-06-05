@@ -36,11 +36,11 @@
         <div class="row">
           <div class="col-12">
             <div class="content">
-              <h3 class="section wow fadeInLeft f-register-h3" data-wow-delay="0.5" style="border-bottom: 1px solid #62cbc9; padding-bottom: 10px">REGISTER<span class="back">
+              <h1 class="section wow fadeInLeft f-register-h1" data-wow-delay="0.5" style="border-bottom: 1px solid #62cbc9; padding-bottom: 10px">REGISTER<span class="back">
                 <nuxt-link :to="`/jobs-exe/${getID}`" class="section wow fadeInRight" data-wow-delay="0.7">&lt; Back to job description</nuxt-link></span>
-              </h3>
+              </h1>
               <div class="register section wow fadeInUp" data-wow-delay="0.7">
-                <h5>“Job Interview + Activities” Package</h5>
+                <h2>“Job Interview + Activities” Package</h2>
                 <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job1Detail") }}</p>
                  <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }}</p>
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">2.&nbsp;&nbsp;{{ $t("job1-2") }}</p>
@@ -50,7 +50,7 @@
               </div>
               <hr style=" border-top: 1px solid rgba(255, 255, 255, 0.5); margin: 5px 0;"/>
               <div class="register section wow fadeInUp" data-wow-delay="0.7">
-                <h5>“Activities Only” Package</h5>
+                <h2>“Activities Only” Package</h2>
                 <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job2Detail") }} </p>
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job2-1") }}</p>
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">2.&nbsp;&nbsp;{{ $t("job2-2") }}</p>
@@ -69,7 +69,7 @@
         <div class="row">
           <div class="col-12">
             <div class="referred">
-              <h5> Referred by a Current Employee<span class="" ><img  class="img-sm-job" src="~/assets/images/Asset2.png"/></span></h5>
+              <h2> Referred by a Current Employee<span class="" ><img  class="img-sm-job" src="~/assets/images/Asset2.png"/></span></h2>
               <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job3Detail") }}</p>
               <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }}</p>
               <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">2.&nbsp;&nbsp;{{ $t("job3-2") }}</p>
@@ -191,6 +191,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-
-</style>
+ 

@@ -15,9 +15,10 @@
           <div class="row">
             <div class="col-12 section" data-wow-delay="">
               <h2 class="headActivite wow fadeInUp">
-                <span style="font-weight: 500"
+                INSPIRATION BEGINS WITH YOU
+                <!-- <span style="font-weight: 500"
                   >INSPIRATION BEGINS WITH YOU
-                </span>
+                </span> -->
               </h2>
             </div>
           </div>
@@ -30,13 +31,13 @@
         <div class="row">
           <div class="col-12">
             <div class="content-find">
-              <h3
+              <h2
                 class="wow fadeInUp"
                 data-wow-duration=""
                 data-wow-delay=""
               >
                 FIND YOUR INSPIRATION
-              </h3>
+              </h2>
               <div class="row justify-content-center">
                 <div class="col-12 col-md-6 col-lg-4">
                   <div
@@ -50,7 +51,7 @@
                         ><img src="~/assets/images/Asset16.png"
                       /></span>
                     </div>
-                    <h5>Job Interview (+Test)</h5>
+                    <h3>Job Interview (+Test)</h3>
                     <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("JobInterview") }}
                     </p>
@@ -68,7 +69,7 @@
                         ><img src="~/assets/images/Asset16.png"
                       /></span>
                     </div>
-                    <h5>Agile Playground</h5>
+                    <h3>Agile Playground</h3>
                     <p :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("AgilePlayground") }}
                     </p>
@@ -86,7 +87,7 @@
                         ><img src="~/assets/images/Asset16.png"
                       /></span>
                     </div>
-                    <h5>Inspire Talk</h5>
+                    <h3>Inspire Talk</h3>
                     <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("InspireTalk") }}
                     </p>
@@ -105,7 +106,7 @@
                       /></span>
                     </div>
                     
-                    <h5>1:1 Career Mentorship</h5>
+                    <h3>1:1 Career Mentorship</h3>
                     <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("1:1CareerMentorship") }}
                     </p>
@@ -123,7 +124,7 @@
                         ><img src="~/assets/images/Asset16.png"
                       /></span>
                     </div>
-                    <h5>Fireside Chat</h5>
+                    <h3>Fireside Chat</h3>
                     <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("FiresideChat") }}
                     </p>
@@ -141,7 +142,7 @@
                         ><img src="~/assets/images/Asset16.png"
                       /></span>
                     </div>
-                    <h5>Upskill Workshop</h5>
+                    <h3>Upskill Workshop</h3>
                     <p  :class="{ 'f-thai': switchLang === 'th' }">
                       {{ $t("Upskill") }}
                     </p>
@@ -157,14 +158,13 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h3 f-h3-act
-               
-              class="wow fadeInUp text-white mt-5"
+            <h2
+              class="wow fadeInUp text-white mt-5 f-h2-act"
               data-wow-duration="200"
               data-wow-delay="200"
             >
               WELCOME TALK SPEAKER
-            </h3>
+            </h2>
             <div class="row">
               <div class="col-12 col-md-4 col-lg-4">
                 <div
@@ -226,7 +226,7 @@
               data-wow-delay=""
             >
              
-              <h3 class="f-h3-act mb-5"><span class="f-kbtg-h3">KBTG</span> INSPIRE SCHEDULE</h3>
+              <div class="mb-5 d-flex justify-content-start"><h1 class="f-kbtg-h1 mr-2">KBTG</h1> <h1 class="f-h1-act ">INSPIRE SCHEDULE</h1> </div>
               <div class="event-wrap ew nt w-100">
                 <div class="row">
                   <div class="col-md-12 col-sm-12 col-lg-3">
@@ -545,11 +545,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h4>
-              FIND A JOB THAT SUITS YOU<span
-                ><img src="~/assets/images/Asset15.png"
-              /></span>
-            </h4>
+            <h2>FIND A JOB THAT SUITS YOU<span><img src="~/assets/images/Asset15.png"/></span></h2>
             <p  :class="{ 'f-thai': switchLang === 'th'  }">
              {{$t('findajob')}}
             </p>

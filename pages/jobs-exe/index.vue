@@ -44,7 +44,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="career">
-                  <h3 class="section wow fadeInLeft f-job-h3 mb-4" data-wow-delay="">WE ARE <span style="color: #62cbc9">HIRING!</span></h3>
+                  <h1 class="section wow fadeInLeft f-job-h1 mb-4" data-wow-delay="">WE ARE <span style="color: #62cbc9">HIRING!</span></h1>
                   <ul class="section wow fadeInUp" data-wow-delay="">
                    
                     <li class="txt-header">
@@ -66,7 +66,7 @@
                     </li>
                     <li v-for="item in displays.slice(listFirst,listLast)" :key="item.id" >
                       <div class="title" v-if="item.id" :class="{'effectList1':item.id > 0}">
-                        <nuxt-link :to="`/jobs-exe/${item.id}`">{{ item.title.toUpperCase() }}<span v-if="item.fresh_grad"><img v-if="item.id" class="imgMobileFresh" src="~/assets/images/icon_fresh_grad.svg"/></span></nuxt-link>
+                        <nuxt-link :to="`/jobs-exe/${item.id}`"><h2>{{ item.title.toUpperCase() }}<span v-if="item.fresh_grad"><img v-if="item.id" class="imgMobileFresh" src="~/assets/images/icon_fresh_grad.svg"/></span></h2></nuxt-link>
                       </div>
                       <div v-if="item.id" class="level" :class="{'effectList1':item.id > 0}">{{ item.level }}</div>
                     </li>

@@ -44,7 +44,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="my-3 d-flex justify-content-start">
-                  <h1 style="color: #62CBC9;">KBTG</h1>
+                  <h1 style="color: #62cbc9">KBTG</h1>
                   <h1 class="ml-3">INSPIRE</h1>
                 </div>
                 <h2 class="mt-2">WE INSPIRE YOU WITH OUR INSIGHTS,</h2>
@@ -102,12 +102,12 @@
         <div class="container py-3">
           <div class="row">
             <div class="col-12 col-md-12">
-              <h3
+              <h2
                 class="section wow fadeInLeft text-white pt-3"
                 data-wow-delay="500"
               >
                 ABOUT KBTG INSPIRE
-              </h3>
+              </h2>
             </div>
           </div>
           <div class="row">
@@ -173,12 +173,13 @@
                     data-wow-duration="400"
                     data-wow-delay="200"
                   >
-                    <h5>
-                      <nuxt-link to="/jobs-exe/1" class=""
-                        >Software Engineer<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h5>
+                      <h3>
+                    <nuxt-link to="/jobs-exe/1" class="">
+                        Software Engineer<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                    </nuxt-link>
+                      </h3>
                     <span class="location"
                       >KBTG Building &amp; K+ Building</span
                     >
@@ -219,12 +220,12 @@
                     data-wow-duration="800"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/3" style="line-height: 30px"
                         >System Engineer - Server Management<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will have fun working on various kinds
@@ -240,12 +241,12 @@
                     data-wow-duration="1000"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/4"
                         >Data Scientist<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will enjoy working with rich data sets,
@@ -261,12 +262,12 @@
                     data-wow-duration="1200"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/5"
                         >IT Operation - System Operator<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will utilize your passion for computer
@@ -282,12 +283,12 @@
                     data-wow-duration="1400"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/6"
                         >Technology Research Engineer<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will be responsible for deploying and
@@ -303,12 +304,12 @@
                     data-wow-duration="1600"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/7"
                         >Business Analyst<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will be the liaison between the business
@@ -323,12 +324,12 @@
                     data-wow-duration="1800"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/9"
                         >Agile Coach<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will be a change agent to drive
@@ -344,12 +345,12 @@
                     data-wow-duration="2000"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/10"
                         >IT Infrastructure Project Manager<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will be responsible for the continued
@@ -365,12 +366,12 @@
                     data-wow-duration="2200"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/11"
                         >IT Security Architect<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will define bank's cybersecurity
@@ -386,12 +387,12 @@
                     data-wow-duration="2400"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/12"
                         >IT Security Architect (DevSecOps)<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will help development team deliver
@@ -406,12 +407,12 @@
                     data-wow-duration="2600"
                     data-wow-delay="200"
                   >
-                    <h5>
+                    <h3>
                       <nuxt-link to="/jobs-exe/13"
                         >IT &amp; Security Assurance<span
                           ><img src="~/assets/images/Asset15.png" /></span
                       ></nuxt-link>
-                    </h5>
+                    </h3>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will oversee all information security
@@ -432,7 +433,7 @@
           <div class="row">
             <div class="col-12">
               <div class="content-find">
-                <h3
+                <h2
                   class="wow fadeInUp h3-l1"
                   data-wow-duration="200"
                   data-wow-delay="200"
@@ -440,7 +441,7 @@
                   FIND YOUR INSPIRATION<a href="/activites" class="a-l1"
                     >View all Activites</a
                   >
-                </h3>
+                </h2>
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-6 col-lg-4">
                     <div
@@ -565,19 +566,19 @@
                 data-wow-duration="200"
                 data-wow-delay="200"
               >
-                <h3 style="color: #fff">
+                <h2 style="color: #fff">
                   FREQUENTLY ASKED QUESTIONS<span
                     style="color: #62cbc9; font-family: "
                   >
                     (FAQ)</span
                   >
-                </h3>
+                </h2>
                 <div
                   class="accordion wow fadeInUp"
                   data-wow-duration="200"
                   data-wow-delay="200"
                 >
-              <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q1')"
                     v-b-toggle.l1
@@ -595,7 +596,7 @@
                       {{ $t("A1") }}
                     </p>
                   </b-collapse>
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q2')"
                     v-b-toggle.l2
@@ -613,7 +614,7 @@
                       {{ $t("A2") }}
                     </p>
                   </b-collapse>
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
 
                   <h4
                     @click="clickFaq('q3')"
@@ -638,7 +639,7 @@
                       >
                     </p>
                   </b-collapse>
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
 
                   <h4
                     @click="clickFaq('q4')"
@@ -657,7 +658,7 @@
                       {{ $t("A4") }}
                     </p>
                   </b-collapse>
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
 
                   <h4
                     @click="clickFaq('q5')"
@@ -677,7 +678,7 @@
                       {{ $t("A5") }}
                     </p>
                   </b-collapse>
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
 
                   <h4
                     @click="clickFaq('q6')"
@@ -697,7 +698,7 @@
                     </p>
                   </b-collapse>
 
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q7')"
                     v-b-toggle.l7
@@ -715,7 +716,7 @@
                       {{ $t("A7") }}
                     </p>
                   </b-collapse>
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
 
                   <h4
                     @click="clickFaq('q8')"
@@ -734,7 +735,7 @@
                       {{ $t("A8") }}
                     </p>
                   </b-collapse>
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q9')"
                     v-b-toggle.l9
@@ -753,7 +754,7 @@
                     </p>
                   </b-collapse>
 
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q10')"
                     v-b-toggle.l10
@@ -771,7 +772,7 @@
                       {{ $t("A10") }}
                     </p>
                   </b-collapse>
-               <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
 
                   <h4
                     @click="clickFaq('q11')"
@@ -790,7 +791,7 @@
                       {{ $t("A11") }}
                     </p>
                   </b-collapse>
-            <!-- ---------------------------------------------------------- -->
+                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q12')"
                     v-b-toggle.l12
@@ -808,9 +809,8 @@
                       {{ $t("A12") }}
                     </p>
                   </b-collapse>
-               <!-- ---------------------------------------------------------- -->
-               
-                 </div>
+                  <!-- ---------------------------------------------------------- -->
+                </div>
               </div>
             </div>
           </div>
