@@ -1,5 +1,13 @@
 <template>
   <div class="wrapper">
+      <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TZSXSC7"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        ></iframe
+      ></noscript>
     <div class="imgHeader position-relative">
       <!-- <img src="~/assets/images/JobBanner/1.jpg" class="img-fluid" /> -->
       <div class="carousel-inner">
@@ -36,10 +44,8 @@
                 <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job1Detail") }}</p>
                  <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }}</p>
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">2.&nbsp;&nbsp;{{ $t("job1-2") }}</p>
-                <div class="submit">
-                  <button>
-                    <a class="submit job" :href="`mailto:kbtginspire@kbtg.tech?subject=${jobApp}`">Apply Now</a>
-                  </button>
+                <div class="submit-b">
+                    <a class="submit job" href="mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Job Application">Apply Now</a>   
                 </div>
               </div>
               <hr style=" border-top: 1px solid rgba(255, 255, 255, 0.5); margin: 5px 0;"/>
@@ -48,11 +54,9 @@
                 <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job2Detail") }} </p>
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job2-1") }}</p>
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">2.&nbsp;&nbsp;{{ $t("job2-2") }}</p>
-                <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">3.&nbsp;&nbsp;{{ $t("job2-3") }}</p>
-                <div class="submit">
-                  <button>
-                    <a class="submit event" :href="`mailto:kbtginspire@kbtg.tech?subject=${eventOnly}`">Apply Now</a>
-                  </button>
+                <!-- <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">3.&nbsp;&nbsp;{{ $t("job2-3") }}</p> -->
+                <div class="submit-b">
+                    <a class="submit event"  href="mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Event Only"> Apply Now</a>
                 </div>
               </div>
             </div>
@@ -70,11 +74,9 @@
               <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }}</p>
               <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">2.&nbsp;&nbsp;{{ $t("job3-2") }}</p>
               <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">3.&nbsp;&nbsp;{{ $t("job3-3") }}</p>
-              <div class="submit">
-                <button>
-                  <a class="submit refer" :href="`mailto:kbtginspire@kbtg.tech?subject=${jobRefer}`">Apply Now</a>
-                </button>
-              </div>
+              <div class="submit-b">
+                <a class="submit refer" href="mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Job Referral">Apply Now</a>
+               </div>
             </div>
           </div>
         </div>
@@ -87,6 +89,16 @@
 export default {
   head: {
     script: [
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/gtm.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/gtm.js",
+      },
       {
         async: true,
         type: "text/javascript",
@@ -179,5 +191,6 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
+
 </style>

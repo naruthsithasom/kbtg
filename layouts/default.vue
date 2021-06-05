@@ -1,8 +1,7 @@
 <template>
-  <div>
+  <div >
     <client-only>
-      <!-- <Loading /> -->
-      <header>
+       <header v-if="true">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -36,21 +35,20 @@
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  <!-- @click="switchLanguage('x')" -->
-                  <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navmenu">
+                <div :class="navBar"  id="navmenu">
                   <ul class="navbar-nav mr-auto">
                     <li
                       class="nav-item"
                       data-toggle="collapse"
                       data-target="#navmenu"
                       aria-controls="navmenu"
-                      aria-expanded="false"
-                      :class="{'active': ($router.currentRoute.path === '/'||  $router.currentRoute.path === '/th/') && !($router.currentRoute.hash=== '#faq')}">
+                      :aria-expanded="false"
+                      :class="{'active': ($router.currentRoute.path === '/'||  $router.currentRoute.path === '/th/'||byPassIndex) && !($router.currentRoute.hash=== '#faq')}">
                         <a href="/" class="nav-link">HOME</a>
                     </li>
                     <li
@@ -59,7 +57,7 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ 'active': ($router.currentRoute.path === '/jobs-exe/' || $router.currentRoute.path === '/th/jobs-exe/') && !( faq === '#faq')}">
+                      :class="{ 'active': ($router.currentRoute.path === '/jobs-exe/' || $router.currentRoute.path === '/th/jobs-exe/'|| byPassJob) && !( faq === '#faq')}">
                        <a href="/jobs-exe" class="nav-link">JOBS</a>
                     </li>
                     <li
@@ -68,7 +66,7 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ 'active': ($router.currentRoute.path === '/activites/' || $router.currentRoute.path === '/th/activites/') && !( faq === '#faq')}">
+                      :class="{ 'active': ($router.currentRoute.path === '/activites/' || $router.currentRoute.path === '/th/activites/' || byPassActivites) && !( faq === '#faq')}">
                        <a href="/activites" class="nav-link">ACTIVITIES</a>
                     </li>
                     <li
@@ -81,6 +79,7 @@
                       @click="navClick('#faq')">
                       <a :href="`/${isThFaq}`" class="nav-link">FAQ</a>
                     </li>
+                      <!-- <a :href="`/${isThFaq}`" class="nav-link">FAQ</a> -->
                     <li
                       class="nav-item"
                       data-toggle="collapse"
@@ -96,15 +95,26 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ 'active': ($router.currentRoute.path === '/join-event/' || $router.currentRoute.path === '/th/join-event/'|| $router.currentRoute.path === '/policy/') && !( faq === '#faq')}">
+                      :class="{ 'active': ($router.currentRoute.path === '/join-event/' || $router.currentRoute.path === '/th/join-event/'|| $router.currentRoute.path === '/policy/'|| byPassJoin || byPassPolicy || (pathName === 'announcement-05-2021___th') || (pathName === 'announcement-05-2021___en')) && !( faq === '#faq')}">
                         <a class="nav-link join" href="/join-event">JOIN EVENT</a> 
                     </li>
                       <!-- @click="navClick('join')"> -->
                   </ul>
                   <div class="d-flex justify-content-start language my-2 my-lg-0 btn-lang">
-                     <span class="nav-item " :class="{'active':  storage === 'en'? true : false }" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" ><button   @click="switchLanguage('en')"  class="nav-link border-0  "  >EN</button></span>
+                     <span class="nav-item " :class="{'active':  storage === 'en'? true : false }" >
+                     <button   @click="switchLanguage('en')"  class="nav-link border-0  " 
+                      data-toggle="collapse"
+                      data-target="#navmenu"
+                      aria-controls="navmenu"
+                      >EN</button></span>
                         <span style="margin: 5px 0;">/</span>
-                      <span class="nav-item" :class="{'active':  storage === 'th'? true : false}"  data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" ><button  @click="switchLanguage('th')"  class="nav-link border-0 "  >TH</button></span>
+                      <span class="nav-item" :class="{'active':  storage === 'th'? true : false}" >
+        
+                      <button  @click="switchLanguage('th')"  class="nav-link border-0 "  
+                      data-toggle="collapse"
+                      data-target="#navmenu"
+                      aria-controls="navmenu"
+                      >TH</button></span>
                   </div>
                     <!-- <ul class="navbar-nav language my-2 my-lg-0">
                        <li class="nav-item" :class="{'active':  storage === 'en'? true : false}"><button   @click="switchLanguage('en')"  class="nav-link border-0  "  >EN</button></li>
@@ -120,7 +130,7 @@
 
       <Nuxt />
 
-      <footer>
+      <footer v-if="footer">
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-9">
@@ -131,11 +141,11 @@
                     style="width: 91px; height: 41px"
                   />
                   <ul>
-                    <li class="nav-item" :class="{'active': $router.currentRoute.path === '/'||  $router.currentRoute.path === '/th/'}"><a href="/" class="">HOME</a></li>
+                    <li class="nav-item" :class="{'active': $router.currentRoute.path === '/'||  $router.currentRoute.path === '/th/'|| byPassIndex }"><a href="/" class="">HOME</a></li>
                     <li class="nav-item" @click="navClick('#faq')" :class="{ 'active': $router.currentRoute.hash=== '#faq' }"  ><a :href="`/${isThFaq}`" class="">FAQ</a></li>
-                    <li class="nav-item" :class="{ 'active': ($router.currentRoute.path === '/activites/' || $router.currentRoute.path === '/th/activites/') && !( faq === '#faq')}"><a href="/activites" class="">ACTIVITIES</a></li>
+                    <li class="nav-item" :class="{ 'active': ($router.currentRoute.path === '/activites/' || $router.currentRoute.path === '/th/activites/' || byPassActivites) && !( faq === '#faq')}"><a href="/activites" class="">ACTIVITIES</a></li>
                     <li class="nav-item" @click="navClick('policy')"><a href="/policy" class="">PRIVACY POLICY</a></li>
-                    <li class="nav-item"  :class="{ 'active': ($router.currentRoute.path === '/jobs-exe/' || $router.currentRoute.path === '/th/job-exe/') && !( faq === '#faq')}"><a href="/jobs-exe" class="">JOBS</a></li>
+                    <li class="nav-item"  :class="{ 'active': ($router.currentRoute.path === '/jobs-exe/' || $router.currentRoute.path === '/th/job-exe/' || byPassJob ) && !( faq === '#faq')}"><a href="/jobs-exe" class="">JOBS</a></li>
                     <li><a href="https://www.facebook.com/KBTGLive" target="_blank" :class="{active: statusContact}">CONTACT</a></li>
                   </ul>
                 </div>
@@ -143,7 +153,7 @@
                   <img src="~/assets/images/logo-footer02.svg" style="width: 80px; height: 27px"/>
                   <ul>
                     <li><a href="https://www.kbtg.tech/" target="_blank">COMPANY</a></li>
-                    <li><a href="https://www.kbtg.tech/about" target="_blank">PROJECT</a></li>
+                    <li><a href="https://www.kbtg.tech/about" target="_blank">PROJECTS</a></li>
                     <li><a href="https://www.kbtg.tech/career" target="_blank">OTHER POSITIONS</a></li>
                   </ul>
                 </div>
@@ -166,8 +176,7 @@
   </div>
 </template>
 <script>
-import Loading from "../components/Loading"
-export default {
+ export default {
   head: {
     script: [
       {
@@ -216,10 +225,14 @@ export default {
         type: "text/javascript",
         src: "/js/wow.js",
       },
+      {
+        async: true,
+        type: "text/javascript",
+        src:'/js/gtm.js'
+      }
     ],
   },
-  components:{ Loading },
-  data() {
+   data() {
     return {
       statusFaq: false,
       statusJoin: false,
@@ -229,55 +242,104 @@ export default {
       faq: "",
       path: "",
       isShow: "false",
+      navBar:"collapse navbar-collapse",
+      footer: false,
+      header: false,
+      pathNameTH : "activites___th",
+      pathNameEN : "activites___en",
+      byPassIndex: false,
+      byPassJob: false,
+      byPassActivites: false,
+      byPassJoin: false,
+      byPassPolicy: false,
+      pathName: this.$router.currentRoute.name,
     };
   },
     async mounted(){
-
-    await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
-
+       console.log('check page:>>',this.pathName)
+    // await setTimeout(function(){ this.footer = true }, 2000);
+  await this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      console.log("Loading kbtg...");
+      setTimeout(() => {
+      this.$nuxt.$loading.finish()
+      // this.header = true
+      this.footer = true
+      }, 1000);
+    });
     this.$router.push(this.switchLocalePath('th'))
     this.storage = localStorage.getItem('lang');
-
     //console.log('layout default---------lang:>>',this.storage)
       if(this.storage === null){ 
         localStorage.setItem('lang', 'en');
         this.storage = 'en'
       } 
     this.$router.push(this.switchLocalePath(this.storage))
-    //console.log('current:>> ',this.$router.currentRoute)
+    
+    //console.log('current:>> ',this.$router.currentRoute.name)
+      if(this.$router.currentRoute.name === "index___en" || this.$router.currentRoute.name === 'index___th'){
+      this.byPassIndex = true 
+      this.byPassActivites = false
+      this.byPassJob = false
+       this.byPassJoin = false
+      this.byPassPolicy = false
 
+    }
+    if(this.$router.currentRoute.name === "activites___th" || this.$router.currentRoute.name === 'activites___en'){
+      this.byPassActivites = true
+      this.byPassJob = false
+      this.byPassJoin = false
+      this.byPassPolicy = false
+      this.byPassIndex = false
+
+    }
+     if(this.$router.currentRoute.name === "jobs-exe___th" || this.$router.currentRoute.name === 'jobs-exe___en'){
+      this.byPassJob = true
+      this.byPassActivites = false
+      this.byPassJoin = false
+      this.byPassPolicy = false
+      this.byPassIndex = false
+
+
+    }
+    if(this.$router.currentRoute.name === "join-event___en" || this.$router.currentRoute.name === 'join-event___th'){
+      this.byPassJoin = true
+      this.byPassActivites = false
+      this.byPassJob = false
+      this.byPassPolicy = false
+      this.byPassIndex = false
+
+
+    }
+    if(this.$router.currentRoute.name === "policy___en" ||  this.$router.currentRoute.name === 'policy___en'){
+      this.byPassPolicy = true
+      this.byPassJoin = true
+      this.byPassActivites = false
+      this.byPassJob = false
+      this.byPassIndex = false
+
+    }
     return this.storage
   },
-  computed:{
 
-  },
   methods: {
-    switchLanguage(sw){
-
-      if(sw === 'x'){ this.isShow = false} 
-      else{ 
-        this.isShow = false
-      }
-
-
-      if(sw === 'en'){
-         localStorage.setItem('lang', 'en');
+     switchLanguage(sw){
+       
+        if(sw === 'en'){
+        localStorage.setItem('lang', 'en');
         this.storage = 'en'
-         this.$router.push(this.switchLocalePath('en'))
-        //this.switchLocalePath('en')
-          }
+        this.$router.push(this.switchLocalePath('en'))
+      }
       if(sw === 'th'){
-         localStorage.setItem('lang', 'th');
-         this.storage = 'th'
-    
-         this.$router.push(this.switchLocalePath('th'))
-         //this.switchLocalePath('th')
-       }
+        localStorage.setItem('lang', 'th');
+        this.storage = 'th'
+        this.$router.push(this.switchLocalePath('th'))
+      }
     },
     navClick(data) {
-  
+
       if(data ==='#faq'){
-        this.faq = data
+         this.faq = data  
         if(this.storage === 'en')this.isThFaq = this.isThFaq
         if(this.storage === 'th')this.isThFaq = '#faq'
       }

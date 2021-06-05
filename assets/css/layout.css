@@ -70,7 +70,9 @@
   src: url('../hco_fonts/woff2/GothamSSm-Bold_Web.woff2') format('woff2'),
     url('../hco_fonts/woff/GothamSSm-Bold_Web.woff') format('woff');
   font-weight: 700;
-  font-style: normal;
+  /* ถ้ามีปัญหาเรื่องfont ให้มาดูตรงนี้ */
+  /* font-style: normal;   */ 
+  font-style: 'GBold';
 }
 
 @font-face {
@@ -93,8 +95,10 @@
   font-family: 'Gotham-Book';
   src: url('../hco_fonts/woff2/GothamSSm-Book_Web.woff2') format('woff2'),
     url('../hco_fonts/woff/GothamSSm-Book_Web.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
+  /* font-weight: 600; */
+  /* font-style: normal; */
+    /* ถ้ามีปัญหาเรื่องfont ให้มาดูตรงนี้ */
+  font-style: 'GBook';
 }
 
 @font-face {
@@ -111,17 +115,13 @@
   font-family: 'Kanit-Regular';
   src: url('../fonts/Kanit/Kanit-Regular.ttf');
 }
-.h1-l1 {
-  font-family: 'Gotham-Bold' !important;
-}
+ 
 
 .h4-l1 {
   font-family: 'Gotham-Bold' !important;
 }
 
-.h2-l2 {
-  font-family: 'Gotham-Book' !important;
-}
+ 
 .order{
       list-style-type: decimal !important;
 }
@@ -314,7 +314,7 @@ header {
   position: fixed;
   background: #fff;
   /* z-index: 1;  old */
-  z-index: 2;
+  z-index: 3;
 }
 
 header .navbar-light .navbar-nav {
@@ -427,22 +427,26 @@ header .navbar-light .language .nav-item.active .nav-link  {
 .imgHeader .position-absolute {
   width: 100%;
   top: 50%;
+  text-align: left !important;
   /* Add new */
-  z-index: 1;
+  /* z-index: 2; */
 }
 
 .imgHeader .position-absolute h1 {
   color: #fff;
+  font-family:'Gotham-Bold';
+
 }
 
 .imgHeader .position-absolute h1 span {
   color: #62CBC9;
-}
+  }
 
 .imgHeader .position-absolute h2 {
   color: #fff;
-  font-weight: 100;
-}
+  font-weight: 100; 
+  font-family:'Gotham-Book';
+ }
 
 .imgHeader .position-absolute .has-search {
   width: 255px;
@@ -470,7 +474,85 @@ header .navbar-light .language .nav-item.active .nav-link  {
   pointer-events: none;
   color: #aaa;
 }
+.imgHeader .btn-play{
+  right: 20px;
+  bottom: 80px;
+  width: 180px;
+ 
+}
 
+.btn-play{
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0 10px 0 0;
+  background-color: gray;
+  height:40px;
+  line-height: 40px;;
+  opacity: 0.6 !important;
+}
+.btn-play > .icon-play{
+  margin-left: 10px;
+}
+.btn-play:hover{
+  background-color: white;
+  color: grey;
+  opacity: 1 !important;
+   
+}
+.btn-play:active{
+  background-color: white !important;
+  color: grey !important;
+  opacity: 1 !important;
+}
+.btn-play:focus{
+  /* border: 0 !important; */
+  box-shadow: 0 0 0 0rem rgb(255 255 255 / 50%) !important;
+}
+/* ---------------------- start popup --------------------*/
+.popup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation:  k-popup 1000ms ease-in-out forwards;
+}
+.popup > .img-popup {
+  width: 49vw !important;
+  height: auto;
+}
+.popup > span {
+  position: absolute; 
+  top:-15px;
+  right:-15px;
+  z-index:1;
+  /* border-radius: 50%;
+  background-color: #ffffff */
+}
+ 
+.icon-x{
+  cursor: pointer;
+  background-color: #ffffff ;
+  border-radius: 50%;
+ 
+}
+.icon-x:hover{
+  opacity: 0.8;
+}
+@keyframes k-popup{
+  from  { margin-top: 500px;}
+  20%  { margin-top: -30px;}
+  to  { margin-top: 0px;}
+}
+.click-x{
+  animation: click-xx 1000ms ease-in-out forwards;
+}
+@keyframes click-xx{
+  from  { margin-top: 0;}
+  80%  { margin-top: -20px; opacity: 0.9; }
+  to  { margin-top: 500px; }
+}
+/* ---------------------- end popup --------------------*/
 .day-location {
   width: 100%;
   position: absolute;
@@ -578,6 +660,7 @@ header .navbar-light .language .nav-item.active .nav-link  {
 .btn-job-apply{
   position: absolute;
   bottom: 20px;
+  z-index: 1 !important;
  }
  .btnApplyJpb {
   position: relative;
@@ -626,21 +709,21 @@ header .navbar-light .language .nav-item.active .nav-link  {
   font-size: 14px;
 }
 
-.detail h5 {
+.detail h3 {
   font-size: 16px;
   margin-bottom: 5px;
 }
 
-.detail h5 span img {
+.detail h3 span img {
   margin-top: -15px;
   margin-left: 5px;
 }
 
-.detail h5 a {
+.detail h3 a {
   color: #252525;
 }
 
-.detail h5 a:hover {
+.detail h3 a:hover {
   color: #62CBC9;
   text-decoration: none;
 }
@@ -730,6 +813,7 @@ header .navbar-light .language .nav-item.active .nav-link  {
   background-repeat: no-repeat;
   background-size: 15%;
   padding: 20px 0px 40px 0px;
+  /* height:fit-content; */
 }
 
 .f-q {
@@ -1042,12 +1126,12 @@ right: 60px;
   font-size: 14px;
 }
 
-.form-job .modal-footer .submit {
+.form-job .modal-footer .submit-b {
   width: 100%;
   text-align: center;
 }
 
-.form-job .modal-footer .submit button {
+.form-job .modal-footer .submit-b button {
   margin-bottom: 0;
 }
 
@@ -1064,11 +1148,11 @@ right: 60px;
   color: #fff;
 }
 
-.register .submit button {
+.register .submit-b button {
   width: 240px;
   margin-bottom: 0;
   padding: 5px;
-
+  z-index: 1 !important;
 }
 
 .referred {
@@ -1084,7 +1168,7 @@ right: 60px;
   display: inline-block;
 }
 
-.referred .submit button {
+.referred .submit-b button {
   width: 240px;
   margin-bottom: 0;
   padding: 5px;
@@ -1185,11 +1269,12 @@ button:focus {
   font-size: 12px;
 }
 
-.submit {
+.submit-b {
   text-align: center;
+  padding-top: 40px;
 }
 
-.submit button {
+.submit-b button {
   padding: 3px 25px;
   border: none;
   border-radius: 15px;
@@ -1200,10 +1285,20 @@ button:focus {
   margin: 30px 0 20%;
 }
 
-.submit button a {
+.submit-b button a {
   color: #fff;
 }
-
+.submit-b > a{
+  
+  border: none;
+  border-radius: 15px;
+  background: #62cbc9;
+  color: #fff;
+  font-size: 16px;
+  margin: 30px 0 0 0;
+  padding: 9px 75px;
+  z-index: 2!important;
+}
 .content-top {
   color: #fff;
   font-size: 14px;
@@ -1595,8 +1690,10 @@ a {
   -webkit-border-radius: 0;
   border-radius: 0;
   color: #393536;
-  padding: 20px 10px 20px 25px;
+  padding: 30px 10px 20px 25px;
   position: relative;
+  /* Add new */
+  width: 120px;
 }
 
 .event-wrap .nav-tabs li+li {
@@ -1624,7 +1721,8 @@ a {
 @keyframes keyframesTap1
 { 
   from { margin-bottom: 0px;}
-  to { margin-bottom: 1161px;}
+  /* to { margin-bottom: 1255px;} */
+  to { margin-bottom: 1163px;}
 }
 .day1-tap1-th{
   /* margin-bottom: 1230px !important; */
@@ -1634,7 +1732,7 @@ a {
   from { margin-bottom: 0px;}
   to { margin-bottom: 1230px;}
 }
-.day2-tap2-en{
+.day2-tap2-th{
   /* margin-bottom: 1089px !important; */
 animation: keyframesTap2 500ms ease-in forwards !important;
 
@@ -1642,13 +1740,19 @@ animation: keyframesTap2 500ms ease-in forwards !important;
 @keyframes keyframesTap2
 { 
   from { margin-bottom: 0px;}
-  to { margin-bottom: 1089px;}
+  to { margin-bottom: 1160px;}
 }
-.day3-tap3-en{
-  /* margin-bottom: 1089px !important; */
-animation: keyframesTap3 500ms ease-in forwards !important;
-
+.day2-tap2-en{
+  animation: kf-day2-en 500ms ease-in forwards !important;
 }
+@keyframes kf-day2-en
+{ 
+  from { margin-bottom: 0px;}
+  to { margin-bottom: 1090px;}
+}
+/* .day3-tap3-en{
+ animation: kf-day2-en 500ms ease-in forwards !important;
+} */
 @keyframes keyframesTap3
 { 
   from { margin-bottom: 1089px;}
@@ -1674,7 +1778,7 @@ animation: keyframesTap3 500ms ease-in forwards !important;
   height: 1.5rem;
   width: 1.5rem;
   position: absolute;
-  right: -89px;
+  right: -104px;
   background-color: #e4e4e5;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -1683,7 +1787,7 @@ animation: keyframesTap3 500ms ease-in forwards !important;
   margin-top: -.75rem;
 }
 .event-wrap .nav-tabs li a.day2:after {
-  right: -86px !important;
+  right: -103px !important;
 }
 .event-wrap ul.nav-tabs li a.nav-link.active:after {
   background-color: #62CBC9;
@@ -1695,7 +1799,7 @@ animation: keyframesTap3 500ms ease-in forwards !important;
   bottom: -2.9375rem;
   width: 2px;
   position: absolute;
-  right: -54px;
+  right: -63px;
   background-color: #d2d2d2;
 }
 
@@ -1870,11 +1974,61 @@ footer {
   color: #fff;
 }
 
-
+/* ------------------------------------------------------- Mobile ---------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------- Mobile ---------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------- Mobile ---------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------- Mobile ---------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------- Mobile ---------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------- Mobile ---------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------- Mobile ---------------------------------------------------------------------------------------------- */
 
 @media (max-width: 575.98px) {
-
+/* ----------------------popup --------------------*/
+.popup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%,1px);
+  animation:  k-popup 1000ms ease-in-out forwards;
+  -webkit-transform: translate3d(-50%,-50%,1px);
+  z-index:3;
+  /* transform: translate3d(0,0,1px); */
+}
+.popup > .img-popup {
+  width: 90vw !important;
+  height: auto;
+}
+.popup > span {
+  position: absolute; 
+  top:-15px;
+  right:-15px;
+  z-index:1;
+  /* border-radius: 50%;
+  background-color: #ffffff */
+}
+.icon-x{
+  cursor: pointer;
+  background-color: #ffffff ;
+  border-radius: 50%;
+ 
+}
+.icon-x:hover{
+  opacity: 0.8;
+}
+@keyframes k-popup{
+  from  { margin-top: 500px;}
+  20%  { margin-top: -30px;}
+  to  { margin-top: 0px;}
+}
+.click-x{
+  animation: click-xx 1000ms ease-in-out forwards;
+}
+@keyframes click-xx{
+  from  { margin-top: 0;}
+  80%  { margin-top: -20px; opacity: 0.9; }
+  to  { margin-top: 500px; }
+}
+/* ---------------------- end popup --------------------*/
   .h1,
   h1 {
     font-size: 30px;
@@ -1940,15 +2094,18 @@ footer {
     max-width: 98vw !important;
     margin: 50% auto;
   }
-  .imgHeader .position-absolute h1 {
+  .imgHeader .position-absolute{
+    z-index: 2;
+    -webkit-transform: translate3d(0,0,1px);
+    transform: translate3d(0,0,1px);
     text-align: left;
-
   }
 
   .imgHeader .position-absolute h2 {
-    text-align: left;
-    /* font-size: 16px; */
-    font-size: 15px;
+     font-size: 15px;
+  }
+  .headActivite{
+    text-align: center !important;
   }
 
   .flex-direction-nav a {
@@ -1960,7 +2117,46 @@ footer {
     height: 350px;
     overflow: hidden;
   }
+  
+  .imgHeader .btn-play{
+    left: 50%;
+    right: 0 !important;
+    bottom: 10% !important;
+    width: 180px;
+    z-index: 2;
+    /* transform: translate(-50%, -50%) !important; */
+    -webkit-transform: translate3d(-50%,-50%,1px);
+    transform: translate3d(-50%,-50%,1px);
+  }
+  
+  .btn-play{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    height:40px;
+    line-height: 40px;;
+    opacity: 0.6 !important;
+  }
+  .btn-play > .icon-play{
+    margin-left: 0px !important;
+  }
+  .btn-play:hover{
+    background-color: white !important;
+    color: grey;
+    opacity: 1 !important;
 
+  }
+  .btn-play:active{
+    background-color: white !important;
+    color: grey;
+    opacity: 1 !important;
+
+  }
+  .btn-play:focus{
+    /* border: 0 !important; */
+    box-shadow: 0 0 0 0rem rgb(255 255 255 / 50%) !important;
+  }
   .imgHeader img {
     width: auto !important;
     height: 350px;
@@ -2064,7 +2260,7 @@ footer {
      50% { margin-bottom: 10px;}
      to { margin-bottom: 0;}
  }
-  .day2-tap2-en{
+  .day2-tap2-th, .day2-tap2-en{
     /* margin-bottom: 0 !important; */
     animation: day1Tap1th 500ms ease-in-out forwards !important;
 
@@ -2133,7 +2329,8 @@ footer {
   }
 
   .event-wrap .nav-tabs li a.nav-link {
-    padding: 8px;
+    /* padding: 8px; */
+    /* Add new */
   }
 
   .event-wrap .nav-tabs li a.nav-link.active {
@@ -2225,10 +2422,10 @@ footer {
     bottom: -216px;
   }
 
-  .imgHeader .position-absolute {
+  /* .imgHeader .position-absolute {
     text-align: center;
     top: 50%;
-  }
+  } */
 
   .event-wrap .nav-tabs li a span {
     font-size: 16px;

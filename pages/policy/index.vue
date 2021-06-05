@@ -1,6 +1,14 @@
 <template>
   <div>
     <client-only>
+      <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TZSXSC7"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        ></iframe
+      ></noscript>
       <div class="wrapper bg-policy">
         <div class="container">
           <div class="row">
@@ -513,13 +521,14 @@
                       <li>KBTG website : https://www.kbtg.tech/contact</li>
                       <li>
                         เจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล อีเมล
-                        DataProtectionOfficer@kbtg.tech สถานที่ติดต่อ : กสิกร
+                         KBTG_DPO@kbtg.tech สถานที่ติดต่อ : กสิกร
                         บิซิเนส-เทคโนโลยี กรุ๊ป : เลขที่ 46/6 ถนนป๊อปปูล่า
                         ตำบลบ้านใหม่ อำเภอปากเกร็ด จังหวัดนนทบุรี 11120
                       </li>
                     </ul>
                   </li>
                 </ul>
+                <p>หมายเหตุ: นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy) นี้ครอบคลุม กสิกร บิซิเนส-เทคโนโลยี กรุ๊ป (“KBTG”) อันได้แก่ KSoft, KInfra, KBTGSec, KLabs, Beacon Interface, KX และ Kubix</p>
               </div>
             </div>
           </div>
@@ -531,64 +540,77 @@
 
 <script>
 export default {
-  head:{
-      bodyAttrs:{
-      class:"bg-all"
-    }
+  head: {
+    bodyAttrs: {
+      class: "bg-all",
+    },
   },
-  // head: {
-  //   script: [
-  //     {
-  //       defer: true,
-  //       type: "text/javascript",
-  //       src: "js/jquery-3.3.1.slim.min.js",
-  //     },
-  //     {
-  //       defer: true,
-  //       type: "text/javascript",
-  //       src: "js/jquery.min.js",
-  //     },
-  //     {
-  //       defer: true,
-  //       type: "text/javascript",
-  //       src: "js/popper.min.js",
-  //     },
-  //     {
-  //       defer: true,
-  //       type: "text/javascript",
-  //       src: "js/bootstrap.min.js",
-  //     },
-  //     {
-  //       defer: true,
-  //       type: "text/javascript",
-  //       src: "flexslider/jquery.flexslider.js",
-  //     },
-  //     {
-  //       defer: true,
-  //       type: "text/javascript",
-  //       src: "flexslider/js/shCore.js",
-  //     },
-  //     {
-  //       defer: true,
-  //       type: "text/javascript",
-  //       src: "flexslider/js/shBrushJScript.js",
-  //     },
-  //     {
-  //       defer: true,
-  //       type: "text/javascript",
-  //       src: "WOW-master/dist/wow.js",
-  //     },
-  //     {
-  //       defer: true,
-  //       type: "text/javascript",
-  //       src: "js/wow.js",
-  //     },
-  //   ],
-  // },
+  head: {
+    script: [
+       {
+        async: true,
+        type: "text/javascript",
+        src: "/js/gtm.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/gtm.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery-3.3.1.slim.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/jquery.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/popper.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/bootstrap.min.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/jquery.flexslider.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shCore.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "flexslider/js/shBrushJScript.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "WOW-master/dist/wow.js",
+      },
+      {
+        defer: true,
+        type: "text/javascript",
+        src: "js/wow.js",
+      },
+    ],
+  },
   async mounted() {
-    await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
+    await this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 2000);
+    });
     //console.log("Loading... /policy");
-    //   setTimeout(function(){ 
+    //   setTimeout(function(){
     //    $("#navmenu li").removeClass('active');
     // $("#navmenu li:eq(5)").addClass('active');
     // }, 1000);
@@ -599,7 +621,7 @@ export default {
   },
 };
 </script>
-<style >
+<style>
 body {
   background: #393536;
 }

@@ -1,12 +1,20 @@
 <template>
   <div class="wrapper">
+      <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TZSXSC7"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        ></iframe
+      ></noscript>
     <div class="imgHeader position-relative">
       <img src="~/assets/images/banner1.png" class="img-fluid" />
       <div class="position-absolute">
         <div class="container">
           <div class="row">
-            <div class="col-12 section wow fadeInUp" data-wow-delay="0.7">
-              <h2>
+            <div class="col-12 section" data-wow-delay="">
+              <h2 class="headActivite wow fadeInUp">
                 <span style="font-weight: 500"
                   >INSPIRATION BEGINS WITH YOU
                 </span>
@@ -24,8 +32,8 @@
             <div class="content-find">
               <h3
                 class="wow fadeInUp"
-                data-wow-duration="200"
-                data-wow-delay="200"
+                data-wow-duration=""
+                data-wow-delay=""
               >
                 FIND YOUR INSPIRATION
               </h3>
@@ -33,8 +41,8 @@
                 <div class="col-12 col-md-6 col-lg-4">
                   <div
                     class="item wow fadeInUp"
-                    data-wow-duration="400"
-                    data-wow-delay="200"
+                    data-wow-duration=""
+                    data-wow-delay=""
                   >
                     <div class="img-find">
                       <img src="~/assets/images/img-find.png" />
@@ -51,8 +59,8 @@
                 <div class="col-12 col-md-6 col-lg-4">
                   <div
                     class="item wow fadeInUp"
-                    data-wow-duration="600"
-                    data-wow-delay="200"
+                    data-wow-duration=""
+                    data-wow-delay=""
                   >
                     <div class="img-find">
                       <img src="~/assets/images/img-find1.png" />
@@ -200,100 +208,6 @@
                   <p class="text-center">Senior Principal Visionary Architect</p>
                 </div>
               </div>
-              <div class="col-12">
-                <!-- <h4
-                  class="wow fadeInUp"
-                  data-wow-duration="200"
-                  data-wow-delay="200"
-                  style="width: 100%; color: #252525"
-                >
-                  INSPIRE TALK SPEAKER
-                </h4> -->
-              </div>
-              <!-- <div class="col-12 col-md-4 col-lg-4">
-                <div
-                  class="item wow fadeInUp"
-                  data-wow-duration="1000"
-                  data-wow-delay="200"
-                >
-                  <img
-                    src="~/assets/images/talk-speaker4.png"
-                    class="img-fluid"
-                  />
-                  <h5>{{ $t("WikanesThongmee") }}</h5>
-                  <p>Head of DevOps</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 col-lg-4">
-                <div
-                  class="item wow fadeInUp"
-                  data-wow-duration="1200"
-                  data-wow-delay="200"
-                >
-                  <img
-                    src="~/assets/images/talk-speaker5.png"
-                    class="img-fluid"
-                  />
-                  <h5>{{ $t("PanuwatKenchat") }}</h5>
-                  <p>Advanced Software Engineer</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 col-lg-4">
-                <div
-                  class="item wow fadeInUp"
-                  data-wow-duration="1600"
-                  data-wow-delay="200"
-                >
-                  <img
-                    src="~/assets/images/talk-speaker6.png"
-                    class="img-fluid"
-                  />
-                  <h5>{{ $t("PaweenPiyasil") }}</h5>
-                  <p>Senior Software Engineer</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 col-lg-4">
-                <div
-                  class="item wow fadeInUp"
-                  data-wow-duration="1800"
-                  data-wow-delay="200"
-                >
-                  <img
-                    src="~/assets/images/talk-speaker7.png"
-                    class="img-fluid"
-                  />
-                  <h5>{{ $t("UnyamaneeKetcharoen") }}</h5>
-                  <p>PMO Professional</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 col-lg-4">
-                <div
-                  class="item wow fadeInUp"
-                  data-wow-duration="2000"
-                  data-wow-delay="200"
-                >
-                  <img
-                    src="~/assets/images/talk-speaker8.png"
-                    class="img-fluid"
-                  />
-                  <h5>{{ $t("PhitsineeSincharoenpong") }}</h5>
-                  <p>Business Analyst</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 col-lg-4">
-                <div
-                  class="item wow fadeInUp"
-                  data-wow-duration="2000"
-                  data-wow-delay="200"
-                >
-                  <img
-                    src="~/assets/images/talk-speaker9.png"
-                    class="img-fluid"
-                  />
-                  <h5>{{ $t("ChayaponSaepung") }}</h5>
-                  <p>Advanced System Engineer - Server Management</p>
-                </div>
-              </div> -->
             </div>
           </div>
         </div>
@@ -308,8 +222,8 @@
           <div class="col-12">
             <div
               class="date_schedule wow fadeInUp"
-              data-wow-duration="200"
-              data-wow-delay="200"
+              data-wow-duration=""
+              data-wow-delay=""
             >
              
               <h3 class="f-h3-act mb-5"><span class="f-kbtg-h3">KBTG</span> INSPIRE SCHEDULE</h3>
@@ -320,26 +234,26 @@
                     <li @click="clickTap(1)" class="item-tabs " :class="{'active': status_tap === 1? true : false }">
                         <nuxt-link
                           to="#move1"
-                          class="nav-link " :class="{'active': status_tap === 1? true : false,'day1-tap1-th': switchLang === 'th' && status_tap === 1}"
+                          class="nav-link" :class="{'active': status_tap === 1? true : false,'day1-tap1-th': switchLang === 'th' && status_tap === 1}"
                           data-toggle="tab"
-                           >Day 1<span>May 21, 2021</span></nuxt-link
+                           >Day 1</nuxt-link
                         >
                       </li>
                       <li @click="clickTap(2)" class="item-tabs" :class="{'active ': status_tap === 2? true : false }">
                         <nuxt-link
                           to="#move2"
-                          class="nav-link day2 " :class="{'active': status_tap === 2? true : false,'day2-tap2-en': status_tap === 2 && switchLang === 'en'}"
+                          class="nav-link" :class="{'active': status_tap === 2? true : false,'day2-tap2-th': status_tap === 2 && switchLang === 'th','day2-tap2-en': status_tap === 2 && switchLang === 'en'}"
                           data-toggle="tab"
-                           >Day 2<span>May 22, 2021</span></nuxt-link
+                           >Day 2</nuxt-link
                         >
                       </li>
                       <li @click="clickTap(3)" class="item-tabs" :class="{'active': status_tap === 3? true : false }">
                         <nuxt-link
                           to="#move3"
-                          class="nav-link day2 " :class="{'active': status_tap === 3? true : false }"
+                          class="nav-link" :class="{'active': status_tap === 3? true : false }"
                           data-toggle="tab"
                           title=""
-                          >Day 3<span>May 23, 2021</span></nuxt-link
+                          >Day 3</nuxt-link
                         >
                       </li> 
                     </ul>
@@ -377,7 +291,7 @@
                             <ul class="event-org mb-0 list-unstyled">
                               <li class="">Guest Speaker</li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }"> {{ $t("text1") }}</p>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }"> {{ $t("day1-1100-1130-text1") }}</p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -387,10 +301,11 @@
                           <div class="event-info">
                             <h3 class="mb-0 pt-2">Fireside Chat</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("by1") }}</li>
+                              <li>KBTG Team</li>
+                              <!-- <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("day1-1130-1200-by1") }}</li> -->
                             </ul>
                             <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">
-                              {{ $t("text2") }}
+                              {{ $t("day1-1130-1200-text2") }}
                             </p>
                           </div>
                         </div>
@@ -407,19 +322,19 @@
                             <span class="d-block">01:00 - 06:00 PM.</span>
                           </div>
                           <div class="event-info">
-                            <h3 class="mb-0 pt-2">Agile Playgroundd</h3>
+                            <h3 class="mb-0 pt-2">Agile Playground</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
                             <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">
-                              {{ $t("text3") }}
+                              {{ $t("day1-3-text3") }}
                             </p>
                             <br />
                             <h3 class="mb-0">Upskill Workshop</h3>
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                              <p class="mb-0">- How to Manage Projects Valued > 1 Billion Baht?</p>
+                              <p class="mb-0">- How to Manage Projects Valued > 1 Billion Baht</p>
                               <p class="mb-0">- Business Analyst in Agile World</p>
                               <p class="mb-0">- How to Secure Your Smart Contract</p>
                             <br/>
@@ -456,9 +371,9 @@
                           <div class="event-info">
                             <h3 class="mb-0 pt-2">Welcome to KBTG and KBTG Beyond</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolChutimarKasemkornkit") }}</li>
                             </ul>
-                            <p  :class="{ 'f-thai': switchLang === 'th'  }">{{$t('kickoffDay3')}}</p>
+                            <p  :class="{ 'f-thai': switchLang === 'th'  }">{{$t('day2-1030-1100-text')}}</p>
                           </div>
                         </div>
                         <div class="event-style1 w-100">
@@ -482,7 +397,8 @@
                           <div class="event-info">
                             <h3 class="mb-0 pt-2">Fireside Chat</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('PanuwatKenchatPhitsineeSincharoenpong') }}</li>
+                              <!-- <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('PanuwatKenchatPhitsineeSincharoenpong') }}</li> -->
+                              <li>KBTG Team</li>
                             </ul>
                             <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('connectDay2') }}</p>
                           </div>
@@ -504,7 +420,7 @@
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("text3") }}</p>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("day1-3-text3") }}</p>
                             <br />
                             <h3 class="mb-0">Upskill Workshop</h3>
                             <ul class="event-org mb-0 list-unstyled">
@@ -513,20 +429,16 @@
                             <p class="mb-0">- {{$t('day2Jouney')}}</p>
                             <p class="mb-0">- {{$t('day2How')}}</p>
                             <p class="mb-0">- {{$t('day2Ob')}}</p>
-                            <!-- <ul class=" mb-0 list-unstyled   " > 
-                              <li>{{$t('day2Jouney')}}</li>
-                              <li>{{$t('day2How')}}</li>
-                              <li>{{$t('day2Ob')}}</li>
-                            </ul> -->
+
                             <br/>
                             <h3 class="mb-0">1:1 Career Mentorship</h3>
                             <br />
                             <h3 class="mb-0">Interview + Final Interview</h3>
                             <p class="mb-0">- Business Analyst</p>
-                            <p class="mb-0">- Software Engineer (Testing)</p>
-                            <p class="mb-0">- Data Scientist (MLE) (Testing)</p>
-                            <p class="mb-0">- New Grad Business Analyst (Testing)</p>
-                            <p class="mb-0">- Agile Coach (Testing)</p>
+                            <p class="mb-0">- Software Engineer (Test)</p>
+                            <p class="mb-0">- Data Scientist (MLE) (Test)</p>
+                            <p class="mb-0">- New Grad Business Analyst (Test)</p>
+                            <p class="mb-0">- Agile Coach (Test)</p>
                           </div>
                         </div>
                       </div>
@@ -538,7 +450,6 @@
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0 pt-2">
-                              <!-- <span  :class="{ 'f-thai': switchLang === 'th'  }" title="">{{ $t("Register") }}</span> -->
                               Register
                             </h3>
                           </div>
@@ -576,7 +487,8 @@
                           <div class="event-info">
                             <h3 class="mb-0 pt-2">Fireside Chat</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("PaweenPiyasilChayaponSaepung") }}</li>
+                              <!-- <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("PaweenPiyasilChayaponSaepung") }}</li> -->
+                              <li>KBTG Team</li>
                             </ul>
                             <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("connectDay3") }}</p>
                           </div>
@@ -598,7 +510,7 @@
                             <ul class="event-org mb-0 list-unstyled">
                               <li>KBTG Team</li>
                             </ul>
-                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("text3") }}</p>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("day1-3-text3") }}</p>
                             <br />
                             <h3 class="mb-0">Upskill Workshop</h3>
                             <ul class="event-org mb-0 list-unstyled">
@@ -606,8 +518,7 @@
                             </ul>
                             <p class="mb-0">- Let's Understand Enterprise Architecture in the Innovation World</p>
                             <p class="mb-0">- How to Handle High Volume Transaction Infrastructure in Crisis Situation</p>
-                            <!-- <p class="p-0 m-0" >- {{$t('letunderDay3')}}</p>
-                            <p class="p-0 m-0">- {{$t('howDay3')}}</p> -->
+                            <p class="mb-0">- How to Design Legalized Data Architecture for Your Organization</p>
                             <br />
                             <h3 class="mb-0">1:1 Career Mentorship</h3>
                             <br />
@@ -639,9 +550,8 @@
                 ><img src="~/assets/images/Asset15.png"
               /></span>
             </h4>
-            <p>
-              Show off your personality and capability for a chance to join
-              KASIKORN Business-Technology Group, Thailand’s top tech company
+            <p  :class="{ 'f-thai': switchLang === 'th'  }">
+             {{$t('findajob')}}
             </p>
             <button><a href="/jobs-exe">See Positions</a></button>
           </div>
@@ -655,6 +565,16 @@
 export default {
   head: {
  script: [
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/gtm.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/gtm.js",
+      },
       {
         async: true,
         type: "text/javascript",

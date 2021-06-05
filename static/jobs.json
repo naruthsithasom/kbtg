@@ -13,13 +13,13 @@
         "Support defect/problem investigation"
       ],
       "qualification": [
-        "Bachelor's degree in Computer Engineer, Computer Science, IT or other related fields (fresh grads welcome!)",
-        "At least 3 years of experience in JAVA software development or other programing languages (GO, JavaScript, Node.js, Python, C#, Android, Swift)",
+        "Bachelor's degree in Computer Engineering, Computer Science, IT or other related fields (fresh grads welcome!)",
+        "At least 3 years of experience in JAVA software development or other programming languages (Java, GO, JavaScript, Kotlin, Swift, Node.js, C#, Python)",
         "Experience working with one or more from the following: web application development, Unix environments, mobile application development, information retrieval, networking, developing large-scale software system, version control system, and/or security software development",
         "Knowledge of XML, Restful, JSON, Framework, SQLite and OOP Concept ",
         "Knowledge of SVN,GIT"
       ],
-      "skill": "Programing Languages (Java, GO, JavaScript, Java (Android), Swift, Node.js, C#, Python)​",
+      "skill": "Programming Languages  (Java, GO, JavaScript, Kotlin, Swift, Node.js, C#, Python)​",
       "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)", "K+ Building (Samyan, Bangkok)"],
       "fresh_grad": true
     },
@@ -328,7 +328,7 @@
         "Get plan and manage resources based on submitted timeline ",
         "Investigate any technical incident ",
         "Forecast any problem that will cause any incident from current implementation ",
-        "mprove process/system to implement any compromised solution between developers and security team ",
+        "Improve process/system to implement any compromised solution between developers and security team ",
         "Get system requirement from related person and coordinate with IT Infrastructure and DevOps Team to implement/improvement and develop project ",
         "Transfer DevSecOps knowledge sharing to application team"
       ],
@@ -424,7 +424,7 @@
       "description": "In this role, you will demonstrate your knowledge of technology and enterprise architecture to design architectures and strategic roadmaps, lead clients as a subject matter expert, and partner with them as a trusted advisor in their future digital experience and strategy execution",
       "responsibility": [
         "Plan, design, develop and execute the effective EA to strengthen the business of KBank ",
-        "Design and Create the future enterprise architect for banking business ",
+        "Design and create the future enterprise architecture for banking business ",
         "Analyze and become an expert on banking reference architectures to suggest new and emerging technologies to our clients ",
         "Advise and analyse the root cause of complex enterprise architect  ",
         "Perform other duties as assigned "
@@ -576,28 +576,26 @@
       "id": 21,
       "title": "UX/UI Designer",
       "level": "Middle",
-      "description": "In this role, you will design solution for user interface and interaction that leverages start-of-the-art UX/UI design trends and techniques.",
+      "description": "In this role, you will use ‘design’ to drive innovative products and services to global standards. You will do this by engaging in challenging interdisciplinary work with multiple cross-functional teams.",
       "responsibility": [
-        "Lead and execute interaction and visual design sessions with solution architects, software developers and business analysts",
-        "Define innovative and cutting-edge design solution for user interface and interaction",
-        "Work as a part of highly collaborative and fast paced multi-discipline software development teams and be in charge of end-to-end UX/UI solution ",
-        "Oversee the implementation and testing of the design including functionality, usability and scalability"
+        "Actively take part in our growing and interdisciplinary design team, where you will help shape the future of our processes and culture",
+        "Indulge yourself in the study of the user",
+        "Creatively translate user values into products or services into captivating user experiences ",
+        "Identify, understand, and foresee design issues or opportunities in product and service development",
+        "Utilize and adapt design process to approach ambiguous challenges",
+        "Constantly bring conversations about users and other stakeholders to the table throughout the product development cycle, from user research, to analysis, concepts, UX/UI design, launch, and iteration",
+        "Engage in deep collaboration with multidisciplinary professionals in fields of design, business, strategy, growth, software development, and technological innovation"
       ],
       "qualification": [
-        "Bachelor's or Master's Degree in Graphic Design, Interaction Design, New Media Design, Industrial Design or related fields ",
-        "3-5 years of experience in graphic design or visual design",
-        "Strong understanding in UX/UI design patterns and standard UCD methodologies",
-        "Strength in design concept, visual communication and drawing skills",
-        "Experience using a variety of designing tools like Photoshop, Illustrator, InDesign, Fireworks or equivalents",
-        "Experience designing UX/UI on Mobile is an advantage",
-        "Ability to create prototyping on iOS, Android platform is an advantage",
-        "Knowledge of HTML, CSS, Rails, JavaScript, JQuery is an advantage",
-        "Knowledge of iOS and Android application development is an advantage",
-        "Highly analytical and creative in design engagement",
-        "Self-driven but highly collaborative"
-
+        "A Bachelor’s or Master’s degree in any field is welcomed",
+        "A sensitivity to both the functional and the emotional aspects of design ",
+        "A curious and open-mind: you see both the big picture as well the small details, and you enjoy connecting the dots and finding relationships within complexities",
+        "An ability to understand the intrinsic “why” behind each given task",
+        "Big plus if you have experience integrating quantitative processes into your overall qualitative research",
+        "It is not necessary for candidates to come from a pure design background, we are excited about any secondary experiences or interests you may have! A diversity of minds is what we look for as we’re growing our team",
+        "And don’t worry, you do not need to be able to do all this right now! We look forward to helping you grow your capabilities along with our growing team"
       ],
-      "skill": " User Interaction and Visualization Design Focusing on Web and Mobile Apps ",
+      "skill": "Human-Centered Thinking and a Familiarity With UX/UI or Service Design Processes and Tools (Figma, Zeplin, Adobe Suite, etc.)",
       "location": ["K+ Building (Samyan, Bangkok)"],
       "fresh_grad": false
     },

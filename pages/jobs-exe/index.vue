@@ -1,7 +1,15 @@
 <template>
   <div>
     <client-only>
-      <div class="wrapper">
+      <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TZSXSC7"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        ></iframe
+      ></noscript>
+      <div class="wrapper" >
         <div class="imgHeader position-relative">
           <b-carousel id="carousel-1" v-model="slide" :interval="4000" @sliding-start="onSlideStart" @sliding-end="onSlideEnd" >
              <div v-for="list in loop" :key="list">
@@ -14,7 +22,7 @@
           <div class="position-absolute">
             <div class="container">
               <div class="row">
-                <div class="col-12 section wow fadeInUp" data-wow-delay="0.7">
+                <div class="col-12 section  wow fadeInUp " data-wow-delay="">
                   <h2>
                     <span style="font-weight: 500">INSPIRATION BEGINS WITH YOU</span>
                   </h2>
@@ -36,8 +44,8 @@
             <div class="row">
               <div class="col-12">
                 <div class="career">
-                  <h3 class="section wow fadeInLeft f-job-h3 mb-4" data-wow-delay="0.5">WE ARE <span style="color: #62cbc9">HIRING!</span></h3>
-                  <ul class="section wow fadeInUp" data-wow-delay="0.7">
+                  <h3 class="section wow fadeInLeft f-job-h3 mb-4" data-wow-delay="">WE ARE <span style="color: #62cbc9">HIRING!</span></h3>
+                  <ul class="section wow fadeInUp" data-wow-delay="">
                    
                     <li class="txt-header">
                       <div class="title" style="font-weight: 700">Job Title</div>
@@ -83,6 +91,16 @@
  export default {
    head: {
     script: [
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/gtm.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/gtm.js",
+      },
       {
         async: true,
         type: "text/javascript",
@@ -157,7 +175,7 @@
       S:"Senior",
       listFirst:0,
       listLast:10,
-      notFound:["{id: 1, title: 'ไม่พบตำแหน่งนี้!!!'}"],
+      // notFound:["{id: 1, title: 'ไม่พบตำแหน่งนี้!!!'}"],
       effectList1: "effectList1",
     };
   },
@@ -263,8 +281,8 @@
       // console.log(data);
       this.choose = data;
       if(data === 1){  this.listFirst = (data * 10) -10}
-      else{  this.listFirst = (data * 10) - 9 }
-      this.listLast = data * 10
+      else{  this.listFirst = (data * 10) - 10 }
+      this.listLast = (data * 10 ) 
     },
     clearSet(){
       this.choose = 1

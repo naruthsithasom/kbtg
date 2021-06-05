@@ -1,13 +1,13 @@
- 
-export default {
- 
-  loading: '~/components/Loading.vue',
+ export default {
+  loading: {
+    continuous: false,
+    color: '#fff'
+  },
   ssr: false,
   target: "static",
   server: {
     port: 80,
   },
- 
   head: {
     title: "KBTG INSPIRE",
     htmlAttrs: {
@@ -19,6 +19,8 @@ export default {
       { name: "keywords", content: "" },
       { ["http-equiv"]: "X-UA-Compatible", content: "IE-edge" },
       { hid: "description", name: "description", content: "" },
+      {name:"facebook-domain-verification" ,content:"854k12xqe83ikkh3n6kxdwmhcifa9a"},
+      /*{name:"facebook-domain-verification", content:"wj3qiox4gvo3pa1z30lpmyrtop781t"}*/
     ],
     link: [
       {
@@ -27,30 +29,7 @@ export default {
         href: "/favicon32.svg",
       },
     ],
-    // script: [
-    //   {
-    //     src: 'https://code.jquery.com/jquery-3.4.1.slim.min.js',
-    //     type: 'text/javascript'
-    //   },
-    //   {
-    //     src: 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
-    //     type: 'text/javascript'
-    //   },
-    //   {
-    //     src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js',
-    //     type: 'text/javascript'
-    //   }
-    // ]
-  
   },
-  // script: [
-  //   {
-  //     src: "js/bootstrap.bundle.min.js",
-  //   },
-  //   {
-  //     src: "js/agenda-tap.js",
-  //   },
-  // ],
   css: [
     { src: "~/assets/css/reset.css" },
     { src: "~/assets/css/print.css" },
@@ -66,10 +45,11 @@ export default {
     "~/plugins/axios.js",
   ],
   components: true,
+  babel: { compact: true },
   buildModules: [],
   build: {},
   bootstrapVue: {
-    icons: false,
+    icons: true,
   },
   modules: [
     "bootstrap-vue/nuxt",
