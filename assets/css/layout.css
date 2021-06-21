@@ -440,8 +440,9 @@ header .navbar-light .language .nav-item.active .nav-link  {
 
 .imgHeader .position-absolute h1 {
   color: #fff;
-  font-family:'Gotham-Bold';
-
+  font-family:'Gotham-Book';
+  font-weight: 100;
+  font-size: 38px;
 }
 
 .imgHeader .position-absolute h1 span {
@@ -664,7 +665,7 @@ header .navbar-light .language .nav-item.active .nav-link  {
 
 .btn-job-apply{
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   z-index: 1 !important;
  }
  .btnApplyJpb {
@@ -735,11 +736,11 @@ header .navbar-light .language .nav-item.active .nav-link  {
   margin-left: 5px;
 }
 
-.detail h3 a {
+.detail a h3  {
   color: #252525;
 }
 
-.detail h3 a:hover {
+.detail a:hover h3{
   color: #62CBC9;
   text-decoration: none;
 }
@@ -811,7 +812,7 @@ header .navbar-light .language .nav-item.active .nav-link  {
   height: auto;
 }
 
-.item h3 {
+.item h5 {
   text-align: center;
   font-family: 'Gotham-Medium';
   font-size: 20px;
@@ -1059,14 +1060,15 @@ right: 60px;
   width: 500px !important;
   margin: 20px auto;
 }
-.jobs h4 {
+.jobs h2 {
   margin-top: 10px;
   padding-bottom: 25px;
   color: #fff;
   font-weight: 700;
+  font-size: 24px;
 }
 
-.jobs h4 a {
+.jobs h2 a {
   font-size: 12px;
   float: right;
   color: #62CBC9;
@@ -1379,7 +1381,10 @@ button:focus {
   color: #fff;
   margin: 30px 0;
 }
-
+.content-detail h3{
+  color: #fff;
+  font-size: 20px;
+}
 .content-detail ul {
   padding-left: 25px;
 
@@ -1448,6 +1453,9 @@ button:focus {
 }
 .title h2{
   font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .career ul li .title span img {
   width: 20px;
@@ -2127,7 +2135,7 @@ footer {
     text-align: left;
   }
 
-  .imgHeader .position-absolute h2 {
+  .imgHeader .position-absolute h1 {
      font-size: 15px;
   }
   .headActivite{
@@ -2242,16 +2250,16 @@ footer {
     margin-top: -22px;
   }
 
-  .jobs h4 {
+  .jobs h2 {
     font-size: 16px;
     display: block;
   }
 
-  .jobs h4 a {
+  .jobs h2 a {
     float: left;
   }
 
-  .jobs h4 .back {
+  .jobs h2 .back {
     float: right;
   }
 
@@ -2260,7 +2268,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .content-detail h5 {
+  .content-detail h3 {
     font-size: 16px;
   }
 

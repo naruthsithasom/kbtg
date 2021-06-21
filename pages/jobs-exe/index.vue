@@ -23,9 +23,9 @@
             <div class="container">
               <div class="row">
                 <div class="col-12 section  wow fadeInUp " data-wow-delay="">
-                  <h2>
-                    <span style="font-weight: 500">INSPIRATION BEGINS WITH YOU</span>
-                  </h2>
+                  <h1>
+                    INSPIRATION BEGINS WITH YOU
+                  </h1>
 
                   <div class="form-group has-search">
                     <span class="fa fa-search form-control-feedback"></span>

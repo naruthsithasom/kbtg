@@ -39,7 +39,7 @@
             type="video/mp4"
           />
         </video>
-        <div class="position-absolute fadeOutHader" v-if="check">
+        <div class="position-absolute fadeOutHader" v-show="check">
           <div class="container">
             <div class="row">
               <div class="col-12">
@@ -127,7 +127,7 @@
                   >See Positions</a
                 >
                 <a
-                  href="/activites"
+                  href="/activities"
                   class="section wow fadeInUp"
                   data-wow-delay="0.7"
                   >View Activities</a
@@ -173,13 +173,13 @@
                     data-wow-duration="400"
                     data-wow-delay="200"
                   >
-                      <h3>
                     <nuxt-link to="/jobs-exe/1" class="">
+                      <h3>
                         Software Engineer<span
                           ><img src="~/assets/images/Asset15.png"
                         /></span>
-                    </nuxt-link>
                       </h3>
+                    </nuxt-link>
                     <span class="location"
                       >KBTG Building &amp; K+ Building</span
                     >
@@ -197,12 +197,13 @@
                     data-wow-duration="600"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/2"
-                        >Test Manager/Test Engineer<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/2">
+                      <h3>
+                        Test Manager/Test Engineer<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will be the key person to drive software
@@ -220,18 +221,18 @@
                     data-wow-duration="800"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/3" style="line-height: 30px"
-                        >System Engineer - Server Management<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/3" style="line-height: 30px">
+                      <h3>
+                        System Engineer - Server Management<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
-                      In this role, you will have fun working on various kinds
-                      of database management, configuring and tuning middleware
-                      software, managing vendor on day to day operation and so
-                      on.
+                      In this role, you will be involved in the planning and
+                      development of the database with the fit recommendation
+                      and technology, as well as in troubleshooting any issues.
                     </p>
                   </div>
                 </div>
@@ -241,18 +242,20 @@
                     data-wow-duration="1000"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/4"
-                        >Data Scientist<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/4">
+                      <h3>
+                        Data Scientist<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
-                      In this role, you will enjoy working with rich data sets,
-                      cutting-edge technology, and the ability to see your
-                      insights turned into real impact on customers and society
-                      as part of our Machine Learning and Data Science team .
+                      In this role, you will enjoy working with
+                      rich data sets, cutting-edge technology, and the ability
+                      to see your insights turned into real impact on customers
+                      and society as part of our Machine Learning and Data
+                      Science team.
                     </p>
                   </div>
                 </div>
@@ -262,18 +265,19 @@
                     data-wow-duration="1200"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/5"
-                        >IT Operation - System Operator<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/5">
+                      <h3>
+                        IT Operation - System Operator<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
-                      In this role, you will utilize your passion for computer
-                      operations/systems, strong problem solving skills and the
-                      ability to troubleshoot computer problems to resolve any
-                      malfunctions in IT operation.
+                      In this role, you will utilize your passion
+                      for computer operations/systems, strong problem solving
+                      skills and the ability to troubleshoot computer problems
+                      to resolve any malfunctions in IT operation.
                     </p>
                   </div>
                 </div>
@@ -283,18 +287,19 @@
                     data-wow-duration="1400"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/6"
-                        >Technology Research Engineer<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/6">
+                      <h3>
+                        DATA ENGINEER<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
-                      In this role, you will be responsible for deploying and
-                      debugging cloud stacks, educating teams on new cloud
-                      initiatives, and ensuring the security of the cloud
-                      infrastructure.
+                      In this role, you will express your passion about data and
+                      insights of large data set as you work closely with Data
+                      Scientist, Machine Engineer, Business Analysts and other
+                      stakeholders across the company.
                     </p>
                   </div>
                 </div>
@@ -304,12 +309,13 @@
                     data-wow-duration="1600"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/7"
-                        >Business Analyst<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/7">
+                      <h3>
+                        Business Analyst<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will be the liaison between the business
@@ -324,12 +330,13 @@
                     data-wow-duration="1800"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/9"
-                        >Agile Coach<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/9">
+                      <h3>
+                        Agile Coach<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will be a change agent to drive
@@ -345,12 +352,13 @@
                     data-wow-duration="2000"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/10"
-                        >IT Infrastructure Project Manager<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/10">
+                      <h3>
+                        IT Infrastructure Project Manager<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will be responsible for the continued
@@ -366,12 +374,13 @@
                     data-wow-duration="2200"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/11"
-                        >IT Security Architect<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/11">
+                      <h3>
+                        IT Security Architect<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will define bank's cybersecurity
@@ -387,17 +396,20 @@
                     data-wow-duration="2400"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/12"
-                        >IT Security Architect (DevSecOps)<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/12">
+                      <h3>
+                        IT Security Architect (DevSecOps)<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
-                      In this role, you will help development team deliver
-                      software and product more quickly by shifting left
-                      security processes into DevOps process.
+                      In this role, you will help manage and reduce security
+                      risks by developing global security controls to integrate
+                      into our DevOps pipelines. You will be establishing
+                      current and long-term direction aiming at driving
+                      DevSecOps culture in organization.
                     </p>
                   </div>
                 </div>
@@ -407,12 +419,13 @@
                     data-wow-duration="2600"
                     data-wow-delay="200"
                   >
-                    <h3>
-                      <nuxt-link to="/jobs-exe/13"
-                        >IT &amp; Security Assurance<span
-                          ><img src="~/assets/images/Asset15.png" /></span
-                      ></nuxt-link>
-                    </h3>
+                    <nuxt-link to="/jobs-exe/13">
+                      <h3>
+                        IT &amp; Security Assurance<span
+                          ><img src="~/assets/images/Asset15.png"
+                        /></span>
+                      </h3>
+                    </nuxt-link>
                     <span class="location">KBTG Building</span>
                     <p>
                       In this role, you will oversee all information security
@@ -827,13 +840,11 @@ export default {
     BIconArrowUp,
     BIconArrowDown,
   },
+  
   head: {
+    title: "KBTG INSPIRE",
+    meta: [{ description:"WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS"}],
     script: [
-      // {
-      //   async: true,
-      //   type: "text/javascript",
-      //   src: "/js/gtmbzd.js",
-      // },
       {
         async: true,
         type: "text/javascript",

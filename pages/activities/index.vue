@@ -1,0 +1,672 @@
+<template>
+  <div class="wrapper">
+      <noscript
+        ><iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-TZSXSC7"
+          height="0"
+          width="0"
+          style="display: none; visibility: hidden"
+        ></iframe
+      ></noscript>
+    <div class="imgHeader position-relative">
+      <img src="~/assets/images/banner1.png" class="img-fluid" />
+      <div class="position-absolute">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 section" data-wow-delay="">
+              <h1 class="headActivite wow fadeInUp">
+                INSPIRATION BEGINS WITH YOU
+                <!-- <span style="font-weight: 500"
+                  >INSPIRATION BEGINS WITH YOU
+                </span> -->
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-line pb30">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content-find">
+              <h2
+                class="wow fadeInUp"
+                data-wow-duration=""
+                data-wow-delay=""
+              >
+                FIND YOUR INSPIRATION
+              </h2>
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div
+                    class="item wow fadeInUp"
+                    data-wow-duration=""
+                    data-wow-delay=""
+                  >
+                    <div class="img-find">
+                      <img src="~/assets/images/img-find.png" />
+                      <span class="icon"
+                        ><img src="~/assets/images/Asset16.png"
+                      /></span>
+                    </div>
+                    <h3>Job Interview (+Test)</h3>
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
+                      {{ $t("JobInterview") }}
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div
+                    class="item wow fadeInUp"
+                    data-wow-duration=""
+                    data-wow-delay=""
+                  >
+                    <div class="img-find">
+                      <img src="~/assets/images/img-find1.png" />
+                      <span class="icon"
+                        ><img src="~/assets/images/Asset16.png"
+                      /></span>
+                    </div>
+                    <h3>Agile Playground</h3>
+                    <p :class="{ 'f-thai': switchLang === 'th' }">
+                      {{ $t("AgilePlayground") }}
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div
+                    class="item wow fadeInUp"
+                    data-wow-duration="800"
+                    data-wow-delay="200"
+                  >
+                    <div class="img-find">
+                      <img src="~/assets/images/img-find2.png" />
+                      <span class="icon"
+                        ><img src="~/assets/images/Asset16.png"
+                      /></span>
+                    </div>
+                    <h3>Inspire Talk</h3>
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
+                      {{ $t("InspireTalk") }}
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div
+                    class="item wow fadeInUp"
+                    data-wow-duration="1000"
+                    data-wow-delay="200"
+                  >
+                    <div class="img-find">
+                      <img src="~/assets/images/img-find3.png" />
+                      <span class="icon"
+                        ><img src="~/assets/images/Asset16.png"
+                      /></span>
+                    </div>
+                    
+                    <h3>1:1 Career Mentorship</h3>
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
+                      {{ $t("1:1CareerMentorship") }}
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div
+                    class="item wow fadeInUp"
+                    data-wow-duration="1200"
+                    data-wow-delay="200"
+                  >
+                    <div class="img-find">
+                      <img src="~/assets/images/img-find4.png" />
+                      <span class="icon"
+                        ><img src="~/assets/images/Asset16.png"
+                      /></span>
+                    </div>
+                    <h3>Fireside Chat</h3>
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
+                      {{ $t("FiresideChat") }}
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div
+                    class="item wow fadeInUp"
+                    data-wow-duration="1200"
+                    data-wow-delay="200"
+                  >
+                    <div class="img-find">
+                      <img src="~/assets/images/img-find5.png" />
+                      <span class="icon"
+                        ><img src="~/assets/images/Asset16.png"
+                      /></span>
+                    </div>
+                    <h3>Upskill Workshop</h3>
+                    <p  :class="{ 'f-thai': switchLang === 'th' }">
+                      {{ $t("Upskill") }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="talk_speaker">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2
+              class="wow fadeInUp text-white mt-5 f-h2-act"
+              data-wow-duration="200"
+              data-wow-delay="200"
+            >
+              WELCOME TALK SPEAKER
+            </h2>
+            <div class="row">
+              <div class="col-12 col-md-4 col-lg-4">
+                <div
+                  class="item wow fadeInUp"
+                  data-wow-duration="400"
+                  data-wow-delay="200"
+                >
+                  <img
+                    src="~/assets/images/talk-speaker1.png"
+                    class="img-fluid"
+                  />
+                  <h5 :class="{ 'f-thai': switchLang === 'th'  }" >{{ $t("CharassriPhaholyotin") }}</h5>
+                  <p class="text-center">Chief IT Operation Officer</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-4">
+                <div
+                  class="item wow fadeInUp"
+                  data-wow-duration="600"
+                  data-wow-delay="200"
+                >
+                  <img
+                    src="~/assets/images/talk-speaker2.png"
+                    class="img-fluid"
+                  />
+                  <h5  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("ChutimarKasemkornkit") }}</h5>
+                  <p class="text-center">Deputy Managing Director</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-4">
+                <div
+                  class="item wow fadeInUp"
+                  data-wow-duration="800"
+                  data-wow-delay="200"
+                >
+                  <img
+                    src="~/assets/images/talk-speaker3.png"
+                    class="img-fluid"
+                  />
+                  <h5  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("ChetaphanSiridanupath") }}</h5>
+                  <p class="text-center">Senior Principal Visionary Architect</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="schedule">
+      <div class="container">
+        <div id="move1"></div>
+        <div id="move2"></div>
+        <div id="move3"></div>
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="date_schedule wow fadeInUp"
+              data-wow-duration=""
+              data-wow-delay=""
+            >
+             
+              <div class="mb-5 d-flex justify-content-start"><h1 class="f-kbtg-h1 mr-2">KBTG</h1> <h1 class="f-h1-act ">INSPIRE SCHEDULE</h1> </div>
+              <div class="event-wrap ew nt w-100">
+                <div class="row">
+                  <div class="col-md-12 col-sm-12 col-lg-3">
+                    <ul class="nav nav-tabs" >
+                    <li @click="clickTap(1)" class="item-tabs " :class="{'active': status_tap === 1? true : false }">
+                        <nuxt-link
+                          to="#move1"
+                          class="nav-link" :class="{'active': status_tap === 1? true : false,'day1-tap1-th': switchLang === 'th' && status_tap === 1}"
+                          data-toggle="tab"
+                           >Day 1</nuxt-link
+                        >
+                      </li>
+                      <li @click="clickTap(2)" class="item-tabs" :class="{'active ': status_tap === 2? true : false }">
+                        <nuxt-link
+                          to="#move2"
+                          class="nav-link" :class="{'active': status_tap === 2? true : false,'day2-tap2-th': status_tap === 2 && switchLang === 'th','day2-tap2-en': status_tap === 2 && switchLang === 'en'}"
+                          data-toggle="tab"
+                           >Day 2</nuxt-link
+                        >
+                      </li>
+                      <li @click="clickTap(3)" class="item-tabs" :class="{'active': status_tap === 3? true : false }">
+                        <nuxt-link
+                          to="#move3"
+                          class="nav-link" :class="{'active': status_tap === 3? true : false }"
+                          data-toggle="tab"
+                          title=""
+                          >Day 3</nuxt-link
+                        >
+                      </li> 
+                    </ul>
+                  </div>
+                  <!-- -----------------------------------Day 1 ---------------------------------------->
+                  <div class="col-md-12 col-sm-12 col-lg-9">
+                    <div class="tab-content">
+                      <div class="tab-pane fade " :class="{'active show': status_tap === 1? true : false }" id="" >
+                         <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">09:30 - 10:30 AM.</span>
+                          </div>
+                          <div class="event-info f-date-h3">
+                            <h3 class="mb-0 py-2">Register</h3>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:30 - 11:00 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Welcome to KBTG and KBTG Beyond</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
+                            </ul>
+                           <p  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('txt1-day1')}}</p>                         
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">11:00 - 11:30 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Inspire Talk</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li class="">Guest Speaker</li>
+                            </ul>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }"> {{ $t("day1-1100-1130-text1") }}</p>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">11:30 - 12:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Fireside Chat</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                              <!-- <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("day1-1130-1200-by1") }}</li> -->
+                            </ul>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">
+                              {{ $t("day1-1130-1200-text2") }}
+                            </p>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100 bg-gray">
+                          <div class="event-meta text-right">
+                            <span class="d-block">12:00 - 01:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Lunch Break</h3>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">01:00 - 06:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Agile Playground</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">
+                              {{ $t("day1-3-text3") }}
+                            </p>
+                            <br />
+                            <h3 class="mb-0">Upskill Workshop</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                              <p class="mb-0">- How to Manage Projects Valued > 1 Billion Baht</p>
+                              <p class="mb-0">- Business Analyst in Agile World</p>
+                              <p class="mb-0">- How to Secure Your Smart Contract</p>
+                            <br/>
+                            <h3 class="mb-0">1:1 Career Mentorship</h3>
+                            <br />
+                            <h3 class="mb-0">Interview + Final Interview</h3>
+                              <p class="mb-0">- Project Management Officer</p>
+                              <p class="mb-0">- Project Manager</p>
+                              <p class="mb-0">- IT Operation</p>
+                              <p class="mb-0">- UX/UI Designer</p>
+                              <p class="mb-0">- Senior DeFi Frontend Engineer</p>
+                              <p class="mb-0">- DeFi / Blockchain Venture Architect</p>
+                              <p class="mb-0">- DeFi / Blockchain Tech Lead</p>
+                              <p class="mb-0">- DevX</p>
+                              <p class="mb-0">- Business Analyst</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- -----------------------------------Day 2 ---------------------------------------->
+                      
+                      <div class="tab-pane fade" :class="{'active show': status_tap === 2? true : false }" id="">
+                         <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">09:30 - 10:30 AM.</span>
+                          </div>
+                          <div class="event-info">
+                             <h3 class="mb-0 py-2">Register</h3>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:30 - 11:00 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Welcome to KBTG and KBTG Beyond</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolChutimarKasemkornkit") }}</li>
+                            </ul>
+                            <p  :class="{ 'f-thai': switchLang === 'th'  }">{{$t('day2-1030-1100-text')}}</p>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">11:00 - 11:30 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Inspire Talk</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>
+                                 Guest Speaker
+                              </li>
+                            </ul>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("immerDay2") }}</p>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">11:30 - 12:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Fireside Chat</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <!-- <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('PanuwatKenchatPhitsineeSincharoenpong') }}</li> -->
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('connectDay2') }}</p>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100 bg-gray">
+                          <div class="event-meta text-right">
+                            <span class="d-block">12:00 - 01:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Lunch Break</h3>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">01:00 - 06:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                          <h3 class="mb-0 pt-2">Agile Playground</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("day1-3-text3") }}</p>
+                            <br />
+                            <h3 class="mb-0">Upskill Workshop</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="mb-0">- {{$t('day2Jouney')}}</p>
+                            <p class="mb-0">- {{$t('day2How')}}</p>
+                            <p class="mb-0">- {{$t('day2Ob')}}</p>
+
+                            <br/>
+                            <h3 class="mb-0">1:1 Career Mentorship</h3>
+                            <br />
+                            <h3 class="mb-0">Interview + Final Interview</h3>
+                            <p class="mb-0">- Business Analyst</p>
+                            <p class="mb-0">- Software Engineer (Test)</p>
+                            <p class="mb-0">- Data Scientist (MLE) (Test)</p>
+                            <p class="mb-0">- New Grad Business Analyst (Test)</p>
+                            <p class="mb-0">- Agile Coach (Test)</p>
+                          </div>
+                        </div>
+                      </div>
+                       <!-- -----------------------------------Day 3 ---------------------------------------->
+                      <div class="tab-pane fade" :class="{'active show': status_tap === 3? true : false }" id="">
+                         <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">09:30 - 10:30 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">
+                              Register
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">10:30 - 11:00 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Welcome to KBTG and KBTG Beyond</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolChetaphanSiridanupath") }}</li>
+                            </ul>
+                            <p  :class="{ 'f-thai': switchLang === 'th'  }">{{$t('kickoffDay3')}}</p>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">11:00 - 11:30 AM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Inspire Talk</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>
+                                Guest Speaker
+                              </li>
+                            </ul>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("immerDay3") }}</p>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">11:30 - 12:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Fireside Chat</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <!-- <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("PaweenPiyasilChayaponSaepung") }}</li> -->
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("connectDay3") }}</p>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100 bg-gray">
+                          <div class="event-meta text-right">
+                            <span class="d-block">12:00 - 01:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Lunch Break</h3>
+                          </div>
+                        </div>
+                        <div class="event-style1 w-100">
+                          <div class="event-meta text-right">
+                            <span class="d-block">01:00 - 06:00 PM.</span>
+                          </div>
+                          <div class="event-info">
+                            <h3 class="mb-0 pt-2">Agile Playground</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="mb-0"  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("day1-3-text3") }}</p>
+                            <br />
+                            <h3 class="mb-0">Upskill Workshop</h3>
+                            <ul class="event-org mb-0 list-unstyled">
+                              <li>KBTG Team</li>
+                            </ul>
+                            <p class="mb-0">- Let's Understand Enterprise Architecture in the Innovation World</p>
+                            <p class="mb-0">- How to Handle High Volume Transaction Infrastructure in Crisis Situation</p>
+                            <p class="mb-0">- How to Design Legalized Data Architecture for Your Organization</p>
+                            <br />
+                            <h3 class="mb-0">1:1 Career Mentorship</h3>
+                            <br />
+                            <h3 class="mb-3">Interview + Final Interview</h3>
+                            <p class="mb-0">- IT Security Engineer</p>
+                            <p class="mb-0">- IT Security Operation</p>
+                            <p class="mb-0">- Enterprise Architect</p>
+                            <p class="mb-0">- Test Manager/Test Engineer</p>
+                            <p class="mb-0">- Network and Security</p>
+                            <p class="mb-0">- Server Management</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="bottom bg-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>FIND A JOB THAT SUITS YOU<span><img src="~/assets/images/Asset15.png"/></span></h2>
+            <p  :class="{ 'f-thai': switchLang === 'th'  }">
+             {{$t('findajob')}}
+            </p>
+            <button><a href="/jobs-exe">See Positions</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  head: {
+ script: [
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/gtm.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/gtm.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/jquery-3.3.1.slim.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/jquery.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/popper.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/bootstrap.min.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/flexslider/jquery.flexslider.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/flexslider/js/shCore.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/flexslider/js/shBrushJScript.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/WOW-master/dist/wow.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/wow.js",
+      },
+      {
+        async: true,
+        type: "text/javascript",
+        src: "/js/agenda-tap.js",
+      },
+    ],
+     bodyAttrs: {
+      class: "bg-all",
+    },
+  },
+    data() {
+      return {
+        status_tap: 1,
+        switchLang: 'en',
+        storage: 'en',
+        eventTap1: '#event-tab1',
+        eventTap2: '#event-tab2',
+        tap2: '',
+       };
+    },
+  async mounted() {
+      await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
+      //setTimeout(function(){ $("#navmenu li").removeClass('active');$("#navmenu li:eq(2)").addClass('active');}, 1000);
+      //console.log("Loading... /activites");
+
+      this.switchLang = localStorage.getItem('lang');
+
+      if(this.switchLang === null){ 
+        localStorage.setItem('lang', 'en');
+        this.switchLang = 'en'
+      } 
+
+      this.$router.push(this.switchLocalePath(this.switchLang))
+
+   },
+   
+  methods: {
+    clickTap(data) {
+      this.status_tap = data;
+      if(this.tap2 === data){}
+    },
+  },
+};
+</script>
+<style scoped>
+html{
+  scroll-behavior: smooth !important;
+}
+#move1, #move2, #move3{
+position: absolute;
+top: 0;
+ }
+</style>
+

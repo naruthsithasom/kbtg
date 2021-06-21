@@ -66,8 +66,8 @@
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ 'active': ($router.currentRoute.path === '/activites/' || $router.currentRoute.path === '/th/activites/' || byPassActivites) && !( faq === '#faq')}">
-                       <a href="/activites" class="nav-link">ACTIVITIES</a>
+                      :class="{ 'active': ($router.currentRoute.path === '/activities/' || $router.currentRoute.path === '/th/activities/' || byPassActivites) && !( faq === '#faq')}">
+                       <a href="/activities" class="nav-link">ACTIVITIES</a>
                     </li>
                     <li
                       class="nav-item"
@@ -143,7 +143,7 @@
                   <ul>
                     <li class="nav-item" :class="{'active': $router.currentRoute.path === '/'||  $router.currentRoute.path === '/th/'|| byPassIndex }"><a href="/" class="">HOME</a></li>
                     <li class="nav-item" @click="navClick('#faq')" :class="{ 'active': $router.currentRoute.hash=== '#faq' }"  ><a :href="`/${isThFaq}`" class="">FAQ</a></li>
-                    <li class="nav-item" :class="{ 'active': ($router.currentRoute.path === '/activites/' || $router.currentRoute.path === '/th/activites/' || byPassActivites) && !( faq === '#faq')}"><a href="/activites" class="">ACTIVITIES</a></li>
+                    <li class="nav-item" :class="{ 'active': ($router.currentRoute.path === '/activities/' || $router.currentRoute.path === '/th/activities/' || byPassActivites) && !( faq === '#faq')}"><a href="/activities" class="">ACTIVITIES</a></li>
                     <li class="nav-item" @click="navClick('policy')"><a href="/policy" class="">PRIVACY POLICY</a></li>
                     <li class="nav-item"  :class="{ 'active': ($router.currentRoute.path === '/jobs-exe/' || $router.currentRoute.path === '/th/job-exe/' || byPassJob ) && !( faq === '#faq')}"><a href="/jobs-exe" class="">JOBS</a></li>
                     <li><a href="https://www.facebook.com/KBTGLive" target="_blank" :class="{active: statusContact}">CONTACT</a></li>
@@ -245,8 +245,8 @@
       navBar:"collapse navbar-collapse",
       footer: false,
       header: false,
-      pathNameTH : "activites___th",
-      pathNameEN : "activites___en",
+      pathNameTH : "activities___th",
+      pathNameEN : "activities___en",
       byPassIndex: false,
       byPassJob: false,
       byPassActivites: false,
@@ -285,7 +285,7 @@
       this.byPassPolicy = false
 
     }
-    if(this.$router.currentRoute.name === "activites___th" || this.$router.currentRoute.name === 'activites___en'){
+    if(this.$router.currentRoute.name === "activities___th" || this.$router.currentRoute.name === 'activities___en'){
       this.byPassActivites = true
       this.byPassJob = false
       this.byPassJoin = false
