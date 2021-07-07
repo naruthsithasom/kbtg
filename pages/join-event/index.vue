@@ -9,64 +9,7 @@
       ></iframe
     ></noscript>
     <div class="imgHeader position-relative">
-      <!-- <img src="~/assets/images/JobBanner/1.jpg" class="img-fluid" /> -->
       <div class="carousel-inner">
-        <!-- <b-carousel
-          id="carousel-fade"
-          style="text-shadow: 0px 0px 2px #000"
-          fade
-          :interval="4000"
-        >
-          <b-carousel-slide
-            :img-src="
-              require(`~/assets/images/JobBanner/${
-                Math.floor(Math.random() * 7) + 1
-              }.jpg`)
-            "
-          ></b-carousel-slide>
-          <b-carousel-slide
-            :img-src="
-              require(`~/assets/images/JobBanner/${
-                Math.floor(Math.random() * 7) + 1
-              }.jpg`)
-            "
-          ></b-carousel-slide>
-          <b-carousel-slide
-            :img-src="
-              require(`~/assets/images/JobBanner/${
-                Math.floor(Math.random() * 7) + 1
-              }.jpg`)
-            "
-          ></b-carousel-slide>
-          <b-carousel-slide
-            :img-src="
-              require(`~/assets/images/JobBanner/${
-                Math.floor(Math.random() * 7) + 1
-              }.jpg`)
-            "
-          ></b-carousel-slide>
-          <b-carousel-slide
-            :img-src="
-              require(`~/assets/images/JobBanner/${
-                Math.floor(Math.random() * 7) + 1
-              }.jpg`)
-            "
-          ></b-carousel-slide>
-          <b-carousel-slide
-            :img-src="
-              require(`~/assets/images/JobBanner/${
-                Math.floor(Math.random() * 7) + 1
-              }.jpg`)
-            "
-          ></b-carousel-slide>
-          <b-carousel-slide
-            :img-src="
-              require(`~/assets/images/JobBanner/${
-                Math.floor(Math.random() * 7) + 1
-              }.jpg`)
-            "
-          ></b-carousel-slide>
-        </b-carousel> -->
         <b-carousel
           id="carousel-1"
           v-model="slide"
@@ -83,8 +26,6 @@
               "
             ></b-carousel-slide>
           </div>
-          <!-- <b-carousel-slide :img-src=" require(`~/assets/images/JobBanner/R${ Math.floor(Math.random() * 7) + 1 }.jpg`)"></b-carousel-slide> -->
-          <!-- <b-carousel-slide :img-src=" require(`~/assets/images/JobBanner/R${ Math.floor(Math.random() * 7) + 1 }.jpg`)"></b-carousel-slide> -->
         </b-carousel>
       </div>
       <div class="position-absolute">
@@ -116,7 +57,6 @@
                 <p :class="{ 'f-thai_job': switchLang === 'th' }">
                   {{ $t("job1Detail") }}
                 </p>
-                <!-- <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }} +</p> -->
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">
                   1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }}
                 </p>
@@ -131,32 +71,18 @@
                   >
                 </div>
               </div>
-              <hr
-                style="
-                  border-top: 1px solid rgba(255, 255, 255, 0.5);
-                  margin: 5px 0;
-                "
-              />
+              <hr style="border-top: 1px solid rgba(255, 255, 255, 0.5); margin: 5px 0;"/>
               <div class="register section wow fadeInUp" data-wow-delay="0.7">
                 <h2>“Activities Only” Package</h2>
-                <p :class="{ 'f-thai_job': switchLang === 'th' }">
-                  {{ $t("job2Detail") }}
-                </p>
+                <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job2Detail") }}</p>
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">
                   1.&nbsp;&nbsp;&nbsp;{{ $t("job2-1") }}
                 </p>
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">
                   2.&nbsp;&nbsp;{{ $t("job2-2") }}
                 </p>
-                <!-- <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">
-                  3.&nbsp;&nbsp;{{ $t("job2-3") }}
-                </p> -->
                 <div class="submit-b">
-                  <a
-                    class="submit event"
-                    href="mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Event Only"
-                    >Apply Now</a
-                  >
+                  <a class="submit event" href="mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Event Only">Apply Now</a>
                 </div>
               </div>
             </div>
@@ -169,11 +95,7 @@
         <div class="row">
           <div class="col-12">
             <div class="referred">
-              <h2>
-                Referred by a Current Employee<span
-                  ><img class="img-sm-job" src="~/assets/images/Asset2.png"
-                /></span>
-              </h2>
+              <h2>Referred by a Current Employee<span><img class="img-sm-job" src="~/assets/images/Asset2.png" /></span></h2>
               <p :class="{ 'f-thai_job': switchLang === 'th' }">
                 {{ $t("job3Detail") }}
               </p>
@@ -187,11 +109,7 @@
                 3.&nbsp;&nbsp;{{ $t("job3-3") }}
               </p>
               <div class="submit-b">
-                <a
-                  class="submit refer"
-                  href="mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Job Referral"
-                  >Apply Now</a
-                >
+                <a class="submit refer" href="mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Job Referral" >Apply Now</a>
               </div>
             </div>
           </div>
@@ -204,6 +122,8 @@
 <script>
 export default {
   head: {
+    title: "KBTG INSPIRE WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS",
+    meta: [{ description:"WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS"}],
     script: [
       {
         async: true,
@@ -281,10 +201,7 @@ export default {
     });
 
     // setTimeout(function(){ $("#navmenu li").removeClass('active'); $("#navmenu li:eq(4)").addClass('active');}, 1000);
-
     this.getID = this.$route.query.id;
-    // this.getData();
-
     this.switchLang = localStorage.getItem("lang");
 
     if (this.switchLang === null) {
@@ -306,12 +223,6 @@ export default {
     onSlideEnd(slide) {
       this.sliding = false;
     },
-    // async getData() {
-    //   await this.$axios.$get(`/jobs.json`).then((res) => {
-    //     this.GET_TITLE = res.jobs[this.getID - 1].title;
-    //   });
-
-    // },
   },
 };
 </script>

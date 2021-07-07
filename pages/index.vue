@@ -451,8 +451,8 @@
                   data-wow-duration="200"
                   data-wow-delay="200"
                 >
-                  FIND YOUR INSPIRATION<a href="/activites" class="a-l1"
-                    >View all Activites</a
+                  FIND YOUR INSPIRATION<a href="/activities" class="a-l1"
+                    >View all Activities</a
                   >
                 </h2>
                 <div class="row justify-content-center">
@@ -842,7 +842,7 @@ export default {
   },
   
   head: {
-    title: "KBTG INSPIRE",
+    title: "KBTG INSPIRE WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS",
     meta: [{ description:"WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS"}],
     script: [
       {

@@ -93,7 +93,7 @@
 export default {
     head() {
       return{
-        title: `Apply Job of ${this.getPosition} at KBTG Inspore`,
+        title: `Apply Job for ${this.getPosition} at KBTG Inspire`,
         meta: [{ description: `${this.getDescription}`}],
       }
   },

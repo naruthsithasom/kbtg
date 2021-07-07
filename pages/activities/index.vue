@@ -16,9 +16,6 @@
             <div class="col-12 section" data-wow-delay="">
               <h1 class="headActivite wow fadeInUp">
                 INSPIRATION BEGINS WITH YOU
-                <!-- <span style="font-weight: 500"
-                  >INSPIRATION BEGINS WITH YOU
-                </span> -->
               </h1>
             </div>
           </div>
@@ -560,6 +557,8 @@
 <script>
 export default {
   head: {
+  title: "KBTG INSPIRE WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS",
+  meta: [{ description:"WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS"}],
  script: [
       {
         async: true,
@@ -638,8 +637,6 @@ export default {
     },
   async mounted() {
       await this.$nextTick(() => {this.$nuxt.$loading.start();setTimeout(() => this.$nuxt.$loading.finish(), 2000);});
-      //setTimeout(function(){ $("#navmenu li").removeClass('active');$("#navmenu li:eq(2)").addClass('active');}, 1000);
-      //console.log("Loading... /activites");
 
       this.switchLang = localStorage.getItem('lang');
 

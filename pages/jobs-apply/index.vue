@@ -88,6 +88,8 @@
 <script>
 export default {
   head: {
+    title: "KBTG INSPIRE WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS",
+    meta: [{ description:"WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS"}],
     script: [
       {
         async: true,
