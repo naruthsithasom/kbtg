@@ -37,13 +37,15 @@
           <div class="col-12">
             <div class="content">
               <h1 class="section wow fadeInLeft f-register-h1" data-wow-delay="0.5" style="border-bottom: 1px solid #62cbc9; padding-bottom: 10px">REGISTER<span class="back">
-                <nuxt-link :to="`/jobs-exe/${getID}`" class="section wow fadeInRight" data-wow-delay="0.7">&lt; Back to job description</nuxt-link></span>
+                <nuxt-link :to="`/jobs/${getID}`" class="f-back wow fadeInRight" data-wow-delay="0.7">&lt; Back to job description</nuxt-link></span>
               </h1>
               <div class="register section wow fadeInUp" data-wow-delay="0.7">
                 <h2>“Job Interview + Activities” Package</h2>
-                <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job1Detail") }}</p>
-                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }}</p>
+                <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job1Detail1") }}</p>
+                <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">1.&nbsp;&nbsp;&nbsp;{{ $t("job1-1") }}</p>
                 <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">2.&nbsp;&nbsp;{{ $t("job1-2") }}</p>
+                <div class="my-3"></div>
+                <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job1Detail2") }}</p>
                 <div class="submit-b">
                     <a class="submit job" href="mailto:kbtginspire@kbtg.tech?subject=KBTG Inspire: Job Application">Apply Now</a>   
                 </div>
@@ -88,7 +90,7 @@
 <script>
 export default {
   head: {
-    title: "KBTG INSPIRE WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS",
+    title: "KBTG INSPIRE",
     meta: [{ description:"WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS"}],
     script: [
       {

@@ -45,24 +45,17 @@
         <div class="row">
           <div class="col-12">
             <div class="content">
-              <h1 class="section wow fadeInLeft f-register-h1" data-wow-delay="0.5" style="">
-                REGISTER<span class="back">
-                  <a href="/jobs-exe" class="section wow fadeInRight" data-wow-delay="0.7">
-                    &lt; Back to job description
-                  </a></span
-                >
-              </h1>
+              <div class="d-flex justify-content-between">
+                <h1 class="section wow fadeInLeft f-register-h1" data-wow-delay="0.5" style="">REGISTER </h1>
+                <div class="back"><a href="/jobs" class="f-back wow fadeInRight" data-wow-delay="0.7">&lt; Back to job description</a></div>
+              </div>
               <div class="register section wow fadeInUp" data-wow-delay="0.7">
                 <h2>“Job Interview + Activities” Package</h2>
-                <p :class="{ 'f-thai_job': switchLang === 'th' }">
-                  {{ $t("job1Detail") }}
-                </p>
-                <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">
-                  1.&nbsp;&nbsp;&nbsp;{{ $t("job3-1") }}
-                </p>
-                <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }">
-                  2.&nbsp;&nbsp;{{ $t("job1-2") }}
-                </p>
+                <p :class="{ 'f-thai_job': switchLang === 'th' }"> {{ $t("job1Detail1") }}</p>
+                <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }"> 1.&nbsp;&nbsp;&nbsp;{{ $t("job1-1") }}</p>
+                <p class="m-0" :class="{ 'f-thai_job': switchLang === 'th' }"> 2.&nbsp;&nbsp;{{ $t("job1-2") }}</p>
+                <div class="my-3"></div>
+                <p :class="{ 'f-thai_job': switchLang === 'th' }">{{ $t("job1Detail2") }}</p>
                 <div class="submit-b">
                   <a
                     class="submit job"
@@ -94,7 +87,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="referred">
+            <div class="referred wow fadeInUp">
               <h2>Referred by a Current Employee<span><img class="img-sm-job" src="~/assets/images/Asset2.png" /></span></h2>
               <p :class="{ 'f-thai_job': switchLang === 'th' }">
                 {{ $t("job3Detail") }}
@@ -122,7 +115,7 @@
 <script>
 export default {
   head: {
-    title: "KBTG INSPIRE WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS",
+    title: "KBTG INSPIRE",
     meta: [{ description:"WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS"}],
     script: [
       {

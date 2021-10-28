@@ -6,7 +6,7 @@
   ssr: false,
   target: "static",
   server: {
-    port: 80,
+    port: 3000,
   },
   head: {
     title: "KBTG INSPIRE",
@@ -20,7 +20,6 @@
       { ["http-equiv"]: "X-UA-Compatible", content: "IE-edge" },
       { hid: "description", name: "description", content: "" },
       {name:"facebook-domain-verification" ,content:"854k12xqe83ikkh3n6kxdwmhcifa9a"},
-      /*{name:"facebook-domain-verification", content:"wj3qiox4gvo3pa1z30lpmyrtop781t"}*/
     ],
     link: [
       {
@@ -61,12 +60,12 @@
   axios: {
     proxy: true,
   },
-  proxy: {
-    "/api/": {
-      target: process.env.AXIOS_SERVER,
-      pathRewrite: { "^/api/": "" },
-    },
-  },
+  // proxy: {
+  //   "/api/": {
+  //     target: process.env.AXIOS_SERVER,
+  //     pathRewrite: { "^/api/": "" },
+  //   },
+  // },
   i18n: {
      locales: [
       { code: "en", iso: "en-US", file: "./static/lang/en.json" },

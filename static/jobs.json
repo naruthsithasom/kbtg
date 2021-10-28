@@ -264,6 +264,35 @@
     },
     {
       "id": 10,
+      "title": "Machine Learning Engineer​",
+      "level": "All Levels",
+      "description": "In this role, you and data scientists will be helping other teams apply data science, machine learning, artificial intelligence tools and techniques to financial products and services. Work with rich data sets, cutting-edge technology, and watch your insights turn into real impact on customers and society.",
+      "responsibility": [
+        "Design, code, train, test, deploy, and iterate on large-scale, distribute machine learning systems",
+        "Collaborate with a multi-functional agile team of data science, UX/UI design, product management, and engineering to build new features / products / services that delight our customers",
+        "Work with data scientists and data engineers to create end-to-end machine learning feedback loop and integrate it into various applications",
+        "Improve existing machine learning models both in terms of model performance and computing performance",
+        "Help drive code review, optimization, testing, and tooling to improve code quality and system reliability",
+        "Research and implement best practices to enhance existing machine learning infrastructure and process",
+        "Be part of an active group of data science and machine learning practitioners that shape the direction of machine learning and artificial intelligence of the organization"
+      ],
+      "qualification": [
+        "Bachelor's degree or higher in Computer Science, Computer Engineering or related technical fields involving Machine Learning or equivalent technical experience",
+        "Strong analytical and problem-solving skills",
+        "Proven software development skills in multiple programming languages (e.g. Python, Golang, C++)",
+        "Experience with machine learning software packages (e.g. scikit-learn, XGBoost, TensorFlow, Caffe, Theano, Torch)",
+        "Familiarity with container-based technologies (e.g., Docker, Kubernetes) and DevOps practices (e.g., code review, automated testing, CI/CD, logging, performance monitoring)",
+        "Strong communication skills and collaborative mindset",
+        "Experience with data processing tools (e.g. Hadoop, Apache Spark, Apache Beam) and cloud platforms (e.g. AWS, Azure, GCP) is a plus"
+      ],
+      "skill": [
+        "Python, Machine Learning Knowledge, Software Engineering"
+       ],
+      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 11,
       "title": "IT Infrastructure Project Manager",
       "level": "Middle - Senior",
       "description": "In this role, you will be responsible for the continued availability and support of all infrastructure projects as a part of our infrastructure team. The role will be expected to work in a fast pace. ",
@@ -284,7 +313,6 @@
         "Demonstrate a very high level of customer service and empathy to the customer issues delivering solutions while working within budget",
         "Negotiate with suppliers to provide best balance of quality, service and price ",
         "Good communication skill",
-        "Background in banking and financial services business is an advantage",
         "Background in banking and financial services business is an advantage "
       ],
       "skill": ["Infrastructure and Project Management"],
@@ -292,7 +320,7 @@
       "fresh_grad": false
     },
     {
-      "id": 11,
+      "id": 12,
       "title": "IT Security Architect",
       "level": "Middle - Senior",
       "description": "In this role, you will define bank's cybersecurity strategy, enterprise security architecture and roadmap, including developing relevant security requirements and standards for Information Technology. ",
@@ -327,7 +355,7 @@
       "fresh_grad": false
     },
     {
-      "id": 12,
+      "id": 13,
       "title": "IT Security Architect (DevSecOps)",
       "level": "Middle - Senior",
       "description": "In this role, you will help manage and reduce security risks by developing global security controls to integrate into our DevOps pipelines. You will be establishing current and long-term direction aiming at driving DevSecOps culture in organization.",
@@ -363,7 +391,7 @@
       "fresh_grad": false
     },
     {
-      "id": 13,
+      "id": 14,
       "title": "IT & Security Assurance",
       "level": "Middle - Senior",
       "description": "In this role, you will oversee all information security policy and procedures to ensure that they follow the bank's standard. Your work will also include developing and maintaining security management and compliance dashboard to detect and track all non-compliance issues.",
@@ -388,39 +416,6 @@
         "Certified security professional such as CISA, CISM, ISO 27001 Lead Auditor/Implementer are a plus"
       ],
       "skill": ["IT & Security Governance / Audit"],
-      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
-      "fresh_grad": false
-    },
-    {
-      "id": 14,
-      "title": "Cyber Security - Vulnerability and Threat Intelligence",
-      "level": "Middle - Senior",
-      "description": "In this role, you will identify threats, vulnerabilities and their associated security risks within KBank by performing vulnerability testing and penetration testing across the CSOC constituency and provide advice on how to remediate the vulnerabilities discovered. ",
-      "responsibility": [
-        "Perform security vulnerability assessment and penetration testing of internal, perimeter, external and wireless network and web and mobile applications ",
-        "Identify security weaknesses and vulnerabilities, and non-compliance within the CSOC constituency ",
-        "Characterize threats and provide recommendation for remediation ",
-        "Research and develop testing tools, technique and process ",
-        "Perform vulnerability assessment and penetration testing as business as usual (BAU) tasks ",
-        "Produce timely, accurate, relevant and predictive intelligence by identifying and reporting on malicious actors, campaigns, and other relevant activities ",
-        "Monitor open source information feeds and threat actor activity to identify activity levels and indicators for threats, targets of interest and possible attack vectors ",
-        "Work with the other CSOC team to ensure that actionable indicators of compromise are incorporated into appropriate technologies ",
-        "Advise appropriate business units on technical configuration and process changes, remediation and best practices to adapt to changing threat, vulnerabilities and new attack methods  "
-      ],
-      "qualification": [
-        "Bachelor’s Degree in a related field such as information security, management or computer engineering ",
-        "5 years of relevant experience working in the Information Security field, including any of the following: threat intelligence, security operations, incident response, malware analysis, and/or vulnerability management",
-        "Experience with open source and Dark Web intelligence analysis tools ",
-        "Prior experience in the Financial Services Industry is a plus ",
-        "Experience operating all areas of the intelligence lifecycle ",
-        "Experience in collecting intelligence from various information sources including but not limited to; malware analysis, open source/paid feeds and technical reports ",
-        "Possess experience in tracking evolving threats and providing threat intelligence support to incident response teams ",
-        "Excellent problem solving/analytical thinking skills ",
-        "Demonstrable oral and written communication skills ",
-        "Ability to create and provide executive level presentations ",
-        "Experience in collaborating as part of a larger security/intelligence team "
-      ],
-      "skill": ["Security Vulnerability Assessment and Penetration Testing"],
       "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
       "fresh_grad": false
     },
@@ -465,7 +460,7 @@
         "Strong interpersonal and communication skills and ability to effectively collaborate with diverse people such as developers, tester, or change implementer ",
         "Positive attitude, energetic, and able to work under pressure and tight deadlines ",
         "Background in banking and financial services business is a plus ",
-        "Experiences in Defect Managmenet, Problem Managemnet, and Change Managmenet is a plus "
+        "Experiences in Defect Management, Problem Management, and Change Management a plus"
       ],
       "skill": ["Project Management"],
       "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
@@ -552,7 +547,7 @@
     },
     {
       "id": 20,
-      "title": "DeFi / Blockchain Tech Lead",
+      "title": "DEFI BACKEND TECH LEAD",
       "level": "Middle - Senior",
       "description": "In this role, you will gain an ownership over end-to-end ecosystem products while ensuring a consistent, high-quality products that deliver great user experience across the ecosystem with robustness and security.",
       "responsibility": [
@@ -578,29 +573,28 @@
     },
     {
       "id": 21,
-      "title": "UX/UI Designer",
-      "level": "Middle",
-      "description": "In this role, you will use ‘design’ to drive innovative products and services to global standards. You will do this by engaging in challenging interdisciplinary work with multiple cross-functional teams.",
+      "title": "DEFI FRONTEND TECH LEAD",
+      "level": "Middle - Senior",
+      "description": "In this role, you will help us build the next generation of financial product ecosystem while influencing the creation, design, and execution of future products.",
       "responsibility": [
-        "Actively take part in our growing and interdisciplinary design team, where you will help shape the future of our processes and culture",
-        "Indulge yourself in the study of the user",
-        "Creatively translate user values into products or services into captivating user experiences ",
-        "Identify, understand, and foresee design issues or opportunities in product and service development",
-        "Utilize and adapt design process to approach ambiguous challenges",
-        "Constantly bring conversations about users and other stakeholders to the table throughout the product development cycle, from user research, to analysis, concepts, UX/UI design, launch, and iteration",
-        "Engage in deep collaboration with multidisciplinary professionals in fields of design, business, strategy, growth, software development, and technological innovation"
+        "Work closely with internal and external parties to rapidly iterate, experiment, and launch products",
+        "Create a unified component library for using across all products",
+        "Rapidly implement functional UI elements from design mocks, with an eye toward performance and accessibility",
+        "Know when to create abstractions vs. one-off features",
+        "Ensure that components are functional, elegant, performant, and mobile-friendly",
+        "Understand when and how to run UI tests"
       ],
       "qualification": [
-        "A Bachelor’s or Master’s degree in any field is welcomed",
-        "A sensitivity to both the functional and the emotional aspects of design ",
-        "A curious and open-mind: you see both the big picture as well the small details, and you enjoy connecting the dots and finding relationships within complexities",
-        "An ability to understand the intrinsic “why” behind each given task",
-        "Big plus if you have experience integrating quantitative processes into your overall qualitative research",
-        "It is not necessary for candidates to come from a pure design background, we are excited about any secondary experiences or interests you may have! A diversity of minds is what we look for as we’re growing our team",
-        "And don’t worry, you do not need to be able to do all this right now! We look forward to helping you grow your capabilities along with our growing team"
+        "Rich experience in React",
+        "A deep understanding of architecture of modern client-side React applications",
+        "Prior experience working with component libraries or design teams in user-facing applications",
+        "Prior experience creating a design system or component library",
+        "A desire to keep up with modern best practices in web development",
+        "Familiarity with the Web3 frontend stack (ethers.js / web3.js, EIP-1193, client-side private key management, etc.)",
+        "Familiarity with React Hooks and TypeScript in React"
       ],
       "skill": [
-        "Human-Centered Thinking and a Familiarity With UX/UI or Service Design Processes and Tools (Figma, Zeplin, Adobe Suite, etc.)"
+        "React Hooks and TypeScript in React, Web3 Frontend Stack (Ethers.js / Web3.js, EIP-1193, Client-Side Private Key Management, etc.)"
       ],
       "location": ["K+ Building (Samyan, Bangkok)"],
       "fresh_grad": false
@@ -632,6 +626,39 @@
     },
     {
       "id": 23,
+      "title": "Cyber Security - Vulnerability and Threat Intelligence",
+      "level": "Middle - Senior",
+      "description": "In this role, you will identify threats, vulnerabilities and their associated security risks within KBank by performing vulnerability testing and penetration testing across the CSOC constituency and provide advice on how to remediate the vulnerabilities discovered. ",
+      "responsibility": [
+        "Perform security vulnerability assessment and penetration testing of internal, perimeter, external and wireless network and web and mobile applications ",
+        "Identify security weaknesses and vulnerabilities, and non-compliance within the CSOC constituency ",
+        "Characterize threats and provide recommendation for remediation ",
+        "Research and develop testing tools, technique and process ",
+        "Perform vulnerability assessment and penetration testing as business as usual (BAU) tasks ",
+        "Produce timely, accurate, relevant and predictive intelligence by identifying and reporting on malicious actors, campaigns, and other relevant activities ",
+        "Monitor open source information feeds and threat actor activity to identify activity levels and indicators for threats, targets of interest and possible attack vectors ",
+        "Work with the other CSOC team to ensure that actionable indicators of compromise are incorporated into appropriate technologies ",
+        "Advise appropriate business units on technical configuration and process changes, remediation and best practices to adapt to changing threat, vulnerabilities and new attack methods  "
+      ],
+      "qualification": [
+        "Bachelor’s Degree in a related field such as information security, management or computer engineering ",
+        "5 years of relevant experience working in the Information Security field, including any of the following: threat intelligence, security operations, incident response, malware analysis, and/or vulnerability management",
+        "Experience with open source and Dark Web intelligence analysis tools ",
+        "Prior experience in the Financial Services Industry is a plus ",
+        "Experience operating all areas of the intelligence lifecycle ",
+        "Experience in collecting intelligence from various information sources including but not limited to; malware analysis, open source/paid feeds and technical reports ",
+        "Possess experience in tracking evolving threats and providing threat intelligence support to incident response teams ",
+        "Excellent problem solving/analytical thinking skills ",
+        "Demonstrable oral and written communication skills ",
+        "Ability to create and provide executive level presentations ",
+        "Experience in collaborating as part of a larger security/intelligence team "
+      ],
+      "skill": ["Security Vulnerability Assessment and Penetration Testing"],
+      "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 24,
       "title": "Cyber Security - IT & Security Operation",
       "level": "Senior",
       "description": "In this role, you will be in the center of the organization employing people, processes, and technology to continuously monitor and improve the security posture while preventing, detecting, analyzing, and responding to cybersecurity incidents. That includes Access Management of Privileged Identity and Cryptography.",
@@ -662,7 +689,7 @@
       "fresh_grad": false
     },
     {
-      "id": 24,
+      "id": 25,
       "title": "Cyber Security - Security Analysts and Incident Responder",
       "level": "Middle - Senior",
       "description": "In this role, you will be responsible for the validation and analysis of investigations passed up from tier 1 analysts. Tier 2 incident responder and investigator will complete the documentation of the investigation, determine the validity and priority of the activity and escalate to the Incident Manager and activate the Incident Response Plan (IR Plan) if appropriate.",
@@ -705,7 +732,7 @@
       "fresh_grad": false
     },
     {
-      "id": 25,
+      "id": 26,
       "title": "Cyber Security - Security Incident Management",
       "level": "Middle - Senior",
       "description": "In this role, you will monitor and track remediation work from the beginning to the end to ensures that security incidents are successfully closed and that escalation can be triggered when required.",
@@ -732,7 +759,7 @@
       "fresh_grad": false
     },
     {
-      "id": 26,
+      "id": 27,
       "title": "Cyber Security - Security Platform Management",
       "level": "Middle - Senior",
       "description": "In this role, you will be a key person for the overall CSOC architecture design and integration between the various platforms and components. You will be testing and building new, or updating existing, automation within CSOC technologies and integration between such technologies, including the larger set of systems and applications within KBank.",
@@ -765,35 +792,36 @@
       "fresh_grad": false
     },
     {
-      "id": 27,
-      "title": "Senior DeFi Frontend Engineer",
-      "level": "Middle - Senior",
-      "description": "In this role, you will help us build the next generation of financial product ecosystem while influencing the creation, design, and execution of future products.",
+      "id": 28,
+      "title": "UX/UI Designer",
+      "level": "Middle",
+      "description": "In this role, you will use ‘design’ to drive innovative products and services to global standards. You will do this by engaging in challenging interdisciplinary work with multiple cross-functional teams.",
       "responsibility": [
-        "Work closely with internal and external parties to rapidly iterate, experiment, and launch products",
-        "Create a unified component library for using across all products",
-        "Rapidly implement functional UI elements from design mocks, with an eye toward performance and accessibility",
-        "Know when to create abstractions vs. one-off features",
-        "Ensure that components are functional, elegant, performant, and mobile-friendly",
-        "Understand when and how to run UI tests"
+        "Actively take part in our growing and interdisciplinary design team, where you will help shape the future of our processes and culture",
+        "Indulge yourself in the study of the user",
+        "Creatively translate user values into products or services into captivating user experiences ",
+        "Identify, understand, and foresee design issues or opportunities in product and service development",
+        "Utilize and adapt design process to approach ambiguous challenges",
+        "Constantly bring conversations about users and other stakeholders to the table throughout the product development cycle, from user research, to analysis, concepts, UX/UI design, launch, and iteration",
+        "Engage in deep collaboration with multidisciplinary professionals in fields of design, business, strategy, growth, software development, and technological innovation"
       ],
       "qualification": [
-        "Rich experience in React",
-        "A deep understanding of architecture of modern client-side React applications",
-        "Prior experience working with component libraries or design teams in user-facing applications",
-        "Prior experience creating a design system or component library",
-        "A desire to keep up with modern best practices in web development",
-        "Familiarity with the Web3 frontend stack (ethers.js / web3.js, EIP-1193, client-side private key management, etc.)",
-        "Familiarity with React Hooks and TypeScript in React"
+        "A Bachelor’s or Master’s degree in any field is welcomed",
+        "A sensitivity to both the functional and the emotional aspects of design ",
+        "A curious and open-mind: you see both the big picture as well the small details, and you enjoy connecting the dots and finding relationships within complexities",
+        "An ability to understand the intrinsic “why” behind each given task",
+        "Big plus if you have experience integrating quantitative processes into your overall qualitative research",
+        "It is not necessary for candidates to come from a pure design background, we are excited about any secondary experiences or interests you may have! A diversity of minds is what we look for as we’re growing our team",
+        "And don’t worry, you do not need to be able to do all this right now! We look forward to helping you grow your capabilities along with our growing team"
       ],
       "skill": [
-        "React Hooks and TypeScript in React, Web3 Frontend Stack (Ethers.js / Web3.js, EIP-1193, Client-Side Private Key Management, etc.)"
+        "Human-Centered Thinking and a Familiarity With UX/UI or Service Design Processes and Tools (Figma, Zeplin, Adobe Suite, etc.)"
       ],
-      "location": ["K+ Building"],
+      "location": ["K+ Building (Samyan, Bangkok)"],
       "fresh_grad": false
     },
     {
-      "id": 28,
+      "id": 29,
       "title": "IT Governance",
       "level": "Middle - Senior",
       "description": "In this role, you will oversee all information security policy and procedures to ensure that they follow the bank's standard. Your work includes developing and maintaining security management and compliance dashboard to detect and track all non-compliance issues.",
@@ -824,7 +852,7 @@
       "fresh_grad": false
     },
     {
-      "id": 29,
+      "id": 30,
       "title": "Network Engineer",
       "level": "Middle",
       "description": "In this role, you will be working with our engineering team to design, implement, optimize, and operate network infrastructure while collaborating with application and infrastructure management teams to establish proper and efficient network infrastructure.",
@@ -854,7 +882,7 @@
       "fresh_grad": false
     },
     {
-      "id": 30,
+      "id": 31,
       "title": "Security Infrastructure Engineer – System and Patch Management",
       "level": "Junior – Middle",
       "description": "In this role, you will be responsible for planning and ensuring corporate security, keeping computer system and network device hardened against cyber attacks. You will also need to maintain system security platform such as AD, LDAP and Radius servers.",
@@ -877,6 +905,325 @@
       ],
       "skill": ["Cloud Security, Database Security or Middleware Security"],
       "location": ["KBTG Building (Muang Thong Thani, Nonthaburi)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 32,
+      "title": "Innovation Product Manager",
+      "level": "Junior – Middle",
+      "description": "In this role, you will be working with cross-functional teams to create innovations that improve customer’s quality of life in both financial and non-financial world.",
+      "responsibility": [
+        "Drive innovation products and new initiatives from ideation, conceptualization, prototyping, through to implementation and launch",
+        "Manage the roadmap for your product, analyze customer journeys, oversee user research, define requirements, set timelines and lead a cross-functional team through product lifecycle",
+        "Identify opportunities for new products that leverage KBANK ecosystem and its partners to provide unique and lasting customer value",
+        "Be a champion of the MVP concept, distilling the product down to what is desirable, viable and feasible"
+      ],
+      "qualification": [
+        "Self-starter and visionary person with strong leadership and self-motivation capabilities",
+        "Startup founder mindset and ability thrive in a dynamic environment, maintaining composure and a positive attitude",
+        "Excellent written and verbal interpersonal skills, with an ability to communicate with a wide range of team members and job functions – all the way up to executives",
+        "Passionate about technology and comfortable to build business use cases around it",
+        "Love what you do and believe in yourself, we need you to be happy here",
+        "From fresh graduates to seasoned project managers, you are all welcomed to join us"
+      ],
+      "skill": [
+        "Product Owner, Product and Business Management"
+      ],
+      "location": [
+        "K+ Building (Samyan, Bangkok)"
+      ],
+      "fresh_grad": true
+    },
+    {
+      "id": 33,
+      "title": "Kubix - Product and Business Development",
+      "level": "Junior – Middle",
+      "description": "In this role, you will join Kubix on their mission as ICO portal to offer financial advisory and technology platform for issuers to tokenize their fund raising projects on Blockchain technology, and at the same time provide investors with new investment platform for digital assets.",
+      "responsibility": [
+        "Drive innovation products and new initiatives from ideation, conceptualization, prototyping, through to implementation and launch",
+        "Manage the roadmap for your product, analyze customer journeys, oversee user research, define requirements, set timelines and lead a cross-functional team through product lifecycle",
+        "Identify opportunities for new products that leverage KBank ecosystem and its partners to provide unique and lasting customer value",
+        "Be a champion of the MVP concept, distilling the product down to what is desirable, viable and feasible"
+      ],
+      "qualification": [
+        "0-5 years of experience in financial industry or IT industry",
+        "Understanding in digital asset industry and capital market",
+        "Self-starter and visionary person with strong leadership and self-motivation capabilities",
+        "Startup founder mindset and ability to thrive in a dynamic environment, maintaining composure and a positive attitude",
+        "Excellent written and verbal interpersonal skills, with an ability to communicate with a wide range of team members and job functions – all the way up to executives",
+        "Passionate about technology and comfortable to build business use cases around it",
+        "Love what you do and believe in yourself, we need you to be happy here"
+      ],
+      "skill": [
+        "Product Owner, Product and Business Management"
+      ],
+      "location": ["K+ Building (Samyan, Bangkok)"],
+      "fresh_grad": true
+    },
+    {
+      "id": 34,
+      "title": "Kubix – Deputy Managing Director",
+      "level": "Senior",
+      "description": "In this role, you will join Kubix on their mission as ICO portal to offer financial advisory and technology platform for issuers to tokenize their fund raising projects on Blockchain technology, and at the same time provide investors with new investment platform for digital assets.",
+      "responsibility": [
+        "Set the vision for the company and define the overall goals and strategy from launch to scale, drive business direction to serve both issuers’ needs and investors' needs",
+        "Oversee company operations and employee productivity ",
+        "Build a highly inclusive company culture ensuring team members thrive and organizational outcomes are met",
+        "Ensure effective recruiting, onboarding, professional development, performance management, and retention",
+        "Adhere to company, national, and regional business requirements, enforcing compliance and taking action when necessary",
+        "Maintain and build trusted relationships with key customers, clients, partners, industry and stakeholders",
+        "Talk, respond and maintain relationship with regulators",
+        "Promote and plan for company branding and PR strategy",
+        "Identify gaps in company’s tasks and operations and close them, either by yourself or with others"
+      ],
+      "qualification": [
+        "8-10 years of experience in financial industry or fintech area with management experiences",
+        "Outstanding organizational and leadership abilities", 
+        "Strong understanding in digital asset industry, both business landscape and technical aspect",
+        "Understanding of advanced business planning and regulatory issues",
+        "Ability to diagnose problems quickly and have foresight into potential issues",
+        "Understanding of business functions such as HR, Finance, marketing etc.",
+        "Self-starter and visionary person with strong leadership and self-motivation capabilities",
+        "Startup founder mindset and ability to thrive in a dynamic environment, maintaining composure and a positive attitude",
+        "Excellent written and verbal interpersonal skills, with an ability to communicate with a wide range of team members and job functions – all the way up to executives",
+        "Love what you do and believe in yourself, we need you to be happy here"
+      ],
+      "skill": [
+        "FinTech or Digital Asset Management and Leadership "
+      ],
+      "location": ["K+ Building (Samyan, Bangkok)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 35,
+      "title": "Kubix – Head of Operations and Risk Control",
+      "level": "Senior",
+      "description": "In this role, you will join Kubix on their mission as ICO portal to offer financial advisory and technology platform for issuers to tokenize their fund raising projects on Blockchain technology, and at the same time provide investors with new investment platform for digital assets.",
+      "responsibility": [
+        "Build overall company’s operational process to deliver our products and efficiently serve our investors on the platform, starting from KYC operations, settlement, and the full lifecycle of products",
+        "Create company’s operating model and policy to ensure end-to-end operations are complied with related regulations",
+        "Work across product and engineering teams to create efficient processes, build successful operation flow, and make strategic trade-off decisions",
+        "Manage product operational roadmap, analyze customer journeys, set timelines and lead a cross-functional team through product launch process",
+        "Identify risks and gaps in company’s operations, work closely with risk management experts to set risk monitoring framework, tool, and reporting",
+        "Monitor to ensure the company’s overall risk framework is suitable with the business scale and comply with regulatory requirements",
+        "Report to Risk Management Committee of the risk monitoring results"
+      ],
+      "qualification": [
+        "5-8 years of experience in financial industry in operations and/or risk management areas ",
+        "Understanding in digital asset industry and capital market",
+        "Have strong operational management skill, risk control and process-driven mindset",
+        "Self-starter and visionary person with strong leadership and self-motivation capabilities",
+        "Startup founder mindset and ability to thrive in a dynamic environment, maintaining composure and a positive attitude",
+        "Excellent written and verbal interpersonal skills, with an ability to communicate with a wide range of team members and job functions – all the way up to executives",
+        "Love what you do and believe in yourself, we need you to be happy here"
+      ],
+      "skill": [
+        "FinTech Operational and/or Risk Management"
+      ],
+      "location": [
+        "K+ Building (Samyan, Bangkok)"
+      ],
+      "fresh_grad": false
+    },
+    {
+      "id": 36,
+      "title": "Kubix – Operations Manager",
+      "level": "Middle",
+      "description": "In this role, you will join Kubix on their mission as ICO portal to offer financial advisory and technology platform for issuers to tokenize their fund raising projects on Blockchain technology, and at the same time provide investors with new investment platform for digital assets.",
+      "responsibility": [
+        "Responsible for company’s operational process to deliver our products and efficiently serve our investors on the platform, starting from KYC operations, settlement, and the full lifecycle of products", 
+        "Execute company’s operating model and policy to ensure end-to-end operations are complied with related regulations",
+        "Manage product operational roadmap, analyze customer journeys, set timelines and lead a cross-functional team through product launch process",
+        "Work closely with call center team to handle investors’ inquiries and close the requests in timely manner. Be a center point of contact to support investors’ inquiries",
+        "Provide necessary daily reporting to relevant stakeholders such as custodian bank for settlement details, and regulatory reporting"
+      ],
+      "qualification": [
+        "2-3 years of experience in financial industry in operations ",
+        "Understanding in digital asset industry and capital market",
+        "Strong operational management skill, customer service mind, and process-driven mindset",
+        "Startup mindset and ability to thrive in a dynamic environment, maintaining composure and a positive attitude",
+        "Good written and verbal interpersonal skills, with an ability to communicate with a wide range of team members and job functions",
+        "Love what you do and believe in yourself, we need you to be happy here"
+      ],
+      "skill": [
+        "FinTech Operational Management Skill"
+      ],
+      "location": ["K+ Building (Samyan, Bangkok)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 37,
+      "title": "Kubix – Digital Asset Tokenization: Head of Sales & Deal Structuring ",
+      "level": "Senior",
+      "description": "In this role, you will join Kubix on their mission as ICO portal to offer financial advisory and technology platform for issuers to tokenize their fund raising projects on Blockchain technology, and at the same time provide investors with new investment platform for digital assets.",
+      "responsibility": [
+        "Manage client relationship and deal pipeline with potential issuers",
+        "Manage a team of deal structurers and executors to ensure the ICO launch process meets the SEC regulatory filing timeline",
+        "Be the SEC gatekeeper: discuss potential deal structure and overall process of ICO deal filing",
+        "Manage the process of marketing and pitching to potential issuers to promote new trend of asset tokenization and Initial Coin Offerings (ICO) process as alternative fund raising channel",
+        "Oversee due diligence process on a potential issuer who is interested in going through Initial Coin Offerings, i.e. company analysis, financial analysis, and regulatory feasibility test to ensure issuer’s eligibility as per SEC regulation",
+        "Oversee deal structuring, conduct financial analysis of the project/asset that the issuer proposes as token’s underlying, including conducting market and business trend to project potential growth and expected return of the project/asset",
+        "Structure legal vehicle of the token (such as trust or SPV), including discussing with legal advisor, tax advisor, and accounting advisor to due diligence all key considerations ",
+        "Ensure that an issuer provide required information and financial data for disclosure and coordinate with legal advisor to prepare SEC filing for ICO and meet regulatory requirement"
+      ],
+      "qualification": [
+        "5-10 years of experience in investment banking, IPO transactions, Financial Advisory, Corporate Financing or related financial/structuring fields, fluent with dealing and understanding SEC regulation",
+        "Self-starter and visionary person with strong leadership and self-motivation capabilities to manage a team, while being hands-on in deal structuring details",
+        "Excitement to explore new technology and build new financial ecosystem, understanding the basic of Blockchain, smart contract, ICO and asset tokenization",
+        "Ability to take full ownership of the process, self-motivation, and multi-tasking",
+        "Startup founder mindset, eagerness to work in a small but dynamic team, and ability to thrive in a dynamic environment, maintaining composure and a positive attitude",
+        "Excellent written and verbal interpersonal skills, with an ability to communicate with a wide range of team members and job functions – all the way up to executives",
+        "A degree in Finance, Economics or related fields"
+      ],
+      "skill": [
+        "Financial Advisory, Investment Banking, IPO Transactions, ICO Portal"
+      ],
+      "location": ["K+ Building (Samyan, Bangkok)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 38,
+      "title": "Kubix – Digital Asset Tokenization: Sales & Deal Structuring",
+      "level": "Middle",
+      "description": "In this role, you will join Kubix on their mission as ICO portal to offer financial advisory and technology platform for issuers to tokenize their fund raising projects on Blockchain technology, and at the same time provide investors with new investment platform for digital assets.",
+      "responsibility": [
+        "Conduct marketing and pitching to potential issuers to promote new trend of asset tokenization and Initial Coin Offerings (ICO) process as alternative fund raising channel",
+        "Responsible for conducting in-depth due diligence on a potential issuer who is interested in going through Initial Coin Offerings, i.e. company analysis, financial analysis, and regulatory feasibility test to ensure issuer’s eligibility as per SEC regulation",
+        "Perform in depth financial analysis of the project/asset that the issuer proposes to use as token’s underlying, including conducting market and business trend to project potential growth and expected return of the project/asset",
+        "Structure legal vehicle of the token (such as trust or SPV), including discussing with legal advisor, tax advisor, and accounting advisor to due diligence all key considerations",
+        "Prepare term sheets, valuation, and design investment return mechanism of the token",
+        "Responsible for SEC filing for ICO by liaising with an issuer to collect required information and financial data for disclosure and coordinate with legal advisor to prepare SEC filing for ICO"
+      ],
+      "qualification": [
+        "3-5 years of experience in IPO transactions, Financial Advisory, Corporate Financing, or related fields, comfortable with SEC regulation", 
+        "Excitement to explore new technology and build new financial ecosystem, understanding the basic of Blockchain, smart contract, ICO and asset tokenization",
+        "Ability to take full ownership of the process, self-motivation, and multi-tasking",
+        "Startup founder mindset, eagerness to work in a small but dynamic team, and ability to thrive in a dynamic environment, maintaining composure and a positive attitude",
+        "Excellent written and verbal interpersonal skills, with an ability to communicate with a wide range of team members and job functions – all the way up to executives",
+        "A degree in Finance, Economics or related fields",
+        "Love what you do and believe in yourself, we need you to be happy here"
+      ],
+      "skill": [
+        "Investment Banking, IPO Transactions, ICO Portal"
+      ],
+      "location": ["K+ Building (Samyan, Bangkok)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 39,
+      "title": "Blockchain Research Engineer ",
+      "level": "Middle",
+      "description": "In this role, you will bring in your passion for our product and cutting edge technology to make a greater impact to the society.",
+      "responsibility": [
+        "Conduct research on blockchain technology and its applications ranging from performance improvement, privacy and security enhancement, DApps to DeFi", 
+        "Able to conduct security review or identify smart contract vulnerabilities is a plus"
+      ],
+      "qualification": [
+        "Bachelor's or Master’s degree in Computer Engineering, Computer Science, IT or related fields",
+        "2-5 years of experience in blockchain technology and its fundamentals ",
+        "Background in development of blockchain smart contract in any of the blockchain platforms (such as Ethereum, Hyperledger Fabric, Corda) ",
+        "Basic understanding in financial industries and/or token economy is a plus",
+        "Good attitude, problem solving and communication skill, enjoy facing new challenges",
+        "Fast learning and ability to work as a team  ",
+        "Strong problem solving skills",
+        "Self-motivation and hard working",
+        "Good skill in automation tool/script is preferred"
+      ],
+      "skill": [
+        "Blockchain Technology, Research"
+      ],
+      "location": ["K+ Building (Samyan, Bangkok)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 40,
+      "title": "Kubix - Head of IT",
+      "level": "Middle - Senior",
+      "description": "In this role, you will join Kubix on their mission as ICO portal to offer financial advisory and technology platform for issuers to tokenize their fund raising projects on Blockchain technology, and at the same time provide investors with new investment platform for digital assets.",
+      "responsibility": [
+        "Responsible for the overall IT architecture and strategic planning in alignment with the business goals",
+        "Supervise and Manage risks relating to IT, making sure all IT operations are under the company’s standard and policy",
+        "Collaborate with the heads of departments, including marketing, production, and operations", 
+        "Study Information processing systems to evaluate the effectiveness, make recommendations for improvement, request approval from the person in charge and notify relevant personnel of the changes immediately",
+        "Conduct overall reports and propose to upper management",
+        "Liaise with other stockholders to share and represent technological visions, opportunities, and risks company-wide to internal and external",
+        "Develop strategic plans and set timelines for evaluation, development, and deployment of all technical aligning with the company’s standard and policy",
+        "Supervise the workflow of IT department"
+      ],
+      "qualification": [
+        "At least 15 years of experience in banking or capital market area ",
+        "8-10 years of experience in a software development role, information technology role, or related field; 5 years in management or leadership role",
+        "Background in banking, financial services business and consulting company is a plus", 
+        "Strong analytical skill and proven ability to quickly understand complex business and systems and to provide appropriate solution", 
+        "Excellent interpersonal and communication skills and ability to effectively collaborate with diverse people such as clients, developers, or testers", 
+        "Excellent understanding of computer systems, security, network and systems administration, databases and data storage systems, and telecommunications systems",
+        "Strong interpersonal skills and ability to effectively communicate with teams across the entire organization",
+        "Experience in technology relevant to the industry such as Blockchain, strong knowledge on digital asset and Blockchain technology",
+        "Excellent leadership and decision making skills",
+        "Strong knowledge of project management principles",
+        "Driver, committed, result-oriented"
+        
+      ],
+      "skill": [
+        "Software Development Skill in Digital Asset and Blockchain Technology"
+      ],
+      "location": ["K+ Building (Samyan, Bangkok)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 41,
+      "title": "Kubix - Developer and Application Support",
+      "level": "Middle",
+      "description": "In this role, you will join Kubix on their mission as ICO portal to offer financial advisory and technology platform for issuers to tokenize their fund raising projects on Blockchain technology, and at the same time provide investors with new investment platform for digital assets.",
+      "responsibility": [
+        "Analyze, design and develop information technology systems for business needs",
+        "Conduct system documents and work manuals",
+        "Investigate technical issues, manage fix deployment to live systems and report to supervisor",
+        "Design and develop both frontend and backend",
+        "Responsible for 1st tier application support"
+      ],
+      "qualification": [
+        "At least 5 years of experience in development",
+        "Experience in production support", 
+        "Strong analytical skill and proven ability to quickly understand complex business and systems and to provide appropriate solution", 
+        "Excellent interpersonal and communication skills and ability to effectively collaborate with diverse people such as testers", 
+        "Working knowledge in IT hardware and software",
+        "Ability to learn and master employer-specific software",
+        "Programming language: Node JS and Solidity",
+        "Knowledge on digital asset and Blockchain technology"
+      ],
+      "skill": [
+        "Strong Programming Skill in Node JS and Solidity (Blockchain)"
+       ],
+      "location": ["K+ Building (Samyan, Bangkok)"],
+      "fresh_grad": false
+    },
+    {
+      "id": 42,
+      "title": "Kubix - IT Operation",
+      "level": "Middle",
+      "description": "In this role, you will join Kubix on their mission as ICO portal to offer financial advisory and technology platform for issuers to tokenize their fund raising projects on Blockchain technology, and at the same time provide investors with new investment platform for digital assets.",
+      "responsibility": [
+        "Responsible for information technology operations, whole application technology systems, networks, activities in computer centers and system issues", 
+        "Develop, implement, and maintain quality assurance protocols",
+        "Report and monitor the performance of IT systems to prevent delays or outages and quickly resolve ongoing issues",
+        "Identify issue and accelerate the resolution process",
+        "Assist technical staff in checking and ensuring resolution of all issues to achieve all objectives",
+        "Conduct system documents, IT issues and work manual to direct reports",
+        "Supervise teams, both internal and vendor, and monitor their performance in alignment with company’s policy"   
+      ],
+      "qualification": [
+        "At least 3 years of experience in system deployment",
+        "Experience in production support",
+        "Strong analytical skill and proven ability to quickly understand complex business and systems and to provide appropriate solution", 
+        "Excellent interpersonal and communication skills and ability to effectively collaborate with diverse people such as clients, developers, or testers ",
+        "Ability to work under pressure",
+        "Additional skills include DevOps, ELK, AWS cloud service"
+      ],
+      "skill": [
+        "IT Operation and Production Support"
+       ],
+      "location": ["K+ Building (Samyan, Bangkok)"],
       "fresh_grad": false
     }
   ]
