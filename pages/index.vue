@@ -1,43 +1,23 @@
 <template>
   <div>
     <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-TZSXSC7"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZSXSC7" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrapper bg-white" v-if="!$nuxt.$loading.loading">
       <div class="imgHeader home position-relative wow fadeInUp">
         <div class="">
           <b-modal id="bv-modal-example" hide-footer>
             <div>
-              <video
-                autoplay=""
-                loop=""
-                id=""
-                muted="false"
-                width="100%"
-                height="100%"
-                controls
-              >
-                <source
-                  src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"
-                  type="video/mp4"
-                />
+              <video autoplay="" loop="" id="" muted="false" width="100%" height="100%" controls>
+                <source src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4" type="video/mp4" />
               </video>
             </div>
           </b-modal>
         </div>
-
         <video autoplay="" loop="" id="video-background" muted="">
-          <source
-            src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"
-            type="video/mp4"
-          />
+          <source src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4" type="video/mp4" />
         </video>
         <div class="position-absolute fadeOutHader" v-show="check">
           <div class="container">
@@ -53,25 +33,18 @@
             </div>
           </div>
         </div>
-        <b-button
-          class="btn-play border-0"
-          data-wow-delay=""
-          data-wow-duration=""
-          id="show-btn"
-          @click="$bvModal.show('bv-modal-example')"
-        >
-          <b-icon class="icon-play" icon="play-fill"></b-icon> PLAY
-        </b-button>
+        <b-button class="btn-play border-0" data-wow-delay="" data-wow-duration="" id="show-btn" @click="$bvModal.show('bv-modal-example')">
+        <b-icon class="icon-play" icon="play-fill"></b-icon>PLAY</b-button>
         <div class="day-location">
           <div class="container pl-0">
             <div class="row">
-              <div class="col-12 col-md-5 t-right">
+              <div class="col-12 col-md-6 t-right">
                 <div class="day" style="height: 17px">
                   <!-- <img src="~/assets/images/Asset13.svg" />
-                  <span class="mr-5 pr-5">22 May, 2021</span> -->
+                  <span class="">21 August 2021</span> -->
                 </div>
               </div>
-              <div class="col-12 col-md-7">
+              <div class="col-12 col-md-6">
                 <div class="location">
                   <!-- <img src="~/assets/images/Asset14.png" /><span
                     >Online Event</span
@@ -82,60 +55,40 @@
           </div>
         </div>
         <div class="popup" :class="{ 'click-x': isCloseX }" v-if="showPopup">
-          <span class="d-flex justify-content-end"
-            ><b-icon
-              icon="x-circle"
-              variant="dark"
+          <span class="d-flex justify-content-end">
+            <b-icon
+              icon="x-circle-fill"
+              variant="black"
               scale=""
               font-scale="2"
               class="icon-x"
               @click="closePopup"
-            ></b-icon
-          ></span>
-          <img
-            src="~/assets/images/POP-UP-25MAY2021-01.png"
-            class="img-popup"
-          />
+            ></b-icon>
+          </span>
+          <img :src="require(`~/assets/images/${banner02}`)" class="img-popup" />
         </div>
       </div>
       <div class="content-about">
         <div class="container py-3">
           <div class="row">
             <div class="col-12 col-md-12">
-              <h2
-                class="section wow fadeInLeft text-white pt-3"
-                data-wow-delay="500"
-              >
+              <h2 class="section wow fadeInLeft text-white pt-3" data-wow-delay="200">
                 ABOUT KBTG INSPIRE
               </h2>
             </div>
           </div>
           <div class="row">
             <div class="col-12 col-md-6">
-              <p
-                class="section wow fadeInUp"
-                :class="{ 'f-thai': switchLang === 'th' }"
-                data-wow-delay="0.5"
-              >
+              <p class="section wow fadeInLeft" :class="{ 'f-thai': switchLang === 'th' }" data-wow-delay="0.5">
                 {{ $t("AboutKBTGInspire") }}
               </p>
               <div class="wrap-link">
-                <a
-                  href="/jobs-exe"
-                  class="section wow fadeInUp"
-                  data-wow-delay="0.7"
-                  >See Positions</a
-                >
-                <a
-                  href="/activities"
-                  class="section wow fadeInUp"
-                  data-wow-delay="0.7"
-                  >View Activities</a
-                >
+                <a href="/jobs" class="section wow fadeInUp" data-wow-delay="" >See Positions</a>
+                <a href="/activities" class="section wow fadeInUp" data-wow-delay="" >View Activities</a>
               </div>
             </div>
             <div class="col-12 col-md-6">
-              <div class="section wow fadeInRight" data-wow-delay="500">
+              <div class="section wow fadeInRight" data-wow-delay="200">
                 <div class=""></div>
                 <div class="">
                   <img src="~/assets/images/img-about.jpg" class="img-fluid" />
@@ -149,290 +102,29 @@
         </div>
       </div>
       <div class="item_slider">
-        <img src="~/assets/images/img-professional_02.jpg" class="img-fluid" />
+        <img :src="require(`~/assets/images/${banner03}`)" class="img-fluid" />
       </div>
+
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="content-job mb-4 pt-5">
               <div class="flex-content">
-                <h2
-                  class="section wow fadeInUp"
-                  data-wow-duration="200"
-                  data-wow-delay="200"
-                >
+                <h2 class="section wow fadeInUp" data-wow-duration="" data-wow-delay="" >
+                <!-- <h2 class="section" > -->
                   JOBS AT <span style="color: #62cbc9">KBTG</span> INSPIRE
                 </h2>
-                <a href="/jobs-exe" class="a-l1">View all Jobs</a>
+                <a href="/jobs" class="a-l1">View all Jobs</a>
               </div>
-
               <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="400"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/1" class="">
-                      <h3>
-                        Software Engineer<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
+                <div class="col-12 col-md-6 col-lg-4" v-for="(job, index) in updateJobs" :key="`job-${index}`">
+                  <div class="detail wow fadeInUp"  v-if="index < 12 ">
+                    <nuxt-link :to="`/jobs/${job.id}`" class="">
+                      <h3>{{job.title}}<span><img src="~/assets/images/Asset15.png" /></span></h3>
                     </nuxt-link>
-                    <span class="location"
-                      >KBTG Building &amp; K+ Building</span
-                    >
+                    <span class="location">{{getLocation(job.location)}}</span>
                     <p>
-                      In this role, you will be responsible for the application
-                      design and development of application components or
-                      multiple application solutions to meet business and
-                      customer requirements.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="600"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/2">
-                      <h3>
-                        Test Manager/Test Engineer<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will be the key person to drive software
-                      quality through test management strategy to ensure that
-                      software delivered with quality and zero incident. If you
-                      are experienced in software development, software testing,
-                      test management, agile testing, test automation, testing
-                      technology and tools, this is the role for you.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="800"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/3" style="line-height: 30px">
-                      <h3>
-                        System Engineer - Server Management<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will be involved in the planning and
-                      development of the database with the fit recommendation
-                      and technology, as well as in troubleshooting any issues.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="1000"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/4">
-                      <h3>
-                        Data Scientist<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will enjoy working with
-                      rich data sets, cutting-edge technology, and the ability
-                      to see your insights turned into real impact on customers
-                      and society as part of our Machine Learning and Data
-                      Science team.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="1200"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/5">
-                      <h3>
-                        IT Operation - System Operator<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will utilize your passion
-                      for computer operations/systems, strong problem solving
-                      skills and the ability to troubleshoot computer problems
-                      to resolve any malfunctions in IT operation.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="1400"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/6">
-                      <h3>
-                        DATA ENGINEER<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will express your passion about data and
-                      insights of large data set as you work closely with Data
-                      Scientist, Machine Engineer, Business Analysts and other
-                      stakeholders across the company.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="1600"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/7">
-                      <h3>
-                        Business Analyst<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will be the liaison between the business
-                      users and technical team to ensure the proper solutions is
-                      developed and delivered according to the business needs.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="1800"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/9">
-                      <h3>
-                        Agile Coach<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will be a change agent to drive
-                      change-welcoming culture and empower team to deliver
-                      excellent software under the agility of Banking Industry
-                      environment.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="2000"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/10">
-                      <h3>
-                        IT Infrastructure Project Manager<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will be responsible for the continued
-                      availability and support of all infrastructure projects as
-                      a part of our infrastructure team. The role will be
-                      expected to work in a fast pace.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="2200"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/11">
-                      <h3>
-                        IT Security Architect<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will define bank's cybersecurity
-                      strategy, enterprise security architecture and roadmap,
-                      including developing relevant security requirements and
-                      standards for Information Technology.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="2400"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/12">
-                      <h3>
-                        IT Security Architect (DevSecOps)<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will help manage and reduce security
-                      risks by developing global security controls to integrate
-                      into our DevOps pipelines. You will be establishing
-                      current and long-term direction aiming at driving
-                      DevSecOps culture in organization.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                  <div
-                    class="detail wow fadeInUp"
-                    data-wow-duration="2600"
-                    data-wow-delay="200"
-                  >
-                    <nuxt-link to="/jobs-exe/13">
-                      <h3>
-                        IT &amp; Security Assurance<span
-                          ><img src="~/assets/images/Asset15.png"
-                        /></span>
-                      </h3>
-                    </nuxt-link>
-                    <span class="location">KBTG Building</span>
-                    <p>
-                      In this role, you will oversee all information security
-                      policy and procedures to ensure that they follow the
-                      bank's standard. Your work will also include developing
-                      and maintaining security management and compliance
-                      dashboard to detect and track all non-compliance issues.
+                      {{job.description}}
                     </p>
                   </div>
                 </div>
@@ -441,143 +133,34 @@
           </div>
         </div>
       </div>
+
       <div class="bgblack">
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="content-find">
-                <h2
-                  class="wow fadeInUp h3-l1"
-                  data-wow-duration="200"
-                  data-wow-delay="200"
-                >
-                  FIND YOUR INSPIRATION<a href="/activities" class="a-l1"
-                    >View all Activities</a
-                  >
-                </h2>
-                <div class="row justify-content-center">
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <div
-                      class="item wow fadeInUp"
-                      data-wow-duration="400"
-                      data-wow-delay="200"
-                    >
-                      <div class="img-find">
-                        <img src="~/assets/images/img-find.png" />
-                        <span class="icon"
-                          ><img src="~/assets/images/Asset16.png"
-                        /></span>
-                      </div>
-                      <h5>Job Interview (+Test)</h5>
-                      <p :class="{ 'f-thai': switchLang === 'th' }">
-                        {{ $t("JobInterview") }}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <div
-                      class="item wow fadeInUp"
-                      data-wow-duration="600"
-                      data-wow-delay="200"
-                    >
-                      <div class="img-find">
-                        <img src="~/assets/images/img-find1.png" /><span
-                          class="icon"
-                          ><img src="~/assets/images/Asset16.png"
-                        /></span>
-                      </div>
-                      <h5>Agile Playground</h5>
-                      <p :class="{ 'f-thai': switchLang === 'th' }">
-                        {{ $t("AgilePlayground") }}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <div
-                      class="item wow fadeInUp"
-                      data-wow-duration="800"
-                      data-wow-delay="200"
-                    >
-                      <div class="img-find">
-                        <img src="~/assets/images/img-find2.png" /><span
-                          class="icon"
-                          ><img src="~/assets/images/Asset16.png"
-                        /></span>
-                      </div>
-                      <h5>Inspire Talk</h5>
-                      <p :class="{ 'f-thai': switchLang === 'th' }">
-                        {{ $t("InspireTalk") }}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <div
-                      class="item wow fadeInUp"
-                      data-wow-duration="1000"
-                      data-wow-delay="200"
-                    >
-                      <div class="img-find">
-                        <img src="~/assets/images/img-find3.png" />
-                        <span class="icon"
-                          ><img src="~/assets/images/Asset16.png"
-                        /></span>
-                      </div>
-                      <h5>1:1 Career Mentorship</h5>
-                      <p :class="{ 'f-thai': switchLang === 'th' }">
-                        {{ $t("1:1CareerMentorship") }}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <div
-                      class="item wow fadeInUp"
-                      data-wow-duration="1200"
-                      data-wow-delay="200"
-                    >
-                      <div class="img-find">
-                        <img src="~/assets/images/img-find4.png" />
-                        <span class="icon"
-                          ><img src="~/assets/images/Asset16.png"
-                        /></span>
-                      </div>
-                      <h5>Fireside Chat</h5>
-                      <p :class="{ 'f-thai': switchLang === 'th' }">
-                        {{ $t("FiresideChat") }}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-4">
-                    <div
-                      class="item wow fadeInUp"
-                      data-wow-duration="1200"
-                      data-wow-delay="200"
-                    >
-                      <div class="img-find">
-                        <img src="~/assets/images/img-find5.png" />
-                        <span class="icon"
-                          ><img src="~/assets/images/Asset16.png"
-                        /></span>
-                      </div>
-                      <h5>Upskill Workshop</h5>
-                      <p :class="{ 'f-thai': switchLang === 'th' }">
-                        {{ $t("Upskill") }}
-                      </p>
-                    </div>
-                  </div>
+              <div class="content-find wow fadeInUp">
+                <div class="flex-content">
+                  <h2 class="section">
+                    FIND YOUR INSPIRATION
+                  </h2>
+                  <a href="/activities" class="a-l1">View all Activities</a>
                 </div>
+                <ComponentFindYour />
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!--  -->
       <div id="faq" class="bgblack-faq">
-        <div class="container">
+      <!-- <div class="bgblack-faq"> -->
+        <div class="container"  >
           <div class="row">
             <div class="col-12">
               <div
-                class="content wow fadeInLeft"
-                data-wow-duration="200"
-                data-wow-delay="200"
+                class="content wow fadeInUp"
+                data-wow-duration=""
+                data-wow-delay=""
               >
                 <h2 style="color: #fff">
                   FREQUENTLY ASKED QUESTIONS<span
@@ -586,22 +169,14 @@
                     (FAQ)</span
                   >
                 </h2>
-                <div
-                  class="accordion wow fadeInUp"
-                  data-wow-duration="200"
-                  data-wow-delay="200"
-                >
-                  <!-- ---------------------------------------------------------- -->
-                  <h4
-                    @click="clickFaq('q1')"
-                    v-b-toggle.l1
-                    class="accordion-toggle"
-                    :class="{
-                      acvite: !status_q1,
-                      active: status_q1,
-                      'f-THaiH': switchLang === 'th',
-                    }"
-                  >
+                <div class="accordion wow fadeInUp" data-wow-duration="200" data-wow-delay="200">
+                  <h4  
+                  @click="clickFaq('q1')"  
+                  v-b-toggle.l1 class="accordion-toggle"
+                    :class="{ 
+                      acvite: !status_q1, active: status_q1, 
+                      'f-THaiH': switchLang === 'th'
+                    }">
                     {{ $t("Q1") }}
                   </h4>
                   <b-collapse id="l1">
@@ -628,7 +203,6 @@
                     </p>
                   </b-collapse>
                   <!-- ---------------------------------------------------------- -->
-
                   <h4
                     @click="clickFaq('q3')"
                     v-b-toggle.l3
@@ -653,26 +227,6 @@
                     </p>
                   </b-collapse>
                   <!-- ---------------------------------------------------------- -->
-
-                  <h4
-                    @click="clickFaq('q4')"
-                    v-b-toggle.l4
-                    class="accordion-toggle"
-                    :class="{
-                      acvite: !status_q4,
-                      active: status_q4,
-                      'f-THaiH': switchLang === 'th',
-                    }"
-                  >
-                    {{ $t("Q4") }}
-                  </h4>
-                  <b-collapse id="l4">
-                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
-                      {{ $t("A4") }}
-                    </p>
-                  </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
-
                   <h4
                     @click="clickFaq('q5')"
                     v-b-toggle.l5
@@ -729,26 +283,7 @@
                       {{ $t("A7") }}
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
 
-                  <h4
-                    @click="clickFaq('q8')"
-                    v-b-toggle.l8
-                    class="accordion-toggle"
-                    :class="{
-                      acvite: !status_q8,
-                      active: status_q8,
-                      'f-THaiH': switchLang === 'th',
-                    }"
-                  >
-                    {{ $t("Q8") }}
-                  </h4>
-                  <b-collapse id="l8">
-                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
-                      {{ $t("A8") }}
-                    </p>
-                  </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q9')"
                     v-b-toggle.l9
@@ -823,27 +358,73 @@
                     </p>
                   </b-collapse>
                   <!-- ---------------------------------------------------------- -->
+                  <h4
+                    @click="clickFaq('q13')"
+                    v-b-toggle.l13
+                    class="accordion-toggle"
+                    :class="{
+                      acvite: !status_q13,
+                      active: status_q13,
+                      'f-THaiH': switchLang === 'th',
+                    }"
+                  >
+                    {{ $t("Q13") }}
+                  </h4>
+                  <b-collapse id="l13">
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A13") }}
+                    </p>
+                  </b-collapse>
+                  <!-- ---------------------------------------------------------- -->
+                  <h4
+                    @click="clickFaq('q14')"
+                    v-b-toggle.l14
+                    class="accordion-toggle"
+                    :class="{
+                      acvite: !status_q14,
+                      active: status_q14,
+                      'f-THaiH': switchLang === 'th',
+                    }"
+                  >
+                    {{ $t("Q14") }}
+                  </h4>
+                  <b-collapse id="l14">
+                    <p class="f-q" :class="{ 'f-thai': !switchLang !== 'en' }">
+                      {{ $t("A14") }}
+                    </p>
+                  </b-collapse>
+                  <!-- ---------------------------------------------------------- -->
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- <div id="faq" ></div> -->
     </div>
+  
   </div>
 </template>
 <script>
 import { BIcon, BIconArrowUp, BIconArrowDown } from "bootstrap-vue";
+import ComponentFindYour from "@/components/theFindYourInspiration"
 export default {
   components: {
     BIcon,
     BIconArrowUp,
     BIconArrowDown,
+    ComponentFindYour,
   },
-  
+
   head: {
-    title: "KBTG INSPIRE WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS",
-    meta: [{ description:"WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS"}],
+    title:
+      "KBTG INSPIRE",
+    meta: [
+      {
+        description:
+          "WE INSPIRE YOU WITH OUR INSIGHTS YOU INSPIRE US WITH YOUR TALENTS",
+      },
+    ],
     script: [
       {
         async: true,
@@ -911,12 +492,15 @@ export default {
         src: "/js/agenda-tap.js",
       },
     ],
+    
     bodyAttrs: {
       class: "bg-all",
     },
   },
   data() {
     return {
+      res:[],
+      updateJobs:[],
       status_q1: false,
       status_q2: false,
       status_q3: false,
@@ -938,6 +522,8 @@ export default {
       windowTop: 0,
       showPopup: false,
       isCloseX: false,
+      banner02: "POP-UP-19JULY2021_EXE-01.jpg",
+      banner03:"img-professional_02.f3f2208.jpg",
     };
   },
   methods: {
@@ -996,7 +582,7 @@ export default {
       if (this.windowTop > 370) {
         this.check = false;
       }
-      // console.log({ top: this.windowTop });
+     //console.log({ top: this.windowTop });
     },
     closePopup() {
       this.isCloseX = true;
@@ -1004,16 +590,57 @@ export default {
         this.showPopup = false;
       }, 1000);
     },
+      async fetchData(){
+        const response =  await this.$axios.$get('/jobs2022.json')
+        this.res = [...response.jobs]
+        //console.log(this.res)
+        return (this.res)
+     },
+     getLocation(local){
+       //console.log(local)
+       let location = ''
+       for(let i in local){
+         location = location + " " + local[i]
+       }
+       return location
+     },
+     getUpdateJob(){
+      return this.updateJobs = this.res.filter( x => x.id != 9 && x.id != 19)
+     }
   },
 
   async mounted() {
-    // await this.$nextTick(() => {
-    //   this.$nuxt.$loading.start();
-    //   console.log("Loading... index");
-    //   setTimeout(() => this.$nuxt.$loading.finish(), 3000);
-    // });
-    //console.log('/index lang: ',this.switchLang)
-    //console.log("ld", this.$nuxt.$loading.loading);
+    // 2204 Desktop
+    //
+    let width = window.innerWidth;
+    let path = this.$router.currentRoute.name
+    //console.log('width ',width)
+    //console.log(this.$router.currentRoute)
+    window.addEventListener("scroll", this.onScroll);
+    if(this.$router.currentRoute.hash === '#faq'){
+      
+      await setTimeout( ()=>{ 
+         if('index___th' === path && width < 500){
+           document.documentElement.scrollTop = 2811
+           } else if('index___th' === path && width > 500){ 
+             document.documentElement.scrollTop = 2018 
+            }
+         
+         if('index___en' === path && width < 500){
+           document.documentElement.scrollTop = 2931
+           } else if ('index___en' === path && width > 500){
+             document.documentElement.scrollTop = 2018 
+           }
+
+        //console.log('frist',{top: this.windowTop });
+        },200)
+      
+     // console.log('faq-mobile')
+      return (this.showPopup = false,
+              this.check = false)
+    }
+    await this.fetchData()
+    await this.getUpdateJob()
     window.addEventListener("scroll", this.onScroll);
     await setTimeout(() => {
       this.showPopup = true;
@@ -1051,5 +678,10 @@ export default {
     opacity: 0;
   }
 }
+
+/* #faq{
+position: relative;
+
+} */
 </style>
-´
+
