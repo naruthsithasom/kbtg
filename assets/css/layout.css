@@ -352,17 +352,29 @@ header .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, .1);
 }
 header .navbar-light .navbar-nav .nav-link.join {
+  color: rgb(127 127 127);  
+  padding: 5px 60px;
+  border-radius: 20px;
+  border: 1px solid #62CBC9;
+}
+.nav-link.join:hover{
+  background: #62CBC9 !important;
+  color: #fff !important;
+
+}
+header .navbar-light .navbar-nav .nav-link.join {
   color: #fff;
   background: #62CBC9;
   padding: 5px 30px;
    border-radius: 20px;
-}
+} 
 
+/* header .navbar-light .navbar-nav { */
 header .navbar-light .navbar-nav .nav-link.join:hover {
   border: none;
 }
 .join:hover{
-  height:33px;
+  /* height:33px; */
 }
 header .navbar-light .navbar-nav .nav-link:hover,
 header .navbar-light .nav-item.active .nav-link  {

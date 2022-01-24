@@ -73,10 +73,10 @@
               WELCOME TALK SPEAKER
             </h2>
             <div class="row">
-              <div class="col-12 col-md-4 col-lg-4">
+                  <div class="col-12 col-md-4 col-lg-4">
                 <div
                   class="item wow fadeInUp"
-                  data-wow-duration="400"
+                  data-wow-duration="800"
                   data-wow-delay="200"
                 >
                   <img
@@ -104,6 +104,7 @@
                   <p class="">Innovation Expert</p>
                 </div>
               </div>
+
               <div class="col-12 col-md-4 col-lg-4">
                 <div
                   class="item wow fadeInUp"
@@ -119,6 +120,7 @@
                   <p class="">Infrastructure Expert</p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -268,7 +270,7 @@
                           <div class="event-info">
                             <h3 class="mb-0 pt-2">Welcome to KBTG and KBTG Beyond</h3>
                             <ul class="event-org mb-0 list-unstyled">
-                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolCharassriPhaholyotin") }}</li>
+                              <li  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("RuangrojPoonpolChutimarKasemkornkit") }}</li>
                             </ul>
                            <p  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('txt1-day1')}}</p>                         
                           </div>
