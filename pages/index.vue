@@ -2,7 +2,12 @@
   <div>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZSXSC7" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TZSXSC7"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrapper bg-white" v-if="!$nuxt.$loading.loading">
@@ -10,14 +15,28 @@
         <div class="">
           <b-modal id="bv-modal-example" hide-footer>
             <div>
-              <video autoplay="" loop="" id="" muted="false" width="100%" height="100%" controls>
-                <source src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4" type="video/mp4" />
+              <video
+                autoplay=""
+                loop=""
+                id=""
+                muted="false"
+                width="100%"
+                height="100%"
+                controls
+              >
+                <source
+                  src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"
+                  type="video/mp4"
+                />
               </video>
             </div>
           </b-modal>
         </div>
         <video autoplay="" loop="" id="video-background" muted="">
-          <source src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4" type="video/mp4" />
+          <source
+            src="~/assets/vdo/KBTG_Inspire_720-Broadband_High.mp4"
+            type="video/mp4"
+          />
         </video>
         <div class="position-absolute fadeOutHader" v-show="check">
           <div class="container">
@@ -33,8 +52,15 @@
             </div>
           </div>
         </div>
-        <b-button class="btn-play border-0" data-wow-delay="" data-wow-duration="" id="show-btn" @click="$bvModal.show('bv-modal-example')">
-        <b-icon class="icon-play" icon="play-fill"></b-icon>PLAY</b-button>
+        <b-button
+          class="btn-play border-0"
+          data-wow-delay=""
+          data-wow-duration=""
+          id="show-btn"
+          @click="$bvModal.show('bv-modal-example')"
+        >
+          <b-icon class="icon-play" icon="play-fill"></b-icon>PLAY</b-button
+        >
         <div class="day-location">
           <div class="container pl-0">
             <div class="row">
@@ -65,26 +91,43 @@
               @click="closePopup"
             ></b-icon>
           </span>
-          <img :src="require(`~/assets/images/${banner02}`)" class="img-popup" />
+          <img
+            :src="require(`~/assets/images/${banner02}`)"
+            class="img-popup"
+          />
         </div>
       </div>
       <div class="content-about">
         <div class="container py-3">
           <div class="row">
             <div class="col-12 col-md-12">
-              <h2 class="section wow fadeInLeft text-white pt-3" data-wow-delay="200">
+              <h2
+                class="section wow fadeInLeft text-white pt-3"
+                data-wow-delay="200"
+              >
                 ABOUT KBTG INSPIRE
               </h2>
             </div>
           </div>
           <div class="row">
             <div class="col-12 col-md-6">
-              <p class="section wow fadeInLeft" :class="{ 'f-thai': switchLang === 'th' }" data-wow-delay="0.5">
+              <p
+                class="section wow fadeInLeft"
+                :class="{ 'f-thai': switchLang === 'th' }"
+                data-wow-delay="0.5"
+              >
                 {{ $t("AboutKBTGInspire") }}
               </p>
               <div class="wrap-link">
-                <a href="/jobs" class="section wow fadeInUp" data-wow-delay="" >See Positions</a>
-                <a href="/activities" class="section wow fadeInUp" data-wow-delay="" >View Activities</a>
+                <a href="/jobs" class="section wow fadeInUp" data-wow-delay=""
+                  >See Positions</a
+                >
+                <a
+                  href="/activities"
+                  class="section wow fadeInUp"
+                  data-wow-delay=""
+                  >View Activities</a
+                >
               </div>
             </div>
             <div class="col-12 col-md-6">
@@ -110,21 +153,33 @@
           <div class="col-12">
             <div class="content-job mb-4 pt-5">
               <div class="flex-content">
-                <h2 class="section wow fadeInUp" data-wow-duration="" data-wow-delay="" >
-                <!-- <h2 class="section" > -->
+                <h2
+                  class="section wow fadeInUp"
+                  data-wow-duration=""
+                  data-wow-delay=""
+                >
                   JOBS AT <span style="color: #62cbc9">KBTG</span> INSPIRE
                 </h2>
                 <a href="/jobs" class="a-l1">View all Jobs</a>
               </div>
               <div class="row">
-                <div class="col-12 col-md-6 col-lg-4" v-for="(job, index) in updateJobs" :key="`job-${index}`">
-                  <div class="detail wow fadeInUp"  v-if="index < 12 ">
+                <div
+                  class="col-12 col-md-6 col-lg-4"
+                  v-for="(job, index) in updateJobs"
+                  :key="`job-${index}`"
+                >
+                  <div class="detail wow fadeInUp" v-if="index < 12">
                     <nuxt-link :to="`/jobs/${job.id}`" class="">
-                      <h3>{{job.title}}<span><img src="~/assets/images/Asset15.png" /></span></h3>
+                      <h3>
+                        {{ job.title
+                        }}<span><img src="~/assets/images/Asset15.png" /></span>
+                      </h3>
                     </nuxt-link>
-                    <span class="location">{{getLocation(job.location)}}</span>
+                    <span class="location">{{
+                      getLocation(job.location)
+                    }}</span>
                     <p>
-                      {{job.description}}
+                      {{ job.description }}
                     </p>
                   </div>
                 </div>
@@ -140,9 +195,7 @@
             <div class="col-12">
               <div class="content-find wow fadeInUp">
                 <div class="flex-content">
-                  <h2 class="section">
-                    FIND YOUR INSPIRATION
-                  </h2>
+                  <h2 class="section">FIND YOUR INSPIRATION</h2>
                   <a href="/activities" class="a-l1">View all Activities</a>
                 </div>
                 <ComponentFindYour />
@@ -153,8 +206,8 @@
       </div>
       <!--  -->
       <div id="faq" class="bgblack-faq">
-      <!-- <div class="bgblack-faq"> -->
-        <div class="container"  >
+        <!-- <div class="bgblack-faq"> -->
+        <div class="container">
           <div class="row">
             <div class="col-12">
               <div
@@ -169,14 +222,21 @@
                     (FAQ)</span
                   >
                 </h2>
-                <div class="accordion wow fadeInUp" data-wow-duration="200" data-wow-delay="200">
-                  <h4  
-                  @click="clickFaq('q1')"  
-                  v-b-toggle.l1 class="accordion-toggle"
-                    :class="{ 
-                      acvite: !status_q1, active: status_q1, 
-                      'f-THaiH': switchLang === 'th'
-                    }">
+                <div
+                  class="accordion wow fadeInUp"
+                  data-wow-duration="200"
+                  data-wow-delay="200"
+                >
+                  <h4
+                    @click="clickFaq('q1')"
+                    v-b-toggle.l1
+                    class="accordion-toggle"
+                    :class="{
+                      acvite: !status_q1,
+                      active: status_q1,
+                      'f-THaiH': switchLang === 'th',
+                    }"
+                  >
                     {{ $t("Q1") }}
                   </h4>
                   <b-collapse id="l1">
@@ -184,7 +244,6 @@
                       {{ $t("A1") }}
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q2')"
                     v-b-toggle.l2
@@ -202,7 +261,6 @@
                       {{ $t("A2") }}
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q3')"
                     v-b-toggle.l3
@@ -226,7 +284,6 @@
                       >
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q5')"
                     v-b-toggle.l5
@@ -245,7 +302,6 @@
                       {{ $t("A5") }}
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
 
                   <h4
                     @click="clickFaq('q6')"
@@ -265,7 +321,6 @@
                     </p>
                   </b-collapse>
 
-                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q7')"
                     v-b-toggle.l7
@@ -302,7 +357,6 @@
                     </p>
                   </b-collapse>
 
-                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q10')"
                     v-b-toggle.l10
@@ -320,7 +374,6 @@
                       {{ $t("A10") }}
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
 
                   <h4
                     @click="clickFaq('q11')"
@@ -339,7 +392,6 @@
                       {{ $t("A11") }}
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q12')"
                     v-b-toggle.l12
@@ -357,7 +409,6 @@
                       {{ $t("A12") }}
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q13')"
                     v-b-toggle.l13
@@ -375,7 +426,6 @@
                       {{ $t("A13") }}
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
                   <h4
                     @click="clickFaq('q14')"
                     v-b-toggle.l14
@@ -393,21 +443,18 @@
                       {{ $t("A14") }}
                     </p>
                   </b-collapse>
-                  <!-- ---------------------------------------------------------- -->
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div id="faq" ></div> -->
     </div>
-  
   </div>
 </template>
 <script>
 import { BIcon, BIconArrowUp, BIconArrowDown } from "bootstrap-vue";
-import ComponentFindYour from "@/components/theFindYourInspiration"
+import ComponentFindYour from "@/components/theFindYourInspiration";
 export default {
   components: {
     BIcon,
@@ -417,8 +464,7 @@ export default {
   },
 
   head: {
-    title:
-      "KBTG INSPIRE",
+    title: "KBTG INSPIRE",
     meta: [
       {
         description:
@@ -492,15 +538,15 @@ export default {
         src: "/js/agenda-tap.js",
       },
     ],
-    
+
     bodyAttrs: {
       class: "bg-all",
     },
   },
   data() {
     return {
-      res:[],
-      updateJobs:[],
+      res: [],
+      updateJobs: [],
       status_q1: false,
       status_q2: false,
       status_q3: false,
@@ -523,7 +569,7 @@ export default {
       showPopup: false,
       isCloseX: false,
       banner02: "POP-UP-19JULY2021_EXE-01.jpg",
-      banner03:"img-professional_02.f3f2208.jpg",
+      banner03: "img-professional_02.f3f2208.jpg",
     };
   },
   methods: {
@@ -582,7 +628,7 @@ export default {
       if (this.windowTop > 370) {
         this.check = false;
       }
-     //console.log({ top: this.windowTop });
+      //console.log({ top: this.windowTop });
     },
     closePopup() {
       this.isCloseX = true;
@@ -590,57 +636,57 @@ export default {
         this.showPopup = false;
       }, 1000);
     },
-      async fetchData(){
-        const response =  await this.$axios.$get('/jobs2022.json')
-        this.res = [...response.jobs]
-        //console.log(this.res)
-        return (this.res)
-     },
-     getLocation(local){
-       //console.log(local)
-       let location = ''
-       for(let i in local){
-         location = location + " " + local[i]
-       }
-       return location
-     },
-     getUpdateJob(){
-      return this.updateJobs = this.res.filter( x => x.id != 9 && x.id != 19)
-     }
+    async fetchData() {
+      const response = await this.$axios.$get("/jobs2022.json");
+      this.res = [...response.jobs];
+      //console.log(this.res)
+      return this.res;
+    },
+    getLocation(local) {
+      //console.log(local)
+      let location = "";
+      for (let i in local) {
+        location = location + " " + local[i];
+      }
+      return location;
+    },
+    getUpdateJob() {
+      return (this.updateJobs = this.res.filter(
+        (x) => x.id != 9 && x.id != 19
+      ));
+    },
   },
 
   async mounted() {
     // 2204 Desktop
     //
     let width = window.innerWidth;
-    let path = this.$router.currentRoute.name
+    let path = this.$router.currentRoute.name;
     //console.log('width ',width)
     //console.log(this.$router.currentRoute)
     window.addEventListener("scroll", this.onScroll);
-    if(this.$router.currentRoute.hash === '#faq'){
-      
-      await setTimeout( ()=>{ 
-         if('index___th' === path && width < 500){
-           document.documentElement.scrollTop = 2811
-           } else if('index___th' === path && width > 500){ 
-             document.documentElement.scrollTop = 2018 
-            }
-         
-         if('index___en' === path && width < 500){
-           document.documentElement.scrollTop = 2931
-           } else if ('index___en' === path && width > 500){
-             document.documentElement.scrollTop = 2018 
-           }
+    if (this.$router.currentRoute.hash === "#faq") {
+      await setTimeout(() => {
+        if ("index___th" === path && width < 500) {
+          document.documentElement.scrollTop = 2811;
+        } else if ("index___th" === path && width > 500) {
+          document.documentElement.scrollTop = 2018;
+        }
+
+        if ("index___en" === path && width < 500) {
+          document.documentElement.scrollTop = 2931;
+        } else if ("index___en" === path && width > 500) {
+          document.documentElement.scrollTop = 2018;
+        }
 
         //console.log('frist',{top: this.windowTop });
-        },200)
-      
-     // console.log('faq-mobile')
-      return (this.showPopup = false,
-              this.check = false)
+      }, 200);
+
+      // console.log('faq-mobile')
+      return (this.showPopup = false), (this.check = false);
     }
-    await this.fetchData()
-    await this.getUpdateJob()
+    await this.fetchData();
+    await this.getUpdateJob();
     window.addEventListener("scroll", this.onScroll);
     await setTimeout(() => {
       this.showPopup = true;
