@@ -117,7 +117,7 @@
                       aria-controls="navmenu"
                       >TH</button></span>
                   </div>
-                  <ul class="navbar-nav ">
+                  <!-- <ul class="navbar-nav ">
                     <li
                       class="nav-item"
                       data-toggle="collapse"
@@ -127,7 +127,7 @@
                       :class="{ 'active': ($router.currentRoute.path === '/sign-in/' || $router.currentRoute.path === '/th/sign-in/'|| $router.currentRoute.path === '/policy/'|| byPassJoin || byPassPolicy || (pathName === 'announcement-05-2021___th') || (pathName === 'announcement-05-2021___en')) && !( faq === '#faq')}">
                         <a class="nav-link join" href="/sign-in">SIGN IN</a> 
                     </li>
-                  </ul>
+                  </ul> -->
                 </div>
               </nav>
             </div>
