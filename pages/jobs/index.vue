@@ -226,23 +226,25 @@
         this.sliding = false
       },
      async fetchData(){
-        let response =  await this.$axios.$get('/jobs.json')
+        let response =  await this.$axios.$get('/jobs2022.json')
+        console.log('jobs updated: ',response.updated)
         let fresh = []
         let notFresh = []
+        
         for(let i in response.jobs){
-          if(response.jobs[i].id != 9 && response.jobs[i].id != 18 && (response.jobs[i].fresh_grad == true)){
-            // this.displays.push({id: response.jobs[i].id, title: response.jobs[i].title, fresh_grad: response.jobs[i].fresh_grad, level: response.jobs[i].level})
+          if(response.jobs[i].fresh_grad == true){
             fresh.push({id: response.jobs[i].id, title: response.jobs[i].title, fresh_grad: response.jobs[i].fresh_grad, level: response.jobs[i].level})
           }
         }
         for(let i in response.jobs){
-          if(response.jobs[i].id != 9 && response.jobs[i].id != 18 && (response.jobs[i].fresh_grad != true)){
+          if( response.jobs[i].fresh_grad != true){
             notFresh.push({id: response.jobs[i].id, title: response.jobs[i].title, fresh_grad: response.jobs[i].fresh_grad, level: response.jobs[i].level})
           }
         }
 
         this.displays = [...fresh, ...notFresh]  
-        this.Pagination(4)
+        console.log('Pagination',Math.ceil(this.displays.length / 10))
+        this.Pagination(Math.ceil(this.displays.length / 10))
       return this.res = [...this.displays]
      },
       create() {

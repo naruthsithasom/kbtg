@@ -89,16 +89,15 @@
                       :class="{active: statusContact}">
                       <a class="nav-link" href="https://www.facebook.com/KBTGLive" target="_blank" >CONTACT</a>
                     </li>
-                    <!-- <li
+                    <li
                       class="nav-item"
                       data-toggle="collapse"
                       data-target="#navmenu"
                       aria-controls="navmenu"
                       aria-expanded="false"
-                      :class="{ 'active': ($router.currentRoute.path === '/join-event/' || $router.currentRoute.path === '/th/join-event/'|| $router.currentRoute.path === '/policy/'|| byPassJoin || byPassPolicy || (pathName === 'announcement-05-2021___th') || (pathName === 'announcement-05-2021___en')) && !( faq === '#faq')}">
-                        <a class="nav-link join" href="/join-event">JOIN EVENT</a> 
-                    </li> -->
-             
+                      :class="{ 'active': ($router.currentRoute.path === '/join-us/' || $router.currentRoute.path === '/th/join-us/'|| $router.currentRoute.path === '/policy/'|| byPassJoin || byPassPolicy || (pathName === 'announcement-05-2021___th') || (pathName === 'announcement-05-2021___en')) && !( faq === '#faq')}">
+                        <a class="nav-link join" href="/join-us">JOIN US</a> 
+                    </li>
                       <!-- @click="navClick('join')"> -->
                   </ul>
                   <div class="d-flex justify-content-start language my-2 my-lg-0 btn-lang">
@@ -117,17 +116,6 @@
                       aria-controls="navmenu"
                       >TH</button></span>
                   </div>
-                  <!-- <ul class="navbar-nav ">
-                    <li
-                      class="nav-item"
-                      data-toggle="collapse"
-                      data-target="#navmenu"
-                      aria-controls="navmenu"
-                      aria-expanded="false"
-                      :class="{ 'active': ($router.currentRoute.path === '/sign-in/' || $router.currentRoute.path === '/th/sign-in/'|| $router.currentRoute.path === '/policy/'|| byPassJoin || byPassPolicy || (pathName === 'announcement-05-2021___th') || (pathName === 'announcement-05-2021___en')) && !( faq === '#faq')}">
-                        <a class="nav-link join" href="/sign-in">SIGN IN</a> 
-                    </li>
-                  </ul> -->
                 </div>
               </nav>
             </div>
@@ -319,17 +307,7 @@
 
 
     }
-    if(this.$router.currentRoute.name === "join-event___en" || this.$router.currentRoute.name === 'join-event___th'){
-
-      this.byPassJoin = true
-      this.byPassActivites = false
-      this.byPassJob = false
-      this.byPassPolicy = false
-      this.byPassIndex = false
-
-
-    }
-    if(this.$router.currentRoute.name === "sign-in___en" || this.$router.currentRoute.name === 'sign-in___th'){
+    if(this.$router.currentRoute.name === "join-us___en" || this.$router.currentRoute.name === 'join-us___th'){
 
       this.byPassJoin = true
       this.byPassActivites = false

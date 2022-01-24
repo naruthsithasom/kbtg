@@ -6,7 +6,7 @@
   ssr: false,
   target: "static",
   server: {
-    port: 3000,
+    port: 80,
   },
   head: {
     title: "KBTG INSPIRE",
@@ -28,6 +28,7 @@
         href: "/favicon32.svg",
       },
     ],
+ 
   },
   css: [
     { src: "~/assets/css/reset.css" },

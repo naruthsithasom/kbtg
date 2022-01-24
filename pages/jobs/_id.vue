@@ -99,7 +99,7 @@ export default {
       $("#navmenu li").removeClass('active');
       $("#navmenu li:eq(1)").addClass('active');}, 1000);
 
-    const response =  await this.$axios.$get('/jobs.json')
+    const response =  await this.$axios.$get('/jobs2022.json')
     const res = response.jobs[this.$route.params.id - 1]
 
     this.getPosition = res.title

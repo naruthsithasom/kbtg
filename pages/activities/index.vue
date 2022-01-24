@@ -80,27 +80,11 @@
                   data-wow-delay="200"
                 >
                   <img
-                    src="~/assets/images/Activities04-01.png"
+                    src="~/assets/images/Activities02-01.png"
                     class="img-fluid"
                   />
-                  <h3  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("TawanJithavech") }}</h3>
-                  <p class="">Managing Director</p>
-                  <p class="">Infrastructure Expert</p>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-4 col-lg-4">
-                <div
-                  class="item wow fadeInUp"
-                  data-wow-duration="400"
-                  data-wow-delay="200"
-                >
-                  <img
-                    src="~/assets/images/Activities-04.png"
-                    class="img-fluid"
-                  />
-                  <h3 :class="{ 'f-thai': switchLang === 'th'  }" >{{ $t("ChutimarKasemkornkit") }}</h3>
-                  <p class="">Deputy Managing Director</p>
+                  <h3 :class="{ 'f-thai': switchLang === 'th'  }" >{{ $t("CharassriPhaholyotin") }}</h3>
+                  <p class="">Chief IT Operation Officer</p>
                   <p class="">People Expert</p>
                 </div>
               </div>
@@ -118,6 +102,22 @@
                   <h3  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("ChetaphanSiridanupath") }}</h3>
                   <p class="">Senior Principal Visionary Architect</p>
                   <p class="">Innovation Expert</p>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-4">
+                <div
+                  class="item wow fadeInUp"
+                  data-wow-duration="800"
+                  data-wow-delay="200"
+                >
+                  <img
+                    src="~/assets/images/Activities04-01.png"
+                    class="img-fluid"
+                  />
+                  <h3  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t("TawanJithavech") }}</h3>
+                  <p class="">Managing Director</p>
+                  <p class="">Infrastructure Expert</p>
                 </div>
               </div>
 
@@ -192,25 +192,22 @@
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0 pt-2">Welcome to KBTG Inspire</h3>
-
-                            <ul class="event-org list-unstyled">
-                              <li  :class="{ 'f-thai-name': switchLang === 'th'  }">
-                                {{ $t("TawanJithavech") }}
-                                <div class="f-en">Managing Director</div>
-                              </li>
-                            </ul>
-
                             <ul class="event-org mb-0 list-unstyled">
                               <li  :class="{ 'f-thai-name': switchLang === 'th'  }">
-                                {{ $t("ChutimarKasemkornkit") }}
-                                <div class="f-en">Deputy Managing Director</div>
+                                {{ $t("CharassriPhaholyotin") }}
+                                <div class="f-en">Chief IT Operation Officer</div>
                               </li>
                             </ul>
-
                             <ul class="event-org list-unstyled">
                               <li  :class="{ 'f-thai-name': switchLang === 'th'  }">
                                 {{ $t("ChetaphanSiridanupath") }}
                                 <div class="f-en">Senior Principal Visionary Architect</div>
+                              </li>
+                            </ul>
+                            <ul class="event-org list-unstyled">
+                              <li  :class="{ 'f-thai-name': switchLang === 'th'  }">
+                                {{ $t("TawanJithavech") }}
+                                <div class="f-en">Managing Director</div>
                               </li>
                             </ul>
                            <p  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('txt1-day1')}}</p>                         
@@ -358,22 +355,22 @@
                           </div>
                           <div class="event-info">
                             <h3 class="mb-0 pt-2">Welcome to KBTG Inspire</h3>
-                            <ul class="event-org list-unstyled">
-                              <li  :class="{ 'f-thai-name': switchLang === 'th'  }">
-                                {{ $t("TawanJithavech") }}
-                                <div class="f-en">Managing Director</div>
-                              </li>
-                            </ul>
                             <ul class="event-org mb-0 list-unstyled">
                               <li  :class="{ 'f-thai-name': switchLang === 'th'  }">
-                                {{ $t("ChutimarKasemkornkit") }}
-                                <div class="f-en">Deputy Managing Director</div>
+                                {{ $t("CharassriPhaholyotin") }}
+                                <div class="f-en">Chief IT Operation Officer</div>
                               </li>
                             </ul>
                             <ul class="event-org list-unstyled">
                               <li  :class="{ 'f-thai-name': switchLang === 'th'  }">
                                 {{ $t("ChetaphanSiridanupath") }}
                                 <div class="f-en">Senior Principal Visionary Architect</div>
+                              </li>
+                            </ul>
+                            <ul class="event-org list-unstyled">
+                              <li  :class="{ 'f-thai-name': switchLang === 'th'  }">
+                                {{ $t("TawanJithavech") }}
+                                <div class="f-en">Managing Director</div>
                               </li>
                             </ul>
                            <p  :class="{ 'f-thai': switchLang === 'th'  }">{{ $t('txt1-day2')}}</p>                         
